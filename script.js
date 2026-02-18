@@ -322,11 +322,26 @@ var generatedVerificationCode = null;
     var watchLater = JSON.parse(localStorage.getItem('myWatchLater')) || [];
     var likesCount = JSON.parse(localStorage.getItem('likesCount')) || {};
     // استعادة القيم مع التأكد من وجود قيم افتراضية صحيحة
-    var currentSourceKey = localStorage.getItem('selectedSource') || 'zaj';
-    var currentSourceName = localStorage.getItem('selectedSourceName') || 'الزواج';
-    var currentType = localStorage.getItem('selectedType') || 'video';
-    var currentCat = localStorage.getItem('selectedCat') || 'all content';
+   // استعادة القيم مع التأكد من وجود قيم افتراضية صحيحة
+// ✅ إذا لم يكن هناك قسم محفوظ مسبقاً (أول مرة)، استخدم 'zaj' (قسم Straight)
+var currentSourceKey = localStorage.getItem('selectedSource');
+var currentSourceName = localStorage.getItem('selectedSourceName');
 
+// إذا لم يكن هناك قسم محفوظ (أول مرة)، نستخدم 'zaj' (Straight) ونتأكد من حفظه
+if (!currentSourceKey) {
+    currentSourceKey = 'zaj';
+    currentSourceName = 'الزواج';
+    // حفظ القيم الافتراضية فوراً حتى لا تظهر أقسام أخرى في أول مرة
+    localStorage.setItem('selectedSource', 'zaj');
+    localStorage.setItem('selectedSourceName', 'الزواج');
+} else {
+    // إذا كان هناك قسم محفوظ، نستخدمه كما هو
+    currentSourceKey = currentSourceKey;
+    currentSourceName = currentSourceName || 'الزواج';
+}
+
+var currentType = localStorage.getItem('selectedType') || 'video';
+var currentCat = localStorage.getItem('selectedCat') || 'all content';
     // إصلاح مشكلة activeParent
     var savedParent = localStorage.getItem('activeParent');
     var activeParent = (savedParent === "null" || savedParent === null || savedParent === undefined) ? null : savedParent;

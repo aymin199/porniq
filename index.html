@@ -1,18 +1,8 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <!-- تحديد اتجاه الصفحة فوراً -->
-    <script>
-        (function() {
-            try {
-                var savedLang = localStorage.getItem('siteLang') || 'en';
-                document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
-                document.documentElement.lang = savedLang;
-            } catch (e) {
-                document.documentElement.dir = 'ltr';
-                document.documentElement.lang = 'en';
-            }
-        })();
+<script src="script.js"></script>
+</body>
+</html>
+     
     </script>
 
     <meta charset='UTF-8'/>
@@ -478,6 +468,200 @@
     window.restoreState = restoreState;
     
 })();
+
 </script>
+<!-- ===== الفوتر الرئيسي (في أسفل الصفحة الرئيسية) - ثابت الاتجاه ===== -->
+<footer id="footerMain" class="mt-16 border-t border-zinc-800 bg-gradient-to-b from-zinc-900 to-black pt-12 pb-8" style="direction: ltr;">
+    <div class="container mx-auto px-4">
+        <!-- شبكة الفوتر مقسمة إلى 3 أعمدة -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            
+                        <!-- العمود الأول: نص المشاركة والروابط -->
+            <div class="text-left">
+                <!-- النص مع الخلفية البيضاء -->
+                <div class="bg-white p-4 rounded-lg mb-4 shadow-lg">
+                    <p class="text-red-600 font-bold text-sm leading-relaxed">
+                        يتم مشاركة في هذا الموقع الفيديوهات والصور والمقالات عبر الروابط تحت
+                    </p>
+                </div>
+                
+                <!-- 5 روابط مع سهم أحمر -->
+                <div class="space-y-3">
+                    <!-- رابط 1: موقع مثال 1 -->
+              <!-- رابط 1 -->
+<a href="رابط_موقعك_1" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
+    <span class="text-sm">اسم الموقع الأول</span>
+</a>
+
+<!-- رابط 2 -->
+<a href="رابط_موقعك_2" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
+    <span class="text-sm">اسم الموقع الثاني</span>
+</a>
+
+<!-- رابط 3 -->
+<a href="رابط_موقعك_3" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
+    <span class="text-sm">اسم الموقع الثالث</span>
+</a>
+
+<!-- رابط 4 -->
+<a href="رابط_موقعك_4" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
+    <span class="text-sm">اسم الموقع الرابع</span>
+</a>
+
+<!-- رابط 5 -->
+<a href="رابط_موقعك_5" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
+    <span class="text-sm">اسم الموقع الخامس</span>
+</a>
+                </div>
+                
+                <!-- خط فاصل خفيف -->
+                <div class="border-t border-zinc-700 my-4 opacity-30"></div>
+            </div> 
+            
+            <!-- العمود الأوسط: PORNIQ + الإحصائيات + النص مع الروابط -->
+            <div class="text-center">
+                <!-- شعار PORNIQ -->
+                <a href="#" onclick="window.location.reload(); return false;" class="flex items-center justify-center gap-2 mb-4 no-underline">
+                    <span class="text-2xl font-black" style="direction: ltr; cursor: pointer;">
+                        <span style="color: #FFB800;">PORN</span><span class="text-white">IQ</span>
+                    </span>
+                </a>
+                
+                <!-- النص التعريفي -->
+                <p class="text-sm text-gray-400 leading-relaxed mb-4 max-w-md mx-auto">
+                    Porniq provides you with unlimited free porn videos with the hottest pornstars. 
+                    Enjoy the largest amateur porn community on the net.
+                </p>
+                
+                <!-- إحصائيات الموقع -->
+                <div class="grid grid-cols-3 gap-2 max-w-xs mx-auto mb-6">
+                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
+                        <div class="text-pink-500 font-bold text-lg footer-videos-count">0</div>
+                        <div class="text-xs text-gray-400">Videos</div>
+                    </div>
+                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
+                        <div class="text-pink-500 font-bold text-lg footer-images-count">0</div>
+                        <div class="text-xs text-gray-400">Images</div>
+                    </div>
+                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
+                        <div class="text-pink-500 font-bold text-lg footer-articles-count">0</div>
+                        <div class="text-xs text-gray-400">Articles</div>
+                    </div>
+                </div>
+
+                <!-- روابط الذكاء الاصطناعي -->
+                <div class="border-t border-zinc-700 pt-6 mt-4">
+                    <p class="text-sm text-gray-300 mb-4 font-medium">تم إنشاء هذا الموقع بمساعدة</p>
+                    
+                    <div class="flex items-center justify-center gap-8">
+                        
+                        <!-- رابط Gemini -->
+                        <a href="https://gemini.google.com/app?hl=ar" target="_blank" class="flex flex-col items-center group no-underline">
+                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" 
+                                 alt="Gemini" 
+                                 class="w-12 h-12 object-contain mb-2 group-hover:scale-110 transition-all"
+                                 onerror="this.src='https://via.placeholder.com/48/FF69B4/ffffff?text=Gemini'; this.onerror=null;">
+                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">Gemini</span>
+                        </a>
+                        
+                        <!-- رابط DeepSeek -->
+                        <a href="https://chat.deepseek.com" target="_blank" class="flex flex-col items-center group no-underline">
+                            <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" 
+                                 alt="DeepSeek" 
+                                 class="w-12 h-12 object-contain mb-2 group-hover:scale-110 transition-all"
+                                 onerror="this.src='https://via.placeholder.com/48/6d28d9/ffffff?text=AI'; this.onerror=null;">
+                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">DeepSeek</span>
+                        </a>
+                        
+                        <!-- PORNIQ -->
+                        <a href="#" onclick="window.location.reload(); return false;" class="flex flex-col items-center group no-underline">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center text-white font-black text-sm mb-2 shadow-lg group-hover:scale-110 transition-all cursor-pointer">
+                                <span style="color: #FFB800;">P</span><span>IQ</span>
+                            </div>
+                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">PORNIQ</span>
+                        </a>
+                    </div>
+                    
+                    <p class="text-[10px] text-gray-600 mt-6">
+                        تم تطوير هذا الموقع باستخدام تقنيات الذكاء الاصطناعي المتطورة
+                    </p>
+                </div>
+            </div>
+            
+            <!-- العمود الثالث: Quick Links و Support (على اليمين) -->
+            <div class="text-right">  <!-- text-right لأنه العمود الأخير في LTR -->
+                <!-- Quick Links -->
+                <h3 class="text-white font-bold text-lg mb-4 border-b border-pink-500/30 pb-2">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" onclick="goToVideos(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>📹</span> Videos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="goToImages(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>🖼️</span> Images
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="goToArticles(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>📄</span> Articles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="goToPopular(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>⭐</span> Popular
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Support -->
+                <h3 class="text-white font-bold text-lg mb-4 mt-6 border-b border-pink-500/30 pb-2">Support</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>🔒</span> Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:aym62729@gmail.com" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>📞</span> Contact Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>ℹ️</span> About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
+                            <span>⚠️</span> Terms of Service
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- الخط السفلي مع الحقوق -->
+        <div class="border-t border-zinc-800 pt-6 mt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-gray-500">
+                    All rights reserved © 2024 porniq.com
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Privacy</a>
+                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Terms</a>
+                    <a href="mailto:aym62729@gmail.com" class="text-xs text-gray-500 hover:text-pink-500 transition">Contact</a>
+                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">DMCA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
