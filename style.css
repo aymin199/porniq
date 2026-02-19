@@ -850,56 +850,119 @@ footer {
 }
 
 /* ===== تحسينات الشاشات المختلفة ===== */
+/* ===== تحسينات الشاشات المختلفة ===== */
 @media (max-width: 768px) {
     #gridBox {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, 1fr) !important; /* بطاقتان فقط في الصف */
+        gap: 12px !important;
+    }
+    
+    .video-title {
+        font-size: 0.85rem !important;
+    }
+    
+    /* تصغير زر الثلاث نقاط */
+    .card-menu-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
     }
     
     #recBox {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
-    }
-    
-    #recBox .relative.rounded-xl {
-        min-height: auto;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
     
     #recBox h4 {
+        font-size: 0.8rem !important;
+    }
+    
+    /* إخفاء الإعلانات الجانبية في الأجهزة المتوسطة */
+    .xl\:block.w-64 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    .video-title {
+        font-size: 0.8rem !important;
+    }
+    
+    .video-duration-badge {
+        font-size: 9px !important;
+        padding: 2px 5px !important;
+    }
+    
+    #recBox {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    #recBox h4 {
+        font-size: 0.75rem !important;
+    }
+    
+    #recBox .absolute.bottom-2.right-2 {
+        font-size: 8px !important;
+        padding: 2px 5px !important;
+    }
+    
+    #sideVerticalList .w-16 {
+        width: 70px !important;
+        height: 50px !important;
+    }
+    
+    #sideVerticalList .flex-1 h4 {
         font-size: 0.75rem !important;
     }
 }
 
 @media (max-width: 480px) {
     #gridBox {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 10px !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* حتى على الشاشات الصغيرة جداً، بطاقتين */
+        gap: 8px !important;
+    }
+
+    .video-title {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .video-duration-badge {
+        font-size: 8px !important;
+        padding: 2px 4px !important;
+        bottom: 5px !important;
+        right: 5px !important;
+    }
+
+    .card-menu-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
     }
     
     #recBox {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
-        gap: 10px !important;
-    }
-    
-    #recBox .relative.rounded-xl {
-        min-height: auto;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
     }
     
     #recBox h4 {
         font-size: 0.7rem !important;
     }
     
-    #recBox .text-pink-500 {
-        font-size: 0.55rem !important;
-        padding: 1px 4px !important;
-    }
-    
     #recBox .absolute.bottom-2.right-2 {
-        font-size: 8px !important;
+        font-size: 7px !important;
         padding: 1px 4px !important;
     }
     
     #sideVerticalList .w-16 {
         width: 60px !important;
-        height: 40px !important;
+        height: 45px !important;
     }
     
     #sideVerticalList .flex-1 h4 {
@@ -907,8 +970,8 @@ footer {
     }
     
     #sideVerticalList .flex-1 span {
-        font-size: 0.55rem !important;
-        padding: 2px 6px !important;
+        font-size: 0.6rem !important;
+        padding: 2px 5px !important;
     }
 }
 
@@ -940,7 +1003,7 @@ footer {
 .fav-btn { 
     position: absolute; 
     top: 8px; 
-    left: 8px; 
+    inset-inline-start: 8px; /* تستبدل left/right حسب اتجاه الصفحة */
     background: rgba(0,0,0,0.4); 
     color: white; 
     width: 30px; 
@@ -962,7 +1025,7 @@ footer {
 .like-btn { 
     position: absolute; 
     top: 8px; 
-    left: 44px; 
+    inset-inline-start: 44px; /* تستبدل left/right */
     background: rgba(0,0,0,0.4); 
     color: white; 
     width: 30px; 
@@ -1066,4 +1129,46 @@ img {
 
 #sideVerticalList .w-16 img.portrait-thumb {
     padding: 3px;
+}
+/* ===== تحسينات نافذة المشغل للجوال ===== */
+@media (max-width: 1023px) {
+    #playWindow aside.w-full.lg\:w-80 {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    
+    #playWindow .action-buttons-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    #playWindow .action-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    #vTitle {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #playWindow .action-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    #playWindow .action-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+    
+    #vTitle {
+        font-size: 1.1rem !important;
+    }
 }
