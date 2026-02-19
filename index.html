@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<script src="script.js"></script>
-</body>
-</html>
-     
+<html>
+<head>
+    <!-- تحديد اتجاه الصفحة فوراً -->
+    <script>
+        (function() {
+            try {
+                var savedLang = localStorage.getItem('siteLang') || 'en';
+                document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+                document.documentElement.lang = savedLang;
+            } catch (e) {
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = 'en';
+            }
+        })();
     </script>
 
     <meta charset='UTF-8'/>
@@ -111,85 +121,15 @@
             <div id="gridBox" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
             <div id="paginationBox" class="flex justify-center gap-2 mt-12 mb-10"></div>
         </main>
-
+        
         <aside class="hidden xl:block w-64 flex-shrink-0">
             <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
         </aside>
     </div>
 
-    <!-- نافذة المقالات -->
-    <div id="articleView" class="fixed inset-0 bg-black z-[110] hidden overflow-y-auto">
-        <div class="max-w-3xl mx-auto p-6 pt-24">
-            <button onclick="closeArticle()" class="bg-zinc-800 text-white px-6 py-2 rounded-full mb-6 hover:bg-pink-600 transition-all">← رجوع للمحتوى</button>
-            <h1 id="artTitle" class="text-4xl font-black mb-8 leading-tight text-pink-500"></h1>
-            <div id="artBody" class="text-gray-300 leading-relaxed text-lg"></div>
-        </div>
-    </div>
-
-   <!-- نافذة المشغل -->
-<div id='playWindow' class='fixed top-0 left-0 w-full h-full bg-black/95 z-[9999] hidden overflow-y-auto'>
-    <div class='w-full max-w-[1600px] mx-auto p-4 pt-10 flex flex-col lg:flex-row gap-6'>
-        <div class="flex-1 min-w-0">
-            <div class='flex justify-between items-center mb-4 border-b border-zinc-800 pb-4'>
-                <!-- الشعار في الأعلى -->
-                <div onclick="switchSource('zaj', 'الزواج'); closePlayer();" 
-                     style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #be185d, #6d28d9); padding: 8px 20px; border-radius: 30px; box-shadow: 0 4px 15px rgba(190,24,93,0.3); transition: all 0.3s ease;">
-                    <span style="color: #FFB800; font-weight: 900; font-size: 20px; text-shadow: 0 0 10px rgba(255,184,0,0.5);">PORN</span>
-                    <span style="color: white; font-weight: 900; font-size: 20px;">IQ</span>
-                </div>
-                <button onclick="closePlayer()" class="bg-zinc-800 hover:bg-red-600 text-white px-6 py-2 rounded-full transition-all font-bold">إغلاق ✕</button>
-            </div>
-            
-             
-            <!-- حاوية الفيديو -->
-            <div id="vArea" class="relative w-full overflow-hidden mb-4 bg-black" style="border-radius: 16px; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);">
-                <iframe class="mainVideo absolute inset-0 w-full h-full z-10" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            
-            <!-- عنوان الفيديو تحت الفيديو -->
-            <div class="mb-6 px-2">
-                <h3 id='vTitle' class='font-bold text-2xl md:text-3xl text-pink-500 line-clamp-2' style="text-align: right;"></h3>
-            </div>
-            
-            <!-- الاقتراحات تحت الفيديو -->
-            <div id="recBox" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-        </div>
-        
-        <!-- الجانب الأيمن من المشغل -->
-        <aside class="w-full lg:w-80 flex-shrink-0">
-            <div class="sticky top-10 flex flex-col gap-6">
-                <!-- إعلانات المشغل -->
-                <div class="flex flex-col gap-4">
-                    <a href="https://example1.com" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
-                        <div class="w-full h-full bg-black flex items-center justify-center">
-                            <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
-                            </video>
-                            <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">▶️ فيديو</div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://example2.com" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
-                        <div class="w-full h-full bg-black flex items-center justify-center">
-                            <img src="https://i.postimg.cc/zfSyrPnH/hq720.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">
-                            <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">📷 إعلان</div>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- اقتراحات مميزة -->
-                <div class="flex flex-col gap-3">
-                    <div class="text-sm font-bold text-white border-b border-zinc-800 pb-2">اقتراحات مميزة</div>
-                    <div id="sideVerticalList" class="flex flex-col gap-3"></div>
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <!-- ===== الفوتر داخل نافذة المشغل ===== -->
-    <div class="w-full max-w-[1600px] mx-auto px-4 mt-8">
-        <footer id="footerMain" class="border-t border-zinc-800 bg-gradient-to-b from-zinc-900 to-black pt-12 pb-8 rounded-lg" style="direction: ltr;">
+    <!-- الفوتر الرئيسي -->
+    <div class="w-full max-w-[1700px] mx-auto px-4 mt-8" dir="ltr">
+        <footer id="footerMainPage" class="border-t border-zinc-800 bg-gradient-to-b from-zinc-900 to-black pt-12 pb-8 rounded-lg">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
                     <div class="text-left">
@@ -200,23 +140,23 @@
                         </div>
                         
                         <div class="space-y-3">
-                            <a href="رابط_موقعك_1" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
                                 <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
                                 <span class="text-sm">اسم الموقع الأول</span>
                             </a>
-                            <a href="رابط_موقعك_2" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
                                 <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
                                 <span class="text-sm">اسم الموقع الثاني</span>
                             </a>
-                            <a href="رابط_موقعك_3" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
                                 <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
                                 <span class="text-sm">اسم الموقع الثالث</span>
                             </a>
-                            <a href="رابط_موقعك_4" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
                                 <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
                                 <span class="text-sm">اسم الموقع الرابع</span>
                             </a>
-                            <a href="رابط_موقعك_5" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
                                 <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
                                 <span class="text-sm">اسم الموقع الخامس</span>
                             </a>
@@ -318,350 +258,76 @@
             </div>
         </footer>
     </div>
-</div> <!-- إغلاق playWindow -->
-   
 
-    <!-- سطر واحد فقط لتحميل الجافاسكريبت -->
-    <script src="script.js"></script>
- <script>
-// ===== نظام الحفظ الوحيد - يعمل تلقائياً بدون أزرار =====
-(function() {
-    console.log('💾 نظام الحفظ النهائي يعمل تلقائياً');
-    
-    // تنظيف أي أنظمة حفظ سابقة
-    const oldStates = ['finalAppState', 'simpleState', 'mySiteState', 'appState', 'siteState'];
-    oldStates.forEach(key => localStorage.removeItem(key));
-    
-    // حفظ الحالة
-    function saveState() {
-        try {
-            const state = {
-                section: currentSourceKey,
-                sectionName: currentSourceName,
-                page: currentPage,
-                type: currentType,
-                cat: currentCat,
-                profile: profileMode,
-                video: currentPlayingId,
-                playerOpen: document.getElementById('playWindow') && !document.getElementById('playWindow').classList.contains('hidden'),
-                time: Date.now()
-            };
-            localStorage.setItem('porniq_state', JSON.stringify(state));
-            if (currentPlayingId) localStorage.setItem('currentPlayingId', currentPlayingId);
-            if (currentSourceKey) localStorage.setItem('selectedSource', currentSourceKey);
-            return true;
-        } catch(e) {
-            return false;
-        }
-    }
-    
-    // استعادة الحالة
-    function restoreState() {
-        try {
-            const saved = localStorage.getItem('porniq_state');
-            if (!saved) return false;
-            
-            const state = JSON.parse(saved);
-            if (Date.now() - state.time > 86400000) {
-                localStorage.removeItem('porniq_state');
-                return false;
-            }
-            
-            if (state.section && allDBs[state.section]) {
-                currentSourceKey = state.section;
-                currentSourceName = state.sectionName || 'الزواج';
-                dummyData = [...allDBs[currentSourceKey]];
-            }
-            if (state.page) currentPage = state.page;
-            if (state.type) currentType = state.type;
-            if (state.cat) currentCat = state.cat;
-            if (state.profile !== null) profileMode = state.profile;
-            if (state.video) {
-                currentPlayingId = state.video;
-                localStorage.setItem('currentPlayingId', state.video);
-            }
-            
-            setTimeout(() => {
-                renderMenu();
-                renderAll();
-                updateSubTitle();
-                if (state.playerOpen && state.video) {
-                    setTimeout(() => {
-                        const item = dummyData.find(i => i.id == state.video);
-                        if (item) playVideo(item);
-                    }, 800);
-                }
-            }, 300);
-            return true;
-        } catch(e) {
-            return false;
-        }
-    }
-    
-    // حفظ عند فتح الفيديو
-    const originalPlayVideo = window.playVideo;
-    window.playVideo = function(p) {
-        originalPlayVideo(p);
-        if (p && p.id) localStorage.setItem('currentPlayingId', p.id);
-        setTimeout(saveState, 300);
-    };
-    
-    // حفظ عند إغلاق الفيديو
-    const originalClosePlayer = window.closePlayer;
-    window.closePlayer = function() {
-        originalClosePlayer();
-        setTimeout(saveState, 300);
-    };
-    
-    // حفظ عند تغيير القسم
-    const originalSwitchSource = window.switchSource;
-    window.switchSource = function(key, name) {
-        originalSwitchSource(key, name);
-        setTimeout(saveState, 300);
-    };
-    
-    // حفظ عند تغيير الصفحة
-    const originalGoToPage = window.goToPage;
-    window.goToPage = function(page) {
-        originalGoToPage(page);
-        setTimeout(saveState, 300);
-    };
-    
-    // أحداث بسيطة
-    document.addEventListener('click', function() {
-        setTimeout(saveState, 500);
-    });
-    
-    setInterval(saveState, 30000);
-    window.addEventListener('beforeunload', saveState);
-    
-    // استعادة عند التحميل
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(restoreState, 1000);
-        });
-    } else {
-        setTimeout(restoreState, 1000);
-    }
-    
-    // استعادة إضافية بعد التحميل الكامل
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            const saved = localStorage.getItem('porniq_state');
-            if (saved) {
-                try {
-                    const state = JSON.parse(saved);
-                    if (state.playerOpen && state.video) {
-                        const item = dummyData.find(i => i.id == state.video);
-                        if (item && document.getElementById('playWindow').classList.contains('hidden')) {
-                            playVideo(item);
-                        }
-                    }
-                } catch(e) {}
-            }
-        }, 1500);
-    });
-    
-    // ✅ لا يوجد أي زر استعادة - الحفظ والاستعادة يعملان تلقائياً
-    
-    window.saveState = saveState;
-    window.restoreState = restoreState;
-    
-})();
-
-</script>
-<!-- ===== الفوتر الرئيسي (في أسفل الصفحة الرئيسية) - ثابت الاتجاه ===== -->
-<footer id="footerMain" class="mt-16 border-t border-zinc-800 bg-gradient-to-b from-zinc-900 to-black pt-12 pb-8" style="direction: ltr;">
-    <div class="container mx-auto px-4">
-        <!-- شبكة الفوتر مقسمة إلى 3 أعمدة -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            
-                        <!-- العمود الأول: نص المشاركة والروابط -->
-            <div class="text-left">
-                <!-- النص مع الخلفية البيضاء -->
-                <div class="bg-white p-4 rounded-lg mb-4 shadow-lg">
-                    <p class="text-red-600 font-bold text-sm leading-relaxed">
-                        يتم مشاركة في هذا الموقع الفيديوهات والصور والمقالات عبر الروابط تحت
-                    </p>
-                </div>
-                
-                <!-- 5 روابط مع سهم أحمر -->
-                <div class="space-y-3">
-                    <!-- رابط 1: موقع مثال 1 -->
-              <!-- رابط 1 -->
-<a href="رابط_موقعك_1" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
-    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
-    <span class="text-sm">اسم الموقع الأول</span>
-</a>
-
-<!-- رابط 2 -->
-<a href="رابط_موقعك_2" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
-    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
-    <span class="text-sm">اسم الموقع الثاني</span>
-</a>
-
-<!-- رابط 3 -->
-<a href="رابط_موقعك_3" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
-    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
-    <span class="text-sm">اسم الموقع الثالث</span>
-</a>
-
-<!-- رابط 4 -->
-<a href="رابط_موقعك_4" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
-    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
-    <span class="text-sm">اسم الموقع الرابع</span>
-</a>
-
-<!-- رابط 5 -->
-<a href="رابط_موقعك_5" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-red-600 transition group">
-    <span class="text-red-500 text-xl group-hover:translate-x-1 transition-transform">→</span>
-    <span class="text-sm">اسم الموقع الخامس</span>
-</a>
-                </div>
-                
-                <!-- خط فاصل خفيف -->
-                <div class="border-t border-zinc-700 my-4 opacity-30"></div>
-            </div> 
-            
-            <!-- العمود الأوسط: PORNIQ + الإحصائيات + النص مع الروابط -->
-            <div class="text-center">
-                <!-- شعار PORNIQ -->
-                <a href="#" onclick="window.location.reload(); return false;" class="flex items-center justify-center gap-2 mb-4 no-underline">
-                    <span class="text-2xl font-black" style="direction: ltr; cursor: pointer;">
-                        <span style="color: #FFB800;">PORN</span><span class="text-white">IQ</span>
-                    </span>
-                </a>
-                
-                <!-- النص التعريفي -->
-                <p class="text-sm text-gray-400 leading-relaxed mb-4 max-w-md mx-auto">
-                    Porniq provides you with unlimited free porn videos with the hottest pornstars. 
-                    Enjoy the largest amateur porn community on the net.
-                </p>
-                
-                <!-- إحصائيات الموقع -->
-                <div class="grid grid-cols-3 gap-2 max-w-xs mx-auto mb-6">
-                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
-                        <div class="text-pink-500 font-bold text-lg footer-videos-count">0</div>
-                        <div class="text-xs text-gray-400">Videos</div>
-                    </div>
-                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
-                        <div class="text-pink-500 font-bold text-lg footer-images-count">0</div>
-                        <div class="text-xs text-gray-400">Images</div>
-                    </div>
-                    <div class="bg-zinc-800/50 rounded-lg p-2 text-center">
-                        <div class="text-pink-500 font-bold text-lg footer-articles-count">0</div>
-                        <div class="text-xs text-gray-400">Articles</div>
-                    </div>
-                </div>
-
-                <!-- روابط الذكاء الاصطناعي -->
-                <div class="border-t border-zinc-700 pt-6 mt-4">
-                    <p class="text-sm text-gray-300 mb-4 font-medium">تم إنشاء هذا الموقع بمساعدة</p>
-                    
-                    <div class="flex items-center justify-center gap-8">
-                        
-                        <!-- رابط Gemini -->
-                        <a href="https://gemini.google.com/app?hl=ar" target="_blank" class="flex flex-col items-center group no-underline">
-                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" 
-                                 alt="Gemini" 
-                                 class="w-12 h-12 object-contain mb-2 group-hover:scale-110 transition-all"
-                                 onerror="this.src='https://via.placeholder.com/48/FF69B4/ffffff?text=Gemini'; this.onerror=null;">
-                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">Gemini</span>
-                        </a>
-                        
-                        <!-- رابط DeepSeek -->
-                        <a href="https://chat.deepseek.com" target="_blank" class="flex flex-col items-center group no-underline">
-                            <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" 
-                                 alt="DeepSeek" 
-                                 class="w-12 h-12 object-contain mb-2 group-hover:scale-110 transition-all"
-                                 onerror="this.src='https://via.placeholder.com/48/6d28d9/ffffff?text=AI'; this.onerror=null;">
-                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">DeepSeek</span>
-                        </a>
-                        
-                        <!-- PORNIQ -->
-                        <a href="#" onclick="window.location.reload(); return false;" class="flex flex-col items-center group no-underline">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center text-white font-black text-sm mb-2 shadow-lg group-hover:scale-110 transition-all cursor-pointer">
-                                <span style="color: #FFB800;">P</span><span>IQ</span>
-                            </div>
-                            <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">PORNIQ</span>
-                        </a>
-                    </div>
-                    
-                    <p class="text-[10px] text-gray-600 mt-6">
-                        تم تطوير هذا الموقع باستخدام تقنيات الذكاء الاصطناعي المتطورة
-                    </p>
-                </div>
-            </div>
-            
-            <!-- العمود الثالث: Quick Links و Support (على اليمين) -->
-            <div class="text-right">  <!-- text-right لأنه العمود الأخير في LTR -->
-                <!-- Quick Links -->
-                <h3 class="text-white font-bold text-lg mb-4 border-b border-pink-500/30 pb-2">Quick Links</h3>
-                <ul class="space-y-3">
-                    <li>
-                        <a href="#" onclick="goToVideos(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>📹</span> Videos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="goToImages(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>🖼️</span> Images
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="goToArticles(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>📄</span> Articles
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="goToPopular(); return false;" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>⭐</span> Popular
-                        </a>
-                    </li>
-                </ul>
-                
-                <!-- Support -->
-                <h3 class="text-white font-bold text-lg mb-4 mt-6 border-b border-pink-500/30 pb-2">Support</h3>
-                <ul class="space-y-3">
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>🔒</span> Privacy Policy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:aym62729@gmail.com" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>📞</span> Contact Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>ℹ️</span> About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-pink-500 transition flex items-center gap-2">
-                            <span>⚠️</span> Terms of Service
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- الخط السفلي مع الحقوق -->
-        <div class="border-t border-zinc-800 pt-6 mt-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="text-sm text-gray-500">
-                    All rights reserved © 2024 porniq.com
-                </div>
-                <div class="flex gap-6">
-                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Privacy</a>
-                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Terms</a>
-                    <a href="mailto:aym62729@gmail.com" class="text-xs text-gray-500 hover:text-pink-500 transition">Contact</a>
-                    <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">DMCA</a>
-                </div>
-            </div>
+    <!-- نافذة المقالات -->
+    <div id="articleView" class="fixed inset-0 bg-black z-[110] hidden overflow-y-auto">
+        <div class="max-w-3xl mx-auto p-6 pt-24">
+            <button onclick="closeArticle()" class="bg-zinc-800 text-white px-6 py-2 rounded-full mb-6 hover:bg-pink-600 transition-all">← رجوع للمحتوى</button>
+            <h1 id="artTitle" class="text-4xl font-black mb-8 leading-tight text-pink-500"></h1>
+            <div id="artBody" class="text-gray-300 leading-relaxed text-lg"></div>
         </div>
     </div>
-</footer>
+
+    <!-- نافذة المشغل -->
+    <div id='playWindow' class='fixed top-0 left-0 w-full h-full bg-black/95 z-[9999] hidden overflow-y-auto'>
+        <div class='w-full max-w-[1600px] mx-auto p-4 pt-10 flex flex-col lg:flex-row gap-6'>
+            <div class="flex-1 min-w-0">
+                <div class='flex justify-between items-center mb-4 border-b border-zinc-800 pb-4'>
+                    <div onclick="switchSource('zaj', 'الزواج'); closePlayer();" 
+                         style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #be185d, #6d28d9); padding: 8px 20px; border-radius: 30px; box-shadow: 0 4px 15px rgba(190,24,93,0.3); transition: all 0.3s ease;">
+                        <span style="color: #FFB800; font-weight: 900; font-size: 20px; text-shadow: 0 0 10px rgba(255,184,0,0.5);">PORN</span>
+                        <span style="color: white; font-weight: 900; font-size: 20px;">IQ</span>
+                    </div>
+                    <button onclick="closePlayer()" class="bg-zinc-800 hover:bg-red-600 text-white px-6 py-2 rounded-full transition-all font-bold">إغلاق ✕</button>
+                </div>
+                
+                <!-- حاوية الفيديو -->
+                <div id="vArea" class="relative w-full overflow-hidden mb-4 bg-black" style="border-radius: 16px; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);">
+                    <!-- المحتوى سيتم إضافته عبر JavaScript -->
+                </div>
+
+                <!-- عنوان الفيديو تحت الفيديو -->
+                <div class="mb-6 px-2">
+                    <h3 id='vTitle' class='font-bold text-2xl md:text-3xl text-pink-500 line-clamp-2' style="text-align: right;"></h3>
+                </div>
+                
+                <!-- الاقتراحات تحت الفيديو -->
+                <div id="recBox" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+            </div>
+            
+            <!-- الجانب الأيمن من المشغل -->
+            <aside class="w-full lg:w-80 flex-shrink-0">
+                <div class="sticky top-10 flex flex-col gap-6">
+                    <!-- إعلانات المشغل -->
+                    <div class="flex flex-col gap-4">
+                        <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
+                            <div class="w-full h-full bg-black flex items-center justify-center">
+                                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                    <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
+                                </video>
+                                <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">▶️ فيديو</div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
+                            <div class="w-full h-full bg-black flex items-center justify-center">
+                                <img src="https://i.postimg.cc/zfSyrPnH/hq720.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">
+                                <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">📷 إعلان</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- اقتراحات مميزة -->
+                    <div class="flex flex-col gap-3">
+                        <div class="text-sm font-bold text-white border-b border-zinc-800 pb-2">اقتراحات مميزة</div>
+                        <div id="sideVerticalList" class="flex flex-col gap-3"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- تحميل الجافاسكريبت -->
+    <script src="script.js"></script>
 </body>
 </html>

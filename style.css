@@ -1,8 +1,6 @@
-
-/* ==============================
-
-   ملف التنسيقات الرئيسي - style.css
-   ============================== */
+/* ======================================
+   ملف التنسيقات الرئيسي - النسخة النهائية
+   ====================================== */
 
 /* المتغيرات الأساسية */
 :root { 
@@ -98,7 +96,10 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    min-height: 180px;
 }
+
 
 .video-card .thumb-wrapper img,
 .video-card .thumb-wrapper video {
@@ -106,12 +107,57 @@ body.dark-mode {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: transform 0.3s ease;
 }
 
+/* تحسين الصور العمودية في الكروت */
 .video-card .thumb-wrapper.portrait-content img,
 .video-card .thumb-wrapper.portrait-content video {
     object-fit: contain;
     background: #000;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
+/* ===== عنوان الفيديو تحت الصورة ===== */
+.video-title {
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 8px;
+    color: #e5e5e5;
+}
+
+/* ===== الشبكة الرئيسية ===== */
+#gridBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px !important;
+    align-items: start;
+}
+
+/* ===== مدة الفيديو على الصورة المصغرة ===== */
+.video-duration-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 15;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+}
+
+.video-duration-badge i {
+    margin-right: 2px;
+    font-size: 9px;
 }
 
 /* ===== شريط تحميل الفيديو ===== */
@@ -140,28 +186,6 @@ body.dark-mode {
     height: 100%;
     background: black;
     z-index: 40;
-}
-
-/* ===== مدة الفيديو على الصورة المصغرة ===== */
-.video-duration-badge {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 15;
-    border: 1px solid rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
-    letter-spacing: 0.5px;
-}
-
-.video-duration-badge i {
-    margin-left: 4px;
-    font-size: 11px;
 }
 
 /* ===== زر الثلاث نقاط والقائمة ===== */
@@ -235,7 +259,7 @@ body.dark-mode {
     color: white;
 }
 
-/* ===== للأزرار تحت الفيديو ===== */
+/* ===== الأزرار تحت الفيديو ===== */
 .action-buttons-container {
     display: flex;
     flex-wrap: wrap;
@@ -332,17 +356,54 @@ body.dark-mode {
     object-fit: contain;
 }
 
+#vArea.image-mode {
+    height: auto;
+    min-height: 80vh;
+    max-height: 90vh;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vArea.image-mode img {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+#vArea.image-mode img:hover {
+    transform: scale(1.02);
+}
+
+#vArea.image-mode.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    background: rgba(0,0,0,0.98);
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+}
+
+#vArea.image-mode.fullscreen-image img {
+    max-height: 95vh;
+    max-width: 95vw;
+    cursor: zoom-out;
+}
+
 #vTitle {
     font-size: 1.8rem !important;
     margin-bottom: 20px !important;
-}
-
-/* ===== الشبكة الرئيسية ===== */
-#gridBox {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    align-items: start;
 }
 
 /* ===== تنسيق الإعلانات الجانبية ===== */
@@ -364,23 +425,174 @@ body.dark-mode {
     object-fit: cover;
 }
 
-/* ===== اقتراحات المشغل ===== */
-.suggestion-thumb {
-    width: 96px;
-    height: 54px;
-    background: #111;
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ===== اقتراحات تحت الفيديو - بنفس حجم الواجهة الرئيسية ===== */
+#recBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    gap: 15px !important;
+    margin-top: 20px;
 }
 
-.suggestion-thumb img,
-.suggestion-thumb video {
+#recBox .suggestion-item {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#recBox .relative.rounded-xl {
+    aspect-ratio: 16 / 9 !important; /* تم التوحيد لتصبح متناسقة تماماً */
+    display: flex !important;        /* إجبار المحتوى على التوسيط */
+    align-items: center !important;  /* توسيط عمودي */
+    justify-content: center !important; /* توسيط أفقي */
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #111;
+    overflow: hidden;
+    min-height: auto !important;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+#recBox .suggestion-item:hover .relative.rounded-xl {
+    border-color: #be185d;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(190,24,93,0.3);
+}
+
+#recBox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#recBox .suggestion-item:hover img {
+    transform: scale(1.08);
+}
+
+/* تحسين الصور العمودية في اقتراحات تحت الفيديو */
+#recBox img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+    padding: 5px;
+}
+
+/* شارة المدة/النوع تحت الصورة */
+#recBox .absolute.bottom-2.right-2 {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    background: rgba(0,0,0,0.95) !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+}
+
+/* عنوان الفيديو تحت الصورة */
+#recBox h4 {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    margin: 8px 0 5px 0 !important;
+    line-height: 1.3 !important;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+/* تاغ التصنيف */
+#recBox .text-pink-500 {
+    font-size: 0.65rem !important;
+    padding: 2px 8px !important;
+    margin-top: 5px;
+    display: inline-block;
+    background: rgba(190, 24, 93, 0.25);
+    border-radius: 20px;
+    color: #ffb3d9;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* ===== الاقتراحات الجانبية - مصححة ===== */
+#sideVerticalList {
+    gap: 15px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+#sideVerticalList .flex {
+    display: flex;
+    gap: 15px !important;
+    align-items: center;
+    padding: 10px !important;
+    margin-bottom: 0 !important;
+    background: rgba(0,0,0,0.5);
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sideVerticalList .flex:hover {
+    background: rgba(190, 24, 93, 0.3) !important;
+    border-color: #be185d;
+    transform: translateX(-5px);
+}
+
+#sideVerticalList .w-16 {
+    width: 120px !important; /* تم التكبير من 80 إلى 120 */
+    height: 80px !important;  /* تم التكبير من 53 إلى 80 */
+    border-radius: 8px !important;
+    overflow: hidden;
+    background: #111;
+    border: 2px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+#sideVerticalList .w-16 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تحسين الصور العمودية في الاقتراحات الجانبية */
+#sideVerticalList .w-16 img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000;
+    padding: 3px;
+}
+
+#sideVerticalList .flex-1 h4 {
+    font-size: 0.95rem !important; /* تكبير الخط ليتناسب مع حجم الصورة الجديد */
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+    line-height: 1.3 !important;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#sideVerticalList .flex-1 span {
+    font-size: 0.6rem !important;
+    padding: 3px 8px !important;
+    border-radius: 20px;
+    display: inline-block;
+    background: rgba(190, 24, 93, 0.4);
+    color: #ffb3d9;
+    font-weight: 600;
 }
 
 /* ===== تنسيق الملف الشخصي ===== */
@@ -420,37 +632,6 @@ body.dark-mode {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-#adsBelowPagination .portrait-ad a {
-    background: #0a0a0a;
-}
-
-#adsBelowPagination .portrait-ad img {
-    object-fit: contain !important;
-    background: #000;
-}
-
-#adsBelowPagination .bg-black {
-    background: #0a0a0a !important;
-}
-
-#adsBelowPagination img[src*="via.placeholder.com"] {
-    object-fit: contain !important;
-}
-
-#adsBelowPagination .grid .relative {
-    background: #0a0a0a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#adsBelowPagination .grid img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
 }
 
 /* ===== زر تبديل قاعدة البيانات ===== */
@@ -550,20 +731,6 @@ body.dark-mode {
     justify-content: center; 
     background: rgba(190, 24, 93, 0.5); 
     backdrop-filter: blur(15px); 
-}
-
-.modal-card { 
-    background: white; 
-    padding: 35px; 
-    border-radius: 24px; 
-    text-align: center; 
-    max-width: 400px; 
-    width: 90%; 
-}
-
-.dark-mode .modal-card { 
-    background: #18181b; 
-    color: white; 
 }
 
 /* ===== نافذة المقال ===== */
@@ -682,72 +849,66 @@ footer {
     color: white; 
 }
 
-/* ===== تحسينات للشاشات الصغيرة ===== */
-@media (max-width: 640px) {
-    #adsBelowPagination .grid {
-        gap: 8px;
+/* ===== تحسينات الشاشات المختلفة ===== */
+@media (max-width: 768px) {
+    #gridBox {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
     
-    #adsBelowPagination .h-40 {
-        height: 120px;
+    #recBox {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
     }
     
-    #adsBelowPagination img[style*="max-height: 200px"] {
-        max-height: 150px;
+    #recBox .relative.rounded-xl {
+        min-height: auto;
     }
-}
-
-@media (max-width: 767px) {
-    #vArea {
-        padding-bottom: 56.25%;
-        min-height: 250px;
+    
+    #recBox h4 {
+        font-size: 0.75rem !important;
     }
 }
 
 @media (max-width: 480px) {
-    .action-btn {
-        padding: 6px 12px;
-        font-size: 12px;
+    #gridBox {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px !important;
     }
     
-    #vTitle {
-        font-size: 1.5rem !important;
+    #recBox {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+        gap: 10px !important;
     }
     
-    .card-menu-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 20px;
+    #recBox .relative.rounded-xl {
+        min-height: auto;
     }
     
-    .video-title {
-        font-size: 14px !important;
+    #recBox h4 {
+        font-size: 0.7rem !important;
     }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-    #adsBelowPagination .h-40 {
-        height: 160px;
+    
+    #recBox .text-pink-500 {
+        font-size: 0.55rem !important;
+        padding: 1px 4px !important;
     }
-}
-
-@media (min-width: 768px) {
-    #vTitle {
-        font-size: 2.2rem !important;
+    
+    #recBox .absolute.bottom-2.right-2 {
+        font-size: 8px !important;
+        padding: 1px 4px !important;
     }
-}
-
-@media (min-width: 1200px) and (max-width: 1599px) {
-    #vArea {
-        padding-bottom: 56.25%;
-        min-height: 600px;
+    
+    #sideVerticalList .w-16 {
+        width: 60px !important;
+        height: 40px !important;
     }
-}
-
-@media (min-width: 1600px) {
-    #vArea {
-        padding-bottom: 50%;
-        min-height: 720px;
+    
+    #sideVerticalList .flex-1 h4 {
+        font-size: 0.7rem !important;
+    }
+    
+    #sideVerticalList .flex-1 span {
+        font-size: 0.55rem !important;
+        padding: 2px 6px !important;
     }
 }
 
@@ -856,963 +1017,7 @@ footer {
     z-index: 2;
     transform: scale(1.1);
 }
-/* ===== تحسين حاوية المشغل ===== */
-#vArea {
-    position: relative;
-    width: 100%;
-    background: black;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-/* للفيديو - نسبة 16:9 */
-#vArea.video-mode {
-    height: 0;
-    padding-bottom: 56.25%;
-}
-
-/* للصورة - ارتفاع متغير */
-#vArea.image-mode {
-    height: auto;
-    min-height: 300px;
-    max-height: 80vh;
-    padding-bottom: 0;
-}
-
-#vArea .mainVideo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    object-fit: contain;
-    background: black;
-}
-
-#vArea.video-mode .mainVideo {
-    object-fit: contain;
-}
-
-#vArea.image-mode {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#vArea.image-mode img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-/* ===== تحسين عرض الصور في الاقتراحات ===== */
-.suggestion-thumb {
-    width: 96px;
-    height: 54px;
-    background: #111;
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.suggestion-thumb img,
-.suggestion-thumb video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* للصور العمودية في الاقتراحات */
-.suggestion-thumb.portrait-thumb img {
-    object-fit: contain;
-    background: #000;
-}
-
-/* ===== تحسين عرض الكروت ===== */
-.thumb-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    background: #111;
-    overflow: hidden;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.thumb-wrapper.portrait-content img,
-.thumb-wrapper.portrait-content video {
-    object-fit: contain;
-    background: #000;
-}
-
-/* ===== تحسين مؤشر التحميل ===== */
-.loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    border: 4px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    border-top-color: #be185d;
-    animation: spin 0.8s linear infinite;
-    z-index: 50;
-}
-
-@keyframes spin {
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* ===== تحسين عرض الصور في المقالات ===== */
-.article-image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 20px 0;
-}
-
-.article-image-container img {
-    max-width: 100%;
-    max-height: 500px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-/* ===== تحسين عرض الصور في المشغل ===== */
-#vArea.image-mode {
-    height: auto;
-    min-height: 80vh; /* زيادة الارتفاع إلى 80% من ارتفاع الشاشة */
-    max-height: 90vh; /* السماح بارتفاع أكبر */
-    padding-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-}
-
-#vArea.image-mode img {
-    max-width: 100%;
-    max-height: 85vh; /* الصورة تأخذ 85% من ارتفاع الشاشة */
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    cursor: zoom-in; /* مؤشر للتكبير */
-    transition: transform 0.3s ease;
-}
-
-/* تأثير عند التحويم على الصورة */
-#vArea.image-mode img:hover {
-    transform: scale(1.02);
-}
-
-/* ===== وضع ملء الشاشة للصور (عند النقر) ===== */
-#vArea.image-mode.fullscreen-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10000;
-    background: rgba(0,0,0,0.98);
-    margin: 0;
-    padding: 20px;
-    border-radius: 0;
-}
-
-#vArea.image-mode.fullscreen-image img {
-    max-height: 95vh;
-    max-width: 95vw;
-    cursor: zoom-out;
-}
-
-/* ===== تحسين عرض الصور في الشبكة ===== */
-.thumb-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    background: #111;
-    overflow: hidden;
-    border-radius: 16px; /* زيادة انحناء الحواف */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-}
-
-.thumb-wrapper:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(190, 24, 93, 0.4);
-}
-
-.thumb-wrapper img,
-.thumb-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.thumb-wrapper.portrait-content img,
-.thumb-wrapper.portrait-content video {
-    object-fit: contain;
-    background: #000;
-    padding: 10px; /* إضافة مسافة حول الصورة */
-}
-
-/* ===== تحسين عرض الصور في المقالات ===== */
-.article-image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #111;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 25px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.article-image-container img {
-    max-width: 100%;
-    max-height: 70vh; /* زيادة ارتفاع الصور في المقالات */
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-/* ===== تحسين عرض الصور في الاقتراحات ===== */
-#recBox .aspect-video {
-    aspect-ratio: 16/9;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-#recBox .aspect-video:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(190, 24, 93, 0.3);
-}
-
-#recBox .aspect-video img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* للصور العمودية في الاقتراحات */
-#recBox .aspect-video.portrait-thumb img {
-    object-fit: contain;
-    background: #000;
-    padding: 5px;
-}
-
-/* ===== تحسين عرض الصور في الاقتراحات الجانبية ===== */
-.suggestion-thumb {
-    width: 100px; /* زيادة عرض الصورة */
-    height: 60px; /* زيادة ارتفاع الصورة */
-    background: #111;
-    overflow: hidden;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.suggestion-thumb:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(190, 24, 93, 0.3);
-}
-
-.suggestion-thumb img,
-.suggestion-thumb video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* للصور العمودية في الاقتراحات الجانبية */
-.suggestion-thumb.portrait-thumb img {
-    object-fit: contain;
-    background: #000;
-    padding: 3px;
-}
-
-/* ===== تحسين عرض الصور في الكروت ===== */
-.video-card .thumb-wrapper {
-    aspect-ratio: 3/2;
-    border-radius: 18px;
-    margin-bottom: 12px;
-}
-
-.video-title {
-    font-size: 1.1rem !important; /* تكبير عنوان الفيديو */
-    font-weight: 800;
-    line-height: 1.4;
-}
-
-/* ===== تحسين عرض المقالات ===== */
-.mag-item {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: all 0.4s ease;
-}
-
-.mag-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(190, 24, 93, 0.4);
-}
-
-.mag-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.mag-item:hover img {
-    transform: scale(1.1);
-}
-
-.mag-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-    padding: 25px;
-}
-
-.mag-overlay h3 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-/* ===== تحسين عرض الإعلانات ===== */
-.side-ad-container {
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.side-ad-container:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(190, 24, 93, 0.3);
-}
-
-/* ===== تحسينات للشاشات الصغيرة ===== */
-@media (max-width: 768px) {
-    #vArea.image-mode {
-        min-height: 50vh;
-    }
-    
-    #vArea.image-mode img {
-        max-height: 60vh;
-    }
-    
-    .thumb-wrapper {
-        border-radius: 14px;
-    }
-    
-    .video-title {
-        font-size: 1rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    #vArea.image-mode {
-        min-height: 40vh;
-    }
-    
-    #vArea.image-mode img {
-        max-height: 50vh;
-    }
-    
-    .thumb-wrapper {
-        border-radius: 12px;
-    }
-}
-/* ===== تحسين عرض الصور في المشغل بشكل كبير ===== */
-#vArea.image-mode {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    width: 100% !important;
-    padding-bottom: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #000;
-    position: relative;
-    overflow: hidden;
-}
-
-#vArea.image-mode img {
-    max-width: 100%;
-    max-height: 98vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.9);
-    cursor: zoom-in;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 0 auto;
-}
-
-/* تأثير عند التحويم على الصورة */
-#vArea.image-mode img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 25px 50px rgba(190, 24, 93, 0.3);
-}
-
-/* وضع ملء الشاشة للصور */
-#vArea.image-mode.fullscreen-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
-    z-index: 10000;
-    background: #000;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-}
-
-#vArea.image-mode.fullscreen-image img {
-    max-height: 100vh;
-    max-width: 100vw;
-    cursor: zoom-out;
-    border-radius: 0;
-    box-shadow: none;
-    transform: scale(1);
-}
-
-#vArea.image-mode.fullscreen-image img:hover {
-    transform: scale(1);
-}
-
-/* ===== تحسين عرض الصور في الشبكة ===== */
-.thumb-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    background: #111;
-    overflow: hidden;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-}
-
-.thumb-wrapper img,
-.thumb-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.thumb-wrapper.portrait-content img,
-.thumb-wrapper.portrait-content video {
-    object-fit: contain;
-    background: #000;
-}
-
-/* ===== تحسين عرض الصور في الاقتراحات ===== */
-#recBox .aspect-video {
-    aspect-ratio: 16/9;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    height: 120px;
-}
-
-#recBox .aspect-video img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.suggestion-thumb {
-    width: 100px;
-    height: 60px;
-    background: #111;
-    overflow: hidden;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.suggestion-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* للصور العمودية */
-.suggestion-thumb.portrait-thumb img {
-    object-fit: contain;
-    background: #000;
-}
-/* ===== تحسين عرض الصور في المشغل بشكل نهائي ===== */
-#vArea.image-mode {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    width: 100% !important;
-    padding-bottom: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #000;
-    position: relative;
-    overflow: hidden;
-}
-
-#vArea.image-mode img.player-image {
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.9);
-    transition: all 0.3s ease;
-    cursor: zoom-in;
-}
-
-/* للصور العمودية - أصغر قليلاً */
-#vArea.image-mode img.player-image.portrait-image {
-    max-height: 90vh !important;  /* تم التعديل من 100vh إلى 90vh */
-    max-width: auto !important;
-    width: auto !important;
-    height: 90vh !important;       /* تم التعديل من 100vh إلى 90vh */
-}
-
-/* للصور الأفقية - أصغر قليلاً */
-#vArea.image-mode img.player-image.landscape-image {
-    max-height: 90vh !important;   /* تم التعديل من 100vh إلى 90vh */
-    max-width: 90% !important;     /* تم التعديل من 100% إلى 90% */
-    width: auto !important;
-    height: auto !important;
-}
-
-/* وضع ملء الشاشة */
-#vArea.image-mode.fullscreen-image {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    z-index: 10000 !important;
-    background: #000 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-}
-
-#vArea.image-mode.fullscreen-image img.player-image {
-    max-height: 100vh !important;
-    max-width: 100vw !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    cursor: zoom-out;
-}
-
-#vArea.image-mode.fullscreen-image img.player-image.portrait-image {
-    height: 100vh !important;
-    width: auto !important;
-}
-
-#vArea.image-mode.fullscreen-image img.player-image.landscape-image {
-    width: 100vw !important;
-    height: auto !important;
-}
-
-/* تأثير التحويم */
-#vArea.image-mode img.player-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 25px 50px rgba(190, 24, 93, 0.3);
-}
-
-/* للشاشات الصغيرة */
-@media (max-width: 768px) {
-    #vArea.image-mode img.player-image.portrait-image {
-        max-height: 85vh !important;
-        height: 85vh !important;
-    }
-    
-    #vArea.image-mode img.player-image.landscape-image {
-        max-height: 85vh !important;
-        max-width: 95% !important;
-    }
-}
-
-@media (max-width: 480px) {
-    #vArea.image-mode img.player-image.portrait-image {
-        max-height: 80vh !important;
-        height: 80vh !important;
-    }
-    
-    #vArea.image-mode img.player-image.landscape-image {
-        max-height: 80vh !important;
-        max-width: 98% !important;
-    }
-}
-/* ===== تحسين الصور المصغرة في الاقتراحات ===== */
-#recBox .aspect-video,
-.suggestion-thumb {
-    position: relative;
-    overflow: hidden;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* للصور العمودية في اقتراحات الفيديو */
-#recBox .aspect-video img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#recBox .aspect-video img.portrait-thumb {
-    object-fit: contain !important;
-    background: #000;
-    padding: 5px;
-}
-
-/* تحسين عرض الصور العمودية في الاقتراحات الجانبية */
-.suggestion-thumb {
-    width: 100px;
-    height: 60px;
-    border-radius: 8px;
-}
-
-.suggestion-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.suggestion-thumb img.portrait-thumb {
-    object-fit: contain !important;
-    background: #000;
-    padding: 3px;
-}
-
-/* إضافة كلاس للصور العمودية عن طريق JavaScript */
-@media (max-width: 768px) {
-    #recBox .aspect-video {
-        height: 100px;
-    }
-    
-    .suggestion-thumb {
-        width: 80px;
-        height: 48px;
-    }
-}
-/* ===== تحسين الصور المصغرة في الاقتراحات ===== */
-#recBox .aspect-video,
-.suggestion-thumb {
-    position: relative;
-    overflow: hidden;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* تكبير حجم الاقتراحات تحت الفيديو */
-#recBox {
-    gap: 20px !important; /* زيادة المسافة بين العناصر */
-}
-
-#recBox .aspect-video {
-    height: 160px !important; /* تكبير الارتفاع من 120px إلى 160px */
-    border-radius: 16px !important;
-    margin-bottom: 12px !important;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-#recBox .aspect-video img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-/* تكبير العناوين تحت الاقتراحات */
-#recBox h4 {
-    font-size: 1rem !important; /* تكبير حجم الخط */
-    line-height: 1.5 !important;
-    margin-bottom: 6px !important;
-    font-weight: 700 !important;
-}
-
-/* تكبير الاقتراحات الجانبية */
-.suggestion-thumb {
-    width: 120px !important;  /* تكبير من 100px إلى 120px */
-    height: 72px !important;  /* تكبير من 60px إلى 72px */
-    border-radius: 12px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* تكبير النص في الاقتراحات الجانبية */
-#sideVerticalList .flex-1 h4 {
-    font-size: 0.9rem !important; /* تكبير الخط */
-    font-weight: 700 !important;
-    margin-bottom: 4px !important;
-}
-
-#sideVerticalList .flex-1 span {
-    font-size: 0.7rem !important; /* تكبير حجم التصنيف */
-    padding: 4px 10px !important;
-}
-
-/* تحسين المظهر العام للاقتراحات الجانبية */
-#sideVerticalList .flex {
-    padding: 8px !important;
-    margin-bottom: 8px !important;
-    background: rgba(0,0,0,0.2);
-    border-radius: 16px !important;
-}
-
-/* للصور العمودية في اقتراحات الفيديو */
-#recBox .aspect-video img.portrait-thumb {
-    object-fit: contain !important;
-    background: #000;
-    padding: 8px; /* زيادة المسافة الداخلية */
-}
-
-/* للشاشات المتوسطة */
-@media (min-width: 768px) and (max-width: 1024px) {
-    #recBox .aspect-video {
-        height: 140px !important;
-    }
-    
-    .suggestion-thumb {
-        width: 100px !important;
-        height: 60px !important;
-    }
-}
-
-/* للشاشات الصغيرة */
-@media (max-width: 767px) {
-    #recBox .aspect-video {
-        height: 120px !important;
-    }
-    
-    .suggestion-thumb {
-        width: 90px !important;
-        height: 54px !important;
-    }
-    
-    #recBox h4 {
-        font-size: 0.9rem !important;
-    }
-}
-
-/* للشاشات الكبيرة جداً */
-@media (min-width: 1400px) {
-    #recBox .aspect-video {
-        height: 180px !important; /* تكبير إضافي للشاشات الكبيرة */
-    }
-    
-    .suggestion-thumb {
-        width: 140px !important;
-        height: 84px !important;
-    }
-}
-
-/* تحسين ظهور الصور عند التحميل */
-#recBox .aspect-video img,
-.suggestion-thumb img {
-    transition: transform 0.4s ease, opacity 0.3s ease;
-}
-
-#recBox .aspect-video:hover img,
-.suggestion-thumb:hover img {
-    transform: scale(1.08);
-}
-
-/* تحسين علامات المدة والتصنيف */
-#recBox .absolute.bottom-2.right-2 {
-    font-size: 11px !important;
-    padding: 4px 10px !important;
-    border-radius: 30px !important;
-    background: rgba(0,0,0,0.85) !important;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.2) !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.5px;
-}
-
-/* إضافة تأثيرات حركية */
-#recBox .cursor-pointer {
-    transition: transform 0.2s ease;
-}
-
-#recBox .cursor-pointer:hover {
-    transform: translateY(-3px);
-}
-
-#sideVerticalList .cursor-pointer {
-    transition: all 0.2s ease;
-}
-
-#sideVerticalList .cursor-pointer:hover {
-    transform: translateX(-3px);
-    background: rgba(190, 24, 93, 0.1) !important;
-}
-/* ===== أنماط الإشعارات ===== */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.animate-slideIn {
-    animation: slideIn 0.3s ease-out;
-}
-
-/* ===== زر استعادة الجلسة ===== */
-#restoreSessionBtn {
-    position: relative;
-    overflow: hidden;
-}
-
-#restoreSessionBtn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-#restoreSessionBtn:hover::before {
-    left: 100%;
-}
-
-/* ===== تحسين الشريط العلوي ===== */
-nav .flex.items-center.gap-4 {
-    gap: 0.75rem !important;
-}
-
-/* للشاشات الصغيرة */
-@media (max-width: 768px) {
-    #restoreSessionBtn {
-        padding: 6px 10px !important;
-        font-size: 10px !important;
-    }
-    
-    #restoreSessionBtn span {
-        display: none;
-    }
-    
-    #restoreSessionBtn::after {
-        content: '↩️';
-        font-size: 14px;
-    }
-}
-/* ===== تحسين زر استعادة الجلسة ===== */
-#manualRestoreBtn {
-    position: relative;
-    overflow: hidden;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
-    }
-}
-
-#manualRestoreBtn:hover {
-    animation: none;
-    transform: scale(1.05);
-}
-
-/* للشاشات الصغيرة */
-@media (max-width: 768px) {
-    #manualRestoreBtn {
-        padding: 4px 8px !important;
-        font-size: 9px !important;
-    }
-    
-    #manualRestoreBtn span {
-        display: none;
-    }
-    
-    #manualRestoreBtn::after {
-        content: '↩️';
-        font-size: 12px;
-    }
-}
-/* ===== زر استعادة الجلسة (سيتم إضافته لاحقاً) ===== */
-#manualRestoreBtn {
-    background: linear-gradient(135deg, #9333ea, #db2777);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(147, 51, 234, 0.3);
-}
-
-#manualRestoreBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(147, 51, 234, 0.5);
-}
 /* تحسينات الأداء والسرعة */
 img {
     content-visibility: auto;
@@ -1821,11 +1026,6 @@ img {
 .video-card {
     contain: content;
     will-change: transform;
-}
-
-/* تحسين ظهور الصور */
-.thumb-wrapper {
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
 }
 
 /* تأثيرات حركية محسنة */
@@ -1844,54 +1044,26 @@ img {
     animation: fadeInScale 0.3s ease-out;
 }
 
-/* تحسين اقتراحات البحث */
-#searchSuggestions {
-    max-height: 300px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #be185d #1f1f1f;
+/* ===== تحسين الصور العمودية في جميع الأماكن ===== */
+.video-card .thumb-wrapper.portrait-content img,
+#recBox img.portrait-thumb,
+#sideVerticalList .w-16 img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
 }
 
-#searchSuggestions::-webkit-scrollbar {
-    width: 6px;
+.video-card .thumb-wrapper.portrait-content img {
+    padding: 10px;
 }
 
-#searchSuggestions::-webkit-scrollbar-track {
-    background: #1f1f1f;
+#recBox img.portrait-thumb {
+    padding: 5px;
 }
 
-#searchSuggestions::-webkit-scrollbar-thumb {
-    background: #be185d;
-    border-radius: 3px;
-}
-
-/* تحسين شاشات اللمس */
-@media (hover: none) and (pointer: coarse) {
-    .card-menu-btn {
-        width: 44px;
-        height: 44px;
-    }
-    
-    .pagination-btn {
-        padding: 12px 18px;
-    }
-}
-
-/* وضع ملء الشاشة الحقيقي */
-#vArea.fullscreen:-webkit-full-screen {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-}
-
-#vArea.fullscreen:-moz-full-screen {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-}
-
-#vArea.fullscreen:fullscreen {
-    width: 100vw;
-    height: 100vh;
-    background: black;
+#sideVerticalList .w-16 img.portrait-thumb {
+    padding: 3px;
 }

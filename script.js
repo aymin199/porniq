@@ -1,293 +1,280 @@
 
-
-    const allDBs = {
-        zaj: [ 
-            { id: 1, type: 'video', title: "زواج: رعب ليلة الغابة", image: "https://via.placeholder.com/300", contentURL: "https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview", labels: "رعب", duration: "0011:30" },
-            { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "متحركة" },
-            { id: 300, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 2, type: 'video', title: "زواج: أكشن سريع", image: "https://via.placeholder.com/300", contentURL: "https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview", labels: "أكشن" },
-        ],
-        nesa: [ 
-            { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "متحركة" },
-            { id: 300, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 201, type: 'image', title: "صورة ثابتة 1", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", labels: "ثابتة" }
-        ],
-        haywan: [ 
-            { id: 307570, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 757350, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 357571, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 2575700, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 257572, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 17757, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 25757, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 357575, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 357570, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 4755754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 55754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 575755, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 45754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 57574, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 55, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 45754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 55754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 557555, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 457554, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 55754, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 55745, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-            { id: 21, type: 'video', title: "فيديو أكشن حيوانات", image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن" },
-        ],
-        life: [
-            { 
-                id: 59801, 
-                type: 'article', 
-                title: "وضعية إندراني", 
-                image: "https://i.top4top.io/p_36847xssu1.png", 
-                labels: "",
-                blocks: [
-                    { 
-                        type: 'text', 
-                        content: `
-                            <div style="direction: rtl; text-align: right; line-height: 1.8; font-size: 15px; margin-bottom: 15px;">
-                                <strong style="color: #fb7185; font-size: 16px;">هذه الوضعية المثيرة تضمن ملاءمة محكمة وتجربة مذهلة.</strong> 
-                                <p style="margin-top: 10px;">
-                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني لأنها مريحة وتسمح باختراق عميق جداً.
-                                </p>
-                            </div>
-                            <div style="display: flex; justify-content: center; width: 80%; margin-top: 0px;">
-                              <div style="width: 100%; max-width: 800px; aspect-ratio: 16/9; overflow: hidden; border: 1px solid #fb7185; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px #fb7185 !important;">
-                                <iframe src="https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview" 
-                                        style="width: 100%; height: 100%; border: none;"
-                                        allow="autoplay">
-                                </iframe>
-                              </div>
-                            </div>
-                        ` 
-                    }
-                ]
-            },
-            { 
-                id: 59802, 
-                type: 'article', 
-                title: "وضعية إندراني 2", 
-                image: "https://i.top4top.io/p_36847xssu1.png", 
-                labels: "",
-                blocks: [
-                    { 
-                        type: 'text', 
-                        content: `
-                            <div style="direction: rtl; text-align: right; line-height: 1.8; font-size: 15px; margin-bottom: 15px;">
-                                <strong style="color: #fb7185; font-size: 16px;">هذه الوضعية المثيرة تضمن ملاءمة محكمة وتجربة مذهلة.</strong> 
-                                <p style="margin-top: 10px;">
-                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني لأنها مريحة وتسمح باختراق عميق جداً.
-                                </p>
-                            </div>
-                            <div style="display: flex; justify-content: center; width: 80%; margin-top: 0px;">
-                              <div style="width: 100%; max-width: 800px; aspect-ratio: 16/9; overflow: hidden; border: 1px solid #fb7185; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px #fb7185 !important;">
-                                <iframe src="https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview" 
-                                        style="width: 100%; height: 100%; border: none;"
-                                        allow="autoplay">
-                                </iframe>
-                              </div>
-                            </div>
-                        ` 
-                    }
-                ]
-            },
-            { 
-                id: 59803, 
-                type: 'article', 
-                title: "وضعية إندراني 3", 
-                image: "https://i.top4top.io/p_36847xssu1.png", 
-                labels: "",
-                blocks: [
-                    { 
-                        type: 'text', 
-                        content: `
-                            <div style="direction: rtl; text-align: right; line-height: 1.8; font-size: 15px; margin-bottom: 15px;">
-                                <strong style="color: #fb7185; font-size: 16px;">هذه الوضعية المثيرة تضمن ملاءمة محكمة وتجربة مذهلة.</strong> 
-                                <p style="margin-top: 10px;">
-                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني لأنها مريحة وتسمح باختراق عميق جداً.
-                                </p>
-                            </div>
-                            <div style="display: flex; justify-content: center; width: 80%; margin-top: 0px;">
-                              <div style="width: 100%; max-width: 800px; aspect-ratio: 16/9; overflow: hidden; border: 1px solid #fb7185; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px #fb7185 !important;">
-                                <iframe src="https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview" 
-                                        style="width: 100%; height: 100%; border: none;"
-                                        allow="autoplay">
-                                </iframe>
-                              </div>
-                            </div>
-                        ` 
-                    }
-                ]
-            },
-             { 
-                id: 59803, 
-                type: 'article', 
-                title: "وضعية إندراني 3", 
-                image: "https://i.top4top.io/p_36847xssu1.png", 
-                labels: "",
-                blocks: [
-                    { 
-                        type: 'text', 
-                        content: `
-                            <div style="direction: rtl; text-align: right; line-height: 1.8; font-size: 15px; margin-bottom: 15px;">
-                                <strong style="color: #fb7185; font-size: 16px;">هذه الوضعية المثيرة تضمن ملاءمة محكمة وتجربة مذهلة.</strong> 
-                                <p style="margin-top: 10px;">
-                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني لأنها مريحة وتسمح باختراق عميق جداً.
-                                </p>
-                            </div>
-                            <div style="display: flex; justify-content: center; width: 80%; margin-top: 0px;">
-                              <div style="width: 100%; max-width: 800px; aspect-ratio: 16/9; overflow: hidden; border: 1px solid #fb7185; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px #fb7185 !important;">
-                                <iframe src="https://drive.google.com/file/d/1Gvue9kj2jnp9VnFAkqkgUVrFcVIFuSGp/preview" 
-                                        style="width: 100%; height: 100%; border: none;"
-                                        allow="autoplay">
-                                </iframe>
-                              </div>
-                            </div>
-                        ` 
-                    }
-                ]
-            },
-            { 
-                id: 52, 
-                type: 'article', 
-                title: "صورة متحركة مذهلة", 
-                image: "https://i.top4top.io/p_36847xssu1.png", 
-                labels: "",
-                blocks: [
-                    { 
-                        type: 'text', 
-                        content:`
-                            <div style="direction: rtl; text-align: right; line-height: 1.8; font-size: 15px; margin-bottom: 15px;">
-                                <p>هنا تضع الوصف الخاص بالصورة أو محتوى المقال.</p>
-                            </div>
-                            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px;">
-                                <div style="width: 100%; max-width: 500px; overflow: hidden; border: none !important; box-shadow: none !important;">
-                                    <img src="https://i.top4top.io/p_36847xssu1.png" 
-                                         style="width: 100%; height: auto; display: block; border: none !important; border-radius: 0 !important;" 
-                                         alt="وصف الصورة">
-                                </div>
-                            </div>
-                        `      
-                    }
-                ]
-            }
-        ]
-    };
-    // ================== الإعلانات المركزية ==================
-// غير الروابط هنا فقط وكل الإعلانات في الموقع ستتغير تلقائياً
-const siteAds = {
-    // إعلانات الشبكة الداخلية (تظهر بين الفيديوهات)
-    networkAds: [
-        { 
-            type: 'video',
-            url: "https://d.top4top.io/m_36805y6jr1.mp4",
-            link: "https://example.com",
-            title: "إعلان فيديو 1",
-            description: "شاهد العرض الآن"
-        },
-        { 
-            type: 'gif',
-            url: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif",
-            link: "https://example2.com",
-            title: "إعلان GIF",
-            description: "عرض محدود"
-        },
-        { 
-            type: 'image',
-            url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg",
-            link: "https://example3.com",
-            title: "إعلان صورة 1",
-            description: "خصم 50%"
-        },
-        { 
-            type: 'video',
-            url: "https://d.top4top.io/m_36805y6jr1.mp4",
-            link: "https://example4.com",
-            title: "إعلان فيديو 2",
-            description: "عرض حصري"
-        },
-        { 
-            type: 'image',
-            url: "https://b.top4top.io/p_3680ejx641.jpg",
-            link: "https://example5.com",
-            title: "إعلان صورة 2",
-            description: "لفترة محدودة"
-        }
+ const allDBs = {
+    zaj: [ 
+        { id: 1, type: 'video', title: "زواج: رعب ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0011:30" },
+        { id: 2, type: 'video', title: "زواج: أكشن سريع", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0008:45" },
+        { id: 3, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
+        { id: 4, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
+        { id: 5, type: 'image', title: "صورة زواج 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 6, type: 'image', title: "صورة زواج 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 7, type: 'video', title: "زواج: كوميدي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
+        { id: 8, type: 'video', title: "زواج: دراما", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
+        { id: 9, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 10, type: 'video', title: "زواج: أكشن 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
+        { id: 11, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
+        { id: 12, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 13, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
+        { id: 14, type: 'video', title: "زواج: رومانسي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0016:40" },
+        { id: 15, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 16, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
+        { id: 17, type: 'video', title: "زواج: رعب 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0013:20" },
+        { id: 18, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 19, type: 'video', title: "زواج: كوميدي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0011:45" },
+        { id: 20, type: 'video', title: "زواج: دراما 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0019:30" },
+        { id: 21, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 22, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
+        { id: 23, type: 'video', title: "زواج: رومانسي 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0017:50" },
+        { id: 24, type: 'image', title: "صورة زواج 8", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 25, type: 'video', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
     ],
-
-    // إعلانات الجانب الأيسر (الواجهة الرئيسية)
-    sidebarAds: [
-        { url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", type: "image" },
-        { url: "https://d.top4top.io/m_36805y6jr1.mp4", link: "https://example2.com", type: "video" },
-        { url: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif", link: "https://example3.com", type: "gif" },
-        { url: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example4.com", type: "image" }
+    
+    nesa: [ 
+        { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "متحركة" },
+        { id: 201, type: 'image', title: "صورة ثابتة 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ثابتة" },
+        { id: 202, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
+        { id: 203, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
+        { id: 204, type: 'video', title: "فيديو نساء 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:30" },
+        { id: 205, type: 'image', title: "صورة أزياء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "أزياء" },
+        { id: 206, type: 'image', title: "صورة جمال", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "جمال" },
+        { id: 207, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
+        { id: 208, type: 'image', title: "صورة مكياج", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "مكياج" },
+        { id: 209, type: 'image', title: "صورة عصرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "عصرية" },
+        { id: 210, type: 'video', title: "فيديو نساء 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "موضة", duration: "0006:15" },
+        { id: 211, type: 'image', title: "صورة سفر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "سفر" },
+        { id: 212, type: 'image', title: "صورة استرخاء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "استرخاء" },
+        { id: 213, type: 'video', title: "فيديو نساء 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رقص", duration: "0004:30" },
+        { id: 214, type: 'image', title: "صورة طعام", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طعام" },
+        { id: 215, type: 'image', title: "صورة قهوة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "قهوة" },
+        { id: 216, type: 'video', title: "فيديو نساء 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "يoga", duration: "0008:20" },
+        { id: 217, type: 'image', title: "صورة حديقة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "حديقة" },
+        { id: 218, type: 'image', title: "صورة شاطئ", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "شاطئ" },
+        { id: 219, type: 'video', title: "فيديو نساء 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طبخ", duration: "0009:45" },
+        { id: 220, type: 'image', title: "صورة غروب", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "غروب" }
     ],
-
-    // إعلانات تحت الترقيم - مستطيل كبير
-    paginationLargeAds: [
-        {
-            image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg",
-            link: "https://example1.com",
-            title: "عرض خاص",
-            isPortrait: false
-        },
-        {
-            image: "https://b.top4top.io/p_3680ejx641.jpg",
-            link: "https://example2.com",
-            title: "عروض حصرية",
-            isPortrait: false
-        },
-        {
-            image: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif",
-            link: "https://example3.com",
-            title: "عضوية مميزة",
-            isPortrait: false
-        }
+    
+    haywan: [ 
+        { id: 307570, type: 'video', title: "فيديو أكشن حيوانات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:20" },
+        { id: 757350, type: 'video', title: "فيديو حيوانات مفترسة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مفترسة", duration: "0007:30" },
+        { id: 357571, type: 'video', title: "فيديو حيوانات أليفة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أليفة", duration: "0004:45" },
+        { id: 2575700, type: 'video', title: "فيديو حيوانات الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "غابة", duration: "0006:15" },
+        { id: 257572, type: 'video', title: "فيديو حيوانات بحرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "بحرية", duration: "0008:00" },
+        { id: 17757, type: 'video', title: "فيديو طيور", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طيور", duration: "0003:30" },
+        { id: 25757, type: 'video', title: "فيديو حيوانات صحراوية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "صحراء", duration: "0005:50" },
+        { id: 357575, type: 'video', title: "فيديو حيوانات قطبية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "قطبية", duration: "0006:40" },
+        { id: 357570, type: 'video', title: "فيديو حيوانات استوائية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "استوائية", duration: "0007:10" },
+        { id: 4755754, type: 'video', title: "فيديو زواحف", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "زواحف", duration: "0004:20" },
+        { id: 55754, type: 'video', title: "فيديو حشرات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "حشرات", duration: "0003:15" },
+        { id: 575755, type: 'video', title: "فيديو ديناصورات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ديناصورات", duration: "0009:30" },
+        { id: 45754, type: 'video', title: "فيديو حيوانات ليلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ليلية", duration: "0005:25" },
+        { id: 57574, type: 'video', title: "فيديو حيوانات نادرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نادرة", duration: "0007:45" },
+        { id: 55, type: 'video', title: "فيديو حيوانات أفريقيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أفريقيا", duration: "0008:50" },
+        { id: 45754, type: 'video', title: "فيديو حيوانات آسيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "آسيا", duration: "0006:30" },
+        { id: 55754, type: 'video', title: "فيديو حيوانات أمريكا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أمريكا", duration: "0007:20" },
+        { id: 557555, type: 'video', title: "فيديو حيوانات أستراليا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أستراليا", duration: "0005:40" },
+        { id: 457554, type: 'video', title: "فيديو حيوانات أوروبا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أوروبا", duration: "0004:55" },
+        { id: 55754, type: 'video', title: "فيديو حيوانات الجبل", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "جبلية", duration: "0006:10" },
+        { id: 55745, type: 'video', title: "فيديو حيوانات النهر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نهرية", duration: "0005:35" },
+        { id: 21, type: 'video', title: "فيديو حيوانات المزرعة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مزرعة", duration: "0007:15" }
     ],
-
-    // إعلانات تحت الترقيم - مربعات
-    paginationSquareAds: [
-        {
-            image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg",
-            link: "https://example1.com",
-            title: "إعلان 1",
-            isPortrait: false
+    
+    life: [
+        { 
+            id: 59801, 
+            type: 'article', 
+            title: "وضعية إندراني", 
+            image: "https://l.top4top.io/p_3702uwnur1.png", 
+            labels: "تعليمي",
+            blocks: [
+                { 
+                    type: 'text', 
+                    content: `
+                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
+                            <h2 style="color: #fb7185; margin-bottom: 15px;">وضعية إندراني</h2>
+                            <p style="margin-bottom: 15px;">
+                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني 
+                                لأنها مريحة وتسمح باختراق عميق جداً.
+                            </p>
+                            <div style="margin: 20px 0;">
+                                <img src="https://l.top4top.io/p_3702uwnur1.png" 
+                                     style="width: 100%; max-width: 500px; border-radius: 15px;" 
+                                     alt="صورة توضيحية">
+                            </div>
+                            <video controls style="width: 100%; max-width: 600px; border-radius: 15px;">
+                                <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    ` 
+                }
+            ]
         },
-        {
-            image: "https://b.top4top.io/p_3680ejx641.jpg",
-            link: "https://example2.com",
-            title: "إعلان 2",
-            isPortrait: false
+        { 
+            id: 59802, 
+            type: 'article', 
+            title: "نصائح للحياة الزوجية", 
+            image: "https://l.top4top.io/p_3702uwnur1.png", 
+            labels: "نصائح",
+            blocks: [
+                { 
+                    type: 'text', 
+                    content: `
+                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
+                            <h2 style="color: #fb7185; margin-bottom: 15px;">نصائح ذهبية للحياة الزوجية</h2>
+                            <ul style="margin-right: 20px; margin-bottom: 20px;">
+                                <li>التواصل المستمر هو أساس العلاقة الناجحة</li>
+                                <li>احترام المساحة الشخصية للطرف الآخر</li>
+                                <li>المفاجآت الرومانسية تضفي جواً من السعادة</li>
+                            </ul>
+                            <div style="margin: 20px 0;">
+                                <img src="https://l.top4top.io/p_3702uwnur1.png" 
+                                     style="width: 100%; max-width: 500px; border-radius: 15px;" 
+                                     alt="صورة نصائح">
+                            </div>
+                        </div>
+                    ` 
+                }
+            ]
         },
-        {
-            image: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif",
-            link: "https://example3.com",
-            title: "إعلان 3",
-            isPortrait: false
-        }
-    ],
-
-    // إعلانات المشغل الجانبية
-    playerAds: [
-        {
-            type: 'video',
-            url: "https://d.top4top.io/m_36805y6jr1.mp4",
-            link: "https://example1.com",
-            title: "إعلان فيديو"
+        { 
+            id: 59803, 
+            type: 'article', 
+            title: "أفضل 10 وضعيات", 
+            image: "https://l.top4top.io/p_3702uwnur1.png", 
+            labels: "توب 10",
+            blocks: [
+                { 
+                    type: 'text', 
+                    content: `
+                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
+                            <h2 style="color: #fb7185; margin-bottom: 15px;">أفضل 10 وضعيات للأزواج</h2>
+                            <ol style="margin-right: 20px; margin-bottom: 20px;">
+                                <li>وضعية إندراني</li>
+                                <li>وضعية الملعقة</li>
+                                <li>الوضعية التبشيرية</li>
+                                <li>وضعية الفارسة</li>
+                                <li>وضعية الكلبية</li>
+                            </ol>
+                            <video controls style="width: 100%; max-width: 600px; border-radius: 15px;">
+                                <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    ` 
+                }
+            ]
         },
-        {
-            type: 'image',
-            url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg",
-            link: "https://example2.com",
-            title: "إعلان صورة"
+        { 
+            id: 59804, 
+            type: 'article', 
+            title: "أسرار العلاقة الحميمة", 
+            image: "https://l.top4top.io/p_3702uwnur1.png", 
+            labels: "أسرار",
+            blocks: [
+                { 
+                    type: 'text', 
+                    content: `
+                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
+                            <h2 style="color: #fb7185; margin-bottom: 15px;">أسرار العلاقة الحميمة</h2>
+                            <p>اكتشف أسرار العلاقة الحميمة الناجحة...</p>
+                            <img src="https://l.top4top.io/p_3702uwnur1.png" style="width:100%; max-width:500px;">
+                        </div>
+                    ` 
+                }
+            ]
+        },
+        { 
+            id: 59805, 
+            type: 'article', 
+            title: "الرومانسية في الزواج", 
+            image: "https://l.top4top.io/p_3702uwnur1.png", 
+            labels: "رومانسية",
+            blocks: [
+                { 
+                    type: 'text', 
+                    content: `
+                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
+                            <h2 style="color: #fb7185; margin-bottom: 15px;">كيف تحافظ على الرومانسية</h2>
+                            <p>نصائح للحفاظ على الرومانسية في العلاقة الزوجية...</p>
+                            <img src="https://l.top4top.io/p_3702uwnur1.png" style="width:100%; max-width:500px;">
+                        </div>
+                    ` 
+                }
+            ]
         }
     ]
-    
 };
 
-// دوال جلب الإعلانات من المكان المركزي
+// ================ الإعلانات ================
+const siteAds = {
+    networkAds: [ 
+        { type: 'video', url: "https://d.top4top.io/m_36805y6jr1.mp4", link: "https://example.com", title: "إعلان فيديو 1", description: "شاهد العرض الآن" },
+        { type: 'gif', url: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif", link: "https://example2.com", title: "إعلان GIF", description: "عرض محدود" },
+        { type: 'image', url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example3.com", title: "إعلان صورة 1", description: "خصم 50%" }
+    ],
+    sidebarAds: [
+        { url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", type: "image" },
+        { url: "https://d.top4top.io/m_36805y6jr1.mp4", link: "https://example2.com", type: "video" }
+    ],
+    paginationLargeAds: [
+        { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "عرض خاص", isPortrait: false },
+        { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "عروض حصرية", isPortrait: false }
+    ],
+    paginationSquareAds: [
+        { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "إعلان 1", isPortrait: false },
+        { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "إعلان 2", isPortrait: false }
+    ]
+};
+
+// ================ المتغيرات العامة ================
+var tempRegistration = null;
+var generatedVerificationCode = null;
+var lastActivityTime = new Date().getTime();
+var userIdle = false;
+var pageVisible = true;
+var ageVerificationEnabled = true;
+var favorites = JSON.parse(localStorage.getItem('myFavs')) || [];
+var likes = JSON.parse(localStorage.getItem('myLikes')) || [];
+var dislikes = JSON.parse(localStorage.getItem('myDislikes')) || [];
+var watchLater = JSON.parse(localStorage.getItem('myWatchLater')) || [];
+var likesCount = JSON.parse(localStorage.getItem('likesCount')) || {};
+var currentSourceKey = localStorage.getItem('selectedSource') || 'zaj';
+var currentSourceName = localStorage.getItem('selectedSourceName') || 'الزواج';
+var currentType = localStorage.getItem('selectedType') || 'video';
+var currentCat = localStorage.getItem('selectedCat') || 'all content';
+var savedParent = localStorage.getItem('activeParent');
+var activeParent = (savedParent === "null" || savedParent === null || savedParent === undefined) ? null : savedParent;
+var currentPlayingId = localStorage.getItem('currentPlayingId') || null;
+var dummyData = (typeof allDBs !== 'undefined' && allDBs[currentSourceKey]) ? [...allDBs[currentSourceKey]] : [];
+var currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
+var usersDB = JSON.parse(localStorage.getItem('usersDB')) || [];
+var currentLang = localStorage.getItem('siteLang') || 'en';
+var itemsPerPage = 20;
+var currentPage = 1;
+var profileMode = null;
+var scrollPosition = 0;
+var isLoginMode = true;
+
+// ================ Firebase (معطل مؤقتاً) ================
+const firebaseConfig = {
+    apiKey: "AIzaSyBk2NxXkXkXkXkXkXkXkXkXkXkXkXk",
+    authDomain: "my-platform-2026.firebaseapp.com",
+    projectId: "my-platform-2026",
+    storageBucket: "my-platform-2026.appspot.com",
+    messagingSenderId: "123456789012",
+    appId: "1:123456789012:web:abc123def4567890"
+};
+
+// تهيئة Firebase بأمان
+try {
+    if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+} catch (e) {
+    console.log("Firebase غير متاح");
+}
+
+const auth = typeof firebase !== 'undefined' ? firebase.auth() : null;
+const provider = auth ? new firebase.auth.GoogleAuthProvider() : null;
+
+// ================ دوال جلب الإعلانات ================
 function getRandomNetworkAd() {
     return siteAds.networkAds[Math.floor(Math.random() * siteAds.networkAds.length)];
 }
@@ -305,112 +292,16 @@ function getRandomPaginationSquareAds(count = 3) {
     return shuffled.slice(0, count);
 }
 
-function getPlayerAds() {
-    return siteAds.playerAds; // إرجاع كل الإعلانات
-}
-    // ✅ بيانات التسجيل المؤقتة لحين التحقق من الرمز
-var tempRegistration = null;
-var generatedVerificationCode = null;
-    // ===== متغيرات الإجراءات =====
-     var lastActivityTime = new Date().getTime();
-    var userIdle = false;
-    var pageVisible = true;
-    var ageVerificationEnabled = true;
-    var favorites = JSON.parse(localStorage.getItem('myFavs')) || [];
-    var likes = JSON.parse(localStorage.getItem('myLikes')) || [];
-    var dislikes = JSON.parse(localStorage.getItem('myDislikes')) || [];
-    var watchLater = JSON.parse(localStorage.getItem('myWatchLater')) || [];
-    var likesCount = JSON.parse(localStorage.getItem('likesCount')) || {};
-    // استعادة القيم مع التأكد من وجود قيم افتراضية صحيحة
-   // استعادة القيم مع التأكد من وجود قيم افتراضية صحيحة
-// ✅ إذا لم يكن هناك قسم محفوظ مسبقاً (أول مرة)، استخدم 'zaj' (قسم Straight)
-var currentSourceKey = localStorage.getItem('selectedSource');
-var currentSourceName = localStorage.getItem('selectedSourceName');
-
-// إذا لم يكن هناك قسم محفوظ (أول مرة)، نستخدم 'zaj' (Straight) ونتأكد من حفظه
-if (!currentSourceKey) {
-    currentSourceKey = 'zaj';
-    currentSourceName = 'الزواج';
-    // حفظ القيم الافتراضية فوراً حتى لا تظهر أقسام أخرى في أول مرة
-    localStorage.setItem('selectedSource', 'zaj');
-    localStorage.setItem('selectedSourceName', 'الزواج');
-} else {
-    // إذا كان هناك قسم محفوظ، نستخدمه كما هو
-    currentSourceKey = currentSourceKey;
-    currentSourceName = currentSourceName || 'الزواج';
+function getRandomAd() {
+    return getRandomNetworkAd();
 }
 
-var currentType = localStorage.getItem('selectedType') || 'video';
-var currentCat = localStorage.getItem('selectedCat') || 'all content';
-    // إصلاح مشكلة activeParent
-    var savedParent = localStorage.getItem('activeParent');
-    var activeParent = (savedParent === "null" || savedParent === null || savedParent === undefined) ? null : savedParent;
-
-    // استعادة الفيديو الحالي
-    var currentPlayingId = localStorage.getItem('currentPlayingId') || null;
-
-    // ===== نظام تسجيل الدخول =====
-
-    // تأكد أن allDBs موجودة قبل الاستخدام
-    var dummyData = (typeof allDBs !== 'undefined' && allDBs[currentSourceKey]) ? [...allDBs[currentSourceKey]] : [];
-    // ===== نظام تسجيل الدخول اليدوي (بدون Firebase) =====
-// ✅ متغير المستخدم الحالي
-var currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
-
-// ✅ قاعدة بيانات المستخدمين (محفوظة في localStorage)
-// ✅ قاعدة بيانات المستخدمين
-var usersDB = JSON.parse(localStorage.getItem('usersDB')) || [];
-
-// ===== نظام تبديل الاتجاه فقط (بدون ترجمة) =====
-var currentLang = 'en'; // 'en' for English, 'ar' for Arabic
-
-// بعد تعريف currentPlayingId مباشرة
-var currentPlayingId = localStorage.getItem('currentPlayingId') || null;
-var lastSavedPage = localStorage.getItem('lastPage') || 1; // أضف هذا السطر
-
-
-
-function toggleLanguage() {
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
-    localStorage.setItem('siteLang', currentLang);
-    
-    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = currentLang;
-    
-    // تغيير نص الزر حسب اللغة المختارة - تصحيح الشرط
-    if (currentLang === 'ar') {
-        document.getElementById('langBtn').innerHTML = '🌐 AR';
-    } else {
-        document.getElementById('langBtn').innerHTML = '🌐 EN';
-    }
-    updateAllTexts();
-    renderMenu();
-    updateUserUI();
-    updateSubTitle(); 
-}
+// ================ الترجمة ================
 const translations = {
     en: {
-        // العناوين الرئيسية
-        sectionNames: {
-            zaj: "Straight",
-            nesa: "Lesbian", 
-            haywan: "Trans",
-            life: "Sex Positions",
-        },
-        sectionTitles: {
-            zaj: "Hot porn videos",
-            nesa: "Lesbian Porn Videos",
-            haywan: "Transgender Porn Videos",
-            life: "Sex Positions - Educational Guides"
-        },
-        subTitles: {
-            zaj: "Watch the hottest straight porn videos in HD quality",
-            nesa: "Best videos - Girl having sex with another woman",  
-            haywan: "Amazing transgender porn videos - TS performers",
-            life: "Learn new sex positions with our educational guides"
-        },
-        
-        // البحث والملف الشخصي
+        sectionNames: { zaj: "Straight", nesa: "Lesbian", haywan: "Trans", life: "Sex Positions" },
+        sectionTitles: { zaj: "Hot porn videos", nesa: "Lesbian Porn Videos", haywan: "Transgender Porn Videos", life: "Sex Positions - Educational Guides" },
+        subTitles: { zaj: "Watch the hottest straight porn videos in HD quality", nesa: "Best videos - Girl having sex with another woman", haywan: "Amazing transgender porn videos - TS performers", life: "Learn new sex positions with our educational guides" },
         searchPlaceholder: "Search for video...",
         profileSaved: "My Saved Profile:",
         btnFav: "❤ Favorites",
@@ -419,20 +310,11 @@ const translations = {
         videosCount: "📹 0 Videos",
         imagesCount: "🖼️ 0 Images",
         articlesCount: "📄 0 Articles",
-        
-        // أزرار القائمة
         videosMenu: "Videos",
         staticImages: "Image",
         animatedImages: "Gif",
         allContentMenu: "All Content",
-        
-        // أزرار المشغل
         close: "Close ✕",
-        sponsored1: "Sponsored Ad 1",
-        sponsored2: "Sponsored Ad 2",
-        specialSuggestions: "Special Suggestions",
-        
-        // إجراءات
         saved: "Saved",
         addToFav: "Add to Favorites",
         removeFromFav: "Remove from Favorites",
@@ -444,20 +326,14 @@ const translations = {
         disliked: "Disliked",
         share: "Share",
         copied: "Copied",
-        
-        // المقالات
         backToContent: "← Back to Content",
         relatedTopics: "Related Topics",
-        
-        // تسجيل الدخول
         welcome: "Welcome",
         logout: "Logout",
         loginButton: "🔐 Login",
-        
-        // الفوتر (الجزء السفلي) - هذه أهم جزء
         leftColumnTitle: "Videos, images and articles are shared on this site via the links below",
         link1: "YouTube",
-        link2: "Facebook", 
+        link2: "Facebook",
         link3: "Twitter",
         link4: "Instagram",
         link5: "TikTok",
@@ -474,35 +350,14 @@ const translations = {
         termsOfService: "Terms of Service",
         footerRights: "All rights reserved © 2024 porniq.com",
         footerDesc: "Porniq provides you with unlimited free porn videos with the hottest pornstars. Enjoy the largest amateur porn community on the net.",
-        
-        // عناوين الصفحات
         favTitle: "Favorites",
         likeTitle: "Liked Content",
         watchLaterTitle: "Watch Later",
     },
-    
     ar: {
-        // العناوين الرئيسية
-        sectionNames: {
-            zaj: "مستقيم <span style='color:#FF69B4; font-size: 1.8em;'>⚤</span>",
-            nesa: "سحاقيات <span style='color: #FF69B4; font-size: 1.8em;'>⚢</span>",
-            haywan: "متحولين جنسياً <span style='color: #9333EA; font-size: 1.5em;'>🏳️‍⚧️</span>",
-            life: 'وضعيات جنسية <img src="https://i.ibb.co/p6wChTmv/mistakes-porn-stars.webp" style="width: 70px; height: 70px; display: inline-block; vertical-align: middle; margin-rigt: 5px;" alt="married life">'
-        },
-        sectionTitles: {
-            zaj: "مقاطع فيديو إباحية ساخنة",
-            nesa: "مقاطع فيديو إباحية للمثليات",
-            haywan: "مقاطع فيديو إباحية للمتحولين جنسياً",
-            life: "وضعيات جنسية - أدلة تعليمية"
-        },
-        subTitles: {
-            zaj: "شاهد أفضل الفيديوهات والأفلام الساخنة ⚤ PORNIQ",
-            nesa: "أفضل فيديوهات وأفلام ⚢ فتاة تمارس الجنس مع امرأة أخرى",
-            haywan: "شاهد أفضل الفيديوهات والأفلام الساخنة للمتحولين جنسياً 🏳️‍⚧️ PORNIQ",
-            life: "تعلم وضعيات جنسية تعليمية مع الشرح بالفيديو والنصوص والصور ⚑PORNiQ"
-        },
-        
-        // البحث والملف الشخصي
+        sectionNames: { zaj: "مستقيم ⚤", nesa: "سحاقيات ⚢", haywan: "متحولين جنسياً ⚧", life: "وضعيات جنسية" },
+        sectionTitles: { zaj: "مقاطع فيديو إباحية ساخنة", nesa: "مقاطع فيديو إباحية للمثليات", haywan: "مقاطع فيديو إباحية للمتحولين جنسياً", life: "وضعيات جنسية - أدلة تعليمية" },
+        subTitles: { zaj: "شاهد أفضل الفيديوهات والأفلام الساخنة ⚤ PORNIQ", nesa: "أفضل فيديوهات وأفلام ⚢ فتاة تمارس الجنس مع امرأة أخرى", haywan: "شاهد أفضل الفيديوهات والأفلام الساخنة للمتحولين جنسياً 🏳️‍⚧️ PORNIQ", life: "تعلم وضعيات جنسية تعليمية مع الشرح بالفيديو والنصوص والصور ⚑PORNiQ" },
         searchPlaceholder: "ابحث عن فيديو...",
         profileSaved: "ملفي المحفوظ:",
         btnFav: "❤ المفضل",
@@ -511,20 +366,11 @@ const translations = {
         videosCount: "📹 0 فيديو",
         imagesCount: "🖼️ 0 صورة",
         articlesCount: "📄 0 مقال",
-        
-        // أزرار القائمة
         videosMenu: "الفيديوهات",
         staticImages: "صور ثابتة",
         animatedImages: "صور متحركة",
         allContentMenu: "كل المحتوى",
-        
-        // أزرار المشغل
         close: "إغلاق ✕",
-        sponsored1: "إعلان ممول 1",
-        sponsored2: "إعلان ممول 2",
-        specialSuggestions: "اقتراحات مميزة",
-        
-        // إجراءات
         saved: "تم الحفظ",
         addToFav: "إضافة للمفضلة",
         removeFromFav: "إزالة من المفضلة",
@@ -536,20 +382,14 @@ const translations = {
         disliked: "غير معجب",
         share: "مشاركة",
         copied: "تم النسخ",
-        
-        // المقالات
         backToContent: "← رجوع للمحتوى",
         relatedTopics: "مواضيع ذات صلة",
-        
-        // تسجيل الدخول
         welcome: "مرحباً",
         logout: "تسجيل خروج",
         loginButton: "🔐 تسجيل الدخول",
-        
-        // الفوتر (الجزء السفلي) - هذه أهم جزء
         leftColumnTitle: "يتم مشاركة في هذا الموقع الفيديوهات والصور والمقالات عبر الروابط تحت",
         link1: "يوتيوب",
-        link2: "فيسبوك", 
+        link2: "فيسبوك",
         link3: "تويتر",
         link4: "انستغرام",
         link5: "تيك توك",
@@ -566,47 +406,56 @@ const translations = {
         termsOfService: "شروط الخدمة",
         footerRights: "جميع الحقوق محفوظة © 2024 porniq.com",
         footerDesc: "يُقدّم لك موقع Porniq عددًا غير محدود من مقاطع الفيديو الإباحية المجانية مع أشهر نجمات الإباحية. استمتع بأكبر مجتمع إباحي للهواة على الإنترنت.",
-        
-        // عناوين الصفحات
         favTitle: "المحتوى المفضل",
         likeTitle: "المحتوى المعجب به",
         watchLaterTitle: "مشاهدة لاحقاً",
     }
 };
+
 function t(key) {
-    return translations[currentLang][key] || key;
+    return translations[currentLang] && translations[currentLang][key] ? translations[currentLang][key] : key;
 }
+
+// ================ دوال الترجمة واللغة ================
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('siteLang', currentLang);
+    
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = currentLang;
+    
+    document.getElementById('langBtn').innerHTML = currentLang === 'ar' ? '🌐 AR' : '🌐 EN';
+    
+    updateAllTexts();
+    renderMenu();
+    updateUserUI();
+    updateSubTitle();
+}
+
 function updateAllTexts() {
-    // الحصول على عناصر الأقسام
     const sectionZaj = document.getElementById('sectionZaj');
     const sectionNesa = document.getElementById('sectionNesa');
     const sectionHaywan = document.getElementById('sectionHaywan');
     const sectionLife = document.getElementById('sectionLife');
     
-    // ✅ التحقق من اللغة الحالية وتعيين النص المناسب
     if (currentLang === 'en') {
-        // إنجليزي
         if (sectionZaj) sectionZaj.innerText = "Straight";
         if (sectionNesa) sectionNesa.innerText = "Lesbian";
         if (sectionHaywan) sectionHaywan.innerText = "Trans";
         if (sectionLife) sectionLife.innerText = "Sex Positions";
     } else {
-        // عربي
-      if (sectionZaj) sectionZaj.innerHTML ='مستقيم <span style="color: #FF69B4; font-size: 1.8em;">⚤</span>';
-      if (sectionNesa) sectionNesa.innerHTML = 'سحاقيات <span style="color:#FF69B4; font-size: 2em ;">⚢</span>';
-       if (sectionHaywan) sectionHaywan.innerHTML = 'متحولين جنسياً <span style="color: #FF69B4; font-size:1.5em;">⚧</span>';
-        if (sectionLife) sectionLife.innerHTML = 'وضعيات جنسية <img src="https://i.ibb.co/p6wChTmv/mistakes-porn-stars.webp.png" style="width: 40px; height: 40px; display: inline-block; vertical-align: middle; margin-right: 5px;">';
+        if (sectionZaj) sectionZaj.innerHTML = 'مستقيم <span style="color: #FF69B4; font-size: 1.8em;">⚤</span>';
+        if (sectionNesa) sectionNesa.innerHTML = 'سحاقيات <span style="color:#FF69B4; font-size: 2em;">⚢</span>';
+        if (sectionHaywan) sectionHaywan.innerHTML = 'متحولين جنسياً <span style="color: #FF69B4; font-size:1.5em;">⚧</span>';
+        if (sectionLife) sectionLife.innerHTML = 'وضعيات جنسية';
     }
     
-    // تحديث placeholder البحث
     const searchBox = document.getElementById('searchBox');
     if (searchBox) searchBox.placeholder = t('searchPlaceholder');
     
-    // تحديث الملف الشخصي
     const profileTitle = document.querySelector('.profile-card .text-\\[10px\\]');
     if (profileTitle) profileTitle.innerText = t('profileSaved');
     
-    // تحديث أزرار الملف الشخصي
     const btnFav = document.getElementById('btnFav');
     if (btnFav) btnFav.innerText = t('btnFav');
     
@@ -616,10 +465,8 @@ function updateAllTexts() {
     const btnWatchLater = document.getElementById('btnWatchLater');
     if (btnWatchLater) btnWatchLater.innerText = t('btnWatchLater');
     
-    // تحديث الإحصائيات
     updateStats();
     
-    // تحديث عنوان الصفحة الرئيسية
     const catTitle = document.getElementById('catTitle');
     if (catTitle) {
         if (profileMode) {
@@ -631,45 +478,24 @@ function updateAllTexts() {
         }
     }
     
-    // تحديث اسم القسم النشط
-  // تحديث اسم القسم النشط
-const activeName = document.getElementById('activeName');
-if (activeName && currentSourceKey) {
-    activeName.innerHTML = t('sectionNames')[currentSourceKey];
-}
-    
-    // تحديث الفوتر
-    const footerText = document.querySelector('.footer-container .text-lg');
-    if (footerText) footerText.innerText = t('footerRights');
-    
-    const footerDesc = document.querySelector('.footer-container p');
-    if (footerDesc) footerDesc.innerText = t('footerDesc');
-    
-    const footerLinks = document.querySelectorAll('.footer-link');
-    if (footerLinks.length >= 3) {
-        footerLinks[0].innerText = t('privacyPolicy');
-        footerLinks[1].innerText = t('contactUs');
-        footerLinks[2].innerText = t('aboutUs');
+    const activeName = document.getElementById('activeName');
+    if (activeName && currentSourceKey) {
+        activeName.innerHTML = t('sectionNames')[currentSourceKey];
     }
 }
-// ===== نظام تسجيل الدخول بحساب Google (إضافي) =====
-// إعدادات Firebase - استبدلها بمفاتيح مشروعك الحقيقي
-const firebaseConfig = {
-    apiKey: "AIzaSyBk2NxXkXkXkXkXkXkXkXkXkXkXkXk",
-    authDomain: "my-platform-2026.firebaseapp.com",
-    projectId: "my-platform-2026",
-    storageBucket: "my-platform-2026.appspot.com",
-    messagingSenderId: "123456789012",
-    appId: "1:123456789012:web:abc123def4567890"
-};
 
-// تهيئة Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+function updateSubTitle() {
+    const subTitle = document.getElementById('sectionSubtitle');
+    if (!subTitle) return;
+    
+    if (currentSourceKey && translations[currentLang] && translations[currentLang].subTitles) {
+        subTitle.innerText = translations[currentLang].subTitles[currentSourceKey] || '';
+    } else {
+        subTitle.innerText = '';
+    }
+}
 
-// ✅ تحديث واجهة المستخدم
-// ✅ تحديث واجهة المستخدم
+// ================ دوال المستخدم والتسجيل ================
 function updateUserUI() {
     const nav = document.querySelector('nav .flex.items-center.gap-4');
     if (!nav) return;
@@ -682,30 +508,20 @@ function updateUserUI() {
     userSection.className = 'flex items-center';
 
     if (currentUser) {
-        // عرض الصورة أو الحرف الأول
         let avatarHtml = '';
         if (currentUser.photoURL) {
             avatarHtml = `<img src="${currentUser.photoURL}" class="w-8 h-8 rounded-full border-2 border-pink-500">`;
         } else {
-            const firstLetter = currentUser.username.charAt(0).toUpperCase();
+            const firstLetter = currentUser.username ? currentUser.username.charAt(0).toUpperCase() : 'U';
             avatarHtml = `<div class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">${firstLetter}</div>`;
         }
         
-        // عرض شعار مزود الخدمة
-        let providerBadge = '';
-        if (currentUser.provider === 'google') {
-            providerBadge = `<span class="text-[10px] bg-blue-600/30 text-blue-400 px-1.5 py-0.5 rounded-full mr-1">Google</span>`;
-        }
-
         userSection.innerHTML = `
             <div class="flex items-center gap-3 bg-gradient-to-r from-zinc-800 to-zinc-900 px-4 py-1.5 rounded-full border border-pink-500/30 shadow-lg">
                 ${avatarHtml}
                 <div class="flex flex-col">
                     <span class="text-xs text-white/60">Welcome</span>
-                    <span class="text-sm font-bold text-pink-500 flex items-center">
-                        ${currentUser.username}
-                        ${providerBadge}
-                    </span>
+                    <span class="text-sm font-bold text-pink-500">${currentUser.username || 'User'}</span>
                 </div>
                 <button onclick="logout()" class="text-xs bg-red-600/80 hover:bg-red-600 px-3 py-1.5 rounded-full text-white font-bold transition-all mr-2">
                     Logout
@@ -726,7 +542,6 @@ function updateUserUI() {
     nav.appendChild(userSection);
 }
 
-// ✅ نافذة تسجيل الدخول والتسجيل (يدوي + بريد إلكتروني + رمز تحقق + Google)
 function showAuthModal() {
     const modal = document.createElement('div');
     modal.id = 'authModal';
@@ -734,16 +549,11 @@ function showAuthModal() {
     modal.style.direction = currentLang === 'ar' ? 'rtl' : 'ltr';
     modal.innerHTML = `
         <div class="bg-zinc-900 p-8 rounded-2xl max-w-md w-full border border-pink-500/30 shadow-2xl my-8">
-            <!-- العنوان -->
             <div class="text-center mb-6">
                 <h2 id="authTitle" class="text-3xl font-black text-white mb-2">Login</h2>
                 <div class="w-16 h-0.5 bg-pink-500 mx-auto"></div>
             </div>
-            
-            <!-- رسالة الخطأ -->
             <div id="authError" class="bg-red-600/20 border border-red-600 text-red-400 p-3 rounded-xl text-sm mb-4 hidden"></div>
-            
-            <!-- حقول تسجيل الدخول -->
             <div id="loginFields" class="space-y-4 mb-4">
                 <div>
                     <label class="block text-white/80 text-sm mb-2 font-bold">👤 Username</label>
@@ -754,8 +564,6 @@ function showAuthModal() {
                     <input type="password" id="loginPassword" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="********">
                 </div>
             </div>
-            
-            <!-- حقول التسجيل الجديد -->
             <div id="registerFields" class="space-y-4 mb-4 hidden">
                 <div>
                     <label class="block text-white/80 text-sm mb-2 font-bold">👤 Username</label>
@@ -774,8 +582,6 @@ function showAuthModal() {
                     <input type="password" id="regConfirmPassword" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="Re-enter password">
                 </div>
             </div>
-            
-            <!-- حقول رمز التحقق (تظهر بعد إرسال البريد) -->
             <div id="verificationFields" class="space-y-4 mb-4 hidden">
                 <div class="text-center text-white/80 text-sm mb-2">
                     Verification code sent to your email
@@ -785,8 +591,6 @@ function showAuthModal() {
                     <input type="text" id="verificationCode" maxlength="4" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none text-center text-2xl tracking-widest" placeholder="_ _ _ _">
                 </div>
             </div>
-            
-            <!-- أزرار تسجيل الدخول -->
             <div id="loginActions" class="flex gap-3 mt-6">
                 <button onclick="handleLogin()" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-xl font-bold transition-all">
                     Login
@@ -795,8 +599,6 @@ function showAuthModal() {
                     Cancel
                 </button>
             </div>
-            
-            <!-- أزرار التسجيل (إرسال رمز التحقق) -->
             <div id="registerActions" class="flex gap-3 mt-6 hidden">
                 <button onclick="handleRegister()" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-xl font-bold transition-all">
                     Send Verification Code
@@ -805,8 +607,6 @@ function showAuthModal() {
                     Cancel
                 </button>
             </div>
-            
-            <!-- أزرار التحقق من الرمز -->
             <div id="verificationActions" class="flex gap-3 mt-6 hidden">
                 <button onclick="verifyCode()" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold transition-all">
                     Verify Account
@@ -815,8 +615,6 @@ function showAuthModal() {
                     Back
                 </button>
             </div>
-            
-            <!-- خط فاصل مع نص "أو" -->
             <div class="relative my-6">
                 <div class="absolute inset-0 flex items-center">
                     <div class="w-full border-t border-zinc-700"></div>
@@ -825,8 +623,7 @@ function showAuthModal() {
                     <span class="bg-zinc-900 px-4 text-white/60">OR</span>
                 </div>
             </div>
-            
-            <!-- زر تسجيل الدخول بحساب Google -->
+            ${auth ? `
             <button onclick="googleSignIn()" class="w-full bg-white hover:bg-gray-100 text-gray-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-3 shadow-lg">
                 <svg class="w-6 h-6" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -836,15 +633,13 @@ function showAuthModal() {
                 </svg>
                 Continue with Google
             </button>
-            
-            <!-- التبديل بين تسجيل الدخول والتسجيل -->
+            ` : ''}
             <div class="mt-4 text-center">
                 <span id="toggleAuthText" class="text-white/60 text-sm">Don't have an account?</span>
                 <button onclick="toggleAuthMode()" id="toggleAuthBtn" class="text-pink-500 hover:text-pink-400 font-bold text-sm mr-1">
                     Create New Account
                 </button>
             </div>
-            
             <p class="text-white/40 text-xs text-center mt-4">
                 By registering, you agree to our Terms of Service and Privacy Policy
             </p>
@@ -852,29 +647,22 @@ function showAuthModal() {
     `;
     document.body.appendChild(modal);
 }
-// ✅ تبديل بين تسجيل الدخول والتسجيل
-var isLoginMode = true;
 
 function toggleAuthMode() {
     isLoginMode = !isLoginMode;
     
-    // تغيير العنوان
     document.getElementById('authTitle').innerText = isLoginMode ? 'Login' : 'Create New Account';
     document.getElementById('toggleAuthBtn').innerText = isLoginMode ? 'Create New Account' : 'Login';
     document.getElementById('toggleAuthText').innerText = isLoginMode ? "Don't have an account?" : 'Already have an account?';
     
-    // إظهار/إخفاء الحقول المناسبة
     document.getElementById('loginFields').classList.toggle('hidden', !isLoginMode);
     document.getElementById('loginActions').classList.toggle('hidden', !isLoginMode);
     document.getElementById('registerFields').classList.toggle('hidden', isLoginMode);
     document.getElementById('registerActions').classList.toggle('hidden', isLoginMode);
     
-    // إخفاء حقول التحقق إذا كانت ظاهرة
     document.getElementById('verificationFields').classList.add('hidden');
     document.getElementById('verificationActions').classList.add('hidden');
 }
-
-// ✅ معالجة تسجيل الدخول والتسجيل
 
 function handleLogin() {
     const username = document.getElementById('loginUsername').value.trim();
@@ -903,7 +691,7 @@ function handleLogin() {
         showAuthError('❌ اسم المستخدم أو كلمة المرور غير صحيحة');
     }
 }
-// ✅ معالجة طلب التسجيل (إرسال رمز التحقق)
+
 function handleRegister() {
     const username = document.getElementById('regUsername').value.trim();
     const email = document.getElementById('regEmail').value.trim();
@@ -913,7 +701,6 @@ function handleRegister() {
     
     errorDiv.classList.add('hidden');
     
-    // التحقق من الحقول
     if (!username || !email || !password || !confirm) {
         showAuthError('❌ جميع الحقول مطلوبة');
         return;
@@ -934,7 +721,6 @@ function handleRegister() {
         return;
     }
     
-    // التحقق من وجود المستخدم مسبقاً
     if (usersDB.find(u => u.username === username)) {
         showAuthError('❌ اسم المستخدم موجود بالفعل');
         return;
@@ -945,20 +731,16 @@ function handleRegister() {
         return;
     }
     
-    // حفظ البيانات مؤقتاً
     tempRegistration = {
         username,
         email,
         password
     };
     
-    // إنشاء رمز تحقق عشوائي
     generatedVerificationCode = generateVerificationCode();
     
-    // محاكاة إرسال الرمز (هنا نعرضه في alert للتجربة)
-    alert(`🔐 رمز التحقق الخاص بك هو: ${generatedVerificationCode}\n\n(في الموقع الحقيقي سيُرسل إلى بريدك ${email})`);
+    alert(`🔐 رمز التحقق الخاص بك هو: ${generatedVerificationCode}`);
     
-    // إظهار حقول التحقق
     document.getElementById('registerFields').classList.add('hidden');
     document.getElementById('registerActions').classList.add('hidden');
     document.getElementById('verificationFields').classList.remove('hidden');
@@ -966,7 +748,6 @@ function handleRegister() {
     document.getElementById('authTitle').innerText = 'تأكيد البريد الإلكتروني';
 }
 
-// ✅ التحقق من الرمز وإتمام التسجيل
 function verifyCode() {
     const code = document.getElementById('verificationCode').value.trim();
     const errorDiv = document.getElementById('authError');
@@ -989,7 +770,6 @@ function verifyCode() {
         return;
     }
     
-    // ✅ رمز صحيح - إتمام التسجيل
     usersDB.push({
         username: tempRegistration.username,
         email: tempRegistration.email,
@@ -998,14 +778,12 @@ function verifyCode() {
     
     localStorage.setItem('usersDB', JSON.stringify(usersDB));
     
-    // تسجيل الدخول مباشرة
     currentUser = { 
         username: tempRegistration.username,
         email: tempRegistration.email
     };
     localStorage.setItem('currentUser', JSON.stringify(currentUser));
     
-    // تنظيف البيانات المؤقتة
     tempRegistration = null;
     generatedVerificationCode = null;
     
@@ -1014,7 +792,6 @@ function verifyCode() {
     alert(`🎉 مرحباً بك ${currentUser.username}، تم إنشاء حسابك بنجاح!`);
 }
 
-// ✅ العودة إلى شاشة التسجيل
 function resetToRegister() {
     document.getElementById('verificationFields').classList.add('hidden');
     document.getElementById('verificationActions').classList.add('hidden');
@@ -1022,12 +799,9 @@ function resetToRegister() {
     document.getElementById('registerActions').classList.remove('hidden');
     document.getElementById('authTitle').innerText = 'إنشاء حساب جديد';
     
-    // تنظيف البيانات المؤقتة
     tempRegistration = null;
     generatedVerificationCode = null;
 }
-
-
 
 function closeAuthModal() {
     const modal = document.getElementById('authModal');
@@ -1035,13 +809,12 @@ function closeAuthModal() {
     tempRegistration = null;
     generatedVerificationCode = null;
 }
+
 function showAuthError(msg) {
     const err = document.getElementById('authError');
     err.innerText = msg;
     err.classList.remove('hidden');
 }
-
-
 
 function logout() {
     currentUser = null;
@@ -1050,18 +823,20 @@ function logout() {
     alert('👋 تم تسجيل الخروج بنجاح');
     location.reload();
 }
-// ===== دوال تسجيل الدخول بحساب Google =====
-// ===== دوال تسجيل الدخول بحساب Google =====
+
 function googleSignIn() {
+    if (!auth || !provider) {
+        alert('خدمة Google غير متاحة حالياً');
+        return;
+    }
+    
     auth.signInWithPopup(provider)
         .then((result) => {
             const user = result.user;
             
-            // التحقق من وجود المستخدم مسبقاً
             let existingUser = usersDB.find(u => u.email === user.email);
             
             if (!existingUser) {
-                // مستخدم جديد - نضيفه إلى قاعدة البيانات
                 const newUser = {
                     username: user.displayName || user.email.split('@')[0],
                     email: user.email,
@@ -1075,7 +850,6 @@ function googleSignIn() {
                 existingUser = newUser;
             }
             
-            // تسجيل الدخول
             currentUser = {
                 username: existingUser.username,
                 email: existingUser.email,
@@ -1088,126 +862,74 @@ function googleSignIn() {
             closeAuthModal();
             updateUserUI();
             
-            // إخفاء نافذة التحقق
             ageVerificationEnabled = false;
             const ageModal = document.getElementById('ageVerifyModal');
             if (ageModal) ageModal.style.display = 'none';
             
-            alert(`👋 مرحباً ${currentUser.username}!\nتم تسجيل الدخول بحساب Google بنجاح ✅`);
+            alert(`👋 مرحباً ${currentUser.username}!`);
         })
         .catch((error) => {
             console.error("خطأ في تسجيل الدخول:", error);
-            
-            if (error.code === 'auth/popup-closed-by-user') {
-                showAuthError('❌ تم إغلاق نافذة تسجيل الدخول');
-            } else {
-                alert("حدث خطأ في تسجيل الدخول: " + error.message);
-            }
+            showAuthError('❌ حدث خطأ في تسجيل الدخول');
         });
 }
-    var itemsPerPage = 20, currentPage = 1, profileMode = null;
-  
 
-
-
-
-
-         // ===== دالة تحديث الإحصائيات =====
-function updateStats() {
-    if (!dummyData) return;
-    const videos = dummyData.filter(item => item.type === 'video').length;
-    const images = dummyData.filter(item => item.type === 'image').length;
-    const articles = dummyData.filter(item => item.type === 'article').length;
-    
-    const videosEl = document.getElementById('videosCount');
-    const imagesEl = document.getElementById('imagesCount');
-    const articlesEl = document.getElementById('articlesCount');
-    
-    if (videosEl) videosEl.innerHTML = `📹 ${videos} Videos`;
-    if (imagesEl) imagesEl.innerHTML = `🖼️ ${images} Images`;
-    if (articlesEl) articlesEl.innerHTML = `📄 ${articles} Articles`;
+function generateVerificationCode() {
+    return Math.floor(1000 + Math.random() * 9000).toString();
 }
-    // مصفوفة الإعلانات
-    // مصفوفة الإعلانات الحقيقية (استبدل هذه الروابط بروابط إعلاناتك الحقيقية)
- 
-      function verifyAge() { 
-        // تخزين وقت التحقق الحالي
-        const now = new Date().getTime();
-        localStorage.setItem('ageVerified', 'true');
-        localStorage.setItem('ageVerifyTimestamp', now);
-        document.getElementById('ageVerifyModal').style.display = 'none'; 
-    }
-        // ===== دوال تتبع حالة الصفحة =====
-    function handleVisibilityChange() {
-        if (document.hidden) {
-            // المستخدم غادر الموقع (فتح تاب ثاني)
-            pageVisible = false;
-            // إخفاء النافذة إذا كانت مفتوحة وهو مش في الموقع
-            document.getElementById('ageVerifyModal').style.display = 'none';
-        } else {
-            // المستخدم رجع للموقع
-            pageVisible = true;
-            // تحديث وقت آخر نشاط
-            lastActivityTime = new Date().getTime();
-            // تحقق فوري من العمر عند الرجوع
-            setTimeout(() => {
-                checkAgeVerification();
-            }, 500);
-        }
-    }
 
-    // ===== دوال تتبع نشاط المستخدم =====
-    function updateUserActivity() {
+// ================ دوال التحقق من العمر ================
+function verifyAge() { 
+    localStorage.setItem('ageVerified', 'true');
+    localStorage.setItem('ageVerifyTimestamp', new Date().getTime());
+    document.getElementById('ageVerifyModal').style.display = 'none'; 
+}
+
+function handleVisibilityChange() {
+    if (document.hidden) {
+        pageVisible = false;
+        document.getElementById('ageVerifyModal').style.display = 'none';
+    } else {
+        pageVisible = true;
         lastActivityTime = new Date().getTime();
+        setTimeout(() => {
+            checkAgeVerification();
+        }, 500);
+    }
+}
+
+function updateUserActivity() {
+    lastActivityTime = new Date().getTime();
+    userIdle = false;
+}
+
+function checkUserActivity() {
+    const now = new Date().getTime();
+    if (now - lastActivityTime > 120000) {
+        userIdle = true;
+        document.getElementById('ageVerifyModal').style.display = 'none';
+    } else {
         userIdle = false;
     }
+}
 
-    function checkUserActivity() {
-        const now = new Date().getTime();
-        // إذا مر أكثر من دقيقتين بدون أي نشاط، اعتبر المستخدم غير نشط
-        if (now - lastActivityTime > 120000) { // 120000 = 2 دقيقة
-            userIdle = true;
-            // إذا كان المستخدم غير نشط، إخفاء النافذة
-            document.getElementById('ageVerifyModal').style.display = 'none';
-        } else {
-            userIdle = false;
-        }
-    }
-
-    // ===== تتبع نشاط المستخدم =====
-    document.addEventListener('mousemove', updateUserActivity);
-    document.addEventListener('keydown', updateUserActivity);
-    document.addEventListener('click', updateUserActivity);
-    document.addEventListener('scroll', updateUserActivity);
-    document.addEventListener('touchstart', updateUserActivity);
-    
-    // ===== تتبع حالة الصفحة =====
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-  // دالة التحقق من العمر - كل 10 دقائق
-    // دالة التحقق من العمر - فقط عندما يكون المستخدم متواجداً
- function checkAgeVerification() {
-    // ✅ الأهم: إذا كان المستخدم مسجل دخول - لا تطلب تحقق أبداً
+function checkAgeVerification() {
     if (currentUser) {
         return;
     }
     
-    // إذا كان التحقق معطل، لا تفعل شيء
     if (!ageVerificationEnabled) return;
     
-    // إذا كانت الصفحة مخفية (المستخدم مش في الموقع)، لا تطلب تحقق
     if (!pageVisible) {
         return;
     }
     
-    // تحقق من نشاط المستخدم
     checkUserActivity();
     
-    // إذا كان المستخدم غير نشط، لا تطلب تحقق
     if (userIdle) {
         return;
     }
     
-    // إذا كانت نافذة الفيديو مفتوحة، لا تطلب تحقق
     const playWindow = document.getElementById('playWindow');
     if (playWindow && !playWindow.classList.contains('hidden')) {
         return;
@@ -1217,41 +939,41 @@ function updateStats() {
     const lastVerifyTime = localStorage.getItem('ageVerifyTimestamp');
     const now = new Date().getTime();
     
-    // إذا لم يسبق التحقق مطلقاً
     if (!isVerified || !lastVerifyTime) {
         document.getElementById('ageVerifyModal').style.display = 'flex';
         return;
     }
     
-    // التحقق كل 10 دقائق (10 * 60 * 1000 = 600000)
     const tenMinutes = 10 * 60 * 1000;
     
     if (now - parseInt(lastVerifyTime) > tenMinutes) {
-        // المستخدم متواجد ومرت 10 دقائق - نطلب التحقق
         document.getElementById('ageVerifyModal').style.display = 'flex';
     }
 }
-// ✅ إنشاء رمز تحقق عشوائي 4 أرقام
-function generateVerificationCode() {
-    return Math.floor(1000 + Math.random() * 9000).toString();
-}
-    
-    // دالة تبديل القائمة
-    function toggleDBList() { 
-        const el = document.getElementById('dbList'); 
-        if (el) {
-            el.style.display = el.style.display === 'block' ? 'none' : 'block';
-        }
-    }
 
-    // إغلاق القائمة عند النقر في أي مكان آخر في الصفحة
-    window.addEventListener('click', function(e){   
-        const dropdown = document.getElementById('dbList');
-        const btn = document.querySelector('.db-switch-btn');
-        if (dropdown && btn && !dropdown.contains(e.target) && !btn.contains(e.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
+// ================ أحداث المستخدم ================
+document.addEventListener('mousemove', updateUserActivity);
+document.addEventListener('keydown', updateUserActivity);
+document.addEventListener('click', updateUserActivity);
+document.addEventListener('scroll', updateUserActivity);
+document.addEventListener('touchstart', updateUserActivity);
+document.addEventListener('visibilitychange', handleVisibilityChange);
+
+// ================ دوال القوائم والتبديل ================
+function toggleDBList() { 
+    const el = document.getElementById('dbList'); 
+    if (el) {
+        el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+}
+
+window.addEventListener('click', function(e){   
+    const dropdown = document.getElementById('dbList');
+    const btn = document.querySelector('.db-switch-btn');
+    if (dropdown && btn && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+        dropdown.style.display = 'none';
+    }
+});
 
 function switchSource(key, name) {
     localStorage.setItem('selectedSource', key);
@@ -1260,10 +982,8 @@ function switchSource(key, name) {
     currentSourceKey = key;
     currentSourceName = name;
     dummyData = [...allDBs[key]]; 
-    localStorage.setItem('selectedSource', currentSourceKey);
 
-
-    document.getElementById('activeName').innerText = t('sectionNames')[key];
+    document.getElementById('activeName').innerHTML = t('sectionNames')[key];
     
     const dbList = document.getElementById('dbList');
     if (dbList) dbList.style.display = 'none';
@@ -1272,13 +992,11 @@ function switchSource(key, name) {
     profileMode = null; 
     currentPage = 1; 
     
-    // ✅ تحديث عنوان الصفحة الرئيسية حسب القسم
     const catTitle = document.getElementById('catTitle');
     if (catTitle) {
         catTitle.innerText = t('sectionTitles')[key] || t('sectionNames')[key];
     }
     
-    // ✅ تحديد الأزرار حسب القسم
     if (key === 'life') {
         currentType = 'all';
         currentCat = 'all content';
@@ -1294,17 +1012,18 @@ function switchSource(key, name) {
     renderMenu(); 
     renderAll();
     updateSubTitle();
-
-    // ✅ إضافة هذا السطر لتحديث الإحصائيات عند تغيير القسم
     updateFooterStats();
+    
+    setTimeout(() => {
+        renderAdsBelowPagination();
+    }, 300);
 }
-// تحديث عنوان الصفحة الرئيسية حسب القسم
 
-    function saveState() {
-        localStorage.setItem('selectedType', currentType);
-        localStorage.setItem('selectedCat', currentCat);
-        localStorage.setItem('activeParent', activeParent || ""); 
-    }
+function saveState() {
+    localStorage.setItem('selectedType', currentType);
+    localStorage.setItem('selectedCat', currentCat);
+    localStorage.setItem('activeParent', activeParent || ""); 
+}
 
 function renderMenu() {
     var box = document.getElementById('menuBox'); 
@@ -1312,9 +1031,7 @@ function renderMenu() {
     box.innerHTML = "";
     let menuStructure = [];
     
-    // ✅ بناء القائمة حسب القسم الحالي
     if(currentSourceKey === 'life') {
-        // قسم الحياة: زر واحد فقط
         menuStructure = [ 
             { 
                 name: t('allContentMenu'), 
@@ -1324,7 +1041,6 @@ function renderMenu() {
             }
         ];
     } else {
-        // باقي الأقسام: ثلاثة أزرار (تظهر مباشرة)
         menuStructure = [
             { 
                 name: t('videosMenu'), 
@@ -1347,11 +1063,9 @@ function renderMenu() {
         ];
     }
     
-    // ✅ رسم الأزرار بشكل واضح
     menuStructure.forEach(m => {
         var d = document.createElement('div');
         
-        // تحديد الزر النشط
         let isNowActive = false;
         if (currentSourceKey === 'life' && m.type === 'all') {
             isNowActive = true;
@@ -1377,27 +1091,29 @@ function renderMenu() {
             profileMode = null; 
             currentPage = 1; 
             saveState(); 
-            renderMenu(); // إعادة رسم الأزرار مع تحديد النشط
+            renderMenu();
             renderAll();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
         box.appendChild(d);
     });
     
-    // ✅ تحديث جميع النصوص بعد رسم القائمة
     updateAllTexts();
 }
-   function createCard(p) {
-    // إذا كان المحتوى مقالاً
+
+// ================ دوال البطاقات والمحتوى ================
+// ================ دوال البطاقات والمحتوى ================
+function createCard(p) {
     if (p.type === 'article') {
         return `
             <div class="mag-item cursor-pointer relative" onclick="openArticle(${p.id})">
-                <img src="${p.image}" class="w-full h-full object-cover">
+                <img src="${p.image}" class="w-full h-40 object-cover" loading="lazy"
+                     onload="if(this.naturalHeight > this.naturalWidth * 1.2) this.classList.add('portrait-thumb');">
                 <div class="mag-overlay">
-                    <h3 class="font-bold text-lg">${p.title}</h3>
+                    <h3 class="font-bold text-sm">${p.title}</h3>
                 </div>
                 <div class="absolute top-2 left-2 z-30">
-                    <button class="card-menu-btn" onclick="toggleCardMenu(event, ${p.id})">⁝</button>
+                    <button class="card-menu-btn w-7 h-7 text-lg" onclick="toggleCardMenu(event, ${p.id})">⁝</button>
                     <div id="menu-${p.id}" class="card-menu-dropdown">
                         <div class="card-menu-item ${favorites.includes(p.id) ? 'active' : ''}" 
                              data-id="${p.id}" data-action="fav"
@@ -1415,7 +1131,6 @@ function renderMenu() {
         `;
     }
     
-    // للفيديوهات والصور
     let defaultDuration = '--:--';
     if (p.type === 'video') {
         if (p.contentURL.includes('drive.google.com')) {
@@ -1426,72 +1141,75 @@ function renderMenu() {
     }
     
     return `
-        <div class="video-card group mb-6 relative" data-video-id="${p.id}" data-video-url="${p.contentURL}" data-video-type="${p.type}">
-            <div class="thumb-wrapper relative overflow-hidden rounded-2xl bg-zinc-900/40" 
+        <div class="video-card group mb-4 relative" data-video-id="${p.id}" data-video-url="${p.contentURL}" data-video-type="${p.type}">
+            <div class="thumb-wrapper relative overflow-hidden rounded-lg bg-zinc-900/40" 
                  style="aspect-ratio: 3/2; border: 1px solid rgba(255,255,255,0.08);"
                  onclick='playVideo(${JSON.stringify(p).replace(/"/g, "&quot;")})'>
-               <img src="${p.image}" 
-     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-     alt="${p.title}"
-     loading="lazy"
-     onload="this.parentElement.classList.toggle('portrait-content', this.naturalHeight > this.naturalWidth);"
-     onerror="this.src='https://via.placeholder.com/400x267/333/fff?text=Image';"
-     style="min-height: 100%;">
+                
+                <img src="${p.image}" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                     alt="${p.title}"
+                     loading="lazy"
+                     onload="if(this.naturalHeight > this.naturalWidth * 1.2) { 
+                         this.classList.add('portrait-thumb');
+                         this.closest('.thumb-wrapper')?.classList.add('portrait-content');
+                     }"
+                     onerror="this.src='https://via.placeholder.com/300x200/333/fff?text=Image';">
                 
                 ${p.type === 'video' ? 
-                    `<span class="video-duration-badge" id="duration-${p.id}">
+                    `<span class="video-duration-badge text-[10px] px-2 py-1">
                         <i>⏱️</i> ${p.duration || defaultDuration}
                     </span>` : 
-                    `<span class="video-duration-badge">
-                        <i>🖼️</i> ${p.image.includes('.gif') ? 'GIF' : 'صورة'}
+                    `<span class="video-duration-badge text-[10px] px-2 py-1">
+                        <i>🖼️</i> ${p.image && p.image.includes('.gif') ? 'GIF' : 'صورة'}
                     </span>`
                 }
             </div>
             
-            <div class="flex items-center justify-between mt-3 px-1">
-                <div class="video-title group-hover:text-pink-500 transition-colors line-clamp-2 text-lg font-black tracking-tight flex-1" 
+            <div class="flex items-center justify-between mt-2 px-1">
+                <div class="video-title group-hover:text-pink-500 transition-colors line-clamp-2 text-sm font-bold flex-1" 
                      style="cursor: pointer; line-height: 1.3; text-align: right;"
                      onclick='playVideo(${JSON.stringify(p).replace(/"/g, "&quot;")})'>
                     ${p.title}
                 </div>
                 
-                <div class="relative mr-2">
-                    <button class="card-menu-btn w-9 h-9 bg-zinc-800 hover:bg-pink-600 rounded-full flex items-center justify-center text-white text-2xl"
+                <div class="relative mr-1">
+                    <button class="card-menu-btn w-7 h-7 bg-zinc-800 hover:bg-pink-600 rounded-full flex items-center justify-center text-white text-lg"
                             onclick="toggleCardMenu(event, ${p.id})">
                         ⁝
                     </button>
-                    <div id="menu-${p.id}" class="card-menu-dropdown absolute bottom-full mb-2 left-0 w-48 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl overflow-hidden z-50 hidden">
-                        <div class="card-menu-item ${favorites.includes(p.id) ? 'active' : ''} flex items-center gap-3 p-3 hover:bg-pink-600/30 cursor-pointer transition-colors border-b border-zinc-800"
+                    <div id="menu-${p.id}" class="card-menu-dropdown absolute bottom-full mb-2 left-0 w-40 bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden z-50 hidden">
+                        <div class="card-menu-item ${favorites.includes(p.id) ? 'active' : ''} flex items-center gap-2 p-2 hover:bg-pink-600/30 cursor-pointer transition-colors border-b border-zinc-800 text-xs"
                              data-id="${p.id}" data-action="fav"
                              onclick="toggleFavFromMenu(event, ${p.id})">
-                            <span class="text-xl">❤️</span>
-                            <span class="text-sm font-bold">${favorites.includes(p.id) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}</span>
+                            <span class="text-base">❤️</span>
+                            <span class="text-xs font-medium">${favorites.includes(p.id) ? 'إزالة' : 'إضافة للمفضلة'}</span>
                         </div>
-                        <div class="card-menu-item ${watchLater.includes(p.id) ? 'active' : ''} flex items-center gap-3 p-3 hover:bg-pink-600/30 cursor-pointer transition-colors"
+                        <div class="card-menu-item ${watchLater.includes(p.id) ? 'active' : ''} flex items-center gap-2 p-2 hover:bg-pink-600/30 cursor-pointer transition-colors text-xs"
                              data-id="${p.id}" data-action="watchlater"
                              onclick="toggleWatchLaterFromMenu(event, ${p.id})">
-                            <span class="text-xl">⏱️</span>
-                            <span class="text-sm font-bold">${watchLater.includes(p.id) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً'}</span>
+                            <span class="text-base">⏱️</span>
+                            <span class="text-xs font-medium">${watchLater.includes(p.id) ? 'إزالة' : 'مشاهدة لاحقاً'}</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="flex items-center justify-start mt-1 px-1">
-                <span class="text-xs text-gray-400 bg-zinc-800/60 px-2 py-1 rounded-full">${p.labels || (p.type === 'video' ? 'فيديو' : 'صورة')}</span>
+                <span class="text-[8px] text-gray-400 bg-zinc-800/60 px-2 py-0.5 rounded-full">${p.labels || (p.type === 'video' ? 'فيديو' : 'صورة')}</span>
             </div>
         </div>
     `;
 }
+
+// ================ دوال المشغل ================
 function playVideo(p) {
-    // حفظ الموضع الحالي قبل فتح المشغل
     scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     
-    // إضافة حالة جديدة في تاريخ المتصفح
     window.history.pushState({view: 'player', videoId: p.id}, "");
     
     currentPlayingId = p.id;
- localStorage.setItem('currentPlayingId', p.id);
+    localStorage.setItem('currentPlayingId', p.id);
 
     const win = document.getElementById('playWindow');
     const vArea = document.getElementById('vArea');
@@ -1499,17 +1217,14 @@ function playVideo(p) {
     win.classList.remove('hidden');
     win.style.display = 'block'; 
     document.body.style.overflow = 'hidden'; 
-
-    // ✅ تأكيد أن المشغل يبقى RTL دائماً
+    
     win.setAttribute('dir', 'rtl');
     
     document.getElementById('vTitle').innerText = p.title;
     
-    // إزالة حاوية الأزرار القديمة إن وجدت
     const oldActions = document.querySelector('.action-buttons-container');
     if (oldActions) oldActions.remove();
 
-    // إنشاء وإضافة أزرار الإجراءات تحت عنوان الفيديو
     const vTitleElement = document.getElementById('vTitle');
     const actionsContainer = document.createElement('div');
     actionsContainer.className = 'action-buttons-container';
@@ -1543,991 +1258,78 @@ function playVideo(p) {
     
     vTitleElement.parentNode.insertBefore(actionsContainer, vTitleElement.nextSibling);
     
-    // ✅ تنظيف حاوية الفيديو وإضافة مؤشر تحميل
-    vArea.innerHTML = '<div class="loading-spinner"></div>';
-    
-    setTimeout(() => {
-        if (p.type === 'video') {
-            // معالجة الفيديو
-            handleVideoPlayback(p, vArea);
-        } 
- else if (p.type === 'image') {
-    // ===== معالجة الصور بشكل صحيح بحجم أكبر =====
     vArea.innerHTML = '';
+    vArea.classList.remove('portrait-media', 'landscape-media');
     
-    // إعداد الحاوية لعرض الصور بشكل أكبر
-    vArea.style.paddingBottom = '0';
-    vArea.style.height = '100vh';
-    vArea.style.minHeight = '100vh';
-    vArea.style.maxHeight = '100vh';
-    vArea.style.width = '100%';
-    vArea.style.display = 'flex';
-    vArea.style.alignItems = 'center';
-    vArea.style.justifyContent = 'center';
-    vArea.style.overflow = 'hidden';
-    vArea.classList.add('image-mode');
-    vArea.classList.remove('video-mode');
-    
-    const img = document.createElement('img');
-    img.src = p.contentURL;
-    img.alt = p.title;
-    img.className = 'player-image';
-    
-    img.onload = function() {
-        console.log('تم تحميل الصورة:', this.naturalWidth, 'x', this.naturalHeight);
-        
-        // تحديد ما إذا كانت الصورة عمودية أم أفقية
-        const isPortrait = this.naturalHeight > this.naturalWidth;
-        
-        if (isPortrait) {
-            // صورة عمودية - تجعلها تأخذ كامل الشاشة
-            img.style.maxHeight = '98vh';
-            img.style.maxWidth = 'auto';
-            img.style.width = 'auto';
-            img.style.height = '98vh';
-            img.classList.add('portrait-image');
-        } else {
-            // صورة أفقية
-            img.style.maxHeight = '95vh';
-            img.style.maxWidth = '100%';
-            img.style.width = '100%';
-            img.style.height = 'auto';
-            img.classList.add('landscape-image');
-        }
-        
-        vArea.appendChild(img);
-        
-        // إضافة تأثير النقر لتكبير الصورة
-        img.onclick = function(e) {
-            e.stopPropagation();
-            if (!vArea.classList.contains('fullscreen-image')) {
-                vArea.classList.add('fullscreen-image');
-                if (isPortrait) {
-                    this.style.maxHeight = '100vh';
-                    this.style.maxWidth = '100vw';
-                    this.style.height = '100vh';
-                    this.style.width = 'auto';
-                } else {
-                    this.style.maxHeight = '100vh';
-                    this.style.maxWidth = '100vw';
-                    this.style.width = '100vw';
-                    this.style.height = 'auto';
-                }
-            } else {
-                vArea.classList.remove('fullscreen-image');
-                if (isPortrait) {
-                    this.style.maxHeight = '98vh';
-                    this.style.maxWidth = 'auto';
-                    this.style.height = '98vh';
-                    this.style.width = 'auto';
-                } else {
-                    this.style.maxHeight = '95vh';
-                    this.style.maxWidth = '100%';
-                    this.style.width = '100%';
-                    this.style.height = 'auto';
-                }
-            }
-        };
-    };
-    
-    img.onerror = function() {
-        vArea.innerHTML = '<div style="color:#fff; padding:20px; text-align:center;">❌ خطأ في تحميل الصورة</div>';
-    };
-        }
-    }, 100);
-
-    // تحديث الاقتراحات
-    updateSideSuggestions();
-    updateRecSuggestions();
-    updateFooterStats();
-}
-// ✅ دالة تحديث الاقتراحات تحت الفيديو (بحجم متناسق)
-function updateRecSuggestions() {
-    const recContainer = document.getElementById('recBox');
-    if (!recContainer || typeof dummyData === 'undefined') return;
-
-    let dataSource = [...dummyData];
-    
-    if (currentSourceKey === 'life') {
-        dataSource = dataSource.filter(item => item.type === 'article');
-    } else {
-        const currentItem = dummyData.find(i => i.id === currentPlayingId);
-        if (currentItem) {
-            dataSource = dataSource.filter(item => item.type === currentItem.type);
-        }
-    }
-
-    if (currentPlayingId) {
-        dataSource = dataSource.filter(item => item.id != currentPlayingId);
-    }
-
-    const shuffled = dataSource.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 8);
-
-    if (selected.length === 0) {
-        recContainer.innerHTML = '<div class="col-span-full text-center text-gray-500 py-8">لا توجد اقتراحات متاحة</div>';
-        return;
-    }
-
-    recContainer.innerHTML = selected.map(item => {
-        const thumbImage = item.image || 'https://via.placeholder.com/300x169/333/fff?text=Video';
-        
-        return `
-        <div class="cursor-pointer group" onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
-            <div class="relative rounded-xl overflow-hidden bg-zinc-900 aspect-video mb-2 border border-zinc-800 group-hover:border-pink-500 transition-all" style="height: 120px;">
-                <img src="${thumbImage}" 
-                     alt="${item.title}"
-                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                     loading="lazy"
-                     onload="if(this.naturalHeight > this.naturalWidth) { this.style.objectFit='contain'; this.style.backgroundColor='#000'; }"
-                     onerror="this.src='https://via.placeholder.com/300x169/333/fff?text=Video';">
-                ${item.type === 'video' ? 
-                    `<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md border border-white/20">
-                        ⏱️ ${item.duration || '03:45'}
-                    </span>` : 
-                    `<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md border border-white/20">
-                        🖼️ ${item.image.includes('.gif') ? 'GIF' : 'صورة'}
-                    </span>`
-                }
-            </div>
-            <h4 class="text-sm font-bold text-gray-200 line-clamp-2 group-hover:text-pink-500 transition-colors">
-                ${item.title}
-            </h4>
-        </div>
-    `}).join('');
-}
-
-// ✅ دالة تحديث الاقتراحات الجانبية
-function updateSideSuggestions() {
-    const sideContainer = document.getElementById('sideVerticalList');
-    if (!sideContainer || typeof dummyData === 'undefined') return;
-
-    let dataSource = [...dummyData];
-    
-    if (currentSourceKey === 'life') {
-        dataSource = dataSource.filter(item => item.type === 'article');
-    } else {
-        const currentItem = dummyData.find(i => i.id === currentPlayingId);
-        if (currentItem) {
-            dataSource = dataSource.filter(item => item.type === currentItem.type);
-        }
-    }
-
-    const shuffled = dataSource.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 5);
-
-    sideContainer.innerHTML = selected.map(item => {
-        const thumbImage = item.image || 'https://via.placeholder.com/96x54/333/fff?text=Video';
-        
-        return `
-        <div class="flex gap-3 cursor-pointer group hover:bg-white/5 p-2 rounded-lg transition border border-transparent hover:border-zinc-800"
-             onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
-            <div class="suggestion-thumb w-24 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-black border border-zinc-700">
-                <img src="${thumbImage}" 
-                     alt="${item.title}"
-                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                     loading="lazy"
-                     onload="if(this.naturalHeight > this.naturalWidth) { this.style.objectFit='contain'; this.style.backgroundColor='#000'; }"
-                     onerror="this.src='https://via.placeholder.com/96x54/333/fff?text=Video';">
-            </div>
-            <div class="flex-1 min-w-0">
-                <h4 class="text-xs font-bold text-gray-200 line-clamp-2 leading-tight group-hover:text-pink-500 mb-1">
-                    ${item.title}
-                </h4>
-                <span class="text-[10px] text-pink-500 font-medium px-2 py-0.5 bg-pink-500/10 rounded-full inline-block">
-                    ${item.labels || (item.type === 'video' ? 'فيديو' : 'صورة')}
-                </span>
-            </div>
-        </div>
-    `}).join('');
-}
-// ✅ دالة منفصلة لمعالجة الفيديو
-function handleVideoPlayback(p, vArea) {
-    // روابط Google Drive
-    if (p.contentURL.includes('drive.google.com')) {
-        let fileId = null;
-        const patterns = [
-            /\/d\/(.*?)(\/|$)/,
-            /id=([^&]+)/,
-            /file\/d\/(.*?)(\/|$)/
-        ];
-        
-        for (const pattern of patterns) {
-            const match = p.contentURL.match(pattern);
-            if (match && match[1]) {
-                fileId = match[1];
-                break;
-            }
-        }
-        
-        if (fileId) {
-            // استخدام رابط embed بدلاً من التحميل المباشر (أكثر استقراراً)
+    if (p.type === 'video') {
+        if (p.contentURL.includes('drive.google.com')) {
+            vArea.innerHTML = `<iframe class="mainVideo absolute inset-0 w-full h-full" src="${p.contentURL}" frameborder="0" allowfullscreen></iframe>`;
+            vArea.classList.add('landscape-media');
+        } else if (p.contentURL.includes('.mp4')) {
             vArea.innerHTML = `
-                <iframe class="mainVideo" 
-                        src="https://drive.google.com/file/d/${fileId}/preview" 
-                        frameborder="0" 
-                        allow="autoplay; encrypted-media" 
-                        allowfullscreen>
-                </iframe>
+                <video class="mainVideo absolute inset-0 w-full h-full" controls autoplay style="object-fit: contain;">
+                    <source src="${p.contentURL}" type="video/mp4">
+                </video>
             `;
         } else {
-            vArea.innerHTML = `<p class="text-white text-center p-10">رابط الفيديو غير صالح</p>`;
+            vArea.innerHTML = `<iframe class="mainVideo absolute inset-0 w-full h-full" src="${p.contentURL}" frameborder="0" allowfullscreen></iframe>`;
+            vArea.classList.add('landscape-media');
         }
-    } 
-    // روابط top4top وملفات MP4 المباشرة
-    else if (p.contentURL.includes('top4top') || p.contentURL.match(/\.(mp4|webm|ogg)(\?.*)?$/i)) {
-        vArea.innerHTML = `
-            <video class="mainVideo" controls autoplay playsinline style="outline: none; width: 100%; height: 100%; object-fit: contain;">
-                <source src="${p.contentURL}" type="video/mp4">
-                <p class="text-white text-center p-10">متصفحك لا يدعم تشغيل الفيديو</p>
-            </video>
-        `;
-        
-        // ضبط حجم الفيديو ليناسب الحاوية
-        const video = vArea.querySelector('video');
-        if (video) {
-            video.onloadedmetadata = function() {
-                // إضافة كلاس بناءً على أبعاد الفيديو
-                if (video.videoHeight > video.videoWidth) {
-                    video.style.objectFit = 'contain';
-                    video.style.width = '100%';
-                    video.style.height = '100%';
-                } else {
-                    video.style.objectFit = 'contain';
-                }
-            };
-        }
+    } else if (p.type === 'image') {
+        vArea.innerHTML = `<img src="${p.contentURL}" class="player-image" alt="${p.title}" style="max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; margin:0 auto;">`;
+        vArea.classList.add('image-mode');
     }
-    // روابط أخرى
-    else {
-        vArea.innerHTML = `
-            <video class="mainVideo" controls autoplay playsinline style="outline: none; width: 100%; height: 100%; object-fit: contain;">
-                <source src="${p.contentURL}" type="video/mp4">
-                <p class="text-white text-center p-10">متصفحك لا يدعم تشغيل الفيديو</p>
-            </video>
-        `;
-    }
+    
+    updateSideSuggestions();
+    updateRecSuggestions();
+    updatePlayerStats();
+    updatePlayerFooterStats();
+    updateFooterStats();
 }
-// ✅ دالة منفصلة لعرض الصور بشكل صحيح (بحجم كبير)
-function handleImageDisplay(p, vArea) {
-    // تنظيف وإعداد الحاوية
-    vArea.innerHTML = '';
-    vArea.style.paddingBottom = '0';
-    vArea.style.height = 'auto';
-    vArea.style.minHeight = '95vh'; // الحاوية تأخذ 95% من الشاشة
-    vArea.style.maxHeight = '100vh';
-    vArea.style.display = 'flex';
-    vArea.style.alignItems = 'center';
-    vArea.style.justifyContent = 'center';
-    vArea.classList.add('image-mode');
-    vArea.classList.remove('video-mode');
-    
-    // إنشاء عنصر الصورة
-    const img = document.createElement('img');
-    img.src = p.contentURL;
-    img.alt = p.title;
-    
-    // ===== هذه هي القيم المهمة جداً للتحكم بالحجم =====
-    img.style.maxWidth = '100%';
-    img.style.maxHeight = '98vh'; // <<<=== غيّر هذه القيمة للتكبير والتصغير
-    img.style.width = 'auto';
-    img.style.height = 'auto';
-    img.style.objectFit = 'contain';
-    img.style.borderRadius = '16px';
-    img.style.boxShadow = '0 15px 40px rgba(0,0,0,0.7)';
-    img.style.cursor = 'zoom-in';
-    img.style.transition = 'transform 0.3s ease';
-    img.style.margin = 'auto';
-    img.style.display = 'block';
-    
-    // عند تحميل الصورة
-    img.onload = function() {
-        console.log('صورة تم تحميلها:', this.naturalWidth, 'x', this.naturalHeight);
+function restoreFinalState() {
+    try {
+        const saved = localStorage.getItem('porniq_state');
+        if (!saved) return false;
         
-        // تكبير إضافي للصور العمودية
-        if (this.naturalHeight > this.naturalWidth) {
-            img.style.maxHeight = '98vh'; // صور عمودية أكبر
-        } else {
-            img.style.maxHeight = '95vh'; // صور أفقية
+        const state = JSON.parse(saved);
+        
+        // استعادة القسم
+        if (state.section && allDBs[state.section]) {
+            currentSourceKey = state.section;
+            currentSourceName = state.sectionName || 'الزواج';
+            dummyData = [...allDBs[currentSourceKey]];
         }
         
-        vArea.appendChild(img);
-    };
-    
-    // في حالة خطأ تحميل الصورة
-    img.onerror = function() {
-        vArea.innerHTML = `
-            <div style="display: flex; align-items: center; justify-content: center; min-height: 400px; background: #111; border-radius: 16px; padding: 20px;">
-                <p style="color: #fff; font-size: 18px;">❌ فشل تحميل الصورة</p>
-            </div>
-        `;
-    };
+        // استعادة الصفحة والنوع
+        if (state.page) currentPage = state.page;
+        if (state.type) currentType = state.type;
+        if (state.cat) currentCat = state.cat;
+        if (state.profile !== null) profileMode = state.profile;
+        
+        // استعادة الفيديو
+        if (state.video) {
+            currentPlayingId = state.video;
+            localStorage.setItem('currentPlayingId', state.video);
+        }
+        
+        // تحديث الواجهة
+        renderMenu();
+        renderAll();
+        updateSubTitle();
+        
+        return true;
+    } catch(e) {
+        return false;
+    }
 }
-
-img.onload = function() {
-    const isPortrait = this.naturalHeight > this.naturalWidth;
-    const screenHeight = window.innerHeight;
-    
-    // للصور العمودية - تأخذ 95% من الشاشة
-    if (isPortrait) {
-        img.style.maxHeight = '98vh';
-    } 
-    // للصور الأفقية - تأخذ 92% من الشاشة
-    else {
-        img.style.maxHeight = '95vh';
-    }
-    
-    // إذا كانت الشاشة صغيرة، نخفف التكبير
-    if (screenHeight < 700) {
-        img.style.maxHeight = '85vh';
-    }
-    
-    vArea.appendChild(img);
-};
-
-// استدعاء الدالة بعد فتح المقال
-function openArticle(articleId) {
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    
-    const article = dummyData.find(item => item.id === articleId);
-    if (!article) return;
-
-    window.history.pushState({view: 'article', articleId: articleId}, "");
-    document.getElementById('artTitle').innerText = article.title;
-    
-    let contentHtml = article.blocks.map(b => `<div class="mb-6">${b.content}</div>`).join('');
-    
-    let relatedArticles = dummyData
-        .filter(item => item.type === 'article' && item.id !== articleId)
-        .slice(0, 4);
-
-    if (relatedArticles.length > 0) {
-        contentHtml += `
-            <div class="mt-12 pt-8 border-t border-zinc-800">
-                <h3 class="text-2xl font-bold text-pink-500 mb-6">مواضيع ذات صلة</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    ${relatedArticles.map(ra => `
-                        <div class="flex gap-4 p-3 bg-zinc-900 rounded-xl cursor-pointer hover:bg-zinc-800 transition-all" onclick="openArticle(${ra.id})">
-                            <img src="${ra.image}" class="w-24 h-24 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/96x96/333/fff?text=Article'">
-                            <div class="font-bold text-sm">${ra.title}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>`;
-    }
-
-    document.getElementById('artBody').innerHTML = contentHtml;
-    document.getElementById('articleView').style.display = 'block';
-    window.scrollTo(0, 0);
-    
-    // إضافة تأثير التكبير للصور في المقال
-    setTimeout(enlargeArticleImages, 500);
-}
-// أضف هذه الدالة المساعدة في مكان مناسب (مثلاً بعد دوال الإعلنات)
 function toggleFavFromPlayer(event, id) {
     event.stopPropagation();
     const idx = favorites.indexOf(id);
     idx > -1 ? favorites.splice(idx, 1) : favorites.push(id);
     localStorage.setItem('myFavs', JSON.stringify(favorites));
-    
-    // تحديث واجهة الزر
-    const btn = event.currentTarget;
-    if (btn) {
-        btn.classList.toggle('active');
-        btn.innerHTML = favorites.includes(id) ? 
-            '<i>❤️</i> تم الحفظ' : 
-            '<i>❤️</i> إضافة للمفضلة';
-    }
-}
-// ✅ دالة تحديث الاقتراحات تحت الفيديو (recBox)
-
-function updateFooterStats() {
-    // احسب الإحصائيات من البيانات الحالية (dummyData)
-    const videos = dummyData.filter(item => item.type === 'video').length;
-    const images = dummyData.filter(item => item.type === 'image').length;
-    const articles = dummyData.filter(item => item.type === 'article').length;
-
-    // حدث كل العناصر التي تحمل الكلاس 'footer-videos-count' في الصفحة بأكملها
-    document.querySelectorAll('.footer-videos-count').forEach(el => el.innerText = videos);
-    document.querySelectorAll('.footer-images-count').forEach(el => el.innerText = images);
-    document.querySelectorAll('.footer-articles-count').forEach(el => el.innerText = articles);
-}
-function closePlayer() {
-    var savedPosition = scrollPosition || window.pageYOffset;
-    
-    localStorage.removeItem('currentPlayingId');
-    currentPlayingId = null;
-
-    const win = document.getElementById('playWindow');
-    win.classList.add('hidden');
-    win.style.display = 'none';
-    
-    document.getElementById('vArea').innerHTML = '';
-    
-    // إزالة حاوية الأزرار
-    const actionsContainer = document.querySelector('.action-buttons-container');
-    if (actionsContainer) actionsContainer.remove();
-    
-    document.body.style.overflow = 'auto';
-    
-    if(window.history.state && window.history.state.view === 'player') {
-        window.history.back();
-    } else {
-        setTimeout(() => {
-            window.scrollTo({
-                top: savedPosition,
-                behavior: 'smooth'
-            });
-        }, 100);
-    }
-}
-    // دالة جلب إعلان عشوائي
-  function getRandomAd() {
-    return getRandomNetworkAd();
+    updatePlayerButtons(id);
 }
 
-    // دالة تحديث الإعلانات الجانبية (اليمين في الصفحة الرئيسية)
-// دالة تحديث الإعلانات الجانبية (تدعم فيديو و GIF)
-// دالة تحديث الإعلانات الجانبية
-function renderSideAds() {
-    const container = document.getElementById('sideAdsContainer');
-    if (!container) return;
-    
-    let html = '<div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>';
-    
-    for(let i=0; i<4; i++) {
-        let ad = getRandomSidebarAd();
-        
-        html += `
-            <a href="${ad.link}" target="_blank" class="block w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-600 transition-all transform hover:scale-[1.02] shadow-xl mb-3 group relative">
-                <div class="w-full h-full bg-black flex items-center justify-center">`;
-        
-        if (ad.type === 'video') {
-            html += `
-                    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                        <source src="${ad.url}" type="video/mp4">
-                    </video>`;
-        } else {
-            html += `
-                    <img src="${ad.url}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">`;
-        }
-        
-        html += `
-                    <div class="absolute top-2 right-2 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
-                        ${ad.type === 'video' ? '▶️ فيديو' : (ad.type === 'gif' ? '🎬 GIF' : '📷 إعلان')}
-                    </div>
-                    <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity text-center bg-black/60 backdrop-blur-sm py-1 rounded-full">
-                        اضغط للمزيد
-                    </div>
-                </div>
-            </a>`;
-    }
-    container.innerHTML = html;
-}
-function updateSideSuggestions() {
-    const sideContainer = document.getElementById('sideVerticalList');
-    if (!sideContainer || typeof dummyData === 'undefined') return;
-
-    let dataSource = [...dummyData];
-    
-    if (currentSourceKey === 'life') {
-        dataSource = dataSource.filter(item => item.type === 'article');
-    } else {
-        const currentItem = dummyData.find(i => i.id === currentPlayingId);
-        if (currentItem) {
-            dataSource = dataSource.filter(item => item.type === currentItem.type);
-        }
-    }
-
-    const shuffled = dataSource.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 5);
-
-    sideContainer.innerHTML = selected.map(item => {
-        const thumbImage = item.image || 'https://via.placeholder.com/96x54/333/fff?text=Video';
-        
-        return `
-        <div class="flex gap-3 cursor-pointer group hover:bg-white/5 p-2 rounded-lg transition border border-transparent hover:border-zinc-800"
-             onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
-            <div class="suggestion-thumb w-24 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-black border border-zinc-700">
-                <img src="${thumbImage}" 
-                     alt="${item.title}"
-                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                     onerror="this.src='https://via.placeholder.com/96x54/333/fff?text=Video';">
-            </div>
-            <div class="flex-1 min-w-0">
-                <h4 class="text-xs font-bold text-gray-200 line-clamp-2 leading-tight group-hover:text-pink-500 mb-1">
-                    ${item.title}
-                </h4>
-                <span class="text-[10px] text-pink-500 font-medium px-2 py-0.5 bg-pink-500/10 rounded-full inline-block">
-                    ${item.labels || (item.type === 'video' ? 'فيديو' : 'صورة')}
-                </span>
-            </div>
-        </div>
-    `}).join('');
-}
-function renderAll() {
-    const grid = document.getElementById('gridBox');
-    if (!grid) return;
-    
-    const q = document.getElementById('searchBox').value.toLowerCase();
-
-    // تصفية البيانات
-    let filtered = (dummyData || []).filter(p => {
-        // قسم الحياة الزوجية - يعرض المقالات فقط
-        if (currentSourceKey === 'life') {
-            if (currentType === 'all') {
-                // عرض كل المقالات
-                return p.type === 'article' && p.title.toLowerCase().includes(q);
-            } else {
-                // عرض حسب النوع المحدد (وهو article فقط)
-                return p.type === currentType && p.title.toLowerCase().includes(q);
-            }
-        }
-        
-        // الأقسام الأخرى - فيديو وصور
-        if (profileMode === 'fav') return favorites.includes(p.id);
-        if (profileMode === 'like') return likes.includes(p.id);
-        if (profileMode === 'watchlater') return watchLater.includes(p.id);
-        
-        // تصفية حسب النوع المحدد في القائمة
-        if (currentType === 'video') {
-            return p.type === 'video' && p.title.toLowerCase().includes(q);
-        } else if (currentType === 'image') {
-            // في قسم الصور، اعرض فقط الصور (ثابتة + متحركة)
-            return p.type === 'image' && p.title.toLowerCase().includes(q);
-        }
-        
-        return false;
-    });
-    
-    // تقسيم الصفحات
-    const paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-    
-    // بناء مصفوفة مختلطة
-    let mixedItems = paginated.map(p => ({ isAd: false, data: p }));
-    
-    // إضافة الإعلانات داخل الشبكة
-    if (mixedItems.length > 4) {
-        for(let i=0; i<2; i++) {
-            let pos = Math.floor(Math.random() * mixedItems.length);
-            mixedItems.splice(pos, 0, { isAd: true, data: getRandomAd() });
-        }
-    }
-
-    // بناء الـ HTML النهائي للشبكة
-    grid.innerHTML = mixedItems.map(item => {
-        if (!item.isAd) {
-            return `<div class="flex flex-col">${createCard(item.data)}</div>`;
-        } else {
-            // إعلان - استخدام الرابط المناسب حسب نوع الإعلان
-            const ad = item.data;
-            let imageUrl = ad.url; // للإعلانات العادية
-            let adLink = ad.link;
-            let adTitle = ad.title || 'إعلان';
-            
-            // تحديد نوع الإعلان وعرضه بشكل مناسب
-            if (ad.type === 'video') {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                    <source src="${imageUrl}" type="video/mp4">
-                                </video>
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">فيديو</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
-            } else if (ad.type === 'gif') {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">GIF</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
-            } else {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">إعلان</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
-            }
-        }
-    }).join('');
-
-    // استدعاء إعلانات الجانب الأيسر
-    renderSideAds();
-    
-    // تحديث الترقيم
-    renderPagination(filtered.length);
-    
-    // استدعاء الإعلانات تحت الترقيم
-    setTimeout(() => {
-        renderAdsBelowPagination();
-    }, 100);
-}
-
-function toggleProfileMode(mode) { 
-    profileMode = (profileMode === mode) ? null : mode; 
-    currentPage = 1; 
-    renderAll(); 
-    renderMenu(); 
-    
-    // تغيير عنوان الصفحة مع الترجمة
-    const catTitle = document.getElementById('catTitle');
-    if (profileMode === 'fav') catTitle.innerText = t('favTitle');
-    else if (profileMode === 'like') catTitle.innerText = t('likeTitle');
-    else if (profileMode === 'watchlater') catTitle.innerText = t('watchLaterTitle');
-   else catTitle.innerText = t('sectionTitles')[currentSourceKey] || t('sectionNames')[currentSourceKey];
-   
-   // ===== إضافة هذا السطر لاستدعاء الإعلانات تحت الترقيم =====
-   setTimeout(() => {
-       renderAdsBelowPagination();
-   }, 200);
-}
-    function renderPagination(totalItems) {
-        const totalPages = Math.ceil(totalItems / itemsPerPage);
-        const container = document.getElementById('paginationBox');
-        if (!container) return;
-        
-        container.innerHTML = '';
-        if (totalPages <= 1) return;
-
-        let html = "";
-
-        if (currentPage > 1) {
-            html += `<button onclick="goToPage(${currentPage - 1})" class="pagination-btn">السابق</button>`;
-        }
-
-        for (let i = 1; i <= totalPages; i++) {
-            if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
-                const activeClass = i === currentPage ? 'active' : '';
-                html += `<button onclick="goToPage(${i})" class="pagination-btn ${activeClass}">${i}</button>`;
-            } 
-            else if (i === currentPage - 2 || i === currentPage + 2) {
-                html += `<span class="text-zinc-600 px-1">...</span>`;
-            }
-        }
-
-        if (currentPage < totalPages) {
-            html += `<button onclick="goToPage(${currentPage + 1})" class="pagination-btn">التالي</button>`;
-        }
-
-        container.innerHTML = html;
-    }
-
-function goToPage(page) {
-    currentPage = page;
-    renderAll();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    localStorage.setItem('lastPage', currentPage);
-
-    
-    // استدعاء الإعلانات بعد التمرير
-    setTimeout(() => {
-        renderAdsBelowPagination();
-    }, 200);
-}
-   function openArticle(articleId) {
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    
-    const article = dummyData.find(item => item.id === articleId);
-    if (!article) return;
-
-    window.history.pushState({view: 'article', articleId: articleId}, "");
-    document.getElementById('artTitle').innerText = article.title;
-    
-    let contentHtml = article.blocks.map(b => `<div class="mb-6">${b.content}</div>`).join('');
-    
-    let relatedArticles = dummyData
-        .filter(item => item.type === 'article' && item.id !== articleId)
-        .slice(0, 4);
-
-    if (relatedArticles.length > 0) {
-        contentHtml += `
-            <div class="mt-12 pt-8 border-t border-zinc-800">
-                <h3 class="text-2xl font-bold text-pink-500 mb-6">مواضيع ذات صلة</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    ${relatedArticles.map(ra => `
-                        <div class="flex gap-4 p-3 bg-zinc-900 rounded-xl cursor-pointer hover:bg-zinc-800 transition-all" onclick="openArticle(${ra.id})">
-                            <img src="${ra.image}" class="w-24 h-24 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/96x96/333/fff?text=Article'">
-                            <div class="font-bold text-sm">${ra.title}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>`;
-    }
-
-    document.getElementById('artBody').innerHTML = contentHtml;
-    document.getElementById('articleView').style.display = 'block';
-    window.scrollTo(0, 0);
-}
-window.onload = () => {
-    // تحديث واجهة المستخدم (عرض معلومات المستخدم)
-    updateUserUI();
-    
-    // إذا كان المستخدم مسجل دخول، عطل التحقق
-     if (currentUser) {
-        ageVerificationEnabled = false;
-        const modal = document.getElementById('ageVerifyModal');
-        if (modal) modal.style.display = 'none';
-    } else {
-        // فقط الزوار يتم تفعيل التحقق لهم
-        ageVerificationEnabled = true;
-    }
-     
-     updateFooterStats();
-    // باقي الكود الأصلي...
-    updateUserActivity();
-    
-    // التحقق من العمر (لن يطلب من المسجلين)
-    checkAgeVerification();
-
-    // ✅ الأهم: استعادة القسم المحفوظ أو تعيين القسم الافتراضي
-    const savedSource = localStorage.getItem('selectedSource');
-    const savedSourceName = localStorage.getItem('selectedSourceName');
-    
-    if (savedSource && allDBs[savedSource]) {
-        currentSourceKey = savedSource;
-        currentSourceName = savedSourceName || 'الزواج';
-        dummyData = [...allDBs[savedSource]];
-    } else {
-        // ✅ إذا مافي قسم محفوظ، استخدم قسم الزواج كافتراضي
-        currentSourceKey = 'zaj';
-        currentSourceName = 'الزواج';
-        dummyData = [...allDBs['zaj']];
-        localStorage.setItem('selectedSource', 'zaj');
-        localStorage.setItem('selectedSourceName', 'الزواج');
-    }
-
-    const activeNameEl = document.getElementById('activeName');
-    if(activeNameEl && currentSourceKey) {
-        activeNameEl.innerText = t('sectionNames')[currentSourceKey];
-    }
-
-    // ✅ تحديث عنوان الصفحة الرئيسية
-    const catTitle = document.getElementById('catTitle');
-    if (catTitle) {
-        catTitle.innerText = t('sectionTitles')[currentSourceKey] || t('sectionNames')[currentSourceKey];
-    }
-
-    renderMenu(); 
-    renderAll();
-     updateSubTitle();
-
-    // استعادة الفيديو المحفوظ
-    const savedPlayingId = localStorage.getItem('currentPlayingId');
-    if (savedPlayingId) {
-        currentPlayingId = savedPlayingId;
-        try {
-            const itemToPlay = dummyData.find(i => i.id == currentPlayingId);
-            if (itemToPlay) {
-                document.getElementById('playWindow').classList.remove('hidden');
-                playVideo(itemToPlay);
-            } else {
-                localStorage.removeItem('currentPlayingId');
-            }
-        } catch(e) {
-            console.error("Error restoring video:", e);
-        }
-    }
-
-    // استعادة وضع الظلام
-    if(localStorage.getItem('darkMode') === 'true'){
-        document.body.classList.add('dark-mode');
-    }
-    
-    // تحديث مدة الفيديوهات
-    setTimeout(updateVideoDurations, 1000);
-    
-    // التحقق من نشاط المستخدم كل 10 ثواني
-    setInterval(checkUserActivity, 10000);
-    
-    // التحقق من العمر كل دقيقة (لن يطلب من المسجلين)
-    setInterval(checkAgeVerification, 60000);
-     setTimeout(() => {
-        renderAdsBelowPagination();
-    }, 500);
-};
-
-
-function closeArticle() { 
-    document.getElementById('articleView').style.display = 'none'; 
-    
-    setTimeout(() => {
-        window.scrollTo({
-            top: scrollPosition || 0,
-            behavior: 'smooth'
-        });
-    }, 100);
-    
-    if(window.history.state && window.history.state.view === 'article') {
-        window.history.back();
-    }
-}
-
-function toggleAction(event, type, id) {
-    event.stopPropagation();
-    let list = (type === 'fav') ? favorites : likes;
-    let key = (type === 'fav') ? 'myFavs' : 'myLikes';
-    const idx = list.indexOf(id);
-    idx > -1 ? list.splice(idx, 1) : list.push(id);
-    localStorage.setItem(key, JSON.stringify(list));
-    renderAll();
-}
-
-function doSearch() { 
-    currentPage = 1; 
-    renderAll(); 
-}
-
-
-// ===== دوال القائمة المنبثقة للكرت =====
-function toggleCardMenu(event, itemId) {
-    event.stopPropagation();
-    
-    document.querySelectorAll('.card-menu-dropdown').forEach(menu => {
-        if (menu.id !== `menu-${itemId}`) {
-            menu.classList.remove('show');
-        }
-    });
-    
-    const menu = document.getElementById(`menu-${itemId}`);
-    if (menu) menu.classList.toggle('show');
-}
-
-// إغلاق القوائم عند النقر خارجها
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.card-menu-btn') && !e.target.closest('.card-menu-dropdown')) {
-        document.querySelectorAll('.card-menu-dropdown').forEach(menu => {
-            menu.classList.remove('show');
-        });
-    }
-});
-
-// إغلاق القوائم عند التمرير
-window.addEventListener('scroll', function() {
-    document.querySelectorAll('.card-menu-dropdown.show').forEach(menu => {
-        menu.classList.remove('show');
-    });
-}, { passive: true });
-
-// ===== دوال الإجراءات من القائمة =====
-function toggleFavFromMenu(event, id) {
-    event.stopPropagation();
-    const idx = favorites.indexOf(id);
-    idx > -1 ? favorites.splice(idx, 1) : favorites.push(id);
-    localStorage.setItem('myFavs', JSON.stringify(favorites));
-    
-    const menuItem = document.querySelector(`.card-menu-item[data-id="${id}"][data-action="fav"]`);
-    if (menuItem) {
-        menuItem.classList.toggle('active', favorites.includes(id));
-        const spans = menuItem.querySelectorAll('span');
-        if (spans.length >= 2) {
-            spans[1].innerHTML = favorites.includes(id) ? 'إزالة من المفضلة' : 'إضافة للمفضلة';
-        }
-    }
-    
-    const menu = document.getElementById(`menu-${id}`);
-    if (menu) menu.classList.remove('show');
-}
-
-function toggleWatchLaterFromMenu(event, id) {
-    event.stopPropagation();
-    const idx = watchLater.indexOf(id);
-    idx > -1 ? watchLater.splice(idx, 1) : watchLater.push(id);
-    localStorage.setItem('myWatchLater', JSON.stringify(watchLater));
-    
-    const menuItem = document.querySelector(`.card-menu-item[data-id="${id}"][data-action="watchlater"]`);
-    if (menuItem) {
-        menuItem.classList.toggle('active', watchLater.includes(id));
-        const spans = menuItem.querySelectorAll('span');
-        if (spans.length >= 2) {
-            spans[1].innerHTML = watchLater.includes(id) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً';
-        }
-    }
-    
-    const menu = document.getElementById(`menu-${id}`);
-    if (menu) menu.classList.remove('show');
-}
-// ===== دالة الحصول على مدة الفيديو =====
-// ===== دالة الحصول على مدة الفيديو =====
-function getVideoDuration(url) {
-    return new Promise((resolve) => {
-        // مدة افتراضية حسب المصدر
-        if (url.includes('drive.google.com')) {
-            resolve("05:30");
-            return;
-        }
-        
-        // للروابط المباشرة (MP4)
-        const video = document.createElement('video');
-        video.preload = 'metadata';
-        video.crossOrigin = 'anonymous';
-        
-        // مهلة زمنية 3 ثواني
-        const timeout = setTimeout(() => {
-            resolve("03:45");
-        }, 3000);
-        
-        video.onloadedmetadata = function() {
-            clearTimeout(timeout);
-            const seconds = video.duration;
-            if (isFinite(seconds) && seconds > 0) {
-                const minutes = Math.floor(seconds / 60);
-                const remainingSeconds = Math.floor(seconds % 60);
-                const duration = `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-                URL.revokeObjectURL(video.src);
-                resolve(duration);
-            } else {
-                resolve("03:45");
-            }
-        };
-        
-        video.onerror = function() {
-            clearTimeout(timeout);
-            resolve("03:45");
-        };
-        
-        video.src = url;
-    });
-}
-
-// دالة تحديث مدة الفيديو في الكروت
-async function updateVideoDurations() {
-    console.log('جاري تحديث مدة الفيديوهات...');
-    const videoCards = document.querySelectorAll('.video-card[data-video-type="video"]');
-    
-    for (const card of videoCards) {
-        const videoId = card.dataset.videoId;
-        const videoUrl = card.dataset.videoUrl;
-        const durationBadge = document.getElementById(`duration-${videoId}`);
-        
-        if (durationBadge && durationBadge.innerHTML.includes('--:--')) {
-            try {
-                const duration = await getVideoDuration(videoUrl);
-                durationBadge.innerHTML = `<i>⏱️</i> ${duration}`;
-                console.log(`تم تحديث مدة الفيديو ${videoId}: ${duration}`);
-            } catch (e) {
-                console.log('خطأ في تحديث مدة الفيديو', videoId);
-            }
-        }
-    }
-}
-
-
-
-// ===== دوال الأزرار تحت الفيديو =====
 function toggleLike(event, id) {
     event.stopPropagation();
     const idx = likes.indexOf(id);
@@ -2600,7 +1402,6 @@ function updatePlayerButtons(id) {
     const container = document.querySelector('.action-buttons-container');
     if (!container) return;
     
-    // تحديث زر المفضلة
     const favBtn = container.querySelector('.fav-action-btn');
     if (favBtn) {
         const isFav = favorites.includes(id);
@@ -2610,7 +1411,6 @@ function updatePlayerButtons(id) {
             '<i>❤️</i> إضافة للمفضلة';
     }
     
-    // تحديث زر الإعجاب
     const likeBtn = container.querySelector('.like-action-btn');
     if (likeBtn) {
         const isLike = likes.includes(id);
@@ -2620,7 +1420,6 @@ function updatePlayerButtons(id) {
             '<i>👍</i> إعجاب';
     }
     
-    // تحديث زر عدم الإعجاب
     const dislikeBtn = container.querySelector('.dislike-action-btn');
     if (dislikeBtn) {
         const isDislike = dislikes.includes(id);
@@ -2630,7 +1429,6 @@ function updatePlayerButtons(id) {
             '<i>👎</i> عدم إعجاب';
     }
     
-    // تحديث زر المشاهدة لاحقاً
     const watchLaterBtn = container.querySelector('.watch-later-btn');
     if (watchLaterBtn) {
         const isWatchLater = watchLater.includes(id);
@@ -2640,95 +1438,733 @@ function updatePlayerButtons(id) {
             '<i>⏱️</i> مشاهدة لاحقاً';
     }
 }
-// دالة لتحديث إحصائيات الفوتر (في الصفحة الرئيسية ومشغل الفيديو)
 
-// استبدل هذا:
-
-
-// بهذا:
-function initializeOnLoad() {
-    // كل الكود الموجود داخل onload...
-    updateUserUI();
-    if (currentUser) {
-        ageVerificationEnabled = false;
-        const modal = document.getElementById('ageVerifyModal');
-        if (modal) modal.style.display = 'none';
-    } else {
-        ageVerificationEnabled = true;
-    }
-    updateFooterStats();
-    updateUserActivity();
-    checkAgeVerification();
-
-    const savedSource = localStorage.getItem('selectedSource');
-    const savedSourceName = localStorage.getItem('selectedSourceName');
+function closePlayer() {
+    var savedPosition = scrollPosition || window.pageYOffset;
     
-    if (savedSource && allDBs[savedSource]) {
-        currentSourceKey = savedSource;
-        currentSourceName = savedSourceName || 'الزواج';
-        dummyData = [...allDBs[savedSource]];
+    localStorage.removeItem('currentPlayingId');
+    currentPlayingId = null;
+
+    const win = document.getElementById('playWindow');
+    win.classList.add('hidden');
+    win.style.display = 'none';
+    
+    document.getElementById('vArea').innerHTML = '';
+    
+    const actionsContainer = document.querySelector('.action-buttons-container');
+    if (actionsContainer) actionsContainer.remove();
+    
+    document.body.style.overflow = 'auto';
+    
+    if(window.history.state && window.history.state.view === 'player') {
+        window.history.back();
     } else {
-        currentSourceKey = 'zaj';
-        currentSourceName = 'الزواج';
-        dummyData = [...allDBs['zaj']];
-        localStorage.setItem('selectedSource', 'zaj');
-        localStorage.setItem('selectedSourceName', 'الزواج');
+        setTimeout(() => {
+            window.scrollTo({
+                top: savedPosition,
+                behavior: 'smooth'
+            });
+        }, 100);
     }
+}
 
-    const activeNameEl = document.getElementById('activeName');
-    if(activeNameEl && currentSourceKey) {
-        activeNameEl.innerText = t('sectionNames')[currentSourceKey];
-    }
+// ================ دوال الاقتراحات ================
+// تعديل دالة updateRecSuggestions لتصغير حجم الاقتراحات
+// تعديل دالة updateRecSuggestions لتصغير حجم الاقتراحات تحت الفيديو
+// تعديل دالة updateRecSuggestions لتصغير حجم الاقتراحات تحت الفيديو
+function updateRecSuggestions() {
+    const recContainer = document.getElementById('recBox');
+    if (!recContainer || typeof dummyData === 'undefined') return;
 
-    const catTitle = document.getElementById('catTitle');
-    if (catTitle) {
-        catTitle.innerText = t('sectionTitles')[currentSourceKey] || t('sectionNames')[currentSourceKey];
-    }
-
-    renderMenu(); 
-    renderAll();
-    updateSubTitle();
-
-    const savedPlayingId = localStorage.getItem('currentPlayingId');
-    if (savedPlayingId) {
-        currentPlayingId = savedPlayingId;
-        try {
-            const itemToPlay = dummyData.find(i => i.id == currentPlayingId);
-            if (itemToPlay) {
-                document.getElementById('playWindow').classList.remove('hidden');
-                playVideo(itemToPlay);
-            } else {
-                localStorage.removeItem('currentPlayingId');
-            }
-        } catch(e) {
-            console.error("Error restoring video:", e);
+    let dataSource = [...dummyData];
+    
+    if (currentSourceKey === 'life') {
+        dataSource = dataSource.filter(item => item.type === 'article');
+    } else {
+        const currentItem = dummyData.find(i => i.id === currentPlayingId);
+        if (currentItem) {
+            dataSource = dataSource.filter(item => item.type === currentItem.type);
         }
     }
 
-    if(localStorage.getItem('darkMode') === 'true'){
-        document.body.classList.add('dark-mode');
+    if (currentPlayingId) {
+        dataSource = dataSource.filter(item => item.id != currentPlayingId);
     }
+
+    const shuffled = dataSource.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 6);
+
+    if (selected.length === 0) {
+        recContainer.innerHTML = '<div class="col-span-full text-center text-gray-500 py-4 text-sm">لا توجد اقتراحات متاحة</div>';
+        return;
+    }
+
+    recContainer.innerHTML = selected.map(item => {
+        const thumbImage = item.image || 'https://via.placeholder.com/200x120/333/fff?text=Video';
+        
+        return `
+        <div class="suggestion-item cursor-pointer group" onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
+            <div class="relative rounded-xl overflow-hidden bg-zinc-900 mb-1 border border-zinc-800 group-hover:border-pink-500 transition-all" 
+                 style="aspect-ratio: 16/9; width: 100%;">
+                <img src="${thumbImage}" 
+                     alt="${item.title}"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                     loading="lazy"
+                     onload="if(this.naturalHeight > this.naturalWidth * 1.2) this.classList.add('portrait-thumb');"
+                     onerror="this.src='https://via.placeholder.com/200x120/333/fff?text=Video';">
+                ${item.type === 'video' ? 
+                    `<span class="absolute bottom-1 right-1 bg-black/90 text-white text-[10px] px-2 py-0.5 rounded-md border border-white/20">
+                        ⏱️ ${item.duration || '03:45'}
+                    </span>` : 
+                    `<span class="absolute bottom-1 right-1 bg-black/90 text-white text-[10px] px-2 py-0.5 rounded-md border border-white/20">
+                        🖼️ ${item.image && item.image.includes('.gif') ? 'GIF' : 'صورة'}
+                    </span>`
+                }
+            </div>
+            <h4 class="text-xs font-medium text-gray-300 line-clamp-2 group-hover:text-pink-400 transition-colors">
+                ${item.title}
+            </h4>
+        </div>
+    `}).join('');
+}
+// إضافة زر استعادة يدوي
+setTimeout(function() {
+    const nav = document.querySelector('nav .flex.items-center.gap-4');
+    if (nav && !document.getElementById('finalRestoreBtn')) {
+        const btn = document.createElement('button');
+        btn.id = 'finalRestoreBtn';
+        btn.innerHTML = '🔄 استعادة';
+        btn.style.cssText = 'background:#9333ea; color:white; padding:5px 12px; border-radius:30px; font-size:12px; font-weight:bold; border:none; cursor:pointer; margin-left:5px;';
+        btn.onclick = function() {
+            if (restoreFinalState()) {
+                alert('✅ تم استعادة آخر جلسة');
+            } else {
+                alert('ℹ️ لا توجد جلسة محفوظة');
+            }
+        };
+        nav.appendChild(btn);
+    }
+}, 2000);
+// تعديل دالة updateSideSuggestions لتصغير الحجم
+function updateSideSuggestions() {
+    const sideContainer = document.getElementById('sideVerticalList');
+    if (!sideContainer || typeof dummyData === 'undefined') return;
+
+    let dataSource = [...dummyData];
     
-    setTimeout(updateVideoDurations, 1000);
-    setInterval(checkUserActivity, 10000);
-    setInterval(checkAgeVerification, 60000);
+    if (currentSourceKey === 'life') {
+        dataSource = dataSource.filter(item => item.type === 'article');
+    } else {
+        const currentItem = dummyData.find(i => i.id === currentPlayingId);
+        if (currentItem) {
+            dataSource = dataSource.filter(item => item.type === currentItem.type);
+        }
+    }
+
+    const shuffled = dataSource.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 4);
+
+    sideContainer.innerHTML = selected.map(item => {
+        const thumbImage = item.image || 'https://via.placeholder.com/120x80/333/fff?text=Video';
+        
+        return `
+        <div class="flex items-center cursor-pointer group hover:bg-zinc-800/70 transition-all border border-transparent hover:border-pink-500/30"
+             onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
+            <div class="w-16 h-12 bg-zinc-900 rounded-md overflow-hidden flex-shrink-0 border border-zinc-800 group-hover:border-pink-500 transition-all">
+                <img src="${thumbImage}" 
+                     alt="${item.title}"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                     loading="lazy"
+                     onload="if(this.naturalHeight > this.naturalWidth * 1.2) this.classList.add('portrait-thumb');"
+                     onerror="this.src='https://via.placeholder.com/120x80/333/fff?text=Video';">
+            </div>
+            <div class="flex-1 min-w-0">
+                <h4 class="text-xs font-medium text-gray-200 line-clamp-2 group-hover:text-pink-500">
+                    ${item.title}
+                </h4>
+                <span class="text-[9px] text-pink-500">${item.labels || (item.type === 'video' ? 'فيديو' : 'صورة')}</span>
+            </div>
+        </div>
+    `}).join('');
+}
+// ================ دوال الإعلانات ================
+function renderSideAds() {
+    const container = document.getElementById('sideAdsContainer');
+    if (!container) return;
+    
+    let html = '<div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>';
+    
+    for(let i=0; i<4; i++) {
+        let ad = getRandomSidebarAd();
+        
+        html += `
+            <a href="${ad.link}" target="_blank" class="block w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-600 transition-all transform hover:scale-[1.02] shadow-xl mb-3 group relative">
+                <div class="w-full h-full bg-black flex items-center justify-center">`;
+        
+        if (ad.type === 'video') {
+            html += `
+                    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                        <source src="${ad.url}" type="video/mp4">
+                    </video>`;
+        } else {
+            html += `
+                    <img src="${ad.url}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">`;
+        }
+        
+        html += `
+                    <div class="absolute top-2 right-2 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
+                        ${ad.type === 'video' ? '▶️ فيديو' : (ad.type === 'gif' ? '🎬 GIF' : '📷 إعلان')}
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity text-center bg-black/60 backdrop-blur-sm py-1 rounded-full">
+                        اضغط للمزيد
+                    </div>
+                </div>
+            </a>`;
+    }
+    container.innerHTML = html;
+}
+// ================ دوال العرض الرئيسية ================
+function renderAll() {
+    const grid = document.getElementById('gridBox');
+    if (!grid) return;
+    
+    const q = document.getElementById('searchBox').value.toLowerCase();
+
+    // تصفية البيانات
+    let filtered = (dummyData || []).filter(p => {
+        if (currentSourceKey === 'life') {
+            if (currentType === 'all') {
+                return p.type === 'article' && p.title.toLowerCase().includes(q);
+            } else {
+                return p.type === currentType && p.title.toLowerCase().includes(q);
+            }
+        }
+        
+        if (profileMode === 'fav') return favorites.includes(p.id);
+        if (profileMode === 'like') return likes.includes(p.id);
+        if (profileMode === 'watchlater') return watchLater.includes(p.id);
+        
+        if (currentType === 'video') {
+            return p.type === 'video' && p.title.toLowerCase().includes(q);
+        } else if (currentType === 'image') {
+            return p.type === 'image' && p.title.toLowerCase().includes(q);
+        }
+        
+        return false;
+    });
+    
+    // تقسيم الصفحات
+    const paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+    
+    // بناء مصفوفة مختلطة
+    let mixedItems = paginated.map(p => ({ isAd: false, data: p }));
+    
+    // إضافة الإعلانات داخل الشبكة
+    if (mixedItems.length > 4) {
+        for(let i=0; i<2; i++) {
+            let pos = Math.floor(Math.random() * mixedItems.length);
+            mixedItems.splice(pos, 0, { isAd: true, data: getRandomAd() });
+        }
+    }
+
+    // بناء الـ HTML النهائي للشبكة
+    grid.innerHTML = mixedItems.map(item => {
+        if (!item.isAd) {
+            return `<div class="flex flex-col">${createCard(item.data)}</div>`;
+        } else {
+            const ad = item.data;
+            let imageUrl = ad.url;
+            let adLink = ad.link;
+            let adTitle = ad.title || 'إعلان';
+            
+            if (ad.type === 'video') {
+                return `
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+                        <a href="${adLink}" target="_blank" class="block">
+                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                    <source src="${imageUrl}" type="video/mp4">
+                                </video>
+                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">فيديو</div>
+                            </div>
+                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
+                        </a>
+                    </div>`;
+            } else if (ad.type === 'gif') {
+                return `
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+                        <a href="${adLink}" target="_blank" class="block">
+                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
+                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">GIF</div>
+                            </div>
+                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
+                        </a>
+                    </div>`;
+            } else {
+                return `
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+                        <a href="${adLink}" target="_blank" class="block">
+                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
+                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">إعلان</div>
+                            </div>
+                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
+                        </a>
+                    </div>`;
+            }
+        }
+    }).join('');
+
+    renderSideAds();
+    renderPagination(filtered.length);
+    
     setTimeout(() => {
         renderAdsBelowPagination();
-    }, 500);
+    }, 100);
 }
 
-function updateSubTitle() {
-    const subTitle = document.getElementById('sectionSubtitle');
-    if (!subTitle) return;
+function toggleProfileMode(mode) { 
+    profileMode = (profileMode === mode) ? null : mode; 
+    currentPage = 1; 
+    renderAll(); 
+    renderMenu(); 
     
-    // الوصول المباشر إلى الترجمة
-    if (currentSourceKey && translations[currentLang] && translations[currentLang].subTitles) {
-        subTitle.innerText = translations[currentLang].subTitles[currentSourceKey] || '';
-    } else {
-        subTitle.innerText = ''; // إذا لم يوجد نص، اتركه فارغاً
+    const catTitle = document.getElementById('catTitle');
+    if (profileMode === 'fav') catTitle.innerText = t('favTitle');
+    else if (profileMode === 'like') catTitle.innerText = t('likeTitle');
+    else if (profileMode === 'watchlater') catTitle.innerText = t('watchLaterTitle');
+    else catTitle.innerText = t('sectionTitles')[currentSourceKey] || t('sectionNames')[currentSourceKey];
+    
+    setTimeout(() => {
+        renderAdsBelowPagination();
+    }, 200);
+}
+
+function renderPagination(totalItems) {
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const container = document.getElementById('paginationBox');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    let html = "";
+
+    if (currentPage > 1) {
+        html += `<button onclick="goToPage(${currentPage - 1})" class="pagination-btn">السابق</button>`;
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+        if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+            const activeClass = i === currentPage ? 'active' : '';
+            html += `<button onclick="goToPage(${i})" class="pagination-btn ${activeClass}">${i}</button>`;
+        } 
+        else if (i === currentPage - 2 || i === currentPage + 2) {
+            html += `<span class="text-zinc-600 px-1">...</span>`;
+        }
+    }
+
+    if (currentPage < totalPages) {
+        html += `<button onclick="goToPage(${currentPage + 1})" class="pagination-btn">التالي</button>`;
+    }
+
+    container.innerHTML = html;
+}
+
+function goToPage(page) {
+    currentPage = page;
+    renderAll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    setTimeout(() => {
+        renderAdsBelowPagination();
+    }, 200);
+}
+
+// ================ دوال المقالات ================
+function openArticle(articleId) {
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    const article = dummyData.find(item => item.id === articleId);
+    if (!article) return;
+
+    window.history.pushState({view: 'article', articleId: articleId}, "");
+    document.getElementById('artTitle').innerText = article.title;
+    
+    let contentHtml = article.blocks.map(b => `<div class="mb-6">${b.content}</div>`).join('');
+    
+    let relatedArticles = dummyData
+        .filter(item => item.type === 'article' && item.id !== articleId)
+        .slice(0, 4);
+
+    if (relatedArticles.length > 0) {
+        contentHtml += `
+            <div class="mt-12 pt-8 border-t border-zinc-800">
+                <h3 class="text-2xl font-bold text-pink-500 mb-6">${t('relatedTopics')}</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    ${relatedArticles.map(ra => `
+                        <div class="flex gap-4 p-3 bg-zinc-900 rounded-xl cursor-pointer hover:bg-zinc-800 transition-all" onclick="openArticle(${ra.id})">
+                            <img src="${ra.image}" class="w-24 h-24 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/96x96/333/fff?text=Article'">
+                            <div class="font-bold text-sm">${ra.title}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+    }
+
+    document.getElementById('artBody').innerHTML = contentHtml;
+    document.getElementById('articleView').style.display = 'block';
+    window.scrollTo(0, 0);
+}
+
+function closeArticle() { 
+    document.getElementById('articleView').style.display = 'none'; 
+    
+    setTimeout(() => {
+        window.scrollTo({
+            top: scrollPosition || 0,
+            behavior: 'smooth'
+        });
+    }, 100);
+    
+    if(window.history.state && window.history.state.view === 'article') {
+        window.history.back();
     }
 }
-// تحسين وظيفة التاريخ للرجوع
+
+// ================ دوال القائمة المنبثقة ================
+function toggleCardMenu(event, itemId) {
+    event.stopPropagation();
+    
+    document.querySelectorAll('.card-menu-dropdown').forEach(menu => {
+        if (menu.id !== `menu-${itemId}`) {
+            menu.classList.remove('show');
+        }
+    });
+    
+    const menu = document.getElementById(`menu-${itemId}`);
+    if (menu) menu.classList.toggle('show');
+}
+
+// إغلاق القوائم عند النقر خارجها
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.card-menu-btn') && !e.target.closest('.card-menu-dropdown')) {
+        document.querySelectorAll('.card-menu-dropdown').forEach(menu => {
+            menu.classList.remove('show');
+        });
+    }
+});
+
+// إغلاق القوائم عند التمرير
+window.addEventListener('scroll', function() {
+    document.querySelectorAll('.card-menu-dropdown.show').forEach(menu => {
+        menu.classList.remove('show');
+    });
+}, { passive: true });
+
+function toggleFavFromMenu(event, id) {
+    event.stopPropagation();
+    const idx = favorites.indexOf(id);
+    idx > -1 ? favorites.splice(idx, 1) : favorites.push(id);
+    localStorage.setItem('myFavs', JSON.stringify(favorites));
+    
+    const menuItem = document.querySelector(`.card-menu-item[data-id="${id}"][data-action="fav"]`);
+    if (menuItem) {
+        menuItem.classList.toggle('active', favorites.includes(id));
+        const spans = menuItem.querySelectorAll('span');
+        if (spans.length >= 2) {
+            spans[1].innerHTML = favorites.includes(id) ? 'إزالة من المفضلة' : 'إضافة للمفضلة';
+        }
+    }
+    
+    const menu = document.getElementById(`menu-${id}`);
+    if (menu) menu.classList.remove('show');
+}
+
+function toggleWatchLaterFromMenu(event, id) {
+    event.stopPropagation();
+    const idx = watchLater.indexOf(id);
+    idx > -1 ? watchLater.splice(idx, 1) : watchLater.push(id);
+    localStorage.setItem('myWatchLater', JSON.stringify(watchLater));
+    
+    const menuItem = document.querySelector(`.card-menu-item[data-id="${id}"][data-action="watchlater"]`);
+    if (menuItem) {
+        menuItem.classList.toggle('active', watchLater.includes(id));
+        const spans = menuItem.querySelectorAll('span');
+        if (spans.length >= 2) {
+            spans[1].innerHTML = watchLater.includes(id) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً';
+        }
+    }
+    
+    const menu = document.getElementById(`menu-${id}`);
+    if (menu) menu.classList.remove('show');
+}
+
+// ================ دوال الإحصائيات ================
+function updateStats() {
+    if (!dummyData) return;
+    const videos = dummyData.filter(item => item.type === 'video').length;
+    const images = dummyData.filter(item => item.type === 'image').length;
+    const articles = dummyData.filter(item => item.type === 'article').length;
+    
+    const videosEl = document.getElementById('videosCount');
+    const imagesEl = document.getElementById('imagesCount');
+    const articlesEl = document.getElementById('articlesCount');
+    
+    if (videosEl) videosEl.innerHTML = `📹 ${videos} ${t('videos')}`;
+    if (imagesEl) imagesEl.innerHTML = `🖼️ ${images} ${t('images')}`;
+    if (articlesEl) articlesEl.innerHTML = `📄 ${articles} ${t('articles')}`;
+}
+
+function updateFooterStats() {
+    const videos = dummyData.filter(item => item.type === 'video').length;
+    const images = dummyData.filter(item => item.type === 'image').length;
+    const articles = dummyData.filter(item => item.type === 'article').length;
+
+    document.querySelectorAll('.footer-videos-count').forEach(el => el.innerText = videos);
+    document.querySelectorAll('.footer-images-count').forEach(el => el.innerText = images);
+    document.querySelectorAll('.footer-articles-count').forEach(el => el.innerText = articles);
+}
+
+function updatePlayerStats() {
+    // يمكن إضافة إحصائيات المشغل هنا إذا لزم الأمر
+}
+
+function updatePlayerFooterStats() {
+    // يمكن إضافة إحصائيات فوتر المشغل هنا إذا لزم الأمر
+}
+
+// ================ دوال البحث ================
+function doSearch() { 
+    currentPage = 1; 
+    renderAll(); 
+}
+
+// ================ دوال مدة الفيديو ================
+function getVideoDuration(url) {
+    return new Promise((resolve) => {
+        if (url.includes('drive.google.com')) {
+            resolve("05:30");
+            return;
+        }
+        
+        const video = document.createElement('video');
+        video.preload = 'metadata';
+        video.crossOrigin = 'anonymous';
+        
+        const timeout = setTimeout(() => {
+            resolve("03:45");
+        }, 3000);
+        
+        video.onloadedmetadata = function() {
+            clearTimeout(timeout);
+            const seconds = video.duration;
+            if (isFinite(seconds) && seconds > 0) {
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = Math.floor(seconds % 60);
+                const duration = `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+                URL.revokeObjectURL(video.src);
+                resolve(duration);
+            } else {
+                resolve("03:45");
+            }
+        };
+        
+        video.onerror = function() {
+            clearTimeout(timeout);
+            resolve("03:45");
+        };
+        
+        video.src = url;
+    });
+}
+
+async function updateVideoDurations() {
+    console.log('جاري تحديث مدة الفيديوهات...');
+    const videoCards = document.querySelectorAll('.video-card[data-video-type="video"]');
+    
+    for (const card of videoCards) {
+        const videoId = card.dataset.videoId;
+        const videoUrl = card.dataset.videoUrl;
+        const durationBadge = document.getElementById(`duration-${videoId}`);
+        
+        if (durationBadge && durationBadge.innerHTML.includes('--:--')) {
+            try {
+                const duration = await getVideoDuration(videoUrl);
+                durationBadge.innerHTML = `<i>⏱️</i> ${duration}`;
+                console.log(`تم تحديث مدة الفيديو ${videoId}: ${duration}`);
+            } catch (e) {
+                console.log('خطأ في تحديث مدة الفيديو', videoId);
+            }
+        }
+    }
+}
+
+// ================ دوال التنقل في الفوتر ================
+function goToVideos() {
+    if (currentSourceKey === 'life') {
+        switchSource('zaj', 'الزواج');
+    }
+    currentType = 'video';
+    currentCat = 'all content';
+    profileMode = null;
+    currentPage = 1;
+    saveState();
+    renderMenu();
+    renderAll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToImages() {
+    if (currentSourceKey === 'life') {
+        switchSource('zaj', 'الزواج');
+    }
+    currentType = 'image';
+    currentCat = 'all content';
+    profileMode = null;
+    currentPage = 1;
+    saveState();
+    renderMenu();
+    renderAll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToArticles() {
+    if (currentSourceKey !== 'life') {
+        switchSource('life', 'الحياة الزوجية');
+    }
+    currentType = 'all';
+    currentCat = 'all content';
+    profileMode = null;
+    currentPage = 1;
+    saveState();
+    renderMenu();
+    renderAll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToPopular() {
+    if (currentSourceKey === 'life') {
+        switchSource('zaj', 'الزواج');
+    }
+    currentType = 'video';
+    currentCat = 'all content';
+    profileMode = null;
+    currentPage = 1;
+    saveState();
+    renderMenu();
+    renderAll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ================ دوال الإعلانات تحت الترقيم ================
+function renderAdsBelowPagination() {
+    const paginationBox = document.getElementById('paginationBox');
+    if (!paginationBox) return;
+    
+    let adsContainer = document.getElementById('adsBelowPagination');
+    if (!adsContainer) {
+        adsContainer = document.createElement('div');
+        adsContainer.id = 'adsBelowPagination';
+        adsContainer.className = 'mt-6 mb-4';
+        paginationBox.parentNode.insertBefore(adsContainer, paginationBox.nextSibling);
+    }
+    
+    const randomType = Math.floor(Math.random() * 2);
+    let html = '';
+    
+    if (randomType === 0) {
+        const ad = getRandomPaginationLargeAd();
+        
+        html = `
+            <div class="w-full bg-gradient-to-r from-pink-900/30 to-purple-900/30 rounded-xl overflow-hidden border-2 border-pink-500/30 hover:border-pink-500 transition-all transform hover:scale-[1.01] shadow-lg group">
+                <a href="${ad.link}" target="_blank" class="block relative" style="height: 220px;">
+                    <div class="w-full h-full bg-black flex items-center justify-center overflow-hidden">
+                        <img src="${ad.image}" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                             alt="${ad.title}"
+                             onerror="this.src='${siteAds.paginationLargeAds[0].image}';"
+                             style="max-height: 100%; max-width: 100%;">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute top-3 right-3 bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-pink-500/50 font-bold z-10">
+                        <span class="text-pink-400">✨</span> إعلان مميز
+                    </div>
+                    <div class="absolute bottom-3 left-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm px-5 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 z-10 shadow-lg">
+                        اضغط للمزيد
+                    </div>
+                    <div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-white/20">
+                        🔥 عرض حصري
+                    </div>
+                </a>
+            </div>
+        `;
+    } else {
+        const selectedAds = getRandomPaginationSquareAds(3);
+        
+        html = `
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                ${selectedAds.map(ad => `
+                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all transform hover:scale-[1.02] group">
+                        <a href="${ad.link}" target="_blank" class="block">
+                            <div class="relative bg-black" style="height: 200px;">
+                                <img src="${ad.image}" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                                     alt="${ad.title}"
+                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}';"
+                                     style="max-height: 100%; max-width: 100%;">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="absolute top-2 right-2 bg-black/80 text-white text-[10px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
+                                    إعلان
+                                </div>
+                            </div>
+                            <div class="p-3 text-center bg-gradient-to-b from-transparent to-black/20">
+                                <h4 class="text-sm font-bold text-white group-hover:text-pink-400 transition line-clamp-1">${ad.title}</h4>
+                                <p class="text-[10px] text-gray-500 mt-1">اضغط للمزيد</p>
+                            </div>
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
+    const badges = ["🔥 عروض حصرية", "⚡ لفترة محدودة", "🎁 خصم 50%", "💎 عضوية VIP", "⭐ تقييم 5 نجوم"];
+    const randomBadges = badges.sort(() => 0.5 - Math.random()).slice(0, 2);
+    
+    html += `
+        <div class="flex justify-center gap-3 mt-3">
+            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[0]}</span>
+            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[1]}</span>
+        </div>
+    `;
+    
+    adsContainer.innerHTML = html;
+}
+
+// ================ دوال تحسين عرض الصور ================
+function optimizeImageDisplay() {
+    const vArea = document.getElementById('vArea');
+    if (vArea) {
+        const images = vArea.querySelectorAll('img');
+        images.forEach(img => {
+            if (img.complete) {
+                const isPortrait = img.naturalHeight > img.naturalWidth;
+                vArea.classList.toggle('portrait-media', isPortrait);
+                vArea.classList.toggle('landscape-media', !isPortrait);
+            } else {
+                img.onload = function() {
+                    const isPortrait = this.naturalHeight > this.naturalWidth;
+                    vArea.classList.toggle('portrait-media', isPortrait);
+                    vArea.classList.toggle('landscape-media', !isPortrait);
+                };
+            }
+        });
+    }
+}
+
+// ================ أحداث التاريخ ================
 window.onpopstate = function(event) {
     const playWindow = document.getElementById('playWindow');
     const articleView = document.getElementById('articleView');
@@ -2760,15 +2196,106 @@ window.onpopstate = function(event) {
         return false;
     }
 };
-// ضبط زر وضع الليل
-document.addEventListener('DOMContentLoaded', function() {
-    // إضافة زر اللغة
-    const nightBtn = document.getElementById('nightBtn');
-    if (nightBtn) {
-        nightBtn.outerHTML += '<button id="langBtn" class="fixed bottom-4 right-4 ..." ...';
+// ================ أحداث تحميل الصفحة ================
+window.onload = () => {
+    // تحديث واجهة المستخدم
+    updateUserUI();
+    
+    // التحقق من المستخدم
+    if (currentUser) {
+        ageVerificationEnabled = false;
+        const modal = document.getElementById('ageVerifyModal');
+        if (modal) modal.style.display = 'none';
+    } else {
+        ageVerificationEnabled = true;
     }
-    // ...
+     
+    updateFooterStats();
+    updateUserActivity();
+    
+    // التحقق من العمر
+    checkAgeVerification();
+
+    // استعادة القسم المحفوظ
+    const savedSource = localStorage.getItem('selectedSource');
+    const savedSourceName = localStorage.getItem('selectedSourceName');
+    
+    if (savedSource && allDBs[savedSource]) {
+        currentSourceKey = savedSource;
+        currentSourceName = savedSourceName || 'الزواج';
+        dummyData = [...allDBs[savedSource]];
+    } else {
+        currentSourceKey = 'zaj';
+        currentSourceName = 'الزواج';
+        dummyData = [...allDBs['zaj']];
+        localStorage.setItem('selectedSource', 'zaj');
+        localStorage.setItem('selectedSourceName', 'الزواج');
+    }
+
+    const activeNameEl = document.getElementById('activeName');
+    if(activeNameEl && currentSourceKey) {
+        activeNameEl.innerHTML = t('sectionNames')[currentSourceKey];
+    }
+
+    // تحديث عنوان الصفحة
+    const catTitle = document.getElementById('catTitle');
+    if (catTitle) {
+        catTitle.innerText = t('sectionTitles')[currentSourceKey] || t('sectionNames')[currentSourceKey];
+    }
+
+    renderMenu(); 
+    renderAll();
+    updateSubTitle();
+
+    // استعادة الفيديو المحفوظ
+    const savedPlayingId = localStorage.getItem('currentPlayingId');
+    if (savedPlayingId) {
+        currentPlayingId = savedPlayingId;
+        try {
+            const itemToPlay = dummyData.find(i => i.id == currentPlayingId);
+            if (itemToPlay) {
+                document.getElementById('playWindow').classList.remove('hidden');
+                playVideo(itemToPlay);
+            } else {
+                localStorage.removeItem('currentPlayingId');
+            }
+        } catch(e) {
+            console.error("Error restoring video:", e);
+        }
+    }
+
+    // استعادة الوضع الليلي
+    if(localStorage.getItem('darkMode') === 'true'){
+        document.body.classList.add('dark-mode');
+    }
+    
+    // تحديث مدة الفيديوهات
+    setTimeout(updateVideoDurations, 1000);
+    
+    // التحقق من نشاط المستخدم كل 10 ثواني
+    setInterval(checkUserActivity, 10000);
+    
+    // التحقق من العمر كل دقيقة
+    setInterval(checkAgeVerification, 60000);
+    
+    setTimeout(() => {
+        renderAdsBelowPagination();
+    }, 500);
+    
+    // تهيئة التاريخ
+    history.replaceState({view: 'home'}, "");
+    
+    // تحديث نص زر اللغة
+    document.getElementById('langBtn').innerHTML = currentLang === 'ar' ? '🌐 AR' : '🌐 EN';
+};
+
+// ================ أحداث إضافية ================
+document.addEventListener('DOMContentLoaded', function() {
+    // تحديث النصوص
+    updateAllTexts();
 });
+
+// دالة handleBackAction (إذا كانت مستخدمة في مكان ما)
 function handleBackAction() {
     document.getElementById('playWindow').style.display = 'none';
     document.getElementById('playWindow').classList.add('hidden');
@@ -2782,452 +2309,48 @@ function handleBackAction() {
         });
     }, 100);
 }
-    // تفعيل أزرار التقدم والرجوع
-    history.replaceState({view: 'home'}, "");
-    // ===== تحديث النصوص في الصفحة =====
-// استدعاء هذه الدالة بعد تحميل الصفحة
-document.addEventListener('DOMContentLoaded', function() {
-    // إضافة زر اللغة
-    const nightBtn = document.getElementById('nightBtn');
-    if (nightBtn) {
-        
-    nightBtn.outerHTML += '<button id="langBtn" class="fixed bottom-4 right-4 bg-zinc-800 text-white p-3 rounded-full z-50 shadow-lg" onclick="toggleLanguage()">🌐 EN</button>';    
-    }
-    // تحديث النصوص
-    updateAllTexts();
-    
-    // باقي الكود الموجود...
-});
-// ✅ دوال التنقل في الفوتر
-function goToVideos() {
-    // التأكد من أننا في قسم مناسب للفيديوهات
-    if (currentSourceKey === 'life') {
-        switchSource('zaj', 'الزواج');
-    }
-    // ضبط النوع على فيديو
-    currentType = 'video';
-    currentCat = 'all content';
-    profileMode = null;
-    currentPage = 1;
-    saveState();
-    renderMenu();
+
+// دوال إضافية مطلوبة
+function toggleAction(event, type, id) {
+    event.stopPropagation();
+    let list = (type === 'fav') ? favorites : likes;
+    let key = (type === 'fav') ? 'myFavs' : 'myLikes';
+    const idx = list.indexOf(id);
+    idx > -1 ? list.splice(idx, 1) : list.push(id);
+    localStorage.setItem(key, JSON.stringify(list));
     renderAll();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function goToImages() {
-    // التأكد من أننا في قسم مناسب للصور
-    if (currentSourceKey === 'life') {
-        switchSource('zaj', 'الزواج');
-    }
-    // ضبط النوع على صور
-    currentType = 'image';
-    currentCat = 'all content'; // هذا سيعرض كل الصور (ثابتة + متحركة)
-    profileMode = null;
-    currentPage = 1;
-    saveState();
-    renderMenu();
-    renderAll();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function goToArticles() {
-    // الانتقال إلى قسم المقالات
-    switchSource('life', 'الحياة الزوجية');
-    // ضبط النوع على all (لأن life يعرض مقالات فقط)
-    currentType = 'all';
-    currentCat = 'all content';
-    profileMode = null;
-    currentPage = 1;
-    saveState();
-    renderMenu();
-    renderAll();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function goToPopular() {
-    // الانتقال إلى قسم الفيديو
-    if (currentSourceKey === 'life') {
-        switchSource('zaj', 'الزواج');
-    }
-    // ضبط النوع على فيديو
-    currentType = 'video';
-    currentCat = 'all content';
-    profileMode = null;
-    currentPage = 1;
-    saveState();
-    renderMenu();
-    
-    // ترتيب الفيديوهات حسب الشعبية (الإعجابات)
-    if (dummyData) {
-        // إنشاء نسخة من البيانات وترتيبها حسب الإعجابات
-        let popularVideos = [...dummyData]
-            .filter(item => item.type === 'video')
-            .sort((a, b) => {
-                const likesA = likesCount[a.id] || 0;
-                const likesB = likesCount[b.id] || 0;
-                return likesB - likesA;
-            });
-        
-        // عرض الفيديوهات مرتبة
-        renderAll();
-    } else {
-        renderAll();
-    }
-    
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-// ===== نظام الإعلانات تحت الترقيم =====
-// ===== نظام الإعلانات تحت الترقيم =====
-function renderAdsBelowPagination() {
-    const paginationBox = document.getElementById('paginationBox');
-    if (!paginationBox) return;
-    
-    let adsContainer = document.getElementById('adsBelowPagination');
-    if (!adsContainer) {
-        adsContainer = document.createElement('div');
-        adsContainer.id = 'adsBelowPagination';
-        adsContainer.className = 'mt-6 mb-4';
-        paginationBox.parentNode.insertBefore(adsContainer, paginationBox.nextSibling);
-    }
-    
-    const randomType = Math.floor(Math.random() * 2);
-    let html = '';
-    
-    if (randomType === 0) {
-        // إعلان مستطيل كبير
-        const ad = getRandomPaginationLargeAd();
-        
-        html = `
-            <div class="w-full bg-gradient-to-r from-pink-900/30 to-purple-900/30 rounded-xl overflow-hidden border-2 border-pink-500/30 hover:border-pink-500 transition-all transform hover:scale-[1.01] shadow-lg group">
-                <a href="${ad.link}" target="_blank" class="block relative" style="height: 220px;">
-                    <div class="w-full h-full bg-black flex items-center justify-center overflow-hidden">
-                        <img src="${ad.image}" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                             alt="${ad.title}"
-                             onerror="this.src='${siteAds.paginationLargeAds[0].image}';"
-                             style="max-height: 100%; max-width: 100%;">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-3 right-3 bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-pink-500/50 font-bold z-10">
-                        <span class="text-pink-400">✨</span> إعلان مميز
-                    </div>
-                    <div class="absolute bottom-3 left-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm px-5 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 z-10 shadow-lg">
-                        اضغط للمزيد
-                    </div>
-                    <div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-white/20">
-                        🔥 عرض حصري
-                    </div>
-                </a>
-            </div>
-        `;
-    } else {
-        // 3 مربعات
-        const selectedAds = getRandomPaginationSquareAds(3);
-        
-        html = `
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                ${selectedAds.map(ad => `
-                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all transform hover:scale-[1.02] group">
-                        <a href="${ad.link}" target="_blank" class="block">
-                            <div class="relative bg-black" style="height: 200px;">
-                                <img src="${ad.image}" 
-                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                                     alt="${ad.title}"
-                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}';"
-                                     style="max-height: 100%; max-width: 100%;">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <div class="absolute top-2 right-2 bg-black/80 text-white text-[10px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
-                                    إعلان
-                                </div>
-                            </div>
-                            <div class="p-3 text-center bg-gradient-to-b from-transparent to-black/20">
-                                <h4 class="text-sm font-bold text-white group-hover:text-pink-400 transition line-clamp-1">${ad.title}</h4>
-                                <p class="text-[10px] text-gray-500 mt-1">اضغط للمزيد</p>
-                            </div>
-                        </a>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-    
-    // إضافة شريط صغير أسفل الإعلانات
-    const badges = ["🔥 عروض حصرية", "⚡ لفترة محدودة", "🎁 خصم 50%", "💎 عضوية VIP", "⭐ تقييم 5 نجوم"];
-    const randomBadges = badges.sort(() => 0.5 - Math.random()).slice(0, 2);
-    
-    html += `
-        <div class="flex justify-center gap-3 mt-3">
-            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[0]}</span>
-            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[1]}</span>
-        </div>
-    `;
-    
-    adsContainer.innerHTML = html;
-}
-// تحسين عرض الصور المصغرة في الاقتراحات
-function fixSuggestionThumbnails() {
-    // معالجة صور اقتراحات الفيديو
-    document.querySelectorAll('#recBox .aspect-video img').forEach(img => {
-        img.onload = function() {
-            if (this.naturalHeight > this.naturalWidth) {
-                this.classList.add('portrait-thumb');
-                this.style.objectFit = 'contain';
-                this.style.backgroundColor = '#000';
-                this.style.padding = '5px';
-            } else {
-                this.classList.remove('portrait-thumb');
-                this.style.objectFit = 'cover';
-                this.style.backgroundColor = 'transparent';
-                this.style.padding = '0';
-            }
-        };
-        
-        // إذا كانت الصورة محملة بالفعل
-        if (img.complete) {
-            if (img.naturalHeight > img.naturalWidth) {
-                img.classList.add('portrait-thumb');
-                img.style.objectFit = 'contain';
-                img.style.backgroundColor = '#000';
-                img.style.padding = '5px';
-            }
-        }
-    });
-    
-    // معالجة الصور في الاقتراحات الجانبية
-    document.querySelectorAll('.suggestion-thumb img').forEach(img => {
-        img.onload = function() {
-            if (this.naturalHeight > this.naturalWidth) {
-                this.classList.add('portrait-thumb');
-                this.style.objectFit = 'contain';
-                this.style.backgroundColor = '#000';
-                this.style.padding = '3px';
-            } else {
-                this.classList.remove('portrait-thumb');
-                this.style.objectFit = 'cover';
-                this.style.backgroundColor = 'transparent';
-                this.style.padding = '0';
-            }
-        };
-        
-        if (img.complete) {
-            if (img.naturalHeight > img.naturalWidth) {
-                img.classList.add('portrait-thumb');
-                img.style.objectFit = 'contain';
-                img.style.backgroundColor = '#000';
-                img.style.padding = '3px';
-            }
-        }
-    });
-}
-
-// استدعاء الدالة بعد تحديث الاقتراحات
-function updateRecSuggestions() {
-    const recContainer = document.getElementById('recBox');
-    if (!recContainer || typeof dummyData === 'undefined') return;
-
-    let dataSource = [...dummyData];
-    
-    if (currentSourceKey === 'life') {
-        dataSource = dataSource.filter(item => item.type === 'article');
-    } else {
-        const currentItem = dummyData.find(i => i.id === currentPlayingId);
-        if (currentItem) {
-            dataSource = dataSource.filter(item => item.type === currentItem.type);
-        }
-    }
-
-    if (currentPlayingId) {
-        dataSource = dataSource.filter(item => item.id != currentPlayingId);
-    }
-
-    const shuffled = dataSource.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 8);
-
-    if (selected.length === 0) {
-        recContainer.innerHTML = '<div class="col-span-full text-center text-gray-500 py-8">لا توجد اقتراحات متاحة</div>';
-        return;
-    }
-
-    recContainer.innerHTML = selected.map(item => {
-        const thumbImage = item.image || 'https://via.placeholder.com/300x169/333/fff?text=Video';
-        
-        return `
-        <div class="cursor-pointer group" onclick='playVideo(${JSON.stringify(item).replace(/"/g, "&quot;")})'>
-            <div class="relative rounded-xl overflow-hidden bg-zinc-900 aspect-video mb-2 border border-zinc-800 group-hover:border-pink-500 transition-all" style="height: 120px;">
-                <img src="${thumbImage}" 
-                     alt="${item.title}"
-                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 suggestion-img"
-                     loading="lazy"
-                     onload="if(this.naturalHeight > this.naturalWidth) { this.style.objectFit='contain'; this.style.backgroundColor='#000'; this.style.padding='5px'; } else { this.style.objectFit='cover'; this.style.padding='0'; }"
-                     onerror="this.src='https://via.placeholder.com/300x169/333/fff?text=Video'; this.style.objectFit='cover'; this.style.padding='0';">
-                ${item.type === 'video' ? 
-                    `<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md border border-white/20">
-                        ⏱️ ${item.duration || '03:45'}
-                    </span>` : 
-                    `<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded-md border border-white/20">
-                        🖼️ ${item.image.includes('.gif') ? 'GIF' : 'صورة'}
-                    </span>`
-                }
-            </div>
-            <h4 class="text-sm font-bold text-gray-200 line-clamp-2 group-hover:text-pink-500 transition-colors">
-                ${item.title}
-            </h4>
-        </div>
-    `}).join('');
-    
-    // استدعاء دالة تحسين الصور بعد إضافتها
-    setTimeout(fixSuggestionThumbnails, 100);
-}
-
-// تحديث دالة الاقتراحات الجانبية أيضاً
-
-
-
-
-// استدعاء الدالة عند فتح مشغل جديد
-const originalPlayVideo = playVideo;
-playVideo = function(p) {
-    originalPlayVideo(p);
-    setTimeout(fixSuggestionThumbnails, 300);
-};
-        
-// تحسين تجربة الاقتراحات
-function enhanceSuggestions() {
-    // إضافة lazy loading للصور
-    const suggestionImages = document.querySelectorAll('#recBox img, .suggestion-thumb img');
-    suggestionImages.forEach(img => {
-        img.loading = 'lazy';
-        
-        // إضافة تأثير ظهور تدريجي
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.5s ease';
-        
-        img.onload = function() {
-            this.style.opacity = '1';
-        };
-        
-        // إذا كانت الصورة محملة بالفعل
-        if (img.complete) {
-            img.style.opacity = '1';
-        }
-    });
-}
-
-// استدعاء الدالة بعد تحديث الاقتراحات
-const originalUpdateRec = updateRecSuggestions;
-updateRecSuggestions = function() {
-    originalUpdateRec();
-    setTimeout(enhanceSuggestions, 200);
-};
-
-const originalUpdateSide = updateSideSuggestions;
-updateSideSuggestions = function() {
-    originalUpdateSide();
-    setTimeout(enhanceSuggestions, 200);
-};
-
-// تحسين أداء الموقع
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
-        });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// إضافة إحصائيات متقدمة
-function trackUserBehavior() {
-    // تتبع الصفحات الأكثر مشاهدة
-    let pageViews = JSON.parse(localStorage.getItem('pageViews')) || {};
-    const currentSection = currentSourceKey || 'home';
-    pageViews[currentSection] = (pageViews[currentSection] || 0) + 1;
-    localStorage.setItem('pageViews', JSON.stringify(pageViews));
-    
-    // تتبع أوقات الذروة
-    const peakHours = JSON.parse(localStorage.getItem('peakHours')) || [];
-    peakHours.push(new Date().getHours());
-    if (peakHours.length > 100) peakHours.shift();
-    localStorage.setItem('peakHours', JSON.stringify(peakHours));
-}
-
-// تحسين تجربة المستخدم
-function enhanceUX() {
-    // إضافة تأثيرات حركية سلسة
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('click', function(e) {
-            if (!e.ctrlKey && !e.metaKey) {
-                this.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 150);
-            }
-        });
-    });
-    
-    // حفظ آخر موضع تمرير
-    window.addEventListener('scroll', debounce(() => {
-        localStorage.setItem('scrollPosition', window.scrollY);
-    }, 500));
-}
-
-// دالة debounce المساعدة
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// تحسين البحث
-function enhancedSearch() {
-    const searchBox = document.getElementById('searchBox');
-    if (!searchBox) return;
-    
-    searchBox.addEventListener('input', debounce(() => {
-        doSearch();
-        
-        // إضافة اقتراحات البحث
-        const query = searchBox.value.toLowerCase();
-        if (query.length > 2) {
-            const suggestions = dummyData
-                .filter(item => item.title.toLowerCase().includes(query))
-                .slice(0, 5);
-            
-            showSearchSuggestions(suggestions);
-        }
-    }, 500));
-}
-
-function showSearchSuggestions(suggestions) {
-    let suggestionsDiv = document.getElementById('searchSuggestions');
-    if (!suggestionsDiv) {
-        suggestionsDiv = document.createElement('div');
-        suggestionsDiv.id = 'searchSuggestions';
-        suggestionsDiv.className = 'absolute top-full right-0 left-0 bg-zinc-900 border border-zinc-800 rounded-xl mt-2 overflow-hidden z-50';
-        document.querySelector('.relative').appendChild(suggestionsDiv);
-    }
-    
-    suggestionsDiv.innerHTML = suggestions.map(item => `
-        <div class="p-3 hover:bg-pink-600/30 cursor-pointer border-b border-zinc-800 last:border-b-0"
-             onclick="document.getElementById('searchBox').value='${item.title}'; doSearch(); suggestionsDiv.remove();">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-500">${item.type === 'video' ? '📹' : (item.type === 'image' ? '🖼️' : '📄')}</span>
-                <span class="text-sm">${item.title}</span>
-            </div>
-        </div>
-    `).join('');
-}
+// تصدير الدوال إلى النافذة العمومية
+window.toggleLanguage = toggleLanguage;
+window.verifyAge = verifyAge;
+window.toggleDBList = toggleDBList;
+window.switchSource = switchSource;
+window.toggleProfileMode = toggleProfileMode;
+window.doSearch = doSearch;
+window.goToPage = goToPage;
+window.playVideo = playVideo;
+window.closePlayer = closePlayer;
+window.openArticle = openArticle;
+window.closeArticle = closeArticle;
+window.toggleCardMenu = toggleCardMenu;
+window.toggleFavFromMenu = toggleFavFromMenu;
+window.toggleWatchLaterFromMenu = toggleWatchLaterFromMenu;
+window.toggleFavFromPlayer = toggleFavFromPlayer;
+window.toggleLike = toggleLike;
+window.toggleDislike = toggleDislike;
+window.toggleWatchLater = toggleWatchLater;
+window.shareVideo = shareVideo;
+window.goToVideos = goToVideos;
+window.goToImages = goToImages;
+window.goToArticles = goToArticles;
+window.goToPopular = goToPopular;
+window.showAuthModal = showAuthModal;
+window.closeAuthModal = closeAuthModal;
+window.handleLogin = handleLogin;
+window.handleRegister = handleRegister;
+window.verifyCode = verifyCode;
+window.resetToRegister = resetToRegister;
+window.toggleAuthMode = toggleAuthMode;
+window.googleSignIn = googleSignIn;
+window.logout = logout;
