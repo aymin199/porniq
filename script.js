@@ -1528,23 +1528,42 @@ function updateRecSuggestions() {
     `}).join('');
 }
 // إضافة زر استعادة يدوي
-setTimeout(function() {
-    const nav = document.querySelector('nav .flex.items-center.gap-4');
-    if (nav && !document.getElementById('finalRestoreBtn')) {
-        const btn = document.createElement('button');
-        btn.id = 'finalRestoreBtn';
-        btn.innerHTML = '🔄 استعادة';
-        btn.style.cssText = 'background:#9333ea; color:white; padding:5px 12px; border-radius:30px; font-size:12px; font-weight:bold; border:none; cursor:pointer; margin-left:5px;';
-        btn.onclick = function() {
-            if (restoreFinalState()) {
-                alert('✅ تم استعادة آخر جلسة');
-            } else {
-                alert('ℹ️ لا توجد جلسة محفوظة');
-            }
-        };
-        nav.appendChild(btn);
+function restoreFinalState() {
+    try {
+        const saved = localStorage.getItem('porniq_state');
+        if (!saved) return false;
+        
+        const state = JSON.parse(saved);
+        
+        // استعادة القسم
+        if (state.section && allDBs[state.section]) {
+            currentSourceKey = state.section;
+            currentSourceName = state.sectionName || 'الزواج';
+            dummyData = [...allDBs[currentSourceKey]];
+        }
+        
+        // استعادة الصفحة والنوع
+        if (state.page) currentPage = state.page;
+        if (state.type) currentType = state.type;
+        if (state.cat) currentCat = state.cat;
+        if (state.profile !== null) profileMode = state.profile;
+        
+        // استعادة الفيديو
+        if (state.video) {
+            currentPlayingId = state.video;
+            localStorage.setItem('currentPlayingId', state.video);
+        }
+        
+        // تحديث الواجهة
+        renderMenu();
+        renderAll();
+        updateSubTitle();
+        
+        return true;
+    } catch(e) {
+        return false;
     }
-}, 2000);
+}
 // تعديل دالة updateSideSuggestions لتصغير الحجم
 function updateSideSuggestions() {
     const sideContainer = document.getElementById('sideVerticalList');

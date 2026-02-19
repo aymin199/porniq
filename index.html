@@ -30,6 +30,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 </head>
 <body class='pt-24 bg-black text-white'>
+    <!-- تأكيد ظهور الفوتر -->
+<div style="clear: both; width: 100%;"></div>
     <!-- زر الوضع الليلي -->
     <button id="nightBtn" class="fixed bottom-4 left-4 bg-zinc-800 text-white p-3 rounded-full z-50 shadow-lg" onclick="document.body.classList.toggle('dark-mode')">🌙</button>
     <button id="langBtn" class="fixed bottom-4 right-4 bg-zinc-800 text-white p-3 rounded-full z-50 shadow-lg hover:bg-pink-600 transition-all" onclick="toggleLanguage()">🌐 EN</button>
@@ -76,9 +78,9 @@
     </nav>
 
     <!-- المحتوى الرئيسي -->
-    <div class='flex flex-row max-w-[1700px] mx-auto p-4 gap-6' dir="rtl">
+   <div class='flex flex-col lg:flex-row max-w-[1700px] mx-auto p-4 gap-6' dir="rtl">
         <!-- الشريط الجانبي الأيسر -->
-        <aside class='w-64 flex-shrink-0 sticky top-24 h-[calc(100vh-120px)] hidden lg:block bg-zinc-900/50 rounded-2xl p-4 border border-zinc-800 overflow-y-auto'>
+<aside class='w-full lg:w-64 flex-shrink-0 lg:sticky top-24 lg:h-[calc(100vh-120px)] block bg-zinc-900/50 rounded-2xl p-4 border border-zinc-800 overflow-y-auto mb-4 lg:mb-0'>
             <div class="profile-card bg-gradient-to-br from-pink-700 to-purple-800 p-4 rounded-xl mb-4 text-white">
                 <div class="text-[10px] uppercase font-bold opacity-80 mb-2">My Saved Profile:</div>
                 <div class="flex flex-col gap-2">
