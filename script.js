@@ -2339,6 +2339,595 @@ function toggleAction(event, type, id) {
     localStorage.setItem(key, JSON.stringify(list));
     renderAll();
 }
+// ================ تحسينات للهاتف ================
+function enhanceMobileMenu() {
+    if (window.innerWidth <= 768) {
+        // إضافة خاصية اللمس للقوائم
+        document.querySelectorAll('.card-menu-btn').forEach(btn => {
+            btn.addEventListener('touchstart', function(e) {
+                e.stopPropagation();
+            });
+        });
+        
+        // إغلاق القوائم عند النقر خارجها
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.card-menu-btn') && !e.target.closest('.card-menu-dropdown')) {
+                document.querySelectorAll('.card-menu-dropdown.show').forEach(menu => {
+                    menu.classList.remove('show');
+                });
+            }
+        });
+    }
+}
+// ================ نظام القائمة الجانبية المنبثقة للهاتف ================
+function initMobileSidebar() {
+    if (window.innerWidth <= 768) {
+        // إنشاء العناصر إذا لم تكن موجودة
+        if (!document.getElementById('sidebarMenuBtn')) {
+            // زر فتح القائمة
+            const menuBtn = document.createElement('button');
+            menuBtn.id = 'sidebarMenuBtn';
+            menuBtn.innerHTML = '☰';
+            menuBtn.setAttribute('aria-label', 'القائمة الرئيسية');
+            document.body.appendChild(menuBtn);
+            
+            // خلفية معتمة
+            const overlay = document.createElement('div');
+            overlay.id = 'sidebarOverlay';
+            document.body.appendChild(overlay);
+            
+            // القائمة المنبثقة
+            const sidebarMenu = document.createElement('div');
+            sidebarMenu.id = 'mobileSidebarMenu';
+            
+            // زر إغلاق
+            const closeBtn = document.createElement('div');
+            closeBtn.id = 'closeSidebarMenu';
+            closeBtn.innerHTML = '✕';
+            sidebarMenu.appendChild(closeBtn);
+            
+            // عنوان القسم الأول - الملف الشخصي
+            const profileTitle = document.createElement('h3');
+            profileTitle.className = 'text-center text-pink-500 font-bold text-lg mb-3 mt-2';
+            profileTitle.innerText = 'ملفي الشخصي';
+            sidebarMenu.appendChild(profileTitle);
+            
+            // نسخ الملف الشخصي من القائمة الجانبية الأصلية
+            const originalSidebar = document.querySelector('aside.w-full.lg\\:w-64');
+            if (originalSidebar) {
+                const profileCard = originalSidebar.querySelector('.profile-card');
+                if (profileCard) {
+                    const clonedProfile = profileCard.cloneNode(true);
+                    clonedProfile.style.margin = '0 0 20px 0';
+                    clonedProfile.style.background = 'linear-gradient(135deg, #be185d, #6d28d9)';
+                    sidebarMenu.appendChild(clonedProfile);
+                }
+            }
+            
+            // عنوان القسم الثاني - تصفح المحتوى
+            const browseTitle = document.createElement('h3');
+            browseTitle.className = 'text-center text-pink-500 font-bold text-lg mb-3 mt-4';
+            browseTitle.innerText = 'تصفح المحتوى';
+            sidebarMenu.appendChild(browseTitle);
+            
+            // زر تبديل الأقسام الرئيسية
+            const dbSwitchContainer = document.createElement('div');
+            dbSwitchContainer.className = 'mb-4';
+            
+            // الحصول على النص الحالي للقسم النشط
+            const activeSection = document.getElementById('activeName')?.innerText || 'قسم الزواج';
+            
+            dbSwitchContainer.innerHTML = `
+                <div class="db-switch-btn-mobile" style="background: linear-gradient(135deg, #917ee6, #6d28d9); color: white; padding: 15px; border-radius: 50px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; cursor: pointer; margin-bottom: 10px; border: 2px solid rgba(255,255,255,0.2);">
+                    <span style="font-size: 16px;">${activeSection}</span>
+                    <span style="background: rgba(255,255,255,0.2); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">▼</span>
+                </div>
+                <div class="db-dropdown-mobile" style="display: none; background: #1f1f1f; border: 2px solid #be185d; border-radius: 20px; overflow: hidden; margin-bottom: 15px;">
+                    <div class="section-option" data-section="zaj" style="padding: 15px 20px; border-bottom: 1px solid #333; cursor: pointer; color: white; font-size: 15px; transition: all 0.2s;">مستقيم ⚤</div>
+                    <div class="section-option" data-section="nesa" style="padding: 15px 20px; border-bottom: 1px solid #333; cursor: pointer; color: white; font-size: 15px;">سحاقيات ⚢</div>
+                    <div class="section-option" data-section="haywan" style="padding: 15px 20px; border-bottom: 1px solid #333; cursor: pointer; color: white; font-size: 15px;">متحولين جنسياً ⚧</div>
+                    <div class="section-option" data-section="life" style="padding: 15px 20px; cursor: pointer; color: white; font-size: 15px;">وضعيات جنسية</div>
+                </div>
+            `;
+            sidebarMenu.appendChild(dbSwitchContainer);
+            
+            // الأقسام الرئيسية (فيديوهات، صور ثابتة، صور متحركة)
+            const menuContainer = document.createElement('div');
+            menuContainer.id = 'mobileMenuBox';
+            menuContainer.style.display = 'flex';
+            menuContainer.style.flexDirection = 'row';
+            menuContainer.style.flexWrap = 'wrap';
+            menuContainer.style.gap = '8px';
+            menuContainer.style.marginTop = '10px';
+            
+            // الحصول على الأقسام الحالية
+            const currentSource = currentSourceKey || 'zaj';
+            
+            let menuItems = [];
+            if (currentSource === 'life') {
+                menuItems = [
+                    { name: 'كل المحتوى', type: 'all', cat: 'all content', icon: 'https://b.top4top.io/p_3690o1nhv1.png' }
+                ];
+            } else {
+                menuItems = [
+                    { name: 'الفيديوهات', type: 'video', cat: 'all content', icon: 'https://b.top4top.io/p_3690o1nhv1.png' },
+                    { name: 'صور ثابتة', type: 'image', cat: 'ثابتة', icon: 'https://h.top4top.io/p_3690et83z1.png' },
+                    { name: 'صور متحركة', type: 'image', cat: 'متحركة', icon: 'https://l.top4top.io/p_36909qyxa1.png' }
+                ];
+            }
+            
+            menuItems.forEach(item => {
+                const isActive = (currentSource === 'life' && item.type === 'all') || 
+                                (currentType === item.type && currentCat === item.cat);
+                
+                const menuItem = document.createElement('div');
+                menuItem.className = 'mobile-menu-item';
+                menuItem.style.flex = '1 1 auto';
+                menuItem.style.minWidth = 'calc(33.33% - 8px)';
+                menuItem.style.background = isActive ? 'linear-gradient(135deg, #be185d, #6d28d9)' : 'rgba(39, 39, 42, 0.8)';
+                menuItem.style.padding = '12px 5px';
+                menuItem.style.borderRadius = '30px';
+                menuItem.style.display = 'flex';
+                menuItem.style.flexDirection = 'column';
+                menuItem.style.alignItems = 'center';
+                menuItem.style.gap = '5px';
+                menuItem.style.cursor = 'pointer';
+                menuItem.style.border = '1px solid rgba(255,255,255,0.1)';
+                menuItem.style.transition = 'all 0.3s ease';
+                menuItem.setAttribute('data-type', item.type);
+                menuItem.setAttribute('data-cat', item.cat);
+                
+                menuItem.innerHTML = `
+                    <img src="${item.icon}" style="width: 24px; height: 24px; object-fit: contain;">
+                    <span style="font-size: 11px; font-weight: 600; color: white; text-align: center;">${item.name}</span>
+                `;
+                
+                menuItem.addEventListener('click', function() {
+                    if (currentSource === 'life' && item.type === 'all') {
+                        currentType = 'all';
+                        currentCat = 'all content';
+                    } else {
+                        currentType = item.type;
+                        currentCat = item.cat;
+                    }
+                    activeParent = null;
+                    profileMode = null;
+                    currentPage = 1;
+                    saveState();
+                    
+                    // تحديث واجهة المستخدم
+                    if (typeof renderMenu === 'function') renderMenu();
+                    if (typeof renderAll === 'function') renderAll();
+                    
+                    // إغلاق القائمة
+                    sidebarMenu.classList.remove('show');
+                    overlay.classList.remove('show');
+                    
+                    // تحديث النشاط في القائمة المنبثقة
+                    updateMobileMenuActiveState();
+                });
+                
+                menuContainer.appendChild(menuItem);
+            });
+            
+            sidebarMenu.appendChild(menuContainer);
+            
+            // إضافة إحصائيات سريعة
+            const statsPreview = document.createElement('div');
+            statsPreview.style.display = 'flex';
+            statsPreview.style.justifyContent = 'space-around';
+            statsPreview.style.marginTop = '20px';
+            statsPreview.style.padding = '15px 10px';
+            statsPreview.style.background = 'rgba(0,0,0,0.3)';
+            statsPreview.style.borderRadius = '50px';
+            
+            // الحصول على الإحصائيات
+            const videosCount = dummyData?.filter(item => item.type === 'video').length || 0;
+            const imagesCount = dummyData?.filter(item => item.type === 'image').length || 0;
+            const articlesCount = dummyData?.filter(item => item.type === 'article').length || 0;
+            
+            statsPreview.innerHTML = `
+                <div style="text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #be185d;">${videosCount}</div>
+                    <div style="font-size: 10px; color: #999;">فيديو</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #be185d;">${imagesCount}</div>
+                    <div style="font-size: 10px; color: #999;">صورة</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #be185d;">${articlesCount}</div>
+                    <div style="font-size: 10px; color: #999;">مقال</div>
+                </div>
+            `;
+            
+            sidebarMenu.appendChild(statsPreview);
+            
+            document.body.appendChild(sidebarMenu);
+            
+            // إضافة الأحداث
+            menuBtn.addEventListener('click', function() {
+                sidebarMenu.classList.add('show');
+                overlay.classList.add('show');
+                updateMobileMenuContent();
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                sidebarMenu.classList.remove('show');
+                overlay.classList.remove('show');
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebarMenu.classList.remove('show');
+                overlay.classList.remove('show');
+            });
+            
+            // أحداث تبديل الأقسام الرئيسية
+            const dbSwitch = document.querySelector('.db-switch-btn-mobile');
+            const dbDropdown = document.querySelector('.db-dropdown-mobile');
+            
+            if (dbSwitch) {
+                dbSwitch.addEventListener('click', function() {
+                    dbDropdown.style.display = dbDropdown.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+            
+            // أحداث اختيار القسم
+            document.querySelectorAll('.section-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const section = this.dataset.section;
+                    const sectionNames = {
+                        zaj: 'مستقيم ⚤',
+                        nesa: 'سحاقيات ⚢',
+                        haywan: 'متحولين جنسياً ⚧',
+                        life: 'وضعيات جنسية'
+                    };
+                    
+                    // تحديث النص في الزر
+                    document.querySelector('.db-switch-btn-mobile span:first-child').innerHTML = sectionNames[section];
+                    
+                    // إخفاء القائمة المنسدلة
+                    dbDropdown.style.display = 'none';
+                    
+                    // تبديل المصدر
+                    if (typeof switchSource === 'function') {
+                        switchSource(section, sectionNames[section]);
+                    }
+                    
+                    // تحديث محتوى القائمة المنبثقة
+                    setTimeout(updateMobileMenuContent, 300);
+                    
+                    // إغلاق القائمة المنبثقة بعد التبديل
+                    setTimeout(() => {
+                        sidebarMenu.classList.remove('show');
+                        overlay.classList.remove('show');
+                    }, 500);
+                });
+            });
+            
+            // ربط أحداث الملف الشخصي
+            setTimeout(() => {
+                const favBtn = document.querySelector('#mobileSidebarMenu #btnFav');
+                const likeBtn = document.querySelector('#mobileSidebarMenu #btnLike');
+                const watchLaterBtn = document.querySelector('#mobileSidebarMenu #btnWatchLater');
+                
+                if (favBtn) {
+                    favBtn.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleProfileMode('fav');
+                        updateMobileSidebarButtons();
+                        // إغلاق القائمة بعد التحديد
+                        setTimeout(() => {
+                            sidebarMenu.classList.remove('show');
+                            overlay.classList.remove('show');
+                        }, 300);
+                    };
+                }
+                
+                if (likeBtn) {
+                    likeBtn.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleProfileMode('like');
+                        updateMobileSidebarButtons();
+                        setTimeout(() => {
+                            sidebarMenu.classList.remove('show');
+                            overlay.classList.remove('show');
+                        }, 300);
+                    };
+                }
+                
+                if (watchLaterBtn) {
+                    watchLaterBtn.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleProfileMode('watchlater');
+                        updateMobileSidebarButtons();
+                        setTimeout(() => {
+                            sidebarMenu.classList.remove('show');
+                            overlay.classList.remove('show');
+                        }, 300);
+                    };
+                }
+            }, 100);
+        }
+    } else {
+        // إزالة العناصر في الشاشات الكبيرة
+        const elements = ['sidebarMenuBtn', 'mobileSidebarMenu', 'sidebarOverlay'];
+        elements.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        });
+    }
+}
+
+// تحديث محتوى القائمة المنبثقة
+function updateMobileMenuContent() {
+    // تحديث النص في زر تبديل الأقسام
+    const activeSection = document.getElementById('activeName')?.innerText || 'قسم الزواج';
+    const switchBtnSpan = document.querySelector('.db-switch-btn-mobile span:first-child');
+    if (switchBtnSpan) switchBtnSpan.innerHTML = activeSection;
+    
+    // تحديث حالة الأزرار في الملف الشخصي
+    updateMobileSidebarButtons();
+    
+    // تحديث الإحصائيات
+    const statsPreview = document.querySelector('#mobileSidebarMenu > div:last-child');
+    if (statsPreview) {
+        const videosCount = dummyData?.filter(item => item.type === 'video').length || 0;
+        const imagesCount = dummyData?.filter(item => item.type === 'image').length || 0;
+        const articlesCount = dummyData?.filter(item => item.type === 'article').length || 0;
+        
+        statsPreview.innerHTML = `
+            <div style="text-align: center;">
+                <div style="font-size: 18px; font-weight: bold; color: #be185d;">${videosCount}</div>
+                <div style="font-size: 10px; color: #999;">فيديو</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 18px; font-weight: bold; color: #be185d;">${imagesCount}</div>
+                <div style="font-size: 10px; color: #999;">صورة</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 18px; font-weight: bold; color: #be185d;">${articlesCount}</div>
+                <div style="font-size: 10px; color: #999;">مقال</div>
+            </div>
+        `;
+    }
+}
+
+// تحديث حالة الأزرار في القائمة المنبثقة
+function updateMobileSidebarButtons() {
+    const favBtn = document.querySelector('#mobileSidebarMenu #btnFav');
+    const likeBtn = document.querySelector('#mobileSidebarMenu #btnLike');
+    const watchLaterBtn = document.querySelector('#mobileSidebarMenu #btnWatchLater');
+    
+    if (favBtn) {
+        favBtn.style.background = profileMode === 'fav' ? '#be185d' : 'rgba(255,255,255,0.1)';
+    }
+    if (likeBtn) {
+        likeBtn.style.background = profileMode === 'like' ? '#be185d' : 'rgba(255,255,255,0.1)';
+    }
+    if (watchLaterBtn) {
+        watchLaterBtn.style.background = profileMode === 'watchlater' ? '#be185d' : 'rgba(255,255,255,0.1)';
+    }
+}
+
+// تحديث النشاط في قائمة الأقسام الرئيسية
+function updateMobileMenuActiveState() {
+    const menuItems = document.querySelectorAll('#mobileMenuBox .mobile-menu-item');
+    const currentSource = currentSourceKey;
+    
+    menuItems.forEach(item => {
+        const type = item.dataset.type;
+        const cat = item.dataset.cat;
+        
+        let isActive = false;
+        if (currentSource === 'life' && type === 'all') {
+            isActive = true;
+        } else {
+            isActive = (currentType === type && currentCat === cat);
+        }
+        
+        item.style.background = isActive ? 'linear-gradient(135deg, #be185d, #6d28d9)' : 'rgba(39, 39, 42, 0.8)';
+    });
+}
+
+// استدعاء الدالة عند التحميل وعند تغيير الحجم
+window.addEventListener('load', initMobileSidebar);
+window.addEventListener('resize', initMobileSidebar);
+
+// تحديث القائمة كلما تغير المحتوى
+const originalRenderAllFunc = renderAll;
+renderAll = function() {
+    originalRenderAllFunc();
+    if (window.innerWidth <= 768) {
+        setTimeout(updateMobileMenuContent, 200);
+    }
+};
+// ================ تحديث القائمة المنبثقة بمحتوى الأقسام والمحفوظات ================
+function updateMainMenuPopup() {
+    const popupMenus = document.querySelectorAll('.card-menu-dropdown');
+    
+    popupMenus.forEach(menu => {
+        // تنظيف المحتوى القديم
+        menu.innerHTML = '';
+        
+        // زر إغلاق
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'close-menu';
+        closeBtn.innerHTML = '✕';
+        closeBtn.onclick = function(e) {
+            e.stopPropagation();
+            menu.classList.remove('show');
+        };
+        menu.appendChild(closeBtn);
+        
+        // قسم المحفوظات
+        const savedSection = document.createElement('div');
+        savedSection.className = 'saved-section';
+        savedSection.innerHTML = `
+            <div class="saved-title">📁 المحفوظات</div>
+            <div class="saved-buttons">
+                <div class="saved-row">
+                    <div class="saved-btn ${profileMode === 'fav' ? 'active' : ''}" onclick="toggleProfileMode('fav'); this.closest('.card-menu-dropdown').classList.remove('show');">❤️ المفضل</div>
+                    <div class="saved-btn ${profileMode === 'like' ? 'active' : ''}" onclick="toggleProfileMode('like'); this.closest('.card-menu-dropdown').classList.remove('show');">👍 الإعجاب</div>
+                </div>
+                <div class="saved-row">
+                    <div class="saved-btn ${profileMode === 'watchlater' ? 'active' : ''}" onclick="toggleProfileMode('watchlater'); this.closest('.card-menu-dropdown').classList.remove('show');">⏱️ المشاهدة لاحقاً</div>
+                </div>
+            </div>
+            <div class="saved-stats">
+                <span>📹 ${dummyData?.filter(item => item.type === 'video').length || 0}</span>
+                <span>🖼️ ${dummyData?.filter(item => item.type === 'image').length || 0}</span>
+                <span>📄 ${dummyData?.filter(item => item.type === 'article').length || 0}</span>
+            </div>
+        `;
+        menu.appendChild(savedSection);
+        
+        // عنوان الأقسام
+        const sectionsTitle = document.createElement('div');
+        sectionsTitle.className = 'sections-title';
+        sectionsTitle.innerText = '📋 الأقسام';
+        menu.appendChild(sectionsTitle);
+        
+        // زر تبديل الأقسام الرئيسية
+        const activeSection = document.getElementById('activeName')?.innerText || 'قسم الزواج';
+        const dbSwitch = document.createElement('div');
+        dbSwitch.className = 'db-switch-mobile';
+        dbSwitch.innerHTML = `<span>${activeSection}</span> <span>▼</span>`;
+        
+        const dbDropdown = document.createElement('div');
+        dbDropdown.className = 'db-dropdown-mobile';
+        dbDropdown.innerHTML = `
+            <div class="db-option" data-section="zaj">مستقيم ⚤</div>
+            <div class="db-option" data-section="nesa">سحاقيات ⚢</div>
+            <div class="db-option" data-section="haywan">متحولين جنسياً ⚧</div>
+            <div class="db-option" data-section="life">وضعيات جنسية</div>
+        `;
+        
+        dbSwitch.onclick = () => {
+            dbDropdown.classList.toggle('show');
+        };
+        
+        dbDropdown.querySelectorAll('.db-option').forEach(opt => {
+            opt.onclick = function() {
+                const section = this.dataset.section;
+                const names = {
+                    zaj: 'مستقيم ⚤',
+                    nesa: 'سحاقيات ⚢',
+                    haywan: 'متحولين جنسياً ⚧',
+                    life: 'وضعيات جنسية'
+                };
+                dbSwitch.querySelector('span:first-child').innerText = names[section];
+                dbDropdown.classList.remove('show');
+                if (typeof switchSource === 'function') {
+                    switchSource(section, names[section]);
+                }
+                menu.classList.remove('show');
+            };
+        });
+        
+        menu.appendChild(dbSwitch);
+        menu.appendChild(dbDropdown);
+        
+        // الأقسام الرئيسية
+        const mainSections = document.createElement('div');
+        mainSections.className = 'main-sections';
+        
+        const currentSource = currentSourceKey || 'zaj';
+        let sections = [];
+        
+        if (currentSource === 'life') {
+            sections = [
+                { name: 'كل المحتوى', type: 'all', cat: 'all content', icon: 'https://b.top4top.io/p_3690o1nhv1.png' }
+            ];
+        } else {
+            sections = [
+                { name: 'فيديوهات', type: 'video', cat: 'all content', icon: 'https://b.top4top.io/p_3690o1nhv1.png' },
+                { name: 'صور ثابتة', type: 'image', cat: 'ثابتة', icon: 'https://h.top4top.io/p_3690et83z1.png' },
+                { name: 'صور متحركة', type: 'image', cat: 'متحركة', icon: 'https://l.top4top.io/p_36909qyxa1.png' }
+            ];
+        }
+        
+        sections.forEach(section => {
+            const isActive = (currentSource === 'life' && section.type === 'all') || 
+                            (currentType === section.type && currentCat === section.cat);
+            
+            const sectionItem = document.createElement('div');
+            sectionItem.className = 'section-item';
+            sectionItem.style.background = isActive ? 'linear-gradient(135deg, #be185d, #6d28d9)' : '';
+            sectionItem.innerHTML = `
+                <img src="${section.icon}">
+                <span>${section.name}</span>
+            `;
+            
+            sectionItem.onclick = function() {
+                if (currentSource === 'life' && section.type === 'all') {
+                    currentType = 'all';
+                    currentCat = 'all content';
+                } else {
+                    currentType = section.type;
+                    currentCat = section.cat;
+                }
+                activeParent = null;
+                profileMode = null;
+                currentPage = 1;
+                saveState();
+                renderMenu();
+                renderAll();
+                menu.classList.remove('show');
+            };
+            
+            mainSections.appendChild(sectionItem);
+        });
+        
+        menu.appendChild(mainSections);
+        
+        // إحصائيات سريعة
+        const quickStats = document.createElement('div');
+        quickStats.className = 'quick-stats';
+        quickStats.innerHTML = `
+            <div>
+                <div class="number">${dummyData?.filter(item => item.type === 'video').length || 0}</div>
+                <div class="label">فيديو</div>
+            </div>
+            <div>
+                <div class="number">${dummyData?.filter(item => item.type === 'image').length || 0}</div>
+                <div class="label">صورة</div>
+            </div>
+            <div>
+                <div class="number">${dummyData?.filter(item => item.type === 'article').length || 0}</div>
+                <div class="label">مقال</div>
+            </div>
+        `;
+        menu.appendChild(quickStats);
+    });
+}
+
+// تعديل دالة createCard لإضافة القائمة المحدثة
+const originalCreateCard = createCard;
+createCard = function(p) {
+    let html = originalCreateCard(p);
+    
+    // تحديث القوائم بعد إنشاء البطاقات
+    setTimeout(() => {
+        if (window.innerWidth <= 768) {
+            updateMainMenuPopup();
+        }
+    }, 100);
+    
+    return html;
+};
+
+// تحديث القوائم كلما تغير المحتوى
+const originalRenderAll2 = renderAll;
+renderAll = function() {
+    originalRenderAll2();
+    if (window.innerWidth <= 768) {
+        setTimeout(updateMainMenuPopup, 200);
+    }
+};
+// استدعاء الدالة عند تحميل الصفحة وعند تغيير الحجم
+window.addEventListener('load', enhanceMobileMenu);
+window.addEventListener('resize', enhanceMobileMenu);
 
 // تصدير الدوال إلى النافذة العمومية
 window.toggleLanguage = toggleLanguage;
