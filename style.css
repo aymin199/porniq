@@ -1867,3 +1867,2417 @@ html, body {
         padding: 20px 14px !important;
     }
 }
+/* ===== إصلاح قائمة الثلاث نقاط (⁝) للهواتف - الحل النهائي ===== */
+@media (max-width: 768px) {
+    .card-menu-dropdown {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 170px !important;
+        background: #1f1f1f !important;
+        border: 2px solid #be185d !important;
+        border-radius: 16px !important;
+        z-index: 999999 !important;
+        margin: 0 !important;
+        padding: 8px 0 !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
+        display: none !important;
+    }
+    
+    .card-menu-dropdown.show {
+        display: block !important;
+    }
+    
+    .card-menu-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        justify-content: flex-start !important;
+        background: #1f1f1f !important;
+        border-bottom: 1px solid #333 !important;
+        color: white !important;
+        cursor: pointer !important;
+    }
+    
+    .card-menu-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .card-menu-item:active {
+        background: #be185d !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 18px !important;
+        min-width: 28px !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: white !important;
+    }
+}
+/* ===== إصلاح قائمة الثلاث نقاط للهواتف - الحل النهائي ===== */
+@media (max-width: 768px) {
+    /* تأكد من ظهور الزر بشكل واضح */
+    .card-menu-btn {
+        width: 32px !important;
+        height: 32px !important;
+        background: rgba(190, 24, 93, 0.9) !important;
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        border-radius: 50% !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        color: white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 100 !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    }
+    
+    .card-menu-btn:active {
+        transform: scale(0.95) !important;
+        background: #ff3366 !important;
+    }
+    
+    /* القائمة المنبثقة - تظهر في منتصف الشاشة */
+    .card-menu-dropdown {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 200px !important;
+        background: #1a1a1a !important;
+        background: linear-gradient(135deg, #1f1f2a, #0a0a0a) !important;
+        border: 2px solid #be185d !important;
+        border-radius: 20px !important;
+        z-index: 999999 !important;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 20px rgba(190,24,93,0.3) !important;
+        display: none !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .card-menu-dropdown.show {
+        display: block !important;
+        animation: popIn 0.2s ease-out !important;
+    }
+    
+    @keyframes popIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    /* عناصر القائمة */
+    .card-menu-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        justify-content: flex-start !important;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        color: #f0f0f0 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .card-menu-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .card-menu-item:active {
+        background: #be185d !important;
+        transform: scale(0.98) !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 20px !important;
+        min-width: 32px !important;
+        display: inline-block !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+    }
+    
+    /* للحالة النشطة */
+    .card-menu-item.active {
+        background: rgba(190, 24, 93, 0.4) !important;
+        border-left: 3px solid #be185d !important;
+    }
+    
+    /* خلفية معتمة عند فتح القائمة */
+    .menu-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0,0,0,0.7) !important;
+        backdrop-filter: blur(3px) !important;
+        z-index: 99999 !important;
+        display: none !important;
+    }
+    
+    .menu-overlay.show {
+        display: block !important;
+        animation: fadeIn 0.2s ease !important;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .card-menu-btn {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 18px !important;
+    }
+    
+    .card-menu-dropdown {
+        width: 180px !important;
+    }
+    
+    .card-menu-item {
+        padding: 12px 16px !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 18px !important;
+        min-width: 28px !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 12px !important;
+    }
+}
+/* ===== إصلاح قائمة الثلاث نقاط للهواتف - بدون شاشة سوداء ===== */
+@media (max-width: 768px) {
+    /* زر الثلاث نقاط */
+    .card-menu-btn {
+        width: 32px !important;
+        height: 32px !important;
+        background: rgba(190, 24, 93, 0.9) !important;
+        border: 2px solid rgba(255,255,255,0.3) !important;
+        border-radius: 50% !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        color: white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 100 !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    }
+    
+    .card-menu-btn:active {
+        transform: scale(0.95) !important;
+        background: #ff3366 !important;
+    }
+    
+    /* القائمة المنبثقة - تظهر في منتصف الشاشة */
+    .card-menu-dropdown {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 200px !important;
+        background: #1a1a1a !important;
+        background: linear-gradient(135deg, #1f1f2a, #0a0a0a) !important;
+        border: 2px solid #be185d !important;
+        border-radius: 20px !important;
+        z-index: 100001 !important;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 20px rgba(190,24,93,0.3) !important;
+        display: none !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .card-menu-dropdown.show {
+        display: block !important;
+        animation: popIn 0.2s ease-out !important;
+    }
+    
+    @keyframes popIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    /* عناصر القائمة */
+    .card-menu-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        justify-content: flex-start !important;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        color: #f0f0f0 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .card-menu-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .card-menu-item:active {
+        background: #be185d !important;
+        transform: scale(0.98) !important;
+    }
+    
+    .card-menu-item.active {
+        background: rgba(190, 24, 93, 0.4) !important;
+        border-left: 3px solid #be185d !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 20px !important;
+        min-width: 32px !important;
+        display: inline-block !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .card-menu-btn {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 18px !important;
+    }
+    
+    .card-menu-dropdown {
+        width: 180px !important;
+    }
+    
+    .card-menu-item {
+        padding: 12px 16px !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 18px !important;
+        min-width: 28px !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 12px !important;
+    }
+}
+
+/* إزالة أي خلفية معتمة قد تسبب شاشة سوداء */
+.menu-overlay {
+    display: none !important;
+}
+/* ===== تحسين زر تسجيل الدخول للهواتف ===== */
+@media (max-width: 768px) {
+    /* تصغير حجم زر تسجيل الدخول */
+    #userSection button {
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+        gap: 4px !important;
+    }
+    
+    /* تحسين الشريط العلوي للهواتف الصغيرة */
+    nav .flex.items-center.gap-4 {
+        gap: 8px !important;
+    }
+    
+    /* تصغير حقل البحث للهواتف */
+    #searchBox {
+        width: 140px !important;
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* للهواتف الصغيرة جداً (S8 وغيرها) */
+@media (max-width: 480px) {
+    #userSection button {
+        padding: 5px 10px !important;
+        font-size: 10px !important;
+    }
+    
+    #searchBox {
+        width: 110px !important;
+    }
+}
+/* ===== تحسين حجم زر تسجيل الدخول للهواتف ===== */
+@media (max-width: 768px) {
+    /* تصغير حجم زر تسجيل الدخول بشكل كبير */
+    #userSection button {
+        padding: 4px 10px !important;
+        font-size: 10px !important;
+        gap: 4px !important;
+        border-radius: 20px !important;
+        min-width: auto !important;
+    }
+    
+    /* تصغير أيقونة القفل */
+    #userSection button .flex.items-center {
+        gap: 3px !important;
+    }
+    
+    /* تصغير الشريط العلوي */
+    nav {
+        padding: 8px 12px !important;
+    }
+    
+    /* تصغير شعار الموقع */
+    nav .flex.items-center.text-2xl {
+        font-size: 1.1rem !important;
+    }
+    
+    /* تصغير حقل البحث */
+    #searchBox {
+        width: 120px !important;
+        padding: 5px 10px !important;
+        font-size: 10px !important;
+        border-radius: 20px !important;
+    }
+    
+    /* تقليل المسافات في الشريط العلوي */
+    nav .flex.items-center.gap-4 {
+        gap: 6px !important;
+    }
+}
+
+/* للهواتف الصغيرة جداً (S8, iPhone SE) */
+@media (max-width: 480px) {
+    /* تصغير أكثر */
+    #userSection button {
+        padding: 3px 8px !important;
+        font-size: 9px !important;
+        border-radius: 16px !important;
+    }
+    
+    /* تصغير شعار الموقع أكثر */
+    nav .flex.items-center.text-2xl {
+        font-size: 0.9rem !important;
+    }
+    
+    /* تصغير حقل البحث أكثر */
+    #searchBox {
+        width: 100px !important;
+        padding: 4px 8px !important;
+        font-size: 9px !important;
+    }
+    
+    /* تقليل المسافات أكثر */
+    nav .flex.items-center.gap-4 {
+        gap: 4px !important;
+    }
+    
+    nav {
+        padding: 6px 10px !important;
+    }
+}
+
+/* للهواتف الكبيرة (iPhone Plus/Pro Max) */
+@media (min-width: 414px) and (max-width: 768px) {
+    #userSection button {
+        padding: 5px 12px !important;
+        font-size: 11px !important;
+    }
+    
+    #searchBox {
+        width: 130px !important;
+        font-size: 11px !important;
+    }
+}
+/* ===== تصغير قائمة الثلاث نقاط بشكل كبير للهواتف ===== */
+@media (max-width: 768px) {
+    /* تصغير زر الثلاث نقاط */
+    .card-menu-btn {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 12px !important;
+        background: rgba(190, 24, 93, 0.85) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+    }
+    
+    /* تصغير القائمة المنبثقة */
+    .card-menu-dropdown {
+        width: 140px !important;
+        padding: 5px 0 !important;
+        border-radius: 12px !important;
+    }
+    
+    /* تصغير عناصر القائمة */
+    .card-menu-item {
+        padding: 8px 12px !important;
+        gap: 8px !important;
+        font-size: 11px !important;
+    }
+    
+    /* تصغير الأيقونات */
+    .card-menu-item span:first-child {
+        font-size: 14px !important;
+        min-width: 24px !important;
+    }
+    
+    /* تصغير النص */
+    .card-menu-item span:last-child {
+        font-size: 11px !important;
+    }
+    
+    /* تقليل ارتفاع العناصر */
+    .card-menu-item:active {
+        transform: scale(0.97) !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً (iPhone SE, S8) */
+@media (max-width: 480px) {
+    .card-menu-btn {
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 10px !important;
+    }
+    
+    .card-menu-dropdown {
+        width: 130px !important;
+        padding: 4px 0 !important;
+    }
+    
+    .card-menu-item {
+        padding: 6px 10px !important;
+        gap: 6px !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 12px !important;
+        min-width: 20px !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 10px !important;
+    }
+}
+
+/* للشاشات الكبيرة جداً (iPhone Plus, Pro Max) */
+@media (min-width: 414px) and (max-width: 768px) {
+    .card-menu-btn {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 14px !important;
+    }
+    
+    .card-menu-dropdown {
+        width: 150px !important;
+    }
+    
+    .card-menu-item {
+        padding: 10px 14px !important;
+    }
+    
+    .card-menu-item span:first-child {
+        font-size: 16px !important;
+    }
+    
+    .card-menu-item span:last-child {
+        font-size: 12px !important;
+    }
+}
+/* ===== تحسين اقتراحات الفيديو في الهواتف (مربعات كاملة) ===== */
+@media (max-width: 768px) {
+    /* جعل الاقتراحات تحت الفيديو عمود واحد - كل اقتراح مربع كامل */
+    #recBox {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+    }
+    
+    /* جعل كل اقتراح مربع كامل عمودي (صورة كبيرة + عنوان تحتها) */
+    #recBox .suggestion-item {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        background: rgba(24, 24, 27, 0.5);
+        border-radius: 16px;
+        padding: 0;
+        border: 1px solid rgba(255,255,255,0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    /* تأثير عند الضغط */
+    #recBox .suggestion-item:active {
+        background: rgba(190, 24, 93, 0.2);
+        transform: scale(0.98);
+    }
+    
+    /* تحسين حجم الصورة المصغرة - كبيرة وعرض كامل */
+    #recBox .relative.rounded-xl {
+        aspect-ratio: 16 / 9 !important;
+        width: 100% !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* تحسين الصورة نفسها */
+    #recBox .relative.rounded-xl img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* حاوية النص تحت الصورة */
+    #recBox .suggestion-item > div:last-child,
+    #recBox .suggestion-item h4 {
+        padding: 0 12px 12px 12px !important;
+    }
+    
+    /* تحسين حجم النص تحت الفيديو - كبير وواضح */
+    #recBox h4 {
+        font-size: 1rem !important;
+        margin: 0 !important;
+        padding: 0 12px 12px 12px !important;
+        line-height: 1.4 !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        text-align: right !important;
+    }
+    
+    /* إضافة التصنيف تحت العنوان */
+    #recBox .text-pink-500 {
+        font-size: 0.7rem !important;
+        padding: 4px 12px !important;
+        display: block !important;
+        margin: 0 0 12px 0 !important;
+        text-align: right !important;
+    }
+    
+    /* تحسين شارة المدة/النوع على الصورة */
+    #recBox .absolute.bottom-1.right-1 {
+        font-size: 11px !important;
+        padding: 4px 10px !important;
+        bottom: 8px !important;
+        right: 8px !important;
+        background: rgba(0,0,0,0.85) !important;
+        border-radius: 8px !important;
+        font-weight: bold;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    #recBox {
+        gap: 16px !important;
+    }
+    
+    #recBox h4 {
+        font-size: 0.9rem !important;
+        padding: 0 10px 10px 10px !important;
+    }
+    
+    #recBox .text-pink-500 {
+        font-size: 0.65rem !important;
+        padding: 3px 10px !important;
+        margin: 0 0 10px 0 !important;
+    }
+    
+    #recBox .absolute.bottom-1.right-1 {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+    }
+}
+/* ===== إخفاء الاقتراحات المميزة في المشغل للهواتف فقط ===== */
+@media (max-width: 768px) {
+    /* إخفاء قسم "اقتراحات مميزة" بالكامل في المشغل */
+    #playWindow aside .flex.flex-col.gap-3:last-child,
+    #playWindow aside .sticky.top-10 .flex.flex-col.gap-3:last-child {
+        display: none !important;
+    }
+    
+    /* إخفاء حاوية الاقتراحات المميزة */
+    #sideVerticalList {
+        display: none !important;
+    }
+    
+    /* إخفاء العنوان الخاص بالاقتراحات المميزة */
+    #playWindow aside .sticky.top-10 .flex.flex-col.gap-3 .text-sm.font-bold.text-white.border-b {
+        display: none !important;
+    }
+}
+/* ===== تحسين حجم الصورة في المشغل للهواتف (حجم مناسب) ===== */
+@media (max-width: 768px) {
+    /* تكبير حاوية الفيديو/الصورة في المشغل */
+    #vArea {
+        padding-bottom: 0 !important;
+        height: auto !important;
+        min-height: 320px !important;
+        max-height: 400px !important;
+        border-radius: 12px !important;
+        background: #000 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* إصلاح عرض الفيديو */
+    #vArea video,
+    #vArea .mainVideo {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 400px !important;
+        object-fit: contain !important;
+    }
+    
+    /* إصلاح عرض الصور في المشغل */
+    #vArea.image-mode {
+        height: auto !important;
+        min-height: 320px !important;
+        max-height: 400px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #vArea.image-mode img {
+        max-width: 100% !important;
+        max-height: 380px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        border-radius: 8px !important;
+    }
+    
+    /* عنوان الفيديو */
+    #vTitle {
+        font-size: 1.1rem !important;
+        margin-top: 10px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    #vArea {
+        min-height: 280px !important;
+        max-height: 350px !important;
+    }
+    
+    #vArea video,
+    #vArea .mainVideo {
+        max-height: 350px !important;
+    }
+    
+    #vArea.image-mode img {
+        max-height: 330px !important;
+    }
+    
+    #vTitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* للشاشات المتوسطة (iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #vArea {
+        min-height: 450px !important;
+        max-height: 500px !important;
+    }
+}
+/* ===== تحسين عرض الصور العمودية في المشغل ===== */
+@media (max-width: 768px) {
+    #vArea.image-mode img {
+        max-width: 100% !important;
+        max-height: 380px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* للصور العمودية جداً */
+@media (max-width: 480px) {
+    #vArea.image-mode img {
+        max-height: 450px !important;
+    }
+}
+/* ===== تحسين الصور العمودية في الإعلانات ===== */
+
+/* الإعلانات الجانبية */
+#sideAdsContainer a {
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#sideAdsContainer a img,
+#sideAdsContainer a video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* للصور العمودية في الإعلانات الجانبية */
+#sideAdsContainer a img.portrait {
+    object-fit: contain !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+
+/* الإعلانات تحت الترقيم */
+#adsBelowPagination .bg-gradient-to-r,
+#adsBelowPagination .grid > div {
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#adsBelowPagination img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* للصور العمودية في الإعلانات تحت الترقيم */
+#adsBelowPagination img.portrait {
+    object-fit: contain !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+
+/* الإعلانات في الشبكة الرئيسية */
+#gridBox .rounded-2xl {
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#gridBox .rounded-2xl img,
+#gridBox .rounded-2xl video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* للصور العمودية في الشبكة الرئيسية */
+#gridBox .rounded-2xl img.portrait {
+    object-fit: contain !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+    #sideAdsContainer {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    #sideAdsContainer a {
+        aspect-ratio: 16 / 9 !important;
+    }
+    
+    #adsBelowPagination .bg-gradient-to-r,
+    #adsBelowPagination .grid > div {
+        aspect-ratio: 16 / 9 !important;
+    }
+    
+    #gridBox .rounded-2xl {
+        aspect-ratio: 16 / 9 !important;
+    }
+}
+/* ===== تصغير كلمة "إعلان" على الصور ===== */
+
+/* تصغير شارة الإعلان على الصور */
+.absolute.top-2.right-2,
+.absolute.top-1.right-1,
+.absolute.top-2.right-1 {
+    font-size: 8px !important;
+    padding: 2px 6px !important;
+    background: rgba(0,0,0,0.6) !important;
+    border-radius: 4px !important;
+    opacity: 0.7 !important;
+}
+
+/* للهواتف - تصغير أكثر */
+@media (max-width: 768px) {
+    .absolute.top-2.right-2,
+    .absolute.top-1.right-1,
+    .absolute.top-2.right-1 {
+        font-size: 6px !important;
+        padding: 1px 4px !important;
+        opacity: 0.5 !important;
+    }
+}
+
+/* إخفاء شارة الإعلان بالكامل إذا أردت (اختياري) */
+/* 
+.absolute.top-2.right-2,
+.absolute.top-1.right-1,
+.absolute.top-2.right-1 {
+    display: none !important;
+}
+*/
+/* ===== حجم مناسب للشبكة الرئيسية في الهاتف ===== */
+@media (max-width: 768px) {
+    /* حجم مناسب للبطاقات */
+    #gridBox {
+        gap: 8px !important;
+        padding: 0 4px !important;
+    }
+    
+    /* حجم مناسب للصورة المصغرة */
+    .video-card .thumb-wrapper {
+        min-height: 108px !important;
+        border-radius: 10px !important;
+    }
+    
+    /* حجم مناسب لعنوان الفيديو */
+    .video-title {
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        margin-top: 4px !important;
+    }
+    
+    /* حجم مناسب للتصنيف */
+    .text-\[8px\] {
+        font-size: 7px !important;
+        padding: 1px 4px !important;
+    }
+    
+    /* حجم مناسب لزر الثلاث نقاط */
+    .card-menu-btn {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper {
+        min-height: 98px !important;
+    }
+    
+    .video-title {
+        font-size: 0.68rem !important;
+    }
+}
+/* ===== الحجم النهائي للصورة المصغرة في الهاتف ===== */
+@media (max-width: 768px) {
+    /* تحديد حجم ثابت للصورة المصغرة */
+    .video-card .thumb-wrapper {
+        min-height: 108px !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        border-radius: 10px !important;
+        background: #000 !important;
+    }
+    
+    /* ضبط الشبكة */
+    #gridBox {
+        gap: 8px !important;
+        padding: 0 4px !important;
+    }
+    
+    /* عنوان الفيديو */
+    .video-title {
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        margin-top: 4px !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* التصنيف */
+    .text-\[8px\] {
+        font-size: 7px !important;
+        padding: 1px 4px !important;
+    }
+    
+    /* زر الثلاث نقاط */
+    .card-menu-btn {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 12px !important;
+    }
+    
+    /* تقليل المسافة بين العناصر */
+    .video-card .flex.items-center.justify-between {
+        margin-top: 2px !important;
+        margin-bottom: 1px !important;
+    }
+    
+    .video-card .flex.items-center.justify-start {
+        margin-top: 0 !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper {
+        min-height: 95px !important;
+    }
+    
+    .video-title {
+        font-size: 0.65rem !important;
+    }
+}
+/* ===== تحسينات خاصة لهواتف Galaxy S8 وشاشات 360px ===== */
+@media (max-width: 375px) {
+    /* تصغير المسافات */
+    #gridBox {
+        gap: 6px !important;
+        padding: 0 3px !important;
+    }
+    
+    /* تصغير الصورة المصغرة */
+    .video-card .thumb-wrapper {
+        min-height: 88px !important;
+        border-radius: 8px !important;
+    }
+    
+    /* تصغير عنوان الفيديو */
+    .video-title {
+        font-size: 0.6rem !important;
+        font-weight: 500 !important;
+        margin-top: 3px !important;
+    }
+    
+    /* تصغير التصنيف */
+    .text-\[8px\] {
+        font-size: 6px !important;
+        padding: 1px 3px !important;
+    }
+    
+    /* تصغير زر الثلاث نقاط */
+    .card-menu-btn {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 10px !important;
+    }
+    
+    /* تصغير المسافات داخل البطاقة */
+    .video-card .flex.items-center.justify-between {
+        margin-top: 1px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* تصغير شارة المدة */
+    .video-duration-badge {
+        font-size: 8px !important;
+        padding: 2px 4px !important;
+        bottom: 4px !important;
+        right: 4px !important;
+    }
+    
+    /* ضبط الشبكة لتكون بعمودين */
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* تحسينات إضافية لشاشات 360px (S8) */
+@media (max-width: 360px) {
+    .video-card .thumb-wrapper {
+        min-height: 85px !important;
+    }
+    
+    .video-title {
+        font-size: 0.58rem !important;
+    }
+    
+    .text-\[8px\] {
+        font-size: 5.5px !important;
+    }
+    
+    .card-menu-btn {
+        width: 18px !important;
+        height: 18px !important;
+        font-size: 9px !important;
+    }
+}
+
+/* تحسينات لهواتف S8+ وشاشات 412px */
+@media (min-width: 376px) and (max-width: 414px) {
+    .video-card .thumb-wrapper {
+        min-height: 100px !important;
+    }
+    
+    .video-title {
+        font-size: 0.68rem !important;
+    }
+}
+/* ===== تكبير الصور العمودية فقط في الشبكة الرئيسية ===== */
+
+/* للصور العمودية فقط - تكبير الحجم */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    padding: 20px !important;
+    transform: scale(1.1) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تأثير hover للصور العمودية */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(1.15) !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 769px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 25px !important;
+        transform: scale(1.15) !important;
+    }
+    
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.2) !important;
+    }
+}
+
+/* على الهواتف - تكبير مناسب */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 15px !important;
+        transform: scale(1.08) !important;
+    }
+    
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.12) !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 12px !important;
+        transform: scale(1.05) !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 8px !important;
+        transform: scale(1.03) !important;
+    }
+}
+/* ===== تكبير الصور العمودية فقط - حل قوي ===== */
+
+/* التأكد من أن الصور العمودية فقط هي التي تتأثر */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    padding: 25px !important;
+    transform: scale(1.3) !important;
+    transition: transform 0.3s ease !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* تأثير hover - تكبير أكبر */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(1.4) !important;
+}
+
+/* إزالة أي padding من الحاوية للصور العمودية */
+.video-card .thumb-wrapper.portrait-content {
+    padding: 0 !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 30px !important;
+        transform: scale(1.35) !important;
+    }
+    
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.45) !important;
+    }
+}
+
+/* على التابلت */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 28px !important;
+        transform: scale(1.32) !important;
+    }
+    
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.42) !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 20px !important;
+        transform: scale(1.25) !important;
+    }
+    
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.35) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 18px !important;
+        transform: scale(1.22) !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        padding: 15px !important;
+        transform: scale(1.2) !important;
+    }
+}
+/* ===== تكبير الصور العمودية فقط - الحل النهائي ===== */
+
+/* إزالة أي تأثيرات سابقة */
+.video-card .thumb-wrapper img {
+    transition: transform 0.3s ease !important;
+}
+
+/* تكبير الصور العمودية بشكل كبير */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: scale(1.8) !important;
+}
+
+/* تأثير hover */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(2) !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(2.2) !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.6) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.8) !important;
+    }
+}
+/* ===== تكبير الصور العمودية بشكل أكبر ===== */
+
+/* تكبير الصور العمودية بشكل أكبر جداً */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: scale(2.2) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تأثير hover - تكبير أكبر */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(2.5) !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2.5) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(2.8) !important;
+    }
+}
+
+/* على التابلت */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2.3) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(2.6) !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(2.3) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.8) !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.6) !important;
+    }
+}
+
+
+/* ===== تكبير الصور العمودية - الحل النهائي بدون فراغات ===== */
+
+/* تكبير الصور العمودية فقط دون التأثير على الشبكة */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: scale(1.8) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تأثير hover */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(2) !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(2.2) !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.6) !important;
+    }
+    .video-card .thumb-wrapper:hover img.portrait-thumb {
+        transform: scale(1.8) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.5) !important;
+    }
+}
+/* ===== تكبير الصور العمودية - حل نهائي ===== */
+
+/* جعل الحاوية تتكيف مع الصور العمودية */
+.video-card .thumb-wrapper.portrait-content {
+    aspect-ratio: auto !important;
+    min-height: 280px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* تكبير الصور العمودية */
+.video-card .thumb-wrapper.portrait-content img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 280px !important;
+    transform: scale(1) !important;
+}
+
+/* للصور العمودية الأطول */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 280px !important;
+}
+
+/* على سطح المكتب - ارتفاع أكبر */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 320px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img.portrait-thumb,
+    .video-card .thumb-wrapper img.portrait-thumb {
+        max-height: 320px !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 240px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img.portrait-thumb,
+    .video-card .thumb-wrapper img.portrait-thumb {
+        max-height: 240px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 200px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img.portrait-thumb,
+    .video-card .thumb-wrapper img.portrait-thumb {
+        max-height: 200px !important;
+    }
+}
+/* ===== ملء الفراغات بين الصور العمودية ===== */
+
+/* تحسين ظهور البطاقات بشكل متساوٍ */
+#gridBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px !important;
+    align-items: stretch;
+}
+
+/* جعل جميع البطاقات بنفس الارتفاع */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.video-card .thumb-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* تحسين الصور العمودية لتأخذ المساحة المتاحة */
+.video-card .thumb-wrapper.portrait-content {
+    min-height: 280px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-card .thumb-wrapper.portrait-content img.portrait-thumb {
+    max-height: 260px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    #gridBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 320px;
+    }
+    
+    .video-card .thumb-wrapper.portrait-content img.portrait-thumb {
+        max-height: 300px;
+    }
+}
+
+/* على التابلت */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 767px) {
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px !important;
+    }
+    
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 240px;
+    }
+    
+    .video-card .thumb-wrapper.portrait-content img.portrait-thumb {
+        max-height: 220px;
+    }
+}
+/* ===== الحل النهائي - تكبير الصور العمودية فقط ===== */
+
+/* تكبير الصور العمودية مع الحفاظ على المسافات */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: scale(2) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تأثير hover */
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: scale(2.2) !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(2.2) !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.8) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper img.portrait-thumb {
+        transform: scale(1.6) !important;
+    }
+}
+/* ===== تكبير الصور العمودية داخل الإطار بدون انبثاق ===== */
+
+/* تكبير الصور العمودية مع الحفاظ على حدود الحاوية */
+.video-card .thumb-wrapper img.portrait-thumb {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    /* إزالة transform: scale نهائياً */
+    transform: none !important;
+}
+
+/* جعل الصور العمودية تأخذ مساحة أكبر داخل الحاوية */
+.video-card .thumb-wrapper.portrait-content {
+    min-height: 280px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+
+.video-card .thumb-wrapper.portrait-content img {
+    max-height: 280px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+/* على سطح المكتب - ارتفاع أكبر */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 350px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 350px !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 240px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 240px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 200px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 200px !important;
+    }
+}/* ===== الحل النهائي - تكبير الصور العمودية بدون انبثاق ===== */
+
+/* إزالة أي transform scale */
+.video-card .thumb-wrapper img.portrait-thumb {
+    transform: none !important;
+    object-fit: contain !important;
+    background: #000 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* جعل الصور العمودية أكبر داخل الإطار */
+.video-card .thumb-wrapper.portrait-content {
+    aspect-ratio: auto !important;
+    min-height: 280px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* الصورة نفسها تأخذ أكبر حجم ممكن داخل الإطار */
+.video-card .thumb-wrapper.portrait-content img {
+    max-height: 260px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+}
+
+/* على سطح المكتب */
+@media (min-width: 1024px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 340px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 320px !important;
+    }
+}
+
+/* على الهواتف */
+@media (max-width: 768px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 250px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 230px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card .thumb-wrapper.portrait-content {
+        min-height: 210px !important;
+    }
+    .video-card .thumb-wrapper.portrait-content img {
+        max-height: 190px !important;
+    }
+}
+/* ===== إزالة تأثير الانبثاق عند المرور بالماوس ===== */
+
+/* إزالة تأثير التكبير من جميع الصور والفيديوهات */
+.media-container:hover img,
+.media-container:hover video,
+.video-card .thumb-wrapper:hover img,
+.video-card .thumb-wrapper:hover video,
+#recBox .suggestion-item:hover img,
+#recBox .suggestion-item:hover .relative.rounded-xl,
+#sideVerticalList .flex:hover img,
+.card:hover,
+.video-card:hover,
+img,
+video {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* إزالة تأثير scale من جميع العناصر */
+.media-container img,
+.media-container video,
+.video-card .thumb-wrapper img,
+.video-card .thumb-wrapper video,
+#recBox img,
+#sideVerticalList .w-16 img,
+#recBox .suggestion-item:hover .relative.rounded-xl {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* إزالة تأثير hover من البطاقات */
+.video-card:hover {
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+.card:hover {
+    transform: none !important;
+}
+
+/* إزالة تأثير hover من الاقتراحات */
+#recBox .suggestion-item:hover .relative.rounded-xl {
+    transform: none !important;
+    border-color: #be185d !important;
+    box-shadow: 0 4px 12px rgba(190,24,93,0.3) !important;
+}
+
+#sideVerticalList .flex:hover {
+    transform: none !important;
+}
+
+/* إزالة تأثير zoom من الصور في المشغل */
+#vArea.image-mode img:hover {
+    transform: none !important;
+}
+
+/* إزالة أي scale متبقي من الصور العمودية */
+.video-card .thumb-wrapper img.portrait-thumb {
+    transform: none !important;
+}
+
+.video-card .thumb-wrapper:hover img.portrait-thumb {
+    transform: none !important;
+}
+
+/* إزالة تأثير التحريك من القوائم */
+.card-menu-btn:hover {
+    transform: none !important;
+}
+
+/* إزالة تأثير scale من جميع العناصر التي قد تحتوي على transition */
+* {
+    transition: none !important;
+}
+
+/* استثناء: الاحتفاظ بتأثيرات اللون فقط */
+.action-btn:hover,
+.db-switch-btn:hover,
+.footer-link:hover,
+.card-menu-item:hover {
+    transform: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+/* ===== نقل شارة الإعلان من داخل الصورة إلى أسفل الإطار ===== */
+
+/* إخفاء شارة الإعلان القديمة من داخل الصورة */
+.absolute.top-2.right-2,
+.absolute.top-1.right-1,
+.absolute.top-2.right-1,
+.bg-black\/80.text-white.text-\[8px\],
+.bg-black\/60.text-white.text-\[8px\],
+.bg-black\/50.text-white.text-\[8px\],
+.rounded-2xl .absolute,
+.rounded-2xl .bg-black\/80,
+.rounded-2xl .bg-black\/60,
+.bg-zinc-900 .absolute,
+.bg-zinc-900 .bg-black\/80,
+.bg-zinc-900 .bg-black\/60,
+.relative .absolute:has(span:contains("إعلان")) {
+    display: none !important;
+}
+
+/* إخفاء شارة الإعلان من جميع الإعلانات */
+#gridBox .rounded-2xl .absolute,
+#sideAdsContainer a .absolute,
+#adsBelowPagination .absolute,
+#playWindow aside .absolute,
+#playWindow aside .bg-black\/80 {
+    display: none !important;
+}
+
+/* إضافة شارة الإعلان أسفل الصورة في الشبكة */
+#gridBox .rounded-2xl {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#gridBox .rounded-2xl::after {
+    display: none;
+}
+
+/* إضافة شارة الإعلان أسفل الإعلانات الجانبية */
+#sideAdsContainer a {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#sideAdsContainer a::after {
+    display: none;
+}
+
+/* إضافة شارة الإعلان أسفل إعلانات الترقيم */
+#adsBelowPagination .bg-gradient-to-r {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#adsBelowPagination .bg-gradient-to-r::after {
+    display: none;
+}
+
+/* إضافة شارة الإعلان أسفل إعلانات المشغل */
+#playWindow aside .bg-zinc-900 {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#playWindow aside .bg-zinc-900::after {
+    display: none;
+}
+
+/* تنسيق شارة الإعلان الجديدة أسفل الإطار */
+.ad-badge-below {
+    display: block !important;
+    text-align: center !important;
+    font-size: 9px !important;
+    color: #9ca3af !important;
+    background: rgba(0,0,0,0.5) !important;
+    padding: 4px 8px !important;
+    border-radius: 4px !important;
+    margin-top: 6px !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+nav {
+    direction: ltr !important;
+}
+nav .flex.items-center.gap-4 {
+    margin-left: auto !important;
+}
+[dir="rtl"] nav .flex.items-center.gap-4 {
+    margin-left: auto !important;
+}
+#sideAdsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.side-ad {
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.side-ad:hover {
+    border-color: #be185d;
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+    #recBox {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    #recBox h4 {
+        font-size: 0.7rem !important;
+    }
+}
+#authModal {
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(12px);
+}
+#authModal input {
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+#authModal input:focus {
+    border-color: #be185d;
+    box-shadow: 0 0 0 2px rgba(190,24,93,0.2);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+    background: #be185d;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff3366;
+}
+#sideVerticalList .w-16 {
+    width: 160px !important;
+    height: 120px !important;
+    border-radius: 12px !important;
+}
+#sideVerticalList .w-16 img.portrait-thumb {
+    width: auto !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+.ad-single-rectangle {
+    width: 100% !important;
+    max-width: 900px !important;
+    height: 200px !important;
+    background: #111 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(190, 24, 93, 0.5) !important;
+    margin: 0 auto !important;
+}
+.ad-single-rectangle img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #vArea {
+        min-height: 450px !important;
+        max-height: 500px !important;
+    }
+}
+.video-card .thumb-wrapper {
+    aspect-ratio: 16 / 9 !important;
+    max-height: 180px !important;
+    border-radius: 10px !important;
+}
+.video-title {
+    font-size: 0.8rem !important;
+}
+#gridBox {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+}
+@media (max-width: 1024px) {
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+/* ===== تحسين الإعلان الكبير أسفل الترقيم - تكبير الحجم ===== */
+#adsBelowPagination .bg-gradient-to-r,
+#adsBelowPagination .bg-gradient-to-r > a,
+#adsBelowPagination .bg-gradient-to-r a div {
+    height: 280px !important; /* تكبير الارتفاع من 180px إلى 280px */
+    max-height: 280px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
+
+#adsBelowPagination .bg-gradient-to-r img,
+#adsBelowPagination .bg-gradient-to-r video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: none !important;
+}
+
+/* زر الإعلان - أكبر */
+#adsBelowPagination .bg-gradient-to-r .absolute.bottom-3.left-3 {
+    bottom: 16px !important;
+    left: 16px !important;
+    padding: 10px 24px !important;
+    font-size: 16px !important;
+}
+
+/* شارة "عرض حصري" */
+#adsBelowPagination .bg-gradient-to-r .absolute.bottom-3.right-3 {
+    bottom: 16px !important;
+    right: 16px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+/* للهواتف - حجم مناسب */
+@media (max-width: 768px) {
+    #adsBelowPagination .bg-gradient-to-r,
+    #adsBelowPagination .bg-gradient-to-r > a,
+    #adsBelowPagination .bg-gradient-to-r a div {
+        height: 200px !important; /* 200px للهواتف بدلاً من 140px */
+        max-height: 200px !important;
+    }
+    
+    #adsBelowPagination .bg-gradient-to-r .absolute.bottom-3.left-3 {
+        padding: 6px 16px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    #adsBelowPagination .bg-gradient-to-r,
+    #adsBelowPagination .bg-gradient-to-r > a,
+    #adsBelowPagination .bg-gradient-to-r a div {
+        height: 160px !important;
+        max-height: 160px !important;
+    }
+}
+/* تحسين الصور العمودية في الإعلان الكبير */
+#adsBelowPagination .bg-gradient-to-r img.portrait,
+#adsBelowPagination .grid img.portrait {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+
+/* تحسين الإعلانات المربعة للهواتف */
+@media (max-width: 768px) {
+    #adsBelowPagination .grid > div {
+        height: auto !important;
+    }
+    
+    #adsBelowPagination .grid .relative.bg-black {
+        height: 160px !important;
+    }
+}
+
+#adsBelowPagination .bg-gradient-to-r img.portrait,
+#adsBelowPagination .grid img.portrait {
+    object-fit: contain !important;
+    background: #000 !important;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+/* ===== إخفاء شارة الإعلان من الإعلانات المربعة تحت الترقيم ===== */
+#adsBelowPagination .grid .absolute.top-2.right-2,
+#adsBelowPagination .grid .bg-pink-600.text-white.text-\[10px\] {
+    display: none !important;
+}
+
+/* إخفاء أي شارة إعلان أخرى في الإعلانات المربعة */
+#adsBelowPagination .grid [class*="absolute"][class*="top-2"][class*="right-2"],
+#adsBelowPagination .grid [class*="bg-pink-600"] {
+    display: none !important;
+}
+/* إخفاء جميع شارات الإعلان من الإعلانات المربعة */
+#adsBelowPagination .grid .absolute,
+#adsBelowPagination .grid .bg-gradient-to-b::after,
+#adsBelowPagination .grid .bg-pink-600,
+#adsBelowPagination .grid [class*="bg-pink-600"] {
+    display: none !important;
+}
+/* ===== إزالة جميع شارات الإعلان من كل مكان ===== */
+
+/* إخفاء شارة الإعلان من الإعلانات المربعة تحت الترقيم */
+#adsBelowPagination .grid .absolute,
+#adsBelowPagination .grid .bg-pink-600,
+#adsBelowPagination .grid [class*="bg-pink-600"],
+#adsBelowPagination .grid [class*="absolute"][class*="top-2"],
+#adsBelowPagination .grid [class*="absolute"][class*="right-2"] {
+    display: none !important;
+}
+
+/* إخفاء شارة الإعلان من الإعلان الكبير */
+#adsBelowPagination .bg-gradient-to-r .absolute,
+#adsBelowPagination .bg-gradient-to-r [class*="absolute"] {
+    display: none !important;
+}
+
+/* إخفاء شارة الإعلان من الإعلانات الجانبية */
+#sideAdsContainer a .absolute,
+#sideAdsContainer a [class*="absolute"] {
+    display: none !important;
+}
+
+/* إخفاء شارة الإعلان من إعلانات المشغل */
+#playWindow aside .absolute,
+#playWindow aside [class*="absolute"] {
+    display: none !important;
+}
+
+/* إخفاء شارة الإعلان من الشبكة الرئيسية */
+#gridBox .rounded-2xl .absolute,
+#gridBox .rounded-2xl [class*="absolute"] {
+    display: none !important;
+}
+/* ===== إزالة شارات الإعلان من الإعلانات المربعة بشكل نهائي ===== */
+#adsBelowPagination .grid .absolute,
+#adsBelowPagination .grid .bg-pink-600,
+#adsBelowPagination .grid [class*="bg-pink-600"],
+#adsBelowPagination .grid [class*="absolute"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* إزالة أي pseudo-element قد يضيف إعلان */
+#adsBelowPagination .grid .bg-gradient-to-b::before,
+#adsBelowPagination .grid .bg-gradient-to-b::after {
+    display: none !important;
+    content: none !important;
+}
+/* ===== تحسين الإعلانات الثلاثة أسفل الترقيم فقط - تكبير داخل الإطار ===== */
+
+/* جعل الصور تظهر بشكل أكبر داخل الإطار */
+#adsBelowPagination .ad-square .ad-image-wrapper {
+    background-color: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* الصورة - تكبير مع الحفاظ على النسب داخل الإطار */
+#adsBelowPagination .ad-square .ad-thumbnail {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* تكبير الصورة مع الحفاظ على النسب */
+#adsBelowPagination .ad-square img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #000 !important;
+    transform: scale(1.4) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تأثير hover - تكبير إضافي بسيط */
+#adsBelowPagination .ad-square:hover img {
+    transform: scale(1.5) !important;
+}
+/* ===== تحسين الإعلانات الثلاثة أسفل الترقيم فقط - تكبير مع الحفاظ على النسب ===== */
+
+/* جعل الصور تظهر بشكل أكبر مع الحفاظ على النسب */
+#adsBelowPagination .ad-square .ad-image-wrapper {
+    background-color: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+/* الصورة نفسها - تكبير مع الحفاظ على النسب */
+#adsBelowPagination .ad-square .ad-thumbnail {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 120% !important;
+    max-height: 120% !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* تكبير الصورة من خلال عرضها أكبر */
+#adsBelowPagination .ad-square img {
+    object-fit: contain !important;
+    width: 120% !important;
+    height: 120% !important;
+    max-width: 120% !important;
+    max-height: 120% !important;
+    background: #000 !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* تأثير hover - تكبير إضافي */
+#adsBelowPagination .ad-square:hover img {
+    width: 130% !important;
+    height: 130% !important;
+    max-width: 130% !important;
+    max-height: 130% !important;
+}
+/* ===== الحل النهائي للإعلانات الثلاثة أسفل الترقيم ===== */
+#adsBelowPagination .grid > div {
+    background: rgba(24, 24, 27, 0.5) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+#adsBelowPagination .grid > div a {
+    display: block !important;
+}
+
+#adsBelowPagination .grid > div .relative.bg-black {
+    background: #000 !important;
+    aspect-ratio: 16/9 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+#adsBelowPagination .grid > div img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+/* ===== تنسيق الإعلان العامودي ===== */
+.vertical-ad-wrapper {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.vertical-ad-wrapper:hover {
+    transform: translateY(-3px);
+    border-color: #be185d !important;
+    box-shadow: 0 8px 20px rgba(190, 24, 93, 0.3);
+}
+
+.vertical-ad-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.vertical-ad-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* جعل الإعلان العامودي طويلاً */
+.vertical-ad-wrapper .relative {
+    aspect-ratio: 9 / 16 !important;
+    min-height: 320px;
+}
+
+/* على الشاشات المتوسطة */
+@media (max-width: 1024px) {
+    .vertical-ad-wrapper {
+        max-width: 240px;
+    }
+    
+    .vertical-ad-wrapper .relative {
+        min-height: 280px;
+    }
+}
+
+/* على الهواتف - تصغير الإعلان العامودي */
+@media (max-width: 768px) {
+    .vertical-ad-wrapper {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .vertical-ad-wrapper .relative {
+        min-height: 220px;
+    }
+    
+    .vertical-ad-wrapper .text-center.text-\[10px\] {
+        font-size: 8px !important;
+        padding: 2px !important;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .vertical-ad-wrapper {
+        max-width: 160px;
+    }
+    
+    .vertical-ad-wrapper .relative {
+        min-height: 180px;
+    }
+}
+#sideVerticalList .w-16 {
+    width: 160px !important;
+    height: 120px !important;
+    border-radius: 12px !important;
+}
+#sideVerticalList .w-16 img.portrait-thumb {
+    width: auto !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+.video-card .thumb-wrapper {
+    aspect-ratio: 16 / 9 !important;
+    max-height: 180px !important;
+    border-radius: 10px !important;
+}
+.video-title {
+    font-size: 0.8rem !important;
+}
+#gridBox {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+}
+@media (max-width: 1024px) {
+    #gridBox {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #vArea {
+        min-height: 450px !important;
+        max-height: 500px !important;
+    }
+}
+/* ======================================================= */
+/* الحل النهائي للهواتف - فقط الصور العمودية تتغير      */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+    
+        /* ===== 1. إصلاح الصور والفيديوهات في الشبكة الرئيسية ===== */
+            /* جميع الصور والفيديوهات تكون مستطيلة بشكل طبيعي */
+                .video-card .thumb-wrapper {
+                        aspect-ratio: 16 / 9 !important;
+                                min-height: auto !important;
+                                        height: auto !important;
+                                            }
+                                                
+                                                    .video-card .thumb-wrapper img,
+                                                        .video-card .thumb-wrapper video {
+                                                                width: 100% !important;
+                                                                        height: 100% !important;
+                                                                                object-fit: cover !important;
+                                                        }
+                                                            
+                                                                /* ===== 2. فقط الصور العمودية - تغيير هيكلها ===== */
+                                                                    /* الصور العمودية فقط تأخذ شكل عمودي */
+                                                                        .video-card .thumb-wrapper img.portrait-thumb {
+                                                                                object-fit: contain !important;
+                                                                                        width: auto !important;
+                                                                                                height: 100% !important;
+                                                                                                        max-width: 100% !important;
+                                                                                                                background: #000 !important;
+                                                                                                                    }
+                                                                                                                        
+                                                                                                                            /* جعل حاوية الصورة العمودية أطول */
+                                                                                                                                .video-card .thumb-wrapper:has(img.portrait-thumb) {
+                                                                                                                                        aspect-ratio: 9 / 16 !important;
+                                                                                                                                                min-height: 240px !important;
+                                                                                                                                                    }
+                                                                                                                                                        
+                                                                                                                                                            /* ===== 3. إصلاح الاقتراحات تحت الفيديو ===== */
+                                                                                                                                                                #recBox .relative.rounded-xl {
+                                                                                                                                                                        aspect-ratio: 16 / 9 !important;
+                                                                                                                                                                            }
+                                                                                                                                                                                
+                                                                                                                                                                                    #recBox .relative.rounded-xl img {
+                                                                                                                                                                                            width: 100% !important;
+                                                                                                                                                                                                    height: 100% !important;
+                                                                                                                                                                                                            object-fit: cover !important;
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                        /* الاقتراحات العمودية فقط */
+                                                                                                                                                                                                                            #recBox .relative.rounded-xl:has(img.portrait-thumb) {
+                                                                                                                                                                                                                                    aspect-ratio: 9 / 16 !important;
+                                                                                                                                                                                                                                            min-height: 280px !important;
+                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                        #recBox .relative.rounded-xl:has(img.portrait-thumb) img {
+                                                                                                                                                                                                                                                                object-fit: contain !important;
+                                                                                                                                                                                                                                                                        width: auto !important;
+                                                                                                                                                                                                                                                                                height: 100% !important;
+                                                                                                                                                                                                                                                                                        max-width: 100% !important;
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                    /* ===== 4. إصلاح الاقتراحات الجانبية ===== */
+                                                                                                                                                                                                                                                                                                        #sideVerticalList .w-16 {
+                                                                                                                                                                                                                                                                                                                width: 80px !important;
+                                                                                                                                                                                                                                                                                                                        height: auto !important;
+                                                                                                                                                                                                                                                                                                                                aspect-ratio: 16 / 9 !important;
+                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                            #sideVerticalList .w-16 img {
+                                                                                                                                                                                                                                                                                                                                                    width: 100% !important;
+                                                                                                                                                                                                                                                                                                                                                            height: 100% !important;
+                                                                                                                                                                                                                                                                                                                                                                    object-fit: cover !important;
+                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                /* الاقتراحات الجانبية العمودية فقط */
+                                                                                                                                                                                                                                                                                                                                                                                    #sideVerticalList .flex:has(img.portrait-thumb) .w-16 {
+                                                                                                                                                                                                                                                                                                                                                                                            width: 70px !important;
+                                                                                                                                                                                                                                                                                                                                                                                                    aspect-ratio: 9 / 16 !important;
+                                                                                                                                                                                                                                                                                                                                                                                                            height: auto !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                        #sideVerticalList .flex:has(img.portrait-thumb) .w-16 img {
+                                                                                                                                                                                                                                                                                                                                                                                                                                object-fit: contain !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                        width: auto !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                height: 100% !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        max-width: 100% !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            /* ===== تحسينات للشاشات الصغيرة جداً ===== */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            @media (max-width: 480px) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                .video-card .thumb-wrapper:has(img.portrait-thumb) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        min-height: 200px !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    #recBox .relative.rounded-xl:has(img.portrait-thumb) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            min-height: 240px !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        #sideVerticalList .flex:has(img.portrait-thumb) .w-16 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                width: 60px !important;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

@@ -331,5 +331,42 @@
 
     <!-- تحميل الجافاسكريبت -->
     <script src="script.js"></script>
+    <div id="authModal" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-4">
+    <div class="bg-zinc-900 w-full max-w-[360px] max-h-[85vh] overflow-y-auto rounded-2xl border border-zinc-800 relative shadow-2xl" dir="rtl">
+        
+        <button onclick="closeAuthModal()" class="absolute top-4 left-4 text-zinc-500 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <div class="p-6 pt-10">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-black text-white">مرحباً بك</h2>
+                <p class="text-zinc-500 text-sm mt-1">سجل دخولك للمتابعة</p>
+            </div>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-zinc-500 mb-1 mr-1">البريد الإلكتروني</label>
+                    <input type="email" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all text-right" placeholder="mail@example.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-500 mb-1 mr-1">كلمة المرور</label>
+                    <input type="password" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all text-right" placeholder="••••••••">
+                </div>
+                
+                <button class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all mt-4">
+                    تسجيل الدخول
+                </button>
+            </form>
+
+            <div class="mt-6 text-center text-sm">
+                <span class="text-zinc-500">ليس لديك حساب؟</span>
+                <a href="#" class="text-pink-500 font-bold hover:underline mr-1">سجل الآن</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

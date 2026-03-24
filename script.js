@@ -5,12 +5,12 @@
         { id: 2, type: 'video', title: "زواج: أكشن سريع", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0008:45" },
         { id: 3, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
         { id: 4, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 5, type: 'image', title: "صورة زواج 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 6, type: 'image', title: "صورة زواج 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 7, type: 'video', title: "زواج: كوميدي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
-        { id: 8, type: 'video', title: "زواج: دراما", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
+        { id: 5, type: 'image', title: "صورة زواج 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" },
+        { id: 6, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" },
+        { id: 7, type: 'video', title: "زواج: كوميدي", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
+        { id: 8, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
         { id: 9, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 10, type: 'video', title: "زواج: أكشن 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
+        { id: 10, type: 'video', title: "زواج: أكشن 2", image: "https://b.top4top.io/p_3680ejx641.jpgg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
         { id: 11, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
         { id: 12, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
         { id: 13, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
@@ -29,8 +29,8 @@
     ],
     
     nesa: [ 
-        { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "متحركة" },
-        { id: 201, type: 'image', title: "صورة ثابتة 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ثابتة" },
+        { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "متحركة" },
+        { id: 201, type: 'image', title: "صورة ثابتة 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "hhttps://b.top4top.io/p_3680ejx641.jpg", labels: "ثابتة" },
         { id: 202, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
         { id: 203, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
         { id: 204, type: 'video', title: "فيديو نساء 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:30" },
@@ -532,138 +532,163 @@ function updateUserUI() {
         const ageModal = document.getElementById('ageVerifyModal');
         if (ageModal) ageModal.style.display = 'none';
     } else {
-        userSection.innerHTML = `
-            <button onclick="showAuthModal()" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white px-5 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2 shadow-lg shadow-pink-600/30">
-                🔐 Login
-            </button>
-        `;
+    userSection.innerHTML = `
+    <button onclick="showAuthModal()" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white px-3 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 shadow-md shadow-pink-600/30">
+        🔐 Login
+    </button>
+`;
         ageVerificationEnabled = true;
     }
     nav.appendChild(userSection);
 }
 
 function showAuthModal() {
+    // إزالة أي نافذة موجودة مسبقاً
+    const existingModal = document.getElementById('authModal');
+    if (existingModal) existingModal.remove();
+    
     const modal = document.createElement('div');
     modal.id = 'authModal';
-    modal.className = 'fixed inset-0 z-[10000] flex items-center justify-center bg-black/80 backdrop-blur-md overflow-y-auto py-10';
+    
+    // تنسيق النافذة مباشرة
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.96);
+        z-index: 100000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    `;
+    
     modal.style.direction = currentLang === 'ar' ? 'rtl' : 'ltr';
+    
     modal.innerHTML = `
-        <div class="bg-zinc-900 p-8 rounded-2xl max-w-md w-full border border-pink-500/30 shadow-2xl my-8">
-            <div class="text-center mb-6">
-                <h2 id="authTitle" class="text-3xl font-black text-white mb-2">Login</h2>
-                <div class="w-16 h-0.5 bg-pink-500 mx-auto"></div>
+        <div style="
+            width: 260px;
+            max-width: 85%;
+            background: #0a0a0a;
+            border-radius: 20px;
+            border: 1px solid #be185d;
+            padding: 16px 14px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        ">
+            <div style="text-align: center; margin-bottom: 10px;">
+                <h2 id="authTitle" style="font-size: 18px; font-weight: bold; color: white; margin: 0;">Login</h2>
+                <div style="width: 35px; height: 2px; background: #be185d; margin: 6px auto 0;"></div>
             </div>
-            <div id="authError" class="bg-red-600/20 border border-red-600 text-red-400 p-3 rounded-xl text-sm mb-4 hidden"></div>
-            <div id="loginFields" class="space-y-4 mb-4">
+            
+            <div id="authError" style="background: rgba(220,38,38,0.2); border: 1px solid #ef4444; color: #fecaca; padding: 6px; border-radius: 8px; font-size: 10px; margin-bottom: 10px; display: none;"></div>
+            
+            <div id="loginFields">
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">👤 Username</label>
+                    <input type="text" id="loginUsername" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="Username">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">🔑 Password</label>
+                    <input type="password" id="loginPassword" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="********">
+                </div>
+            </div>
+            
+            <div id="registerFields" style="display: none;">
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">👤 Username</label>
+                    <input type="text" id="regUsername" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="Username">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">📧 Email</label>
+                    <input type="email" id="regEmail" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="Email">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">🔑 Password</label>
+                    <input type="password" id="regPassword" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="Password">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">✅ Confirm</label>
+                    <input type="password" id="regConfirmPassword" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; font-size: 12px; box-sizing: border-box;" placeholder="Confirm">
+                </div>
+            </div>
+            
+            <div id="verificationFields" style="display: none;">
+                <div style="text-align: center; color: #aaa; font-size: 11px; margin-bottom: 10px;">Verification code sent to your email</div>
                 <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">👤 Username</label>
-                    <input type="text" id="loginUsername" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="Enter username">
-                </div>
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">🔑 Password</label>
-                    <input type="password" id="loginPassword" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="********">
+                    <label style="display: block; color: #aaa; font-size: 10px; margin-bottom: 4px;">🔢 4-digit code</label>
+                    <input type="text" id="verificationCode" maxlength="4" style="width: 100%; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 8px 10px; color: white; text-align: center; font-size: 16px; letter-spacing: 4px; box-sizing: border-box;" placeholder="____">
                 </div>
             </div>
-            <div id="registerFields" class="space-y-4 mb-4 hidden">
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">👤 Username</label>
-                    <input type="text" id="regUsername" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="Choose username">
-                </div>
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">📧 Email</label>
-                    <input type="email" id="regEmail" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="example@gmail.com">
-                </div>
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">🔑 Password</label>
-                    <input type="password" id="regPassword" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="********">
-                </div>
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">✅ Confirm Password</label>
-                    <input type="password" id="regConfirmPassword" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none" placeholder="Re-enter password">
-                </div>
+            
+            <div id="loginActions" style="display: flex; gap: 8px; margin-top: 12px;">
+                <button onclick="handleLogin()" style="flex: 1; background: #be185d; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Login</button>
+                <button onclick="closeAuthModal()" style="flex: 1; background: #2a2a2a; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Cancel</button>
             </div>
-            <div id="verificationFields" class="space-y-4 mb-4 hidden">
-                <div class="text-center text-white/80 text-sm mb-2">
-                    Verification code sent to your email
-                </div>
-                <div>
-                    <label class="block text-white/80 text-sm mb-2 font-bold">🔢 Verification Code (4 digits)</label>
-                    <input type="text" id="verificationCode" maxlength="4" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white focus:border-pink-500 outline-none text-center text-2xl tracking-widest" placeholder="_ _ _ _">
-                </div>
+            <div id="registerActions" style="display: none; gap: 8px; margin-top: 12px;">
+                <button onclick="handleRegister()" style="flex: 1; background: #be185d; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Send Code</button>
+                <button onclick="closeAuthModal()" style="flex: 1; background: #2a2a2a; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Cancel</button>
             </div>
-            <div id="loginActions" class="flex gap-3 mt-6">
-                <button onclick="handleLogin()" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Login
-                </button>
-                <button onclick="closeAuthModal()" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Cancel
-                </button>
+            <div id="verificationActions" style="display: none; gap: 8px; margin-top: 12px;">
+                <button onclick="verifyCode()" style="flex: 1; background: #22c55e; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Verify</button>
+                <button onclick="resetToRegister()" style="flex: 1; background: #2a2a2a; color: white; border: none; border-radius: 10px; padding: 8px; font-size: 12px; font-weight: bold; cursor: pointer;">Back</button>
             </div>
-            <div id="registerActions" class="flex gap-3 mt-6 hidden">
-                <button onclick="handleRegister()" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Send Verification Code
-                </button>
-                <button onclick="closeAuthModal()" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Cancel
-                </button>
-            </div>
-            <div id="verificationActions" class="flex gap-3 mt-6 hidden">
-                <button onclick="verifyCode()" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Verify Account
-                </button>
-                <button onclick="resetToRegister()" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl font-bold transition-all">
-                    Back
-                </button>
-            </div>
-            <div class="relative my-6">
-                <div class="absolute inset-0 flex items-center">
-                    <div class="w-full border-t border-zinc-700"></div>
-                </div>
-                <div class="relative flex justify-center text-xs">
-                    <span class="bg-zinc-900 px-4 text-white/60">OR</span>
-                </div>
-            </div>
+            
             ${auth ? `
-            <button onclick="googleSignIn()" class="w-full bg-white hover:bg-gray-100 text-gray-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-3 shadow-lg">
-                <svg class="w-6 h-6" viewBox="0 0 24 24">
-                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                Continue with Google
+            <div style="position: relative; margin: 12px 0;">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center;"><div style="width: 100%; border-top: 1px solid #333;"></div></div>
+                <div style="position: relative; display: flex; justify-content: center;"><span style="background: #0a0a0a; padding: 0 8px; color: #666; font-size: 9px;">OR</span></div>
+            </div>
+            <button onclick="googleSignIn()" style="width: 100%; background: white; color: #333; border: none; border-radius: 10px; padding: 8px; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                Google
             </button>
             ` : ''}
-            <div class="mt-4 text-center">
-                <span id="toggleAuthText" class="text-white/60 text-sm">Don't have an account?</span>
-                <button onclick="toggleAuthMode()" id="toggleAuthBtn" class="text-pink-500 hover:text-pink-400 font-bold text-sm mr-1">
-                    Create New Account
-                </button>
+            
+            <div style="text-align: center; margin-top: 12px;">
+                <span id="toggleAuthText" style="color: #666; font-size: 9px;">Don't have an account?</span>
+                <button onclick="toggleAuthMode()" id="toggleAuthBtn" style="background: none; border: none; color: #ec489a; font-size: 9px; font-weight: bold; cursor: pointer; display: inline; padding: 0;"> Sign up</button>
             </div>
-            <p class="text-white/40 text-xs text-center mt-4">
-                By registering, you agree to our Terms of Service and Privacy Policy
-            </p>
+            <div style="text-align: center; margin-top: 8px; font-size: 7px; color: #444;">By registering, you agree to our Terms</div>
         </div>
     `;
+    
     document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
 }
 
+function closeAuthModal() {
+    const modal = document.getElementById('authModal');
+    if (modal) modal.remove();
+    tempRegistration = null;
+    generatedVerificationCode = null;
+    document.body.style.overflow = '';
+}
 function toggleAuthMode() {
     isLoginMode = !isLoginMode;
     
-    document.getElementById('authTitle').innerText = isLoginMode ? 'Login' : 'Create New Account';
-    document.getElementById('toggleAuthBtn').innerText = isLoginMode ? 'Create New Account' : 'Login';
-    document.getElementById('toggleAuthText').innerText = isLoginMode ? "Don't have an account?" : 'Already have an account?';
+    const authTitle = document.getElementById('authTitle');
+    const toggleBtn = document.getElementById('toggleAuthBtn');
+    const toggleText = document.getElementById('toggleAuthText');
+    const loginFields = document.getElementById('loginFields');
+    const loginActions = document.getElementById('loginActions');
+    const registerFields = document.getElementById('registerFields');
+    const registerActions = document.getElementById('registerActions');
+    const verificationFields = document.getElementById('verificationFields');
+    const verificationActions = document.getElementById('verificationActions');
     
-    document.getElementById('loginFields').classList.toggle('hidden', !isLoginMode);
-    document.getElementById('loginActions').classList.toggle('hidden', !isLoginMode);
-    document.getElementById('registerFields').classList.toggle('hidden', isLoginMode);
-    document.getElementById('registerActions').classList.toggle('hidden', isLoginMode);
+    if (authTitle) authTitle.innerText = isLoginMode ? 'Login' : 'Create Account';
+    if (toggleBtn) toggleBtn.innerText = isLoginMode ? 'Sign up' : 'Login';
+    if (toggleText) toggleText.innerText = isLoginMode ? "Don't have an account?" : 'Already have an account?';
     
-    document.getElementById('verificationFields').classList.add('hidden');
-    document.getElementById('verificationActions').classList.add('hidden');
+    if (loginFields) loginFields.style.display = isLoginMode ? 'block' : 'none';
+    if (loginActions) loginActions.style.display = isLoginMode ? 'flex' : 'none';
+    if (registerFields) registerFields.style.display = isLoginMode ? 'none' : 'block';
+    if (registerActions) registerActions.style.display = isLoginMode ? 'none' : 'flex';
+    
+    if (verificationFields) verificationFields.style.display = 'none';
+    if (verificationActions) verificationActions.style.display = 'none';
 }
-
 function handleLogin() {
     const username = document.getElementById('loginUsername').value.trim();
     const password = document.getElementById('loginPassword').value.trim();
@@ -803,12 +828,6 @@ function resetToRegister() {
     generatedVerificationCode = null;
 }
 
-function closeAuthModal() {
-    const modal = document.getElementById('authModal');
-    if (modal) modal.remove();
-    tempRegistration = null;
-    generatedVerificationCode = null;
-}
 
 function showAuthError(msg) {
     const err = document.getElementById('authError');
@@ -1108,7 +1127,10 @@ function createCard(p) {
         return `
             <div class="mag-item cursor-pointer relative" onclick="openArticle(${p.id})">
                 <img src="${p.image}" class="w-full h-40 object-cover" loading="lazy"
-                     onload="if(this.naturalHeight > this.naturalWidth * 1.2) this.classList.add('portrait-thumb');">
+   onload="if(this.naturalHeight > this.naturalWidth * 1.2) { 
+    this.classList.add('portrait-thumb');
+    this.closest('.thumb-wrapper')?.classList.add('portrait-content');
+}"
                 <div class="mag-overlay">
                     <h3 class="font-bold text-sm">${p.title}</h3>
                 </div>
@@ -1607,41 +1629,7 @@ function updateSideSuggestions() {
     `}).join('');
 }
 // ================ دوال الإعلانات ================
-function renderSideAds() {
-    const container = document.getElementById('sideAdsContainer');
-    if (!container) return;
-    
-    let html = '<div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>';
-    
-    for(let i=0; i<4; i++) {
-        let ad = getRandomSidebarAd();
-        
-        html += `
-            <a href="${ad.link}" target="_blank" class="block w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-600 transition-all transform hover:scale-[1.02] shadow-xl mb-3 group relative">
-                <div class="w-full h-full bg-black flex items-center justify-center">`;
-        
-        if (ad.type === 'video') {
-            html += `
-                    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                        <source src="${ad.url}" type="video/mp4">
-                    </video>`;
-        } else {
-            html += `
-                    <img src="${ad.url}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">`;
-        }
-        
-        html += `
-                    <div class="absolute top-2 right-2 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
-                        ${ad.type === 'video' ? '▶️ فيديو' : (ad.type === 'gif' ? '🎬 GIF' : '📷 إعلان')}
-                    </div>
-                    <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity text-center bg-black/60 backdrop-blur-sm py-1 rounded-full">
-                        اضغط للمزيد
-                    </div>
-                </div>
-            </a>`;
-    }
-    container.innerHTML = html;
-}
+
 // ================ دوال العرض الرئيسية ================
 function renderAll() {
     const grid = document.getElementById('gridBox');
@@ -1685,7 +1673,29 @@ function renderAll() {
             mixedItems.splice(pos, 0, { isAd: true, data: getRandomAd() });
         }
     }
+// إضافة عناصر وهمية لملء الفراغات وجعل الشبكة متساوية
+const totalItems = mixedItems.length;
+const targetItemsPerRow = window.innerWidth >= 1024 ? 3 : 2;
+const remainder = totalItems % targetItemsPerRow;
 
+if (remainder !== 0 && totalItems > 0) {
+    const itemsToAdd = targetItemsPerRow - remainder;
+    for (let i = 0; i < itemsToAdd && i < 3; i++) {
+        // إضافة عنصر وهمي (فيديو أو صورة) لملء الفراغ
+        mixedItems.push({
+            isAd: false,
+            data: {
+                id: `dummy-${Date.now()}-${i}`,
+                type: 'video',
+                title: 'محتوى إضافي',
+                image: 'https://l.top4top.io/p_3702uwnur1.png',
+                contentURL: 'https://d.top4top.io/m_36805y6jr1.mp4',
+                labels: 'مميز',
+                duration: '05:00'
+            }
+        });
+    }
+}
     // بناء الـ HTML النهائي للشبكة
     grid.innerHTML = mixedItems.map(item => {
         if (!item.isAd) {
@@ -1696,41 +1706,51 @@ function renderAll() {
             let adLink = ad.link;
             let adTitle = ad.title || 'إعلان';
             
-            if (ad.type === 'video') {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                    <source src="${imageUrl}" type="video/mp4">
-                                </video>
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">فيديو</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
-            } else if (ad.type === 'gif') {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">GIF</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
-            } else {
-                return `
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
-                        <a href="${adLink}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9;">
-                                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-[9px] px-2 py-1 rounded-md border border-white/10">إعلان</div>
-                            </div>
-                            <div class="p-3 text-center text-[10px] font-bold text-gray-400">${adTitle}</div>
-                        </a>
-                    </div>`;
+       if (ad.type === 'video') {
+    return `
+        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+            <a href="${adLink}" target="_blank" class="block">
+                <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                    <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                        <source src="${imageUrl}" type="video/mp4">
+                    </video>
+                    <!-- تم إزالة شارة الإعلان من داخل الصورة -->
+                </div>
+                <div class="p-3 text-center">
+                    <div class="text-[10px] font-bold text-gray-400">${adTitle}</div>
+                    <div class="text-[8px] text-pink-500/70 mt-1">📢 إعلان</div>
+                </div>
+            </a>
+        </div>`;
+} else if (ad.type === 'gif') {
+    return `
+        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+            <a href="${adLink}" target="_blank" class="block">
+                <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                    <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
+                    <!-- تم إزالة شارة الإعلان من داخل الصورة -->
+                </div>
+                <div class="p-3 text-center">
+                    <div class="text-[10px] font-bold text-gray-400">${adTitle}</div>
+                    <div class="text-[8px] text-pink-500/70 mt-1">📢 إعلان</div>
+                </div>
+            </a>
+        </div>`;
+} else {
+    return `
+        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group relative h-fit">
+            <a href="${adLink}" target="_blank" class="block">
+                <div class="relative bg-black" style="aspect-ratio: 16/9;">
+                    <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${adTitle}">
+                    <!-- تم إزالة شارة الإعلان من داخل الصورة -->
+                </div>
+                <div class="p-3 text-center">
+                    <div class="text-[10px] font-bold text-gray-400">${adTitle}</div>
+                    <div class="text-[8px] text-pink-500/70 mt-1">📢 إعلان</div>
+                </div>
+            </a>
+        </div>`;
+
             }
         }
     }).join('');
@@ -2078,6 +2098,7 @@ function goToPopular() {
 }
 
 // ================ دوال الإعلانات تحت الترقيم ================
+// ================ دوال الإعلانات تحت الترقيم ================
 function renderAdsBelowPagination() {
     const paginationBox = document.getElementById('paginationBox');
     if (!paginationBox) return;
@@ -2090,78 +2111,29 @@ function renderAdsBelowPagination() {
         paginationBox.parentNode.insertBefore(adsContainer, paginationBox.nextSibling);
     }
     
-    const randomType = Math.floor(Math.random() * 2);
-    let html = '';
+    // اختيار 3 إعلانات مربعة بشكل عشوائي
+    const selectedAds = getRandomPaginationSquareAds(3);
     
-    if (randomType === 0) {
-        const ad = getRandomPaginationLargeAd();
-        
-        html = `
-            <div class="w-full bg-gradient-to-r from-pink-900/30 to-purple-900/30 rounded-xl overflow-hidden border-2 border-pink-500/30 hover:border-pink-500 transition-all transform hover:scale-[1.01] shadow-lg group">
-                <a href="${ad.link}" target="_blank" class="block relative" style="height: 220px;">
-                    <div class="w-full h-full bg-black flex items-center justify-center overflow-hidden">
-                        <img src="${ad.image}" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                             alt="${ad.title}"
-                             onerror="this.src='${siteAds.paginationLargeAds[0].image}';"
-                             style="max-height: 100%; max-width: 100%;">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-3 right-3 bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-pink-500/50 font-bold z-10">
-                        <span class="text-pink-400">✨</span> إعلان مميز
-                    </div>
-                    <div class="absolute bottom-3 left-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm px-5 py-2 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 z-10 shadow-lg">
-                        اضغط للمزيد
-                    </div>
-                    <div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm border border-white/20">
-                        🔥 عرض حصري
-                    </div>
-                </a>
-            </div>
-        `;
-    } else {
-        const selectedAds = getRandomPaginationSquareAds(3);
-        
-        html = `
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                ${selectedAds.map(ad => `
-                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all transform hover:scale-[1.02] group">
-                        <a href="${ad.link}" target="_blank" class="block">
-                            <div class="relative bg-black" style="height: 200px;">
-                                <img src="${ad.image}" 
-                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                                     alt="${ad.title}"
-                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}';"
-                                     style="max-height: 100%; max-width: 100%;">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <div class="absolute top-2 right-2 bg-black/80 text-white text-[10px] px-2 py-1 rounded-full border border-pink-500/50 z-10">
-                                    إعلان
-                                </div>
-                            </div>
-                            <div class="p-3 text-center bg-gradient-to-b from-transparent to-black/20">
-                                <h4 class="text-sm font-bold text-white group-hover:text-pink-400 transition line-clamp-1">${ad.title}</h4>
-                                <p class="text-[10px] text-gray-500 mt-1">اضغط للمزيد</p>
-                            </div>
-                        </a>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-    
-    const badges = ["🔥 عروض حصرية", "⚡ لفترة محدودة", "🎁 خصم 50%", "💎 عضوية VIP", "⭐ تقييم 5 نجوم"];
-    const randomBadges = badges.sort(() => 0.5 - Math.random()).slice(0, 2);
-    
-    html += `
-        <div class="flex justify-center gap-3 mt-3">
-            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[0]}</span>
-            <span class="text-[9px] text-gray-500 bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">${randomBadges[1]}</span>
+    // إنشاء شبكة من 3 إعلانات مربعة
+    let html = `
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            ${selectedAds.map(ad => `
+                <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                    <a href="${ad.link}" target="_blank" class="block">
+                        <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="${ad.image}" 
+                                 style="width: 100%; height: 100%; object-fit: contain; background: black;"
+                                 alt="${ad.title}"
+                                 onerror="this.src='${siteAds.paginationSquareAds[0].image}';">
+                        </div>
+                    </a>
+                </div>
+            `).join('')}
         </div>
     `;
     
     adsContainer.innerHTML = html;
 }
-
 // ================ دوال تحسين عرض الصور ================
 function optimizeImageDisplay() {
     const vArea = document.getElementById('vArea');
@@ -2916,7 +2888,186 @@ createCard = function(p) {
     
     return html;
 };
-
+// ===== إصلاح قائمة الثلاث نقاط للهواتف - إزالة الشاشة السوداء =====
+(function fixMobileMenuFinal() {
+    // استبدال دالة toggleCardMenu
+    window.toggleCardMenu = function(event, itemId) {
+        event.stopPropagation();
+        event.preventDefault();
+        
+        // إغلاق جميع القوائم المفتوحة
+        document.querySelectorAll('.card-menu-dropdown').forEach(menu => {
+            if (menu.id !== `menu-${itemId}`) {
+                menu.classList.remove('show');
+            }
+        });
+        
+        // إزالة أي خلفية معتمة موجودة
+        const existingOverlay = document.querySelector('.menu-overlay');
+        if (existingOverlay) existingOverlay.remove();
+        
+        const menu = document.getElementById(`menu-${itemId}`);
+        if (!menu) return;
+        
+        // إذا كانت القائمة مفتوحة، أغلقها
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+            return;
+        }
+        
+        // الحصول على العنصر الحالي
+        const item = dummyData.find(i => i.id == itemId);
+        if (!item) return;
+        
+        // إعادة بناء محتوى القائمة
+        menu.innerHTML = '';
+        
+        // زر المفضلة
+        const favDiv = document.createElement('div');
+        favDiv.className = `card-menu-item ${favorites.includes(itemId) ? 'active' : ''}`;
+        favDiv.innerHTML = `
+            <span>❤️</span>
+            <span>${favorites.includes(itemId) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}</span>
+        `;
+        favDiv.onclick = function(e) {
+            e.stopPropagation();
+            const idx = favorites.indexOf(itemId);
+            if (idx > -1) {
+                favorites.splice(idx, 1);
+            } else {
+                favorites.push(itemId);
+            }
+            localStorage.setItem('myFavs', JSON.stringify(favorites));
+            
+            // تحديث القائمة
+            menu.innerHTML = '';
+            
+            // إعادة بناء القائمة بعد التحديث
+            const newFavDiv = document.createElement('div');
+            newFavDiv.className = `card-menu-item ${favorites.includes(itemId) ? 'active' : ''}`;
+            newFavDiv.innerHTML = `
+                <span>❤️</span>
+                <span>${favorites.includes(itemId) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}</span>
+            `;
+            newFavDiv.onclick = arguments.callee;
+            
+            const newWatchDiv = document.createElement('div');
+            newWatchDiv.className = `card-menu-item ${watchLater.includes(itemId) ? 'active' : ''}`;
+            newWatchDiv.innerHTML = `
+                <span>⏱️</span>
+                <span>${watchLater.includes(itemId) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً'}</span>
+            `;
+            newWatchDiv.onclick = function(ev) {
+                ev.stopPropagation();
+                const wIdx = watchLater.indexOf(itemId);
+                if (wIdx > -1) {
+                    watchLater.splice(wIdx, 1);
+                } else {
+                    watchLater.push(itemId);
+                }
+                localStorage.setItem('myWatchLater', JSON.stringify(watchLater));
+                menu.innerHTML = '';
+                const ffDiv = document.createElement('div');
+                ffDiv.className = `card-menu-item ${favorites.includes(itemId) ? 'active' : ''}`;
+                ffDiv.innerHTML = `<span>❤️</span><span>${favorites.includes(itemId) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}</span>`;
+                ffDiv.onclick = newFavDiv.onclick;
+                const wwDiv = document.createElement('div');
+                wwDiv.className = `card-menu-item ${watchLater.includes(itemId) ? 'active' : ''}`;
+                wwDiv.innerHTML = `<span>⏱️</span><span>${watchLater.includes(itemId) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً'}</span>`;
+                wwDiv.onclick = arguments.callee;
+                menu.appendChild(ffDiv);
+                menu.appendChild(wwDiv);
+                updateStats();
+                renderAll();
+            };
+            
+            menu.appendChild(newFavDiv);
+            menu.appendChild(newWatchDiv);
+            updateStats();
+            renderAll();
+        };
+        
+        // زر المشاهدة لاحقاً
+        const watchDiv = document.createElement('div');
+        watchDiv.className = `card-menu-item ${watchLater.includes(itemId) ? 'active' : ''}`;
+        watchDiv.innerHTML = `
+            <span>⏱️</span>
+            <span>${watchLater.includes(itemId) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً'}</span>
+        `;
+        watchDiv.onclick = function(e) {
+            e.stopPropagation();
+            const idx = watchLater.indexOf(itemId);
+            if (idx > -1) {
+                watchLater.splice(idx, 1);
+            } else {
+                watchLater.push(itemId);
+            }
+            localStorage.setItem('myWatchLater', JSON.stringify(watchLater));
+            
+            // تحديث القائمة
+            menu.innerHTML = '';
+            
+            const newFavDiv2 = document.createElement('div');
+            newFavDiv2.className = `card-menu-item ${favorites.includes(itemId) ? 'active' : ''}`;
+            newFavDiv2.innerHTML = `<span>❤️</span><span>${favorites.includes(itemId) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}</span>`;
+            newFavDiv2.onclick = favDiv.onclick;
+            
+            const newWatchDiv2 = document.createElement('div');
+            newWatchDiv2.className = `card-menu-item ${watchLater.includes(itemId) ? 'active' : ''}`;
+            newWatchDiv2.innerHTML = `<span>⏱️</span><span>${watchLater.includes(itemId) ? 'إزالة من المشاهدة لاحقاً' : 'مشاهدة لاحقاً'}</span>`;
+            newWatchDiv2.onclick = arguments.callee;
+            
+            menu.appendChild(newFavDiv2);
+            menu.appendChild(newWatchDiv2);
+            updateStats();
+            renderAll();
+        };
+        
+        menu.appendChild(favDiv);
+        menu.appendChild(watchDiv);
+        
+        // تحديد موقع القائمة بجوار الزر
+        const btn = event.currentTarget;
+        const rect = btn.getBoundingClientRect();
+        
+        if (window.innerWidth <= 768) {
+            // على الهاتف: تظهر في منتصف الشاشة
+            menu.style.position = 'fixed';
+            menu.style.top = '50%';
+            menu.style.left = '50%';
+            menu.style.transform = 'translate(-50%, -50%)';
+            menu.style.bottom = 'auto';
+            menu.style.right = 'auto';
+            menu.style.margin = '0';
+        } else {
+            // على الكمبيوتر: تظهر بجوار الزر
+            menu.style.position = 'absolute';
+            menu.style.bottom = '100%';
+            menu.style.left = '0';
+            menu.style.transform = 'none';
+            menu.style.marginBottom = '8px';
+        }
+        
+        // عرض القائمة
+        menu.classList.add('show');
+        
+        // إغلاق القائمة عند النقر خارجها
+        const closeMenu = function(e) {
+            if (!menu.contains(e.target) && !e.target.closest('.card-menu-btn')) {
+                menu.classList.remove('show');
+                document.removeEventListener('click', closeMenu);
+                document.removeEventListener('touchstart', closeMenu);
+            }
+        };
+        
+        setTimeout(() => {
+            document.addEventListener('click', closeMenu);
+            document.addEventListener('touchstart', closeMenu);
+        }, 100);
+    };
+    
+    console.log('✅ تم إصلاح قائمة الثلاث نقاط - بدون شاشة سوداء');
+})();
 // تحديث القوائم كلما تغير المحتوى
 const originalRenderAll2 = renderAll;
 renderAll = function() {
@@ -2925,6 +3076,68 @@ renderAll = function() {
         setTimeout(updateMainMenuPopup, 200);
     }
 };
+// ================ دوال الإعلانات ================
+// ================ دوال الإعلانات ================
+function renderSideAds() {
+    const container = document.getElementById('sideAdsContainer');
+    if (!container) return;
+    
+    let html = '<div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>';
+    
+    // الإعلانات الأربعة الجانبية (مربعة)
+    for(let i=0; i<4; i++) {
+        let ad = getRandomSidebarAd();
+        
+        html += `
+            <a href="${ad.link}" target="_blank" class="block w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-600 transition-all transform hover:scale-[1.02] shadow-xl mb-3 group relative">
+                <div class="w-full h-full bg-black flex items-center justify-center">
+                    ${ad.type === 'video' ? `
+                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                            <source src="${ad.url}" type="video/mp4">
+                        </video>
+                    ` : `
+                        <img src="${ad.url}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">
+                    `}
+                </div>
+                <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity text-center bg-black/60 backdrop-blur-sm py-1 rounded-full">
+                    اضغط للمزيد
+                </div>
+            </a>
+            <div class="text-center text-[8px] text-pink-500/70 -mt-2 mb-2">📢 إعلان</div>
+        `;
+    }
+    
+    // ===== إضافة الإعلان العامودي تحت الإعلانات الأربعة =====
+    // قائمة الإعلانات العامودية
+    const verticalAdsList = [
+        { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "إعلان عامودي 1" },
+        { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "إعلان عامودي 2" },
+        { image: "https://l.top4top.io/p_3702uwnur1.png", link: "https://example3.com", title: "إعلان عامودي 3" }
+    ];
+    const randomVerticalAd = verticalAdsList[Math.floor(Math.random() * verticalAdsList.length)];
+    
+    // إضافة الإعلان العامودي - بنسبة 9:16 (طولي)
+    html += `
+        <div class="mt-6 pt-4 border-t border-zinc-800">
+            <div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>
+            <div class="vertical-ad-wrapper bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                <a href="${randomVerticalAd.link}" target="_blank" class="block">
+                    <div class="relative bg-black" style="aspect-ratio: 9 / 16; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="${randomVerticalAd.image}" 
+                             style="width: 100%; height: 100%; object-fit: cover; background: black;"
+                             alt="${randomVerticalAd.title}"
+                             onerror="this.src='${verticalAdsList[0].image}';">
+                    </div>
+                    <div class="text-center text-[10px] text-gray-500 py-2 border-t border-zinc-800">
+                        📢 إعلان عامودي
+                    </div>
+                </a>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
 // استدعاء الدالة عند تحميل الصفحة وعند تغيير الحجم
 window.addEventListener('load', enhanceMobileMenu);
 window.addEventListener('resize', enhanceMobileMenu);
