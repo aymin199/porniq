@@ -29,7 +29,21 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 </head>
-<body class='pt-24 bg-black text-white'>
+<body
+ class='pt-24 bg-black text-white'>
+ <div id="mainContent" class="max-w-[1700px] mx-auto px-4 py-8">
+
+    <div class="w-full overflow-x-auto no-scrollbar py-3 sticky top-16 z-40 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+        <div id="topCategoryBar" class="flex flex-nowrap gap-3 px-4 justify-start md:justify-center">
+            </div>
+    </div>
+
+<!-- تم تغيير id من videoGrid إلى gridBox ليتوافق مع الجافاسكريبت -->
+	
+
+
+        </div>
+</div>
     <!-- تأكيد ظهور الفوتر -->
 <div style="clear: both; width: 100%;"></div>
     <!-- زر الوضع الليلي -->
@@ -76,42 +90,131 @@
             <input class='bg-zinc-900 border border-zinc-800 text-gray-300 rounded-full py-2 px-6 outline-none w-48 md:w-80 text-sm focus:border-pink-600 transition-all' id='searchBox' oninput='doSearch()' placeholder='Search for video...' type='text'/>
         </div>
     </nav>
+<!-- زر الثلاث خطوط في الجهة اليمنى (تم ت
+عديل موقعه للأسفل قليلاً) -->
+<button onclick="toggleSidebar()" id="menuToggleBtn" 
+        style="position: fixed !important; top: 80px !important; right: 15px !important; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background-color: #FFB800; border-radius: 50%; z-index: 100000; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: none; cursor: pointer;">  
+    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
 
+<div id="sidebarOverlay" onclick="toggleSidebar()" class="fixed inset-0 bg-black/60 z-40 hidden backdrop-blur-sm"></div>
+
+<aside id="mainSidebar" class="fixed top-0 right-0 h-full w-72 bg-zinc-950 z-50 transform translate-x-full transition-transform duration-300 border-l border-zinc-800 overflow-y-auto shadow-2xl">
+    <div class="p-5 text-right" dir="rtl">
+        <div class="flex justify-between items-center mb-6 border-b-2 border-yellow-400 pb-3">
+            <button onclick="toggleSidebar()" class="text-gray-400 hover:text-white text-xl">✕</button>
+            <h2 class="text-xl font-bold text-white">القائمة الرئيسية</h2>
+        </div>
+        <nav class="space-y-2">
+            <!-- قسم مستقيم ⚤ -->
+            <div class="menu-item">
+                <button onclick="toggleSubMenu('sub-straight', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">⚤ مستقيم</span>
+                    <span class="text-yellow-400 transition-transform duration-300">▼</span>
+                </button>
+                <div id="sub-straight" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
+                     <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
+                </div>
+            </div>
+
+            <!-- قسم سحاقيات ⚢ -->
+            <div class="menu-item">
+                <button onclick="toggleSubMenu('sub-lesbian', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">⚢ سحاقيات</span>
+                    <span class="text-yellow-400 transition-transform duration-300">▼</span>
+                </button>
+                <div id="sub-lesbian" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+                    <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
+                     <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
+
+                    <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
+                    <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
+                </div>
+            </div>
+
+            <!-- قسم متحولين جنسياً ⚧ -->
+            <div class="menu-item">
+                <button onclick="toggleSubMenu('sub-trans', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">⚧ متحولين جنسياً</span>
+                    <span class="text-yellow-400 transition-transform duration-300">▼</span>
+                </button>
+                <div id="sub-trans" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+                    <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
+                   <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
+
+                    <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
+                    <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
+                </div>
+            </div>
+             <div class="menu-item">
+    <button onclick="toggleSubMenu('sub-anime', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+        <span class="font-bold text-white">Anime 🎌</span>
+        <span class="text-yellow-400 transition-transform duration-300">▼</span>
+    </button>
+    <div id="sub-anime" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
+        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
+        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
+        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
+    </div>
+</div>
+<!-- قسم Live Girls -->
+<div class="menu-item">
+    <button onclick="switchSource('liveGirls', 'Live Girls')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+        <span class="font-bold text-white">🔴 Live Girls</span>
+        <span class="text-yellow-400">➡️</span>
+    </button>
+</div>
+
+<!-- قسم Live Channels Porn -->
+<div class="menu-item">
+    <button onclick="switchSource('liveChannels', 'Live Channels Porn')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+        <span class="font-bold text-white">📺 Live Channels Porn</span>
+        <span class="text-yellow-400">➡️</span>
+    </button>
+</div>
+            <!-- قسم وضعيات جنسية 📖 -->
+            <div class="menu-item">
+                <button onclick="toggleSubMenu('sub-positions', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">📖 وضعيات جنسية</span>
+                    <span class="text-yellow-400 transition-transform duration-300">▼</span>
+                </button>
+                <div id="sub-positions" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+                    <a href="#" onclick="changeCategory(event, 'life', 'الوضعيات', 'article', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">📄 المقالات</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- إحصائيات سريعة في أسفل القائمة -->
+        <div class="mt-6 pt-4 border-t border-zinc-800">
+            <div class="grid grid-cols-3 gap-2 text-center">
+                <div class="bg-zinc-900/50 rounded-lg p-2">
+                    <div class="text-pink-500 font-bold text-lg footer-videos-count">0</div>
+                    <div class="text-[10px] text-gray-400">فيديو</div>
+                </div>
+                <div class="bg-zinc-900/50 rounded-lg p-2">
+                    <div class="text-pink-500 font-bold text-lg footer-images-count">0</div>
+                    <div class="text-[10px] text-gray-400">صورة</div>
+                </div>
+                <div class="bg-zinc-900/50 rounded-lg p-2">
+                    <div class="text-pink-500 font-bold text-lg footer-articles-count">0</div>
+                    <div class="text-[10px] text-gray-400">مقال</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
     <!-- المحتوى الرئيسي -->
    <div class='flex flex-col lg:flex-row max-w-[1700px] mx-auto p-4 gap-6' dir="rtl">
         <!-- الشريط الجانبي الأيسر -->
-<aside class='w-full lg:w-64 flex-shrink-0 lg:sticky top-24 lg:h-[calc(100vh-120px)] block bg-zinc-900/50 rounded-2xl p-4 border border-zinc-800 overflow-y-auto mb-4 lg:mb-0'>
-            <div class="profile-card bg-gradient-to-br from-pink-700 to-purple-800 p-4 rounded-xl mb-4 text-white">
-                <div class="text-[10px] uppercase font-bold opacity-80 mb-2">My Saved Profile:</div>
-                <div class="flex flex-col gap-2">
-                    <div class="flex gap-2">
-                        <div id="btnFav" onclick="toggleProfileMode('fav')" class="tab-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg cursor-pointer text-xs flex-1 text-center">❤ المفضل</div>
-                        <div id="btnLike" onclick="toggleProfileMode('like')" class="tab-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg cursor-pointer text-xs flex-1 text-center">👍 الإعجاب</div>
-                    </div>
-                    <div class="flex gap-2 mt-1">
-                        <div id="btnWatchLater" onclick="toggleProfileMode('watchlater')" class="tab-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg cursor-pointer text-xs flex-1 text-center">⏱️ المشاهدة لاحقاً</div>
-                    </div>
-                </div>
-                <div id="statsContainer" class="mt-3 text-[11px] text-white/80 border-t border-white/20 pt-3 flex justify-around">
-                    <span id="videosCount">📹 0 فيديو</span>
-                    <span id="imagesCount">🖼️ 0 صورة</span>
-                    <span id="articlesCount">📄 0 مقال</span>
-                </div>
-            </div>
-            
-            <div class="relative"> 
-                <div class="db-switch-btn bg-zinc-800 p-3 rounded-xl cursor-pointer flex justify-between items-center border border-zinc-700 hover:border-pink-500 transition-all" onclick="toggleDBList()">
-                    <span id="activeName" class="font-bold text-sm text-pink-500">قسم الزواج</span> <span>▼</span>
-                </div>
-                <div class="db-dropdown hidden absolute w-full bg-zinc-900 border border-zinc-800 mt-2 rounded-xl overflow-hidden z-50 shadow-2xl" id="dbList">
-                    <div class="p-3 hover:bg-pink-600 cursor-pointer text-sm" onclick="switchSource('zaj', 'الزواج')" id="sectionZaj">قسم الزواج</div>
-                    <div class="p-3 hover:bg-pink-600 cursor-pointer text-sm" onclick="switchSource('nesa', 'النساء')" id="sectionNesa">قسم النساء</div>
-                    <div class="p-3 hover:bg-pink-600 cursor-pointer text-sm" onclick="switchSource('haywan', 'الحيوانات')" id="sectionHaywan">قسم الحيوانات</div>
-                    <div class="p-3 hover:bg-pink-600 cursor-pointer text-sm" onclick="switchSource('life', 'الحياة الزوجية')" id="sectionLife">قسم الحياة الزوجية</div>
-                </div>
-            </div>
-            <div id='menuBox' class="mt-4 flex flex-col gap-1"></div>
-        </aside>
+
+
+<div id="sidebarOverlay" onclick="toggleSidebar()" class="fixed inset-0 bg-black/70 z-40 hidden backdrop-blur-sm"></div>
 
         <main class='flex-1 min-w-0'>
             <div class="flex flex-col items-start mb-6">
@@ -124,7 +227,28 @@
             <div id="paginationBox" class="flex justify-center gap-2 mt-12 mb-10"></div>
         </main>
         
-        <aside class="hidden xl:block w-64 flex-shrink-0">
+<aside class="xl:block w-64 flex-shrink-0">
+    <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
+    
+    <!-- الإعلان العامودي - تحت الإعلانات المربعة -->
+    <div class="vertical-ad-left mt-6 pt-4 border-t border-zinc-800">
+        <div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>
+        <div class="vertical-ad-wrapper bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+            <a href="https://example.com" target="_blank" class="block">
+                <div class="relative bg-black" style="aspect-ratio: 9 / 16; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="https://i.postimg.cc/zfSyrPnH/hq720.jpg" 
+                         style="width: 100%; height: 100%; object-fit: cover; background: black;"
+                         alt="إعلان عامودي"
+                         onerror="this.src='https://i.postimg.cc/zfSyrPnH/hq720.jpg';">
+                </div>
+                <div class="text-center text-[10px] text-gray-500 py-2 border-t border-zinc-800">
+                    📢 إعلان عامودي
+                </div>
+            </a>
+        </div>
+    </div>
+</aside>
+
             <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
         </aside>
     </div>
@@ -368,5 +492,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
