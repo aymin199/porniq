@@ -103,10 +103,14 @@
 
 <aside id="mainSidebar" class="fixed top-0 right-0 h-full w-72 bg-zinc-950 z-50 transform translate-x-full transition-transform duration-300 border-l border-zinc-800 overflow-y-auto shadow-2xl">
     <div class="p-5 text-right" dir="rtl">
+        
+        <!-- رأس القائمة: زر إغلاق + العنوان -->
         <div class="flex justify-between items-center mb-6 border-b-2 border-yellow-400 pb-3">
             <button onclick="toggleSidebar()" class="text-gray-400 hover:text-white text-xl">✕</button>
             <h2 class="text-xl font-bold text-white">القائمة الرئيسية</h2>
         </div>
+
+        <!-- محتوى الأقسام (كما هو موجود لديك) -->
         <nav class="space-y-2">
             <!-- قسم مستقيم ⚤ -->
             <div class="menu-item">
@@ -116,7 +120,7 @@
                 </button>
                 <div id="sub-straight" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
                     <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
-                     <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
                     <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
                     <a href="#" onclick="changeCategory(event, 'zaj', 'مستقيم', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
                 </div>
@@ -130,8 +134,7 @@
                 </button>
                 <div id="sub-lesbian" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
                     <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
-                     <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
-
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
                     <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
                     <a href="#" onclick="changeCategory(event, 'nesa', 'سحاقيات', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
                 </div>
@@ -145,40 +148,43 @@
                 </button>
                 <div id="sub-trans" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
                     <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
-                   <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;">🎞️ أفلام</a>
-
+                    <a href="#" onclick="changeCategory(event, 'zaj', 'أفلام كاملة', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
                     <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
                     <a href="#" onclick="changeCategory(event, 'haywan', 'متحولين', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
                 </div>
             </div>
-             <div class="menu-item">
-    <button onclick="toggleSubMenu('sub-anime', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
-        <span class="font-bold text-white">Anime 🎌</span>
-        <span class="text-yellow-400 transition-transform duration-300">▼</span>
-    </button>
-    <div id="sub-anime" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
-        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
-        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
-        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
-        <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
-    </div>
-</div>
-<!-- قسم Live Girls -->
-<div class="menu-item">
-    <button onclick="switchSource('liveGirls', 'Live Girls')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
-        <span class="font-bold text-white">🔴 Live Girls</span>
-        <span class="text-yellow-400">➡️</span>
-    </button>
-</div>
 
-<!-- قسم Live Channels Porn -->
-<div class="menu-item">
-    <button onclick="switchSource('liveChannels', 'Live Channels Porn')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
-        <span class="font-bold text-white">📺 Live Channels Porn</span>
-        <span class="text-yellow-400">➡️</span>
-    </button>
-</div>
-            <!-- قسم وضعيات جنسية 📖 -->
+            <!-- قسم Anime -->
+            <div class="menu-item">
+                <button onclick="toggleSubMenu('sub-anime', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">Anime 🎌</span>
+                    <span class="text-yellow-400 transition-transform duration-300">▼</span>
+                </button>
+                <div id="sub-anime" class="hidden pr-4 mt-2 space-y-1 border-r-2 border-yellow-400 mr-2">
+                    <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'video', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎬 الفيديوهات</a>
+                    <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'movie', 'all'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ أفلام</a>
+                    <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'static'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🖼️ صور ثابتة</a>
+                    <a href="#" onclick="changeCategory(event, 'ime', 'Anime', 'image', 'animated'); return false;" class="block p-2 text-sm text-zinc-400 hover:text-yellow-400 transition rounded-lg">🎞️ صور متحركة</a>
+                </div>
+            </div>
+
+            <!-- قسم Live Girls -->
+            <div class="menu-item">
+                <button onclick="switchSource('liveGirls', 'Live Girls')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">🔴 Live Girls</span>
+                    <span class="text-yellow-400">➡️</span>
+                </button>
+            </div>
+
+            <!-- قسم Live Channels Porn -->
+            <div class="menu-item">
+                <button onclick="switchSource('liveChannels', 'Live Channels Porn')" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
+                    <span class="font-bold text-white">📺 Live Channels Porn</span>
+                    <span class="text-yellow-400">➡️</span>
+                </button>
+            </div>
+
+            <!-- قسم وضعيات جنسية -->
             <div class="menu-item">
                 <button onclick="toggleSubMenu('sub-positions', this)" class="w-full flex items-center justify-between p-3 bg-zinc-900 rounded-xl hover:bg-zinc-800 transition border border-zinc-800">
                     <span class="font-bold text-white">📖 وضعيات جنسية</span>
@@ -189,8 +195,8 @@
                 </div>
             </div>
         </nav>
-        
-        <!-- إحصائيات سريعة في أسفل القائمة -->
+
+        <!-- إحصائيات سريعة -->
         <div class="mt-6 pt-4 border-t border-zinc-800">
             <div class="grid grid-cols-3 gap-2 text-center">
                 <div class="bg-zinc-900/50 rounded-lg p-2">
@@ -207,7 +213,14 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- زر تسجيل الخروج (أسفل القائمة، محاذاة إلى اليمين) -->
+ <!-- زر تسجيل الخروج (مخفي افتراضياً، يظهر فقط عند تسجيل الدخول) -->
+<div class="mt-4 pt-2 border-t border-zinc-800 flex justify-end">
+    <button id="logoutSidebarBtn" onclick="logout()" class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-4 rounded-lg text-xs font-bold transition-all hidden">
+        🚪 Sign out
+    </button>
+</div>
 </aside>
     <!-- المحتوى الرئيسي -->
    <div class='flex flex-col lg:flex-row max-w-[1700px] mx-auto p-4 gap-6' dir="rtl">
@@ -455,43 +468,72 @@
 
     <!-- تحميل الجافاسكريبت -->
     <script src="script.js"></script>
-    <div id="authModal" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-4">
+<div id="authModal" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-4">
     <div class="bg-zinc-900 w-full max-w-[360px] max-h-[85vh] overflow-y-auto rounded-2xl border border-zinc-800 relative shadow-2xl" dir="rtl">
-        
         <button onclick="closeAuthModal()" class="absolute top-4 left-4 text-zinc-500 hover:text-white transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-
         <div class="p-6 pt-10">
             <div class="text-center mb-8">
-                <h2 class="text-2xl font-black text-white">مرحباً بك</h2>
-                <p class="text-zinc-500 text-sm mt-1">سجل دخولك للمتابعة</p>
+                <h2 id="authModalTitle" class="text-2xl font-black text-white">تسجيل الدخول</h2>
+                <p class="text-zinc-500 text-sm mt-1">أدخل بياناتك للمتابعة</p>
             </div>
 
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-zinc-500 mb-1 mr-1">البريد الإلكتروني</label>
-                    <input type="email" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all text-right" placeholder="mail@example.com">
+            <div id="authError" class="hidden bg-red-500/20 border border-red-500 text-red-300 text-sm p-2 rounded-lg mb-4"></div>
+
+            <!-- نموذج تسجيل الدخول -->
+            <div id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">اسم المستخدم</label>
+                    <input type="text" id="loginUsername" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="username">
                 </div>
-                <div>
-                    <label class="block text-xs font-bold text-zinc-500 mb-1 mr-1">كلمة المرور</label>
-                    <input type="password" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all text-right" placeholder="••••••••">
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">كلمة المرور</label>
+                    <input type="password" id="loginPassword" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="••••••••">
                 </div>
-                
-                <button class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all mt-4">
-                    تسجيل الدخول
-                </button>
-            </form>
+                <button onclick="handleLogin()" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all">تسجيل الدخول</button>
+            </div>
+
+            <!-- نموذج التسجيل -->
+            <div id="registerForm" style="display: none;">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">اسم المستخدم</label>
+                    <input type="text" id="regUsername" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="username">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">البريد الإلكتروني</label>
+                    <input type="email" id="regEmail" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="mail@example.com">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">كلمة المرور</label>
+                    <input type="password" id="regPassword" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="••••••••">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">تأكيد كلمة المرور</label>
+                    <input type="password" id="regConfirmPassword" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white focus:outline-none focus:border-pink-500 transition-all" placeholder="••••••••">
+                </div>
+                <button onclick="handleRegister()" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all">إنشاء حساب</button>
+            </div>
+
+            <!-- نموذج التحقق من البريد (يظهر بعد التسجيل) -->
+            <div id="verificationForm" style="display: none;">
+                <div class="text-center text-zinc-400 text-sm mb-4">تم إرسال رمز التحقق إلى بريدك الإلكتروني</div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-zinc-500 mb-1">رمز التحقق (4 أرقام)</label>
+                    <input type="text" id="verificationCode" maxlength="4" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-3 text-white text-center text-xl tracking-widest focus:outline-none focus:border-pink-500 transition-all" placeholder="0000">
+                </div>
+                <button onclick="verifyCode()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all">تحقق</button>
+                <button onclick="resetToRegister()" class="w-full mt-3 bg-zinc-700 hover:bg-zinc-600 text-white font-bold py-3 rounded-xl transition-all">رجوع</button>
+            </div>
 
             <div class="mt-6 text-center text-sm">
-                <span class="text-zinc-500">ليس لديك حساب؟</span>
-                <a href="#" class="text-pink-500 font-bold hover:underline mr-1">سجل الآن</a>
+                <span id="toggleAuthText" class="text-zinc-500">ليس لديك حساب؟</span>
+                <button onclick="toggleAuthMode()" id="toggleAuthBtn" class="text-pink-500 font-bold hover:underline mr-1">سجل الآن</button>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>

@@ -1,4 +1,70 @@
 
+
+// دالة لاستخراج الرابط الحقيقي من أي نص (مثل BBCode)
+function extractRealUrl(raw) {
+    if (!raw || typeof raw !== 'string') return raw;
+    // أولاً: البحث عن [img] داخل النص (حتى لو كان داخل [url])
+    let match = raw.match(/\[img\](.*?)\[\/img\]/i);
+    if (match) return match[1];
+    // ثانياً: البحث عن [url=...]
+    match = raw.match(/\[url=(.+?)\](.*?)\[\/url\]/i);
+    if (match) return match[1];
+    // ثالثاً: البحث عن رابط مباشر
+    match = raw.match(/https?:\/\/[^\s"']+/i);
+    if (match) return match[0];
+    return raw;
+}
+// دالة لتحويل رابط Google Drive إلى رابط تضمين صالح (preview)
+function getGoogleDriveEmbedLink(url) {
+    if (!url || typeof url !== 'string') return url;
+    // استخراج معرف الملف من الرابط
+    let match = url.match(/\/d\/(.+?)\/view/);
+    if (match) {
+        const fileId = match[1];
+        return `https://drive.google.com/file/d/${fileId}/preview`;
+    }
+    match = url.match(/id=(.+?)(&|$)/);
+    if (match) {
+        const fileId = match[1];
+        return `https://drive.google.com/file/d/${fileId}/preview`;
+    }
+    if (url.includes('drive.google.com/uc')) {
+        match = url.match(/id=(.+?)(&|$)/);
+        if (match) {
+            return `https://drive.google.com/file/d/${match[1]}/preview`;
+        }
+    }
+    return url;
+}
+
+// دالة لتحويل رابط Google Drive إلى رابط مباشر قابل للتضمين
+function getGoogleDriveDirectLink(url) {
+    if (!url || typeof url !== 'string') return url;
+    const match = url.match(/\/d\/(.+?)\/view/);
+    if (match) {
+        return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+    }
+    if (url.includes('drive.google.com/embed')) return url;
+    if (url.includes('export=download')) return url;
+    return url;
+}
+
+// دالة لتنظيف جميع روابط العنصر (الصورة والمحتوى)
+function sanitizeItemUrls(item) {
+    if (item.image) {
+        item.image = extractRealUrl(item.image);
+        if (item.image && item.image.includes('drive.google.com')) {
+            item.image = getGoogleDriveEmbedLink(item.image);
+        }
+    }
+    if (item.contentURL) {
+        item.contentURL = extractRealUrl(item.contentURL);
+        if (item.contentURL && item.contentURL.includes('drive.google.com')) {
+            item.contentURL = getGoogleDriveEmbedLink(item.contentURL);
+        }
+    }
+    return item;
+}
 const allCategories = [
     "Lesbian", "Asian", "MILF", "Doggystyle", "Ebony", "Gay", "Teen", "Repairman", 
     "Pizza Delivery", "Amateur", "Big Cock", "Softcore", "Nurse", "Handjob", 
@@ -22,7 +88,7 @@ const allCategories = [
     "Santa", "Loli", "Prostitute", "Drunk", "Premature Ejaculation", "Chastity", 
     "Sleeping", "Futanari", "Incest", "Homeless", "Triple Penetration", "Snuff Fantasy", 
     "Blood", "Chloroform", "Rape Fantasy (CNC)", "Crackhead", "Enema", "Torture", 
-    "Twincest", "Gore", "Trans", "Shemale"
+    "Twincest", "Gore", "Trans", "Shemale", "Compilation"
 ];
 // متغير لحفظ التصنيف المختار حالياً
 let currentFilterTag = null;
@@ -37,26 +103,36 @@ function getItemTags(item) {
     }
     return [];
 }
-// دالة المناداة: تغلق المشغل وتبحث عن التصنيف
+
+// استبدل دالة filterByTag بهذه النسخة
 function filterByTag(tagName) {
     if (window.closePlayer) window.closePlayer();
     if (window.closeArticle) window.closeArticle();
     
-    // مناداة دالة البحث الأصلية في كودك
-    // ستقوم بالبحث في allDBs عن الفيديوهات التي تملك هذا الـ label
-    window.doSearch(tagName);
+    // تعيين التصنيف الحالي
+    currentFilterTag = tagName;
     
-    // رفع الصفحة للأعلى لرؤية النتائج الجديدة
+    // إعادة تعيين وضع الملف الشخصي (إذا كان نشطاً)
+    profileMode = null;
+    
+    // تطبيق الفلتر
+    doSearch('');
+    
+    // تحديث عنوان الصفحة
+    const catTitle = document.getElementById('catTitle');
+    if (catTitle) catTitle.innerText = `#${tagName}`;
+    
+    // رفع الصفحة للأعلى
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// عرض 10 أزرار عشوائية فوق الشبكة
+// تأكد من أن هذه الدالة موجودة وأنها تستخدم allCategories الصحيح
 function renderCategoryBar() {
     const container = document.getElementById('topCategoryBar');
     if (!container) return;
     const randomTags = [...allCategories].sort(() => 0.5 - Math.random()).slice(0, 10);
     container.innerHTML = randomTags.map(tag => `
-        <button onclick="filterByTag('${tag}')" class="bg-zinc-900 hover:bg-pink-600 text-white text-[11px] font-bold py-2 px-5 rounded-full border border-zinc-800 transition-all whitespace-nowrap shadow-lg">
+        <button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" class="bg-zinc-900 hover:bg-pink-600 text-white text-[11px] font-bold py-2 px-5 rounded-full border border-zinc-800 transition-all whitespace-nowrap shadow-lg">
             ${tag}
         </button>
     `).join('');
@@ -64,101 +140,102 @@ function renderCategoryBar() {
 window.addEventListener('DOMContentLoaded', renderCategoryBar);
  const allDBs = {
     zaj: [ 
-        { id: 1, type: 'video', title: "زواج: رعب ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-            { id: 155, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 2, type: 'video', title: "زواج: أكشن سريع", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0008:45" },
-        { id: 3, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
-        { id: 4, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 5, type: 'image', title: "صورة زواج 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" },
-        { id: 6, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" },
-        { id: 7, type: 'video', title: "زواج: كوميدي", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
-        { id: 8, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
-        { id: 9, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 10, type: 'video', title: "زواج: أكشن 2", image: "https://b.top4top.io/p_3680ejx641.jpgg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
-        { id: 11, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
-        { id: 12, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 13, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
-        { id: 14, type: 'video', title: "زواج: رومانسي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0016:40" },
-        { id: 15, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 16, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
-        { id: 17, type: 'video', title: "زواج: رعب 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0013:20" },
-        { id: 18, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 19, type: 'video', title: "زواج: كوميدي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0011:45" },
-        { id: 20, type: 'video', title: "زواج: دراما 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0019:30" },
-        { id: 21, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 22, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
-        { id: 23, type: 'video', title: "زواج: رومانسي 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0017:50" },
-        { id: 24, type: 'image', title: "صورة زواج 8", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 25, type: 'video', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
+        { id: 1, type: 'video', title: "LoveHerFeet - Creepy Stepdad Stepdaughter‏", image: "https://e.top4top.io/p_3747snmhg0.jpg", contentURL: "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", labels: " Feet  ", duration: "0011:30"  },
+            { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
+        { id: 3, type: 'video', title: "زواج: أكشن سريع", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0008:45" },
+        { id: 4, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
+        { id: 5, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
+        { id: 6, type: 'image', title: "صورة زواج 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" },
+        { id: 7, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" },
+        { id: 8, type: 'video', title: "زواج: كوميدي", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
+        { id: 9, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
+        { id: 10, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 11, type: 'video', title: "زواج: أكشن 2", image: "https://b.top4top.io/p_3680ejx641.jpgg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
+        { id: 12, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
+        { id: 13, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 14, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
+        { id: 15, type: 'video', title: "زواج: رومانسي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0016:40" },
+        { id: 16, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 17, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
+        { id: 18, type: 'video', title: "زواج: رعب 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0013:20" },
+        { id: 19, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 20, type: 'video', title: "زواج: كوميدي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0011:45" },
+        { id: 21, type: 'video', title: "زواج: دراما 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0019:30" },
+        { id: 22, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 23, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
+        { id: 24, type: 'video', title: "زواج: رومانسي 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0017:50" },
+        { id: 25, type: 'image', title: "صورة زواج 8", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 26, type: 'video', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
     ],
     
+    
     nesa: [ 
-        { id: 200, type: 'image', title: "صورة متحركة مذهلة", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "متحركة" },
-        { id: 6445, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 201, type: 'image', title: "صورة ثابتة 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "hhttps://b.top4top.io/p_3680ejx641.jpg", labels: "ثابتة" },
-        { id: 202, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
-        { id: 203, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
-        { id: 204, type: 'video', title: "فيديو نساء 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:30" },
-        { id: 205, type: 'image', title: "صورة أزياء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "أزياء" },
-        { id: 206, type: 'image', title: "صورة جمال", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "جمال" },
-        { id: 207, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
-        { id: 208, type: 'image', title: "صورة مكياج", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "مكياج" },
-        { id: 209, type: 'image', title: "صورة عصرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "عصرية" },
-        { id: 210, type: 'video', title: "فيديو نساء 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "موضة", duration: "0006:15" },
-        { id: 211, type: 'image', title: "صورة سفر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "سفر" },
-        { id: 212, type: 'image', title: "صورة استرخاء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "استرخاء" },
-        { id: 213, type: 'video', title: "فيديو نساء 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رقص", duration: "0004:30" },
-        { id: 214, type: 'image', title: "صورة طعام", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طعام" },
-        { id: 215, type: 'image', title: "صورة قهوة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "قهوة" },
-        { id: 216, type: 'video', title: "فيديو نساء 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "يoga", duration: "0008:20" },
-        { id: 217, type: 'image', title: "صورة حديقة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "حديقة" },
-        { id: 218, type: 'image', title: "صورة شاطئ", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "شاطئ" },
-        { id: 219, type: 'video', title: "فيديو نساء 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طبخ", duration: "0009:45" },
-        { id: 220, type: 'image', title: "صورة غروب", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "غروب" }
+        { id: 1, type: 'video', title: "Epic Public Flashing Compilation Vol. 5", image: "https://c.top4top.io/p_3746q2xr80.jpg", contentURL: "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", labels: "Compilation" },
+        { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
+        { id: 3, type: 'image', title: "Epic Public Flashing", image: "https://c.top4top.io/p_3746q2xr80.jpg ", contentURL: "https://www.raed.net/img?id=1531550", labels: "ثابتة" },
+        { id: 4, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
+        { id: 5, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
+        { id: 6, type: 'video', title: "فيديو نساء 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:30" },
+        { id: 7, type: 'image', title: "صورة أزياء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "أزياء" },
+        { id: 8, type: 'image', title: "صورة جمال", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "جمال" },
+        { id: 9, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
+        { id: 10, type: 'image', title: "صورة مكياج", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "مكياج" },
+        { id: 11, type: 'image', title: "صورة عصرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "عصرية" },
+        { id: 12, type: 'video', title: "فيديو نساء 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "موضة", duration: "0006:15" },
+        { id: 13, type: 'image', title: "صورة سفر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "سفر" },
+        { id: 14, type: 'image', title: "صورة استرخاء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "استرخاء" },
+        { id: 15, type: 'video', title: "فيديو نساء 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رقص", duration: "0004:30" },
+        { id: 16, type: 'image', title: "صورة طعام", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طعام" },
+        { id: 17, type: 'image', title: "صورة قهوة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "قهوة" },
+        { id: 18, type: 'video', title: "فيديو نساء 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "يoga", duration: "0008:20" },
+        { id: 19, type: 'image', title: "صورة حديقة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "حديقة" },
+        { id: 20, type: 'image', title: "صورة شاطئ", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "شاطئ" },
+        { id: 21, type: 'video', title: "فيديو نساء 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طبخ", duration: "0009:45" },
+        { id: 22, type: 'image', title: "صورة غروب", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "غروب" }
         ],
        
 
 
     haywan: [ 
-        { id: 307570, type: 'video', title: "فيديو أكشن حيوانات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:20" },
-        { id: 665, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 757350, type: 'video', title: "فيديو حيوانات مفترسة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مفترسة", duration: "0007:30" },
-        { id: 357571, type: 'video', title: "فيديو حيوانات أليفة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أليفة", duration: "0004:45" },
-        { id: 2575700, type: 'video', title: "فيديو حيوانات الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "غابة", duration: "0006:15" },
-        { id: 257572, type: 'video', title: "فيديو حيوانات بحرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "بحرية", duration: "0008:00" },
-        { id: 17757, type: 'video', title: "فيديو طيور", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طيور", duration: "0003:30" },
-        { id: 25757, type: 'video', title: "فيديو حيوانات صحراوية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "صحراء", duration: "0005:50" },
-        { id: 357575, type: 'video', title: "فيديو حيوانات قطبية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "قطبية", duration: "0006:40" },
-        { id: 357570, type: 'video', title: "فيديو حيوانات استوائية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "استوائية", duration: "0007:10" },
-        { id: 4755754, type: 'video', title: "فيديو زواحف", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "زواحف", duration: "0004:20" },
-        { id: 55754, type: 'video', title: "فيديو حشرات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "حشرات", duration: "0003:15" },
-        { id: 575755, type: 'video', title: "فيديو ديناصورات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ديناصورات", duration: "0009:30" },
-        { id: 45754, type: 'video', title: "فيديو حيوانات ليلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ليلية", duration: "0005:25" },
-        { id: 57574, type: 'video', title: "فيديو حيوانات نادرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نادرة", duration: "0007:45" },
-        { id: 55, type: 'video', title: "فيديو حيوانات أفريقيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أفريقيا", duration: "0008:50" },
-        { id: 45754, type: 'video', title: "فيديو حيوانات آسيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "آسيا", duration: "0006:30" },
-        { id: 55754, type: 'video', title: "فيديو حيوانات أمريكا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أمريكا", duration: "0007:20" },
-        { id: 557555, type: 'video', title: "فيديو حيوانات أستراليا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أستراليا", duration: "0005:40" },
-        { id: 457554, type: 'video', title: "فيديو حيوانات أوروبا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أوروبا", duration: "0004:55" },
-        { id: 55754, type: 'video', title: "فيديو حيوانات الجبل", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "جبلية", duration: "0006:10" },
-        { id: 55745, type: 'video', title: "فيديو حيوانات النهر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نهرية", duration: "0005:35" },
-        { id: 21, type: 'video', title: "فيديو حيوانات المزرعة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مزرعة", duration: "0007:15" }
+        { id: 1, type: 'video', title: "فيديو أكشن حيوانات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:20" },
+        { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
+        { id: 3, type: 'video', title: "فيديو حيوانات مفترسة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مفترسة", duration: "0007:30" },
+        { id: 4, type: 'video', title: "فيديو حيوانات أليفة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أليفة", duration: "0004:45" },
+        { id: 5, type: 'video', title: "فيديو حيوانات الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "غابة", duration: "0006:15" },
+        { id: 6, type: 'video', title: "فيديو حيوانات بحرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "بحرية", duration: "0008:00" },
+        { id: 7, type: 'video', title: "فيديو طيور", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طيور", duration: "0003:30" },
+        { id: 8, type: 'video', title: "فيديو حيوانات صحراوية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "صحراء", duration: "0005:50" },
+        { id: 9, type: 'video', title: "فيديو حيوانات قطبية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "قطبية", duration: "0006:40" },
+        { id: 10, type: 'video', title: "فيديو حيوانات استوائية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "استوائية", duration: "0007:10" },
+        { id: 11, type: 'video', title: "فيديو زواحف", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "زواحف", duration: "0004:20" },
+        { id: 12, type: 'video', title: "فيديو حشرات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "حشرات", duration: "0003:15" },
+        { id: 13, type: 'video', title: "فيديو ديناصورات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ديناصورات", duration: "0009:30" },
+        { id: 14, type: 'video', title: "فيديو حيوانات ليلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ليلية", duration: "0005:25" },
+        { id: 15, type: 'video', title: "فيديو حيوانات نادرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نادرة", duration: "0007:45" },
+        { id: 16, type: 'video', title: "فيديو حيوانات أفريقيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أفريقيا", duration: "0008:50" },
+        { id: 17, type: 'video', title: "فيديو حيوانات آسيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "آسيا", duration: "0006:30" },
+        { id: 18, type: 'video', title: "فيديو حيوانات أمريكا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أمريكا", duration: "0007:20" },
+        { id: 19, type: 'video', title: "فيديو حيوانات أستراليا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أستراليا", duration: "0005:40" },
+        { id: 20, type: 'video', title: "فيديو حيوانات أوروبا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أوروبا", duration: "0004:55" },
+        { id: 21, type: 'video', title: "فيديو حيوانات الجبل", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "جبلية", duration: "0006:10" },
+        { id: 22, type: 'video', title: "فيديو حيوانات النهر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نهرية", duration: "0005:35" },
+        { id: 23, type: 'video', title: "فيديو حيوانات المزرعة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مزرعة", duration: "0007:15" }
     ],
-    ime: [{ id: 4, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 5, type: 'image', title: "صورة زواج 1", image: " ", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" }
+    ime: [{ id: 1, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
+        { id: 2, type: 'image', title: "صورة زواج 1", image: " ", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" }
 
  ],
    
     liveGirls: [
    
-    { id: 9001, type: 'live', title: "بث مباشر - قناة 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
-    { id: 9002, type: 'live', title: "بث مباشر - قناة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
-    { id: 9003, type: 'live', title: "بث مباشر - قناة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" }
+    { id: 1, type: 'live', title: "بث مباشر - قناة 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
+    { id: 2, type: 'live', title: "بث مباشر - قناة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
+    { id: 3, type: 'live', title: "بث مباشر - قناة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" }
 ],
 liveChannels: [
 
 { 
-  id: 9101, 
+  id: 1, 
   type: 'live', 
   title: "قناة إباحية حية 1", 
   image: "...", 
@@ -168,7 +245,7 @@ liveChannels: [
 }, // 🔥 لازم هاي الفاصلة
 
 { 
-  id: 9102, 
+  id: 2, 
   type: 'live', 
   title: "قناة إباحية حية 2", 
   image: "...", 
@@ -185,7 +262,7 @@ liveChannels: [
     
     life: [
         { 
-            id: 59801, 
+            id: 1, 
             type: 'article', 
             title: "وضعية إندراني", 
             image: "https://l.top4top.io/p_3702uwnur1.png", 
@@ -214,7 +291,7 @@ liveChannels: [
             ]
         },
         { 
-            id: 59802, 
+            id: 2, 
             type: 'article', 
             title: "نصائح للحياة الزوجية", 
             image: "https://l.top4top.io/p_3702uwnur1.png", 
@@ -241,7 +318,7 @@ liveChannels: [
             ]
         },
         { 
-            id: 59803, 
+            id: 3, 
             type: 'article', 
             title: "أفضل 10 وضعيات", 
             image: "https://l.top4top.io/p_3702uwnur1.png", 
@@ -268,7 +345,7 @@ liveChannels: [
             ]
         },
         { 
-            id: 59804, 
+            id: 4, 
             type: 'article', 
             title: "أسرار العلاقة الحميمة", 
             image: "https://l.top4top.io/p_3702uwnur1.png", 
@@ -287,7 +364,7 @@ liveChannels: [
             ]
         },
         { 
-            id: 59805, 
+            id: 5, 
             type: 'article', 
             title: "الرومانسية في الزواج", 
             image: "https://l.top4top.io/p_3702uwnur1.png", 
@@ -331,13 +408,11 @@ const siteAds = {
     
  // أضف هذا الكود الجديد للإعلانات المستطيلة الرفيعة
     horizontalRectAds: [
-        { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "عرض حصري 1" },
-        { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "عرض حصري 2" },
-        { image: "https://l.top4top.io/p_3702uwnur1.png", link: "https://example3.com", title: "عرض حصري 3" }
+        { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example1.com", title: "عرض حصري 1" },
+        { video: "   ", link: "https://example2.com", title: "عرض حصري 2" },
+        { video: "     ", link: "https://example3.com", title: "عرض حصري 3" }
     ]
 };
-
-// ================ المتغيرات العامة ================
 
 
 // ================ المتغيرات العامة ================
@@ -1728,21 +1803,29 @@ function playVideo(p) {
             }, 100);
             return;
         }
-        if (p.contentURL.includes('drive.google.com')) {
-            vArea.innerHTML = `
-                <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-                        src="${p.contentURL}" allowfullscreen>
-                </iframe>
-            `;
-            // تحديث الاقتراحات
-            setTimeout(() => {
-                updateRecSuggestions();
-                updateSideSuggestions();
-                updatePlayerStats();
-                updateFooterStats();
-            }, 100);
-            return;
-        }
+// داخل playVideo، بعد التحقق من p.type === 'video'
+if (p.contentURL.includes('drive.google.com')) {
+    // استخدم رابط التضمين الصحيح
+    const embedUrl = getGoogleDriveEmbedLink(p.contentURL);
+    vArea.innerHTML = `
+        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+                src="${embedUrl}" 
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen>
+        </iframe>
+    `;
+    return;
+}
+
+if (p.contentURL.match(/\.mp4$/i)) {
+    // تشغيل MP4 مباشرة مع عناصر التحكم المخصصة أو البسيطة
+    vArea.innerHTML = `
+        <video style="width:100%; height:100%; object-fit:contain;" controls autoplay>
+            <source src="${p.contentURL}" type="video/mp4">
+        </video>
+    `;
+    return;
+}
         if (isHardToEmbed(p.contentURL)) {
             vArea.style.paddingBottom = '0';
             vArea.innerHTML = `
@@ -2406,6 +2489,7 @@ function goToPopular() {
 }
 
 // ================ دوال الإعلانات تحت الترقيم ================
+// دالة لعرض الإعلانات تحت الترقيم مع دعم الإعلان الواحد المتغير للهواتف
 function renderAdsBelowPagination() {
     const paginationBox = document.getElementById('paginationBox');
     if (!paginationBox) return;
@@ -2416,29 +2500,91 @@ function renderAdsBelowPagination() {
         adsContainer.className = 'mt-6 mb-4';
         paginationBox.parentNode.insertBefore(adsContainer, paginationBox.nextSibling);
     }
-    const adType = Math.random() < 0.5 ? 'horizontal' : 'square';
-    let html = '';
-    if (adType === 'horizontal') {
-        const horizontalAd = getRandomHorizontalRectAd();
-        html = `
-            <div class="horizontal-rect-ad">
-                <a href="${horizontalAd.link}" target="_blank" class="block w-full">
-                    <div class="relative bg-black rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group" 
-                         style="aspect-ratio: 16 / 5; width: 100%;">
-                        <img src="${horizontalAd.image}" 
-                             style="width: 100%; height: 100%; object-fit: cover;"
-                             alt="${horizontalAd.title}"
-                             onerror="this.src='${siteAds.horizontalRectAds[0].image}';">
+
+    const isMobile = window.innerWidth < 768;
+
+    // إزالة أي interval سابق
+    if (window._mobileAdInterval) {
+        clearInterval(window._mobileAdInterval);
+        window._mobileAdInterval = null;
+    }
+
+    if (isMobile) {
+        // في الهواتف: نعرض إعلاناً واحداً فقط
+        let currentAdIndex = 0;
+        
+        // دالة لعرض إعلان عشوائي (مربع أو أفقي)
+        function showRandomMobileAd() {
+            // 70% إعلان مربع من paginationSquareAds، 30% إعلان أفقي من horizontalRectAds
+            const useSquare = Math.random() < 0.7;
+            let adHtml = '';
+            if (useSquare && siteAds.paginationSquareAds && siteAds.paginationSquareAds.length) {
+                const adsList = siteAds.paginationSquareAds;
+                const randomAd = adsList[Math.floor(Math.random() * adsList.length)];
+                adHtml = `
+                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                        <a href="${randomAd.link}" target="_blank" class="block">
+                            <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                <img src="${randomAd.image}" 
+                                     style="width: 100%; height: 100%; object-fit: contain; background: black;"
+                                     alt="${randomAd.title}"
+                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}'">
+                            </div>
+                        </a>
                     </div>
-                    <div class="text-center text-[10px] text-gray-500 py-2">
+                    <div class="text-center text-[10px] text-gray-500 py-2 mt-2">
                         📢 إعلان
                     </div>
-                </a>
-            </div>
-        `;
+                `;
+            } else if (siteAds.horizontalRectAds && siteAds.horizontalRectAds.length) {
+                const horizontalAd = siteAds.horizontalRectAds[Math.floor(Math.random() * siteAds.horizontalRectAds.length)];
+                const isVideo = horizontalAd.video && horizontalAd.video.trim() !== '';
+                const mediaUrl = isVideo ? horizontalAd.video : (horizontalAd.image || 'https://i.postimg.cc/zfSyrPnH/hq720.jpg');
+                adHtml = `
+                    <div class="horizontal-rect-ad">
+                        <a href="${horizontalAd.link}" target="_blank" class="block w-full">
+                            <div class="relative bg-black rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                                ${isVideo ? `
+                                    <video class="w-full h-auto object-contain" 
+                                           autoplay muted loop playsinline 
+                                           style="max-height: 200px; width: 100%;">
+                                        <source src="${mediaUrl}" type="video/mp4">
+                                    </video>
+                                ` : `
+                                    <img src="${mediaUrl}" 
+                                         style="width: 100%; height: auto; object-fit: contain; max-height: 180px;"
+                                         alt="${horizontalAd.title}"
+                                         onerror="this.src='https://i.postimg.cc/zfSyrPnH/hq720.jpg'">
+                                `}
+                            </div>
+                            <div class="text-center text-[10px] text-gray-500 py-2">
+                                📢 إعلان
+                            </div>
+                        </a>
+                    </div>
+                `;
+            } else {
+                // في حال عدم وجود إعلانات، نعرض إعلان افتراضي
+                adHtml = `
+                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800">
+                        <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-gray-500 text-sm">إعلان</span>
+                        </div>
+                    </div>
+                `;
+            }
+            adsContainer.innerHTML = adHtml;
+        }
+
+        // عرض إعلان أولي
+        showRandomMobileAd();
+        
+        // تغيير الإعلان كل 15 ثانية
+        window._mobileAdInterval = setInterval(showRandomMobileAd, 15000);
     } else {
+        // في الكمبيوتر: نعرض 3 إعلانات مربعة عشوائية (كما كانت)
         const selectedSquareAds = getRandomPaginationSquareAds(3);
-        html = `
+        let html = `
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 ${selectedSquareAds.map(ad => `
                     <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
@@ -2447,7 +2593,7 @@ function renderAdsBelowPagination() {
                                 <img src="${ad.image}" 
                                      style="width: 100%; height: 100%; object-fit: contain; background: black;"
                                      alt="${ad.title}"
-                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}';">
+                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}'">
                             </div>
                         </a>
                     </div>
@@ -2457,10 +2603,9 @@ function renderAdsBelowPagination() {
                 📢 إعلانات
             </div>
         `;
+        adsContainer.innerHTML = html;
     }
-    adsContainer.innerHTML = html;
 }
-
 function optimizeImageDisplay() {
     const vArea = document.getElementById('vArea');
     if (vArea) {
