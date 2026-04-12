@@ -88,7 +88,7 @@ const allCategories = [
     "Santa", "Loli", "Prostitute", "Drunk", "Premature Ejaculation", "Chastity", 
     "Sleeping", "Futanari", "Incest", "Homeless", "Triple Penetration", "Snuff Fantasy", 
     "Blood", "Chloroform", "Rape Fantasy (CNC)", "Crackhead", "Enema", "Torture", 
-    "Twincest", "Gore", "Trans", "Shemale", "Compilation"
+    "Twincest", "Gore", "Trans",  "naked", "Shemale", "Compilation", "hardcore","blowjob"  , "creampie", "milf"
 ];
 // متغير لحفظ التصنيف المختار حالياً
 let currentFilterTag = null;
@@ -142,10 +142,10 @@ window.addEventListener('DOMContentLoaded', renderCategoryBar);
     zaj: [ 
         { id: 1, type: 'video', title: "LoveHerFeet - Creepy Stepdad Stepdaughter‏", image: "https://e.top4top.io/p_3747snmhg0.jpg", contentURL: "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", labels: " Feet  ", duration: "0011:30"  },
             { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 3, type: 'video', title: "زواج: أكشن سريع", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0008:45" },
+        { id: 3, type: 'video', title: "Busy Mercedes Carrera takes time off work for a good fuck‏", image: "https://a.top4top.io/p_37535ta9f0.jpg", contentURL: "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", labels: "hardcore, blowjob, creampie, milf", duration: "08:45"},
         { id: 4, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
         { id: 5, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 6, type: 'image', title: "صورة زواج 1", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" },
+        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
         { id: 7, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" },
         { id: 8, type: 'video', title: "زواج: كوميدي", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
         { id: 9, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
@@ -175,7 +175,7 @@ window.addEventListener('DOMContentLoaded', renderCategoryBar);
         { id: 3, type: 'image', title: "Epic Public Flashing", image: "https://c.top4top.io/p_3746q2xr80.jpg ", contentURL: "https://www.raed.net/img?id=1531550", labels: "ثابتة" },
         { id: 4, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
         { id: 5, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
-        { id: 6, type: 'video', title: "فيديو نساء 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:30" },
+        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
         { id: 7, type: 'image', title: "صورة أزياء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "أزياء" },
         { id: 8, type: 'image', title: "صورة جمال", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "جمال" },
         { id: 9, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
@@ -400,21 +400,51 @@ const siteAds = {
         { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "عرض خاص", isPortrait: false },
         { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "عروض حصرية", isPortrait: false }
     ],
+    
     paginationSquareAds: [
-        { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "إعلان 1", isPortrait: false },
-         { image: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", title: "إعلان 2", isPortrait: false },
-        { image: "https://b.top4top.io/p_3680ejx641.jpg", link: "https://example2.com", title: "إعلان 2", isPortrait: false }
+        { image: "https://h.top4top.io/p_3753dyy8t2.gif", link: "https://example1.com", title: "إعلان 1", isPortrait: false },
+         { video: "https://e.top4top.io/m_37536b5gy0.mp4", link: "https://example1.com", title: "إعلان 2", isPortrait: false },
+        { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example2.com", title: "إعلان 2", isPortrait: false }
     ],
     
  // أضف هذا الكود الجديد للإعلانات المستطيلة الرفيعة
     horizontalRectAds: [
-        { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example1.com", title: "عرض حصري 1" },
-        { video: "   ", link: "https://example2.com", title: "عرض حصري 2" },
-        { video: "     ", link: "https://example3.com", title: "عرض حصري 3" }
-    ]
+    { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example1.com", title: "عرض حصري 1" },
+    { video: "https://g.top4top.io/m_3753hq7ei1.mp4", link: "https://example2.com", title: "عرض حصري 2" },
+        { video: "https://d.top4top.io/m_37548wm9l0.mp4", link: "https://example2.com", title: "عرض حصري 2" },
+    { video: "https://b.top4top.io/m_3754wr5fy0.mp4", link: "https://example3.com", title: "عرض حصري 3" }
+]
+
 };
 
+// Cache لتثبيت الإعلانات لكل قسم (لا تتغير أثناء نفس الجلسة)
+let adsCache = {
+    networkAd: null,           // إعلان الشبكة الواحد المضمن بين البطاقات
+    sidebarAds: [],            // مصفوفة الإعلانات الجانبية (4 إعلانات)
+    paginationLargeAds: [],    // إعلانات الترقيم الكبيرة (غير مستخدمة حالياً)
+    paginationSquareAds: [],   // إعلانات المربعات تحت الترقيم (3 إعلانات)
+    horizontalRectAd: null     // الإعلان الأفقي للهواتف
+};
 
+// دالة لإعادة تعيين الـ Cache عند تغيير القسم
+function resetAdsCache() {
+    adsCache = {
+        networkAd: null,
+        sidebarAds: [],
+        paginationLargeAds: [],
+        paginationSquareAds: [],
+        horizontalRectAd: null
+    };
+}
+// دالة لتهيئة الإعلانات الجانبية للقسم الحالي (4 إعلانات ثابتة)
+function initSidebarAdsForCurrentSection() {
+    if (adsCache.sidebarAds.length === 0) {
+        // نختار 4 إعلانات عشوائية من siteAds.sidebarAds
+        const shuffled = [...siteAds.sidebarAds].sort(() => 0.5 - Math.random());
+        adsCache.sidebarAds = shuffled.slice(0, 4);
+    }
+    return adsCache.sidebarAds;
+}
 // ================ المتغيرات العامة ================
 var tempRegistration = null;
 var generatedVerificationCode = null;
@@ -445,6 +475,7 @@ var scrollPosition = 0;
 var isLoginMode = true;
 window.filterByTag = filterByTag;
 
+
 // ================ Firebase (معطل مؤقتاً) ================
 const firebaseConfig = {
     apiKey: "AIzaSyBk2NxXkXkXkXkXkXkXkXkXkXkXkXk",
@@ -468,7 +499,13 @@ const provider = auth ? new firebase.auth.GoogleAuthProvider() : null;
 
 // ================ دوال جلب الإعلانات ================
 function getRandomNetworkAd() {
-    return siteAds.networkAds[Math.floor(Math.random() * siteAds.networkAds.length)];
+    // إذا كان هناك إعلان مخزن للقسم الحالي، نعيده
+    if (adsCache.networkAd) return adsCache.networkAd;
+    
+    // وإلا نختار واحداً عشوائياً ونخزنه
+    const ad = siteAds.networkAds[Math.floor(Math.random() * siteAds.networkAds.length)];
+    adsCache.networkAd = ad;
+    return ad;
 }
 
 function getRandomSidebarAd() {
@@ -480,8 +517,16 @@ function getRandomPaginationLargeAd() {
 }
 
 function getRandomPaginationSquareAds(count = 3) {
+    // إذا كانت الإعلانات مخزنة مسبقاً للقسم الحالي، نعيدها
+    if (adsCache.paginationSquareAds.length > 0) {
+        return adsCache.paginationSquareAds.slice(0, count);
+    }
+    
+    // وإلا نختار عشوائياً عدداً من الإعلانات (عادة 3) ونخزنها
     const shuffled = [...siteAds.paginationSquareAds].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+    const selected = shuffled.slice(0, count);
+    adsCache.paginationSquareAds = selected;
+    return selected;
 }
 
 function getRandomAd() {
@@ -572,86 +617,83 @@ const translations = {
     },
     ar: {
         sectionNames: {
-            zaj: "مستقيم ⚤",
-            nesa: "سحاقيات ⚢",
-            haywan: "متحولين جنسياً ⚧",
-             ime: "Anime",
-            liveGirls: "فتيات حية",
-            liveChannels: "قنوات حية إباحية",
-            life: "وضعيات جنسية",
-            movies: "أفلام 🎬"
+            zaj: "Straight",
+            nesa: "Lesbian",
+            haywan: "Trans",
+            liveGirls: "Live Girls",
+            liveChannels: "Live Channels Porn",
+            life: "Sex Positions",
+            movies: "Movies"
         },
         sectionTitles: {
-            zaj: "مقاطع فيديو إباحية ساخنة",
-            nesa: "مقاطع فيديو إباحية للمثليات",
-            haywan: "مقاطع فيديو إباحية للمتحولين جنسياً",
-            ime: "   مقاطع فيديو إباحية ٱنمي   ",
-            liveGirls: "بث مباشر - فتيات حية",
-            liveChannels: "قنوات إباحية مباشرة",
-            life: "وضعيات جنسية - أدلة تعليمية",
-            movies: "أفلام كاملة"
+            zaj: "Hot porn videos",
+            nesa: "Lesbian Porn Videos",
+            haywan: "Transgender Porn Videos",
+            liveGirls: "Live Girls - Streaming Now",
+            liveChannels: "Live Porn Channels",
+            life: "Sex Positions - Educational Guides",
+            movies: "Full Movies"
         },
         subTitles: {
-            zaj: "شاهد أفضل الفيديوهات والأفلام الساخنة ⚤ PORNIQ",
-            nesa: "أفضل فيديوهات وأفلام ⚢ فتاة تمارس الجنس مع امرأة أخرى",
-            haywan: "شاهد أفضل الفيديوهات والأفلام الساخنة للمتحولين جنسياً 🏳️‍⚧️ PORNIQ",
-            ime: "شاهد أفضل الفيديوهات والأفلام الساخنة  ٱنمي 🏳️‍⚧️ PORNIQ  ",
-            liveGirls: "شاهد البث المباشر للفتيات في الوقت الحقيقي",
-            liveChannels: "قنوات إباحية مباشرة 24/7",
-            life: "تعلم وضعيات جنسية تعليمية مع الشرح بالفيديو والنصوص والصور ⚑PORNiQ",
-            movies: "شاهد أفلام كاملة بجودة عالية"
+            zaj: "Watch the hottest straight porn videos in HD quality",
+            nesa: "Best videos - Girl having sex with another woman",
+            haywan: "Amazing transgender porn videos - TS performers",
+            liveGirls: "Watch live girls streaming in real time",
+            liveChannels: "24/7 live porn channels",
+            life: "Learn new sex positions with our educational guides",
+            movies: "Watch full-length movies in high quality"
         },
-        searchPlaceholder: "ابحث عن فيديو...",
-        profileSaved: "ملفي المحفوظ:",
-        btnFav: "❤ المفضل",
-        btnLike: "👍 الإعجاب",
-        btnWatchLater: "⏱️ المشاهدة لاحقاً",
-        videosCount: "📹 0 فيديو",
-        imagesCount: "🖼️ 0 صورة",
-        articlesCount: "📄 0 مقال",
-        videosMenu: "الفيديوهات",
-        staticImages: "صور ثابتة",
-        animatedImages: "صور متحركة",
-        allContentMenu: "كل المحتوى",
-        close: "إغلاق ✕",
-        saved: "تم الحفظ",
-        addToFav: "إضافة للمفضلة",
-        removeFromFav: "إزالة من المفضلة",
-        addToWatchLater: "مشاهدة لاحقاً",
-        removeFromWatchLater: "إزالة من المشاهدة لاحقاً",
-        like: "إعجاب",
-        liked: "معجب",
-        dislike: "عدم إعجاب",
-        disliked: "غير معجب",
-        share: "مشاركة",
-        copied: "تم النسخ",
-        backToContent: "← رجوع للمحتوى",
-        relatedTopics: "مواضيع ذات صلة",
-        welcome: "مرحباً",
-        logout: "تسجيل خروج",
-        loginButton: "🔐 تسجيل الدخول",
-        leftColumnTitle: "يتم مشاركة في هذا الموقع الفيديوهات والصور والمقالات عبر الروابط تحت",
-        link1: "يوتيوب",
-        link2: "فيسبوك",
-        link3: "تويتر",
-        link4: "انستغرام",
-        link5: "تيك توك",
-        aiHelpText: "تم إنشاء هذا الموقع بمساعدة",
-        quickLinks: "روابط سريعة",
-        support: "الدعم",
-        videos: "فيديوهات",
-        images: "صور",
-        articles: "مقالات",
-        popular: "الأكثر مشاهدة",
-        privacyPolicy: "سياسة الخصوصية",
-        contactUs: "اتصل بنا",
-        aboutUs: "من نحن",
-        termsOfService: "شروط الخدمة",
-        footerRights: "جميع الحقوق محفوظة © 2024 porniq.com",
-        footerDesc: "يُقدّم لك موقع Porniq عددًا غير محدود من مقاطع الفيديو الإباحية المجانية مع أشهر نجمات الإباحية. استمتع بأكبر مجتمع إباحي للهواة على الإنترنت.",
-        favTitle: "المحتوى المفضل",
-        likeTitle: "المحتوى المعجب به",
-        watchLaterTitle: "مشاهدة لاحقاً"
+        searchPlaceholder: "Search for video...",
+        profileSaved: "My Saved Profile:",
+        btnFav: "❤ Favorites",
+        btnLike: "👍 Likes",
+        btnWatchLater: "⏱️ Watch Later",
+        videosCount: "📹 0 Videos",
+        imagesCount: "🖼️ 0 Images",
+        articlesCount: "📄 0 Articles",
+        videosMenu: "Videos",
+        staticImages: "Image",
+        animatedImages: "Gif",
+        allContentMenu: "All Content",
+        close: "Close ✕",
+        saved: "Saved",
+        addToFav: "Add to Favorites",
+        removeFromFav: "Remove from Favorites",
+        addToWatchLater: "Watch Later",
+        removeFromWatchLater: "Remove from Watch Later",
+        like: "Like",
+        liked: "Liked",
+        dislike: "Dislike",
+        disliked: "Disliked",
+        share: "Share",
+        copied: "Copied",
+        backToContent: "← Back to Content",
+        relatedTopics: "Related Topics",
+        welcome: "Welcome",
+        logout: "Logout",
+        loginButton: "🔐 Login",
+        leftColumnTitle: "Videos, images and articles are shared on this site via the links below",
+        link1: "YouTube",
+        link2: "Facebook",
+        link3: "Twitter",
+        link4: "Instagram",
+        link5: "TikTok",
+        aiHelpText: "This website was created with the help of",
+        quickLinks: "Quick Links",
+        support: "Support",
+        videos: "Videos",
+        images: "Images",
+        articles: "Articles",
+        popular: "Popular",
+        privacyPolicy: "Privacy Policy",
+        contactUs: "Contact Us",
+        aboutUs: "About Us",
+        termsOfService: "Terms of Service",
+        footerRights: "All rights reserved © 2024 porniq.com",
+        footerDesc: "Porniq provides you with unlimited free porn videos with the hottest pornstars. Enjoy the largest amateur porn community on the net.",
+        favTitle: "Favorites",
+        likeTitle: "Liked Content",
+        watchLaterTitle: "Watch Later"
     }
 };
 
@@ -1192,6 +1234,7 @@ window.addEventListener('load', function() {
 });
 
 function switchSource(key, name) {
+    resetAdsCache();
     currentFilterTag = null;
     sessionStorage.setItem('selectedSource', key);
     sessionStorage.setItem('selectedSourceName', name);
@@ -1231,9 +1274,9 @@ function switchSource(key, name) {
 }
 
 function saveState() {
-    localStorage.setItem('selectedType', currentType);
-    localStorage.setItem('selectedCat', currentCat);
-    localStorage.setItem('activeParent', activeParent || ""); 
+    sessionStorage.setItem('selectedType', currentType);
+    sessionStorage.setItem('selectedCat', currentCat);
+    sessionStorage.setItem('activeParent', activeParent || ""); 
 }
 
 
@@ -2163,6 +2206,7 @@ function renderAll() {
 }
 
 function changeCategory(event, sourceKey, displayName, contentType, categoryType) {
+    resetAdsCache();
     if (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -2490,6 +2534,7 @@ function goToPopular() {
 
 // ================ دوال الإعلانات تحت الترقيم ================
 // دالة لعرض الإعلانات تحت الترقيم مع دعم الإعلان الواحد المتغير للهواتف
+// دالة لعرض الإعلانات تحت الترقيم مع دعم الفيديو MP4 في الإعلانات المربعة والأفقية
 function renderAdsBelowPagination() {
     const paginationBox = document.getElementById('paginationBox');
     if (!paginationBox) return;
@@ -2503,109 +2548,124 @@ function renderAdsBelowPagination() {
 
     const isMobile = window.innerWidth < 768;
 
-    // إزالة أي interval سابق
-    if (window._mobileAdInterval) {
-        clearInterval(window._mobileAdInterval);
-        window._mobileAdInterval = null;
+    function renderMediaItem(ad, additionalClass = '') {
+        const videoSrc = ad.video ? ad.video.trim() : '';
+        const imageSrc = ad.image || 'https://via.placeholder.com/400x225/333/fff?text=AD';
+        const hasVideo = videoSrc !== '';
+        
+        if (hasVideo) {
+            return `
+                <video class="w-full h-full ${additionalClass}" style="object-fit: contain; background: black;" autoplay muted loop playsinline webkit-playsinline>
+                    <source src="${videoSrc}" type="video/mp4">
+                    <img src="${imageSrc}" class="w-full h-full object-cover" alt="${ad.title || 'إعلان'}">
+                </video>
+            `;
+        } else {
+            return `<img src="${imageSrc}" class="w-full h-full object-cover ${additionalClass}" alt="${ad.title || 'إعلان'}">`;
+        }
     }
 
     if (isMobile) {
-        // في الهواتف: نعرض إعلاناً واحداً فقط
-        let currentAdIndex = 0;
-        
-        // دالة لعرض إعلان عشوائي (مربع أو أفقي)
-        function showRandomMobileAd() {
-            // 70% إعلان مربع من paginationSquareAds، 30% إعلان أفقي من horizontalRectAds
+        let adHtml = '';
+        if (!adsCache.horizontalRectAd) {
             const useSquare = Math.random() < 0.7;
-            let adHtml = '';
             if (useSquare && siteAds.paginationSquareAds && siteAds.paginationSquareAds.length) {
                 const adsList = siteAds.paginationSquareAds;
                 const randomAd = adsList[Math.floor(Math.random() * adsList.length)];
-                adHtml = `
-                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
-                        <a href="${randomAd.link}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                <img src="${randomAd.image}" 
-                                     style="width: 100%; height: 100%; object-fit: contain; background: black;"
-                                     alt="${randomAd.title}"
-                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}'">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="text-center text-[10px] text-gray-500 py-2 mt-2">
-                        📢 إعلان
-                    </div>
-                `;
+                adsCache.horizontalRectAd = { type: 'square', data: randomAd };
             } else if (siteAds.horizontalRectAds && siteAds.horizontalRectAds.length) {
                 const horizontalAd = siteAds.horizontalRectAds[Math.floor(Math.random() * siteAds.horizontalRectAds.length)];
-                const isVideo = horizontalAd.video && horizontalAd.video.trim() !== '';
-                const mediaUrl = isVideo ? horizontalAd.video : (horizontalAd.image || 'https://i.postimg.cc/zfSyrPnH/hq720.jpg');
-                adHtml = `
-                    <div class="horizontal-rect-ad">
-                        <a href="${horizontalAd.link}" target="_blank" class="block w-full">
-                            <div class="relative bg-black rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
-                                ${isVideo ? `
-                                    <video class="w-full h-auto object-contain" 
-                                           autoplay muted loop playsinline 
-                                           style="max-height: 200px; width: 100%;">
-                                        <source src="${mediaUrl}" type="video/mp4">
-                                    </video>
-                                ` : `
-                                    <img src="${mediaUrl}" 
-                                         style="width: 100%; height: auto; object-fit: contain; max-height: 180px;"
-                                         alt="${horizontalAd.title}"
-                                         onerror="this.src='https://i.postimg.cc/zfSyrPnH/hq720.jpg'">
-                                `}
-                            </div>
-                            <div class="text-center text-[10px] text-gray-500 py-2">
-                                📢 إعلان
+                adsCache.horizontalRectAd = { type: 'horizontal', data: horizontalAd };
+            } else {
+                adsCache.horizontalRectAd = { type: 'square', data: siteAds.paginationSquareAds[0] };
+            }
+        }
+
+        const cached = adsCache.horizontalRectAd;
+        if (cached.type === 'square') {
+            const ad = cached.data;
+            adHtml = `
+                <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                    <a href="${ad.link}" target="_blank" class="block">
+                        <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+                            ${renderMediaItem(ad)}
+                        </div>
+                    </a>
+                </div>
+                <div class="text-center text-[10px] text-gray-500 py-2 mt-2">📢 إعلان</div>
+            `;
+        } else {
+            const ad = cached.data;
+            adHtml = `
+                <div class="horizontal-rect-ad bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                    <a href="${ad.link}" target="_blank" class="block w-full">
+                        <div class="relative bg-black" style="min-height: 120px; max-height: 180px; display: flex; align-items: center; justify-content: center;">
+                            ${renderMediaItem(ad, 'max-h-[180px] w-auto')}
+                        </div>
+                        <div class="text-center text-[10px] text-gray-500 py-2">📢 إعلان</div>
+                    </a>
+                </div>
+            `;
+        }
+        adsContainer.innerHTML = adHtml;
+    } 
+    else {
+        // 🔥 عشوائي: يا 3 مربعات يا مستطيل واحد
+        const showSquares = Math.random() < 0.5;
+
+        let html = '';
+
+        if (showSquares) {
+            let squareAds = [];
+            if (siteAds.paginationSquareAds && siteAds.paginationSquareAds.length) {
+                const shuffled = [...siteAds.paginationSquareAds].sort(() => 0.5 - Math.random());
+                squareAds = shuffled.slice(0, 3);
+            } else {
+                squareAds = [
+                    { link: '#', title: 'إعلان', image: '' },
+                    { link: '#', title: 'إعلان', image: '' },
+                    { link: '#', title: 'إعلان', image: '' }
+                ];
+            }
+
+            html += `<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">`;
+            squareAds.forEach(ad => {
+                html += `
+                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
+                        <a href="${ad.link}" target="_blank" class="block">
+                            <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+                                ${renderMediaItem(ad)}
                             </div>
                         </a>
                     </div>
                 `;
-            } else {
-                // في حال عدم وجود إعلانات، نعرض إعلان افتراضي
-                adHtml = `
-                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800">
-                        <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
-                            <span class="text-gray-500 text-sm">إعلان</span>
-                        </div>
+            });
+            html += `</div>`;
+        } else {
+            let rectAd = null;
+            if (siteAds.horizontalRectAds && siteAds.horizontalRectAds.length) {
+                rectAd = siteAds.horizontalRectAds[Math.floor(Math.random() * siteAds.horizontalRectAds.length)];
+            }
+
+            if (rectAd) {
+                html += `
+                    <div class="horizontal-rect-ad bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group mt-4">
+                        <a href="${rectAd.link}" target="_blank" class="block w-full">
+                            <div class="relative bg-black" style="min-height: 140px; max-height: 200px; display: flex; align-items: center; justify-content: center;">
+                                ${renderMediaItem(rectAd, 'max-h-[200px] w-auto')}
+                            </div>
+                            <div class="text-center text-[10px] text-gray-500 py-2">📢 إعلان مستطيل</div>
+                        </a>
                     </div>
                 `;
             }
-            adsContainer.innerHTML = adHtml;
         }
 
-        // عرض إعلان أولي
-        showRandomMobileAd();
-        
-        // تغيير الإعلان كل 15 ثانية
-        window._mobileAdInterval = setInterval(showRandomMobileAd, 15000);
-    } else {
-        // في الكمبيوتر: نعرض 3 إعلانات مربعة عشوائية (كما كانت)
-        const selectedSquareAds = getRandomPaginationSquareAds(3);
-        let html = `
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                ${selectedSquareAds.map(ad => `
-                    <div class="bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
-                        <a href="${ad.link}" target="_blank" class="block">
-                            <div class="relative bg-black" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                <img src="${ad.image}" 
-                                     style="width: 100%; height: 100%; object-fit: contain; background: black;"
-                                     alt="${ad.title}"
-                                     onerror="this.src='${siteAds.paginationSquareAds[0].image}'">
-                            </div>
-                        </a>
-                    </div>
-                `).join('')}
-            </div>
-            <div class="text-center text-[10px] text-gray-500 py-2 mt-2">
-                📢 إعلانات
-            </div>
-        `;
+        html += `<div class="text-center text-[10px] text-gray-500 py-2 mt-2">📢 إعلانات</div>`;
         adsContainer.innerHTML = html;
     }
 }
+
 function optimizeImageDisplay() {
     const vArea = document.getElementById('vArea');
     if (vArea) {
@@ -2668,19 +2728,20 @@ window.onload = () => {
     updateFooterStats();
     updateUserActivity();
     checkAgeVerification();
-    const savedSource = localStorage.getItem('selectedSource');
-    const savedSourceName = localStorage.getItem('selectedSourceName');
-    if (savedSource && allDBs[savedSource]) {
-        currentSourceKey = savedSource;
-        currentSourceName = savedSourceName || 'الزواج';
-        dummyData = shuffleArray(allDBs[savedSource]);
-    } else {
-        currentSourceKey = 'zaj';
-        currentSourceName = 'الزواج';
-        dummyData = shuffleArray(allDBs['zaj']);
-        localStorage.setItem('selectedSource', 'zaj');
-        localStorage.setItem('selectedSourceName', 'الزواج');
-    }
+    const savedSource = sessionStorage.getItem('selectedSource');
+const savedSourceName = sessionStorage.getItem('selectedSourceName');
+if (savedSource && allDBs[savedSource]) {
+    currentSourceKey = savedSource;
+    currentSourceName = savedSourceName || 'الزواج';
+    dummyData = shuffleArray(allDBs[savedSource]);
+} else {
+    currentSourceKey = 'zaj';
+    currentSourceName = 'الزواج';
+    dummyData = shuffleArray(allDBs['zaj']);
+    sessionStorage.setItem('selectedSource', 'zaj');
+    sessionStorage.setItem('selectedSourceName', 'الزواج');
+}
+
     const activeNameEl = document.getElementById('activeName');
     if(activeNameEl && currentSourceKey) {
         activeNameEl.innerHTML = t('sectionNames')[currentSourceKey];
@@ -3009,6 +3070,7 @@ function updateMobileMenuContent() {
 }
 // دالة لتغيير القسم والفئة من القائمة الجانبية الثابتة
 function changeCategory(event, sourceKey, displayName, contentType, categoryType) {
+    resetAdsCache();
     if (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -3369,9 +3431,13 @@ createCard = function(p) {
 function renderSideAds() {
     const container = document.getElementById('sideAdsContainer');
     if (!container) return;
+    
+    // تهيئة الإعلانات الجانبية إذا لم تكن موجودة
+    const ads = initSidebarAdsForCurrentSection();
+    
     let html = '<div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>';
-    for(let i=0; i<4; i++) {
-        let ad = getRandomSidebarAd();
+    for(let i = 0; i < ads.length; i++) {
+        let ad = ads[i];
         html += `
             <a href="${ad.link}" target="_blank" class="block w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-600 transition-all transform hover:scale-[1.02] shadow-xl mb-3 group relative">
                 <div class="w-full h-full bg-black flex items-center justify-center">
@@ -4256,3 +4322,5 @@ if (vAreaObserver) {
 }
 
 console.log('✅ تم إضافة التمرير التلقائي إلى أعلى المشغل عند اختيار اقتراح');
+
+
