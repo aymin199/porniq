@@ -173,12 +173,12 @@ window.addEventListener('DOMContentLoaded', renderCategoryBar);
     nesa: [ 
         { id: 1, type: 'video', title: "Epic Public Flashing Compilation Vol. 5", image: "https://c.top4top.io/p_3746q2xr80.jpg", contentURL: "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", labels: "Compilation" },
         { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 3, type: 'image', title: "Epic Public Flashing", image: "https://c.top4top.io/p_3746q2xr80.jpg ", contentURL: "https://www.raed.net/img?id=1531550", labels: "ثابتة" },
-        { id: 4, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طبيعة" },
-        { id: 5, type: 'image', title: "صورة ساحلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "ساحل" },
+        { id: 3, type: 'image', title: "Epic Public Flashing", image: "https://c.top4top.io/p_3746q2xr80.jpg ", contentURL: "https://www.raed.net/img?id=1531550", labels: "naked" },
+        { id: 4, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3754oc8jl0.png", contentURL: "https://l.top4top.io/p_3754oc8jl0.png", labels: "طبيعة" },
+        { id: 5, type: 'image', title: "صورة ساحلية", image: "https://f.top4top.io/p_3754zu7n06.jpeg", contentURL: "https://f.top4top.io/p_3754zu7n06.jpeg", labels: "ساحل" },
         { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
-        { id: 7, type: 'image', title: "صورة أزياء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "أزياء" },
-        { id: 8, type: 'image', title: "صورة جمال", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "جمال" },
+         {id: 7, type: 'image', title: "صورة أزياء", image: "https://f.top4top.io/p_3754qh5mz0.jpg", contentURL: "https://f.top4top.io/p_3754qh5mz0.jpg", labels: "أزياء" },
+        { id: 8, type: 'image', title: "صورة جمال", image: "https://f.top4top.io/p_3754qh5mz0.jpg", contentURL: "https://f.top4top.io/p_3754qh5mz0.jpg", labels: "جمال" },
         { id: 9, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
         { id: 10, type: 'image', title: "صورة مكياج", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "مكياج" },
         { id: 11, type: 'image', title: "صورة عصرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "عصرية" },
@@ -223,7 +223,12 @@ window.addEventListener('DOMContentLoaded', renderCategoryBar);
         { id: 23, type: 'video', title: "فيديو حيوانات المزرعة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مزرعة", duration: "0007:15" }
     ],
     ime: [{ id: 1, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 2, type: 'image', title: "صورة زواج 1", image: " ", contentURL: "https://b.top4top.io/p_3680ejx641.jpg", labels: "صور" }
+        { id: 3, type: 'image', title: "صورة ", image: " https://d.top4top.io/p_3754m7gav4.jpeg", contentURL: "https://d.top4top.io/p_3754m7gav4.jpeg", labels: "صور" },
+                { id: 4, type: 'image', title: " 1", image: " https://b.top4top.io/p_3754pp9ki2.jpeg", contentURL: "https://b.top4top.io/p_3754pp9ki2.jpeg", labels: "صور" },
+                        { id: 5, type: 'image', title: "ت  ", image: " https://c.top4top.io/p_37548lmfr3.jpeg", contentURL: "https://c.top4top.io/p_37548lmfr3.jpeg", labels: "صور" },
+                                { id: 6, type: 'image', title: "م 1", image: " ", contentURL: "https://a.top4top.io/p_37544kag61.jpg", labels: "صور" },
+                                          { id: 6, type: 'image', title: "صورة عا 1", image: " https://a.top4top.io/p_37544kag61.jpg", contentURL: "https://a.top4top.io/p_37544kag61.jpg", labels: "صور" },
+          { id: 7, type: 'image', title: "صورة تل 1", image: "https://g.top4top.io/p_37541rhbo2.jpeg", contentURL: "https://g.top4top.io/p_37541rhbo2.jpeg", labels: "صور" }
 
  ],
    
@@ -1894,10 +1899,19 @@ if (p.contentURL.match(/\.mp4$/i)) {
             </iframe>
         `;
     } else if (p.type === 'image') {
+        // إزالة أي تنسيقات سابقة وإضافة كلاس image-mode لعرض الصور بشكل صحيح
         vArea.style.paddingBottom = '0';
+        vArea.style.height = 'auto';
+        vArea.style.minHeight = 'auto';
+        vArea.classList.add('image-mode'); // إضافة الكلاس الخاص بالصور
+        
         vArea.innerHTML = `
-            <img src="${p.contentURL}" 
-                 style="max-width:100%;max-height:70vh;display:block;margin:auto;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
+                <img src="${p.contentURL}" 
+                     style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
+                     alt="${p.title}"
+                     onload="this.parentElement.parentElement.style.paddingBottom = '0'; this.parentElement.parentElement.style.height = 'auto';">
+            </div>
         `;
     }
     setTimeout(() => {
