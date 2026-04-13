@@ -240,7 +240,6 @@
             <div id="paginationBox" class="flex justify-center gap-2 mt-12 mb-10"></div>
         </main>
         
-
 <aside class="xl:block w-64 flex-shrink-0">
     <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
     
@@ -262,10 +261,13 @@
 
 <script>
     (function() {
-        // قائمة الإعلانات (يمكنك إضافة المزيد)
+        // قائمة الإعلانات
         const mediaList = [
             { type: 'video', src: 'https://e.top4top.io/m_3754o3ux01.mp4', link: 'https://example1.com', title: 'إعلان 1' },
- 
+            { type: 'video', src: 'https://c.top4top.io/m_3754wamh31.mp4', link: 'https://example2.com', title: 'إعلان 2' },
+                   { type: 'video', src: 'https://j.top4top.io/m_375494yvh8.mp4', link: 'https://example2.com', title: 'إعلان 2' },
+            { type: 'image', src: 'https://j.top4top.io/p_37543d1i10.jpeg', link: 'https://example3.com', title: 'إعلان 3' },
+            { type: 'image', src: 'https://j.top4top.io/p_37543d1i10.jpeg', link: 'https://example4.com', title: 'إعلان 4' }
         ];
 
         function getRandomMedia() {
@@ -279,18 +281,12 @@
                 console.warn('randomAdContainer غير موجود');
                 return;
             }
-            if (!adLink) {
-                console.warn('adLink غير موجود');
-                return;
-            }
+            if (!adLink) return;
 
             const media = getRandomMedia();
-            console.log('جاري عرض إعلان:', media);
+            console.log('تحديث الإعلان العمودي:', media.type, media.src);
             
-            // تحديث الرابط
             adLink.href = media.link;
-            
-            // تفريغ المحتوى القديم
             container.innerHTML = '';
 
             if (media.type === 'video') {
@@ -312,24 +308,16 @@
                 source.type = 'video/mp4';
                 video.appendChild(source);
                 
-                video.onerror = function(e) {
-                    console.error('خطأ في تحميل الفيديو:', media.src, e);
-                    // استبدال بصورة بديلة
-                    const fallbackImg = document.createElement('img');
-                    fallbackImg.src = 'https://j.top4top.io/p_37543d1i10.jpeg';
-                    fallbackImg.style.width = '100%';
-                    fallbackImg.style.height = 'auto';
-                    fallbackImg.style.display = 'block';
+                video.onerror = () => {
+                    const fallback = document.createElement('img');
+                    fallback.src = 'https://j.top4top.io/p_37543d1i10.jpeg';
+                    fallback.style.width = '100%';
                     container.innerHTML = '';
-                    container.appendChild(fallbackImg);
+                    container.appendChild(fallback);
                 };
                 
                 container.appendChild(video);
-                
-                // محاولة تشغيل الفيديو (بعض المتصفحات تحتاج تفاعل)
-                video.play().catch(err => {
-                    console.warn('تعذر التشغيل التلقائي:', err);
-                });
+                video.play().catch(e => console.warn('autoplay failed', e));
             } 
             else {
                 const img = document.createElement('img');
@@ -337,16 +325,12 @@
                 img.style.width = '100%';
                 img.style.height = 'auto';
                 img.style.display = 'block';
-                img.alt = 'إعلان عمودي';
-                img.onerror = function() {
-                    console.error('خطأ في تحميل الصورة:', media.src);
-                    this.src = 'https://j.top4top.io/p_37543d1i10.jpeg';
-                };
+                img.onerror = () => { img.src = 'https://j.top4top.io/p_37543d1i10.jpeg'; };
                 container.appendChild(img);
             }
         }
 
-        // عرض الإعلان عند تحميل الصفحة (بعد التأكد من وجود العناصر)
+        // عرض الإعلان عند تحميل الصفحة
         function initAd() {
             if (document.getElementById('randomAdContainer')) {
                 renderRandomAd();
@@ -354,39 +338,43 @@
                 setTimeout(initAd, 100);
             }
         }
-
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initAd);
         } else {
             initAd();
         }
 
-        // ربط التغيير مع تبديل القسم
-        const originalSwitchSource = window.switchSource;
-        if (typeof originalSwitchSource === 'function') {
-            window.switchSource = function(key, name) {
-                originalSwitchSource(key, name);
-                setTimeout(renderRandomAd, 300);
-            };
-        } else {
-            // إذا لم تكن switchSource موجودة بعد، ننتظر حتى تظهر
-            window.addEventListener('load', function() {
-                if (typeof window.switchSource === 'function') {
-                    const original = window.switchSource;
-                    window.switchSource = function(key, name) {
-                        original(key, name);
-                        setTimeout(renderRandomAd, 300);
-                    };
+        // طريقة قوية للاستماع إلى تغيير القسم: مراقبة المتغير currentSourceKey
+        function watchSourceChange() {
+            let lastSource = window.currentSourceKey;
+            setInterval(() => {
+                if (window.currentSourceKey !== lastSource) {
+                    lastSource = window.currentSourceKey;
+                    renderRandomAd();
                 }
-            });
+            }, 500);
         }
+
+        // بدء المراقبة بعد تحميل الصفحة
+        window.addEventListener('load', function() {
+            watchSourceChange();
+            
+            // أيضاً استبدال switchSource إذا وجدت (كإجراء احتياطي)
+            if (typeof window.switchSource === 'function') {
+                const original = window.switchSource;
+                window.switchSource = function(key, name) {
+                    original(key, name);
+                    setTimeout(renderRandomAd, 200);
+                };
+            }
+        });
     })();
 </script>
 
 
 
 
-            <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
+   
         </aside>
     </div>
 

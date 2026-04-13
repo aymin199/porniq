@@ -89,7 +89,7 @@ const allCategories = [
     "Santa", "Loli", "Prostitute", "Drunk", "Premature Ejaculation", "Chastity", 
     "Sleeping", "Futanari", "Incest", "Homeless", "Triple Penetration", "Snuff Fantasy", 
     "Blood", "Chloroform", "Rape Fantasy (CNC)", "Crackhead", "Enema", "Torture", 
-    "Twincest", "Gore", "Trans",  "naked", "Shemale", "Compilation", "hardcore","blowjob"  , "creampie", "milf"
+    "Twincest", "Gore", "Stepbro", "Trans",  "naked", "Shemale", "Compilation", "hardcore","blowjob"  , "creampie", "milf", "Pink Pussy"
 ];
 // متغير لحفظ التصنيف المختار حالياً
 let currentFilterTag = null;
@@ -139,34 +139,67 @@ function renderCategoryBar() {
     `).join('');
 }
 window.addEventListener('DOMContentLoaded', renderCategoryBar);
+// حفظ موضع التمرير الحالي
+function saveCurrentScrollPosition() {
+    sessionStorage.setItem('savedScrollY', window.pageYOffset || document.documentElement.scrollTop);
+}
+
+// استعادة موضع التمرير
+function restoreScrollPosition() {
+    const savedY = sessionStorage.getItem('savedScrollY');
+    if (savedY && !document.getElementById('playWindow').classList.contains('hidden')) {
+        // إذا كان المشغل مفتوحاً لا نستعيد التمرير الآن
+        return;
+    }
+    if (savedY) {
+        window.scrollTo({ top: parseInt(savedY), behavior: 'auto' });
+        sessionStorage.removeItem('savedScrollY');
+    }
+}
+
+// توسيع saveState لحفظ currentPage و profileMode
+const originalSaveState = saveState;
+saveState = function() {
+    sessionStorage.setItem('selectedType', currentType);
+    sessionStorage.setItem('selectedCat', currentCat);
+    sessionStorage.setItem('activeParent', activeParent || "");
+    sessionStorage.setItem('currentPage', currentPage);
+    if (profileMode) sessionStorage.setItem('profileMode', profileMode);
+    else sessionStorage.removeItem('profileMode');
+};
  const allDBs = {
     zaj: [ 
-        { id: 1, type: 'video', title: "LoveHerFeet - Creepy Stepdad Stepdaughter‏", image: "https://e.top4top.io/p_3747snmhg0.jpg", contentURL: "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", labels: " Feet  ", duration: "0011:30"  },
-            { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
+      
+           { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
+           
+           
+          { id: 1, type: 'video', title: "LoveHerFeet - Creepy Stepdad Stepdaughter‏", image: "https://e.top4top.io/p_3747snmhg0.jpg", contentURL: "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", labels: " Feet , milf ", duration: "0011:30"  },
         { id: 3, type: 'video', title: "Busy Mercedes Carrera takes time off work for a good fuck‏", image: "https://a.top4top.io/p_37535ta9f0.jpg", contentURL: "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", labels: "hardcore, blowjob, creampie, milf", duration: "08:45"},
-        { id: 4, type: 'video', title: "زواج: رومانسي", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0015:20" },
-        { id: 5, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
-        { id: 7, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" },
-        { id: 8, type: 'video', title: "زواج: كوميدي", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0012:30" },
+        { id: 4, type: 'video', title: "Perfect Pink Pussy Babe Gets an Intense Orgasm and Unforgettable Creampie - Hottiestwo", image: "https://g.top4top.io/p_3755c55fb2.jpeg", contentURL: "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", labels: "Pink Pussy , blowjob, creampie, milf", duration: "0015:20" },
+        { id: 5, type: 'video', title: "Slut Teenie Step Sis Makes A Move On her Older Stepbro", image: "https://f.top4top.io/p_3755ozfb71.jpg", contentURL: "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk", labels: "Stepbrohardcore, blowjob, creampie, milf",  duration: "0022:10" },
+         { id: 8, type: 'video', title: "She_s going on a Date on Valentine_s Day. what could go Wrong", image: "https://e.top4top.io/p_375530k6g0.jpeg", contentURL: "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk", labels: "كوميدي", duration: "0012:30" },
         { id: 9, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
-        { id: 10, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
         { id: 11, type: 'video', title: "زواج: أكشن 2", image: "https://b.top4top.io/p_3680ejx641.jpgg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
         { id: 12, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
-        { id: 13, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 14, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
+         { id: 14, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
         { id: 15, type: 'video', title: "زواج: رومانسي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0016:40" },
-        { id: 16, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 17, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
+         { id: 17, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
         { id: 18, type: 'video', title: "زواج: رعب 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0013:20" },
-        { id: 19, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
         { id: 20, type: 'video', title: "زواج: كوميدي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0011:45" },
         { id: 21, type: 'video', title: "زواج: دراما 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0019:30" },
-        { id: 22, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 23, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
+       { id: 23, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
         { id: 24, type: 'video', title: "زواج: رومانسي 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0017:50" },
+        
+        
+        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
+        { id: 7, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" }, 
+        { id: 10, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 13, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 16, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 19, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
+        { id: 22, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
         { id: 25, type: 'image', title: "صورة زواج 8", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 26, type: 'video', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
+        { id: 26, type: 'image', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
     ],
     
     
@@ -1921,7 +1954,6 @@ if (p.contentURL.match(/\.mp4$/i)) {
         updateFooterStats();
     }, 100);
 }
-
 function restoreFinalState() {
     try {
         const saved = localStorage.getItem('porniq_state');
@@ -2049,8 +2081,14 @@ function updatePlayerButtons(id) {
 }
 
 function closePlayer() {
-    var savedPosition = scrollPosition || window.pageYOffset;
-    localStorage.removeItem('currentPlayingId');
+    var savedPosition = scrollPosition || sessionStorage.getItem('scrollBeforePlayer') || window.pageYOffset;
+    
+    // إزالة بيانات الفيديو من sessionStorage فقط
+    sessionStorage.removeItem('currentPlayingId');
+    sessionStorage.removeItem('lastPlayingSource');
+    sessionStorage.removeItem('lastPlayingSourceName');
+    sessionStorage.removeItem('scrollBeforePlayer');
+    
     currentPlayingId = null;
     const win = document.getElementById('playWindow');
     win.classList.add('hidden');
@@ -2059,16 +2097,18 @@ function closePlayer() {
     const actionsContainer = document.querySelector('.action-buttons-container');
     if (actionsContainer) actionsContainer.remove();
     document.body.style.overflow = 'auto';
+    
     if(window.history.state && window.history.state.view === 'player') {
         window.history.back();
     } else {
         setTimeout(() => {
             window.scrollTo({
-                top: savedPosition,
+                top: parseInt(savedPosition) || 0,
                 behavior: 'smooth'
             });
         }, 100);
     }
+    sessionStorage.removeItem('savedScrollY');
 }
 
 // ================ دوال الاقتراحات ================
@@ -2289,6 +2329,8 @@ function goToPage(page) {
     currentPage = page;
     renderAll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    sessionStorage.setItem('currentPage', currentPage);
+    saveState();  // <-- أضف هذا السطر إذا لم يكن موجوداً
     setTimeout(() => {
         renderAdsBelowPagination();
     }, 200);
@@ -2435,6 +2477,7 @@ function doSearch(query = '') {
     dummyData = data;
     currentPage = 1;
     renderAll();
+    saveState();  // <-- أضف هذا السطر
 }
 
 // ================ دوال مدة الفيديو ================
@@ -2743,19 +2786,66 @@ window.onload = () => {
     updateFooterStats();
     updateUserActivity();
     checkAgeVerification();
+
+    // محاولة استعادة الفيديو قيد التشغيل أولاً (من sessionStorage فقط)
+    const playingId = sessionStorage.getItem('currentPlayingId');
+    const playingSource = sessionStorage.getItem('lastPlayingSource');
+    if (playingId && playingSource && allDBs[playingSource]) {
+        currentSourceKey = playingSource;
+        currentSourceName = sessionStorage.getItem('lastPlayingSourceName') || (playingSource === 'zaj' ? 'الزواج' : playingSource);
+        dummyData = shuffleArray(allDBs[playingSource]);
+        const videoItem = dummyData.find(item => item.id == playingId);
+        if (videoItem) {
+            const savedScroll = sessionStorage.getItem('scrollBeforePlayer');
+            if (savedScroll) scrollPosition = parseInt(savedScroll);
+            setTimeout(() => {
+                playVideo(videoItem);
+            }, 100);
+            return;
+        } else {
+            sessionStorage.removeItem('currentPlayingId');
+            sessionStorage.removeItem('lastPlayingSource');
+            sessionStorage.removeItem('lastPlayingSourceName');
+        }
+    }
+
+    // إذا لم يكن هناك فيديو قيد التشغيل، نستعيد حالة التصفح من sessionStorage
     const savedSource = sessionStorage.getItem('selectedSource');
-const savedSourceName = sessionStorage.getItem('selectedSourceName');
-if (savedSource && allDBs[savedSource]) {
-    currentSourceKey = savedSource;
-    currentSourceName = savedSourceName || 'الزواج';
-    dummyData = shuffleArray(allDBs[savedSource]);
-} else {
-    currentSourceKey = 'zaj';
-    currentSourceName = 'الزواج';
-    dummyData = shuffleArray(allDBs['zaj']);
-    sessionStorage.setItem('selectedSource', 'zaj');
-    sessionStorage.setItem('selectedSourceName', 'الزواج');
-}
+    const savedPage = sessionStorage.getItem('currentPage');
+    const savedProfileMode = sessionStorage.getItem('profileMode');
+    
+    if (savedSource && allDBs[savedSource]) {
+        currentSourceKey = savedSource;
+        currentSourceName = sessionStorage.getItem('selectedSourceName') || 'الزواج';
+        dummyData = shuffleArray(allDBs[savedSource]);
+        currentType = sessionStorage.getItem('selectedType') || 'video';
+        currentCat = sessionStorage.getItem('selectedCat') || 'all content';
+        activeParent = sessionStorage.getItem('activeParent') || null;
+        if (activeParent === "null") activeParent = null;
+        currentPage = savedPage ? parseInt(savedPage) : 1;
+        if (savedProfileMode && (savedProfileMode === 'fav' || savedProfileMode === 'like' || savedProfileMode === 'watchlater')) {
+            profileMode = savedProfileMode;
+        } else {
+            profileMode = null;
+        }
+    } else {
+        // لا توجد جلسة سابقة: نستخدم القسم الافتراضي Straight مع الفيديوهات
+        currentSourceKey = 'zaj';
+        currentSourceName = 'الزواج';
+        dummyData = shuffleArray(allDBs['zaj']);
+        currentType = 'video';
+        currentCat = 'all content';
+        activeParent = null;
+        profileMode = null;
+        currentPage = 1;
+        sessionStorage.setItem('selectedSource', 'zaj');
+        sessionStorage.setItem('selectedSourceName', 'الزواج');
+        sessionStorage.setItem('selectedType', 'video');
+        sessionStorage.setItem('selectedCat', 'all content');
+        sessionStorage.setItem('activeParent', '');
+        sessionStorage.setItem('currentPage', '1');
+        sessionStorage.removeItem('profileMode');
+    }
 
     const activeNameEl = document.getElementById('activeName');
     if(activeNameEl && currentSourceKey) {
@@ -2780,6 +2870,8 @@ if (savedSource && allDBs[savedSource]) {
     }, 500);
     history.replaceState({view: 'home'}, "");
     document.getElementById('langBtn').innerHTML = currentLang === 'ar' ? '🌐 AR' : '🌐 EN';
+    
+    restoreScrollPosition();
 };
 
 document.addEventListener('DOMContentLoaded', function() {
