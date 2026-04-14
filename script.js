@@ -167,263 +167,69 @@ saveState = function() {
     if (profileMode) sessionStorage.setItem('profileMode', profileMode);
     else sessionStorage.removeItem('profileMode');
 };
- const allDBs = {
-    zaj: [ 
-      
-           { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-           
-           
-          { id: 1, type: 'video', title: "LoveHerFeet - Creepy Stepdad Stepdaughter‏", image: "https://e.top4top.io/p_3747snmhg0.jpg", contentURL: "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", labels: " Feet , milf ", duration: "0011:30"  },
-        { id: 3, type: 'video', title: "Busy Mercedes Carrera takes time off work for a good fuck‏", image: "https://a.top4top.io/p_37535ta9f0.jpg", contentURL: "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", labels: "hardcore, blowjob, creampie, milf", duration: "08:45"},
-        { id: 4, type: 'video', title: "Perfect Pink Pussy Babe Gets an Intense Orgasm and Unforgettable Creampie - Hottiestwo", image: "https://g.top4top.io/p_3755c55fb2.jpeg", contentURL: "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", labels: "Pink Pussy , blowjob, creampie, milf", duration: "0015:20" },
-        { id: 5, type: 'video', title: "Slut Teenie Step Sis Makes A Move On her Older Stepbro", image: "https://f.top4top.io/p_3755ozfb71.jpg", contentURL: "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk", labels: "Stepbrohardcore, blowjob, creampie, milf",  duration: "0022:10" },
-         { id: 8, type: 'video', title: "She_s going on a Date on Valentine_s Day. what could go Wrong", image: "https://e.top4top.io/p_375530k6g0.jpeg", contentURL: "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk", labels: "كوميدي", duration: "0012:30" },
-        { id: 9, type: 'video', title: "زواج: دراما", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0018:45" },
-        { id: 11, type: 'video', title: "زواج: أكشن 2", image: "https://b.top4top.io/p_3680ejx641.jpgg", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0009:15" },
-        { id: 12, type: 'video', title: "زواج: رعب 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0014:30" },
-         { id: 14, type: 'video', title: "زواج: مغامرة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0025:00" },
-        { id: 15, type: 'video', title: "زواج: رومانسي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0016:40" },
-         { id: 17, type: 'video', title: "زواج: أكشن 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0010:30" },
-        { id: 18, type: 'video', title: "زواج: رعب 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رعب", duration: "0013:20" },
-        { id: 20, type: 'video', title: "زواج: كوميدي 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "كوميدي", duration: "0011:45" },
-        { id: 21, type: 'video', title: "زواج: دراما 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "دراما", duration: "0019:30" },
-       { id: 23, type: 'video', title: "زواج: مغامرة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0023:15" },
-        { id: 24, type: 'video', title: "زواج: رومانسي 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رومانسي", duration: "0017:50" },
-        
-        
-        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
-        { id: 7, type: 'image', title: "صورة زواج 2", image: "https://b.top4top.io/p_3680ejx641.jpg", contentURL: "https://b.top4top.io/p_3680ejx641.jpgg", labels: "صور" }, 
-        { id: 10, type: 'image', title: "صورة زواج 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 13, type: 'image', title: "صورة زواج 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 16, type: 'image', title: "صورة زواج 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 19, type: 'image', title: "صورة زواج 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 22, type: 'image', title: "صورة زواج 7", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 25, type: 'image', title: "صورة زواج 8", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "صور" },
-        { id: 26, type: 'image', title: "زواج: أكشن 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0011:30" }
-    ],
-    
-    
-    nesa: [ 
-        { id: 1, type: 'video', title: "Epic Public Flashing Compilation Vol. 5", image: "https://c.top4top.io/p_3746q2xr80.jpg", contentURL: "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", labels: "Compilation" },
-        { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 3, type: 'image', title: "Epic Public Flashing", image: "https://c.top4top.io/p_3746q2xr80.jpg ", contentURL: "https://www.raed.net/img?id=1531550", labels: "naked" },
-        { id: 4, type: 'image', title: "صورة طبيعية", image: "https://l.top4top.io/p_3754oc8jl0.png", contentURL: "https://l.top4top.io/p_3754oc8jl0.png", labels: "طبيعة" },
-        { id: 5, type: 'image', title: "صورة ساحلية", image: "https://f.top4top.io/p_3754zu7n06.jpeg", contentURL: "https://f.top4top.io/p_3754zu7n06.jpeg", labels: "ساحل" },
-        { id: 6, type: 'image', title: "naked ass butt and pussy ", image: "https://e.top4top.io/p_3753j5f462.jpg", contentURL: "https://e.top4top.io/p_3753j5f462.jpg", labels: "naked, pussy, ass, butt" },
-         {id: 7, type: 'image', title: "صورة أزياء", image: "https://f.top4top.io/p_3754qh5mz0.jpg", contentURL: "https://f.top4top.io/p_3754qh5mz0.jpg", labels: "أزياء" },
-        { id: 8, type: 'image', title: "صورة جمال", image: "https://f.top4top.io/p_3754qh5mz0.jpg", contentURL: "https://f.top4top.io/p_3754qh5mz0.jpg", labels: "جمال" },
-        { id: 9, type: 'video', title: "فيديو نساء 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رياضة", duration: "0007:45" },
-        { id: 10, type: 'image', title: "صورة مكياج", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "مكياج" },
-        { id: 11, type: 'image', title: "صورة عصرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "عصرية" },
-        { id: 12, type: 'video', title: "فيديو نساء 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "موضة", duration: "0006:15" },
-        { id: 13, type: 'image', title: "صورة سفر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "سفر" },
-        { id: 14, type: 'image', title: "صورة استرخاء", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "استرخاء" },
-        { id: 15, type: 'video', title: "فيديو نساء 4", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "رقص", duration: "0004:30" },
-        { id: 16, type: 'image', title: "صورة طعام", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "طعام" },
-        { id: 17, type: 'image', title: "صورة قهوة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "قهوة" },
-        { id: 18, type: 'video', title: "فيديو نساء 5", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "يoga", duration: "0008:20" },
-        { id: 19, type: 'image', title: "صورة حديقة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "حديقة" },
-        { id: 20, type: 'image', title: "صورة شاطئ", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "شاطئ" },
-        { id: 21, type: 'video', title: "فيديو نساء 6", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طبخ", duration: "0009:45" },
-        { id: 22, type: 'image', title: "صورة غروب", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://l.top4top.io/p_3702uwnur1.png", labels: "غروب" }
-        ],
-       
-
-
-    haywan: [ 
-        { id: 1, type: 'video', title: "فيديو أكشن حيوانات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أكشن", duration: "0005:20" },
-        { id: 2, type: 'movie', title: ":  ليلة الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Trans",   duration: "0011:30"  },
-        { id: 3, type: 'video', title: "فيديو حيوانات مفترسة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مفترسة", duration: "0007:30" },
-        { id: 4, type: 'video', title: "فيديو حيوانات أليفة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أليفة", duration: "0004:45" },
-        { id: 5, type: 'video', title: "فيديو حيوانات الغابة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "غابة", duration: "0006:15" },
-        { id: 6, type: 'video', title: "فيديو حيوانات بحرية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "بحرية", duration: "0008:00" },
-        { id: 7, type: 'video', title: "فيديو طيور", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "طيور", duration: "0003:30" },
-        { id: 8, type: 'video', title: "فيديو حيوانات صحراوية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "صحراء", duration: "0005:50" },
-        { id: 9, type: 'video', title: "فيديو حيوانات قطبية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "قطبية", duration: "0006:40" },
-        { id: 10, type: 'video', title: "فيديو حيوانات استوائية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "استوائية", duration: "0007:10" },
-        { id: 11, type: 'video', title: "فيديو زواحف", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "زواحف", duration: "0004:20" },
-        { id: 12, type: 'video', title: "فيديو حشرات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "حشرات", duration: "0003:15" },
-        { id: 13, type: 'video', title: "فيديو ديناصورات", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ديناصورات", duration: "0009:30" },
-        { id: 14, type: 'video', title: "فيديو حيوانات ليلية", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "ليلية", duration: "0005:25" },
-        { id: 15, type: 'video', title: "فيديو حيوانات نادرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نادرة", duration: "0007:45" },
-        { id: 16, type: 'video', title: "فيديو حيوانات أفريقيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أفريقيا", duration: "0008:50" },
-        { id: 17, type: 'video', title: "فيديو حيوانات آسيا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "آسيا", duration: "0006:30" },
-        { id: 18, type: 'video', title: "فيديو حيوانات أمريكا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أمريكا", duration: "0007:20" },
-        { id: 19, type: 'video', title: "فيديو حيوانات أستراليا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أستراليا", duration: "0005:40" },
-        { id: 20, type: 'video', title: "فيديو حيوانات أوروبا", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "أوروبا", duration: "0004:55" },
-        { id: 21, type: 'video', title: "فيديو حيوانات الجبل", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "جبلية", duration: "0006:10" },
-        { id: 22, type: 'video', title: "فيديو حيوانات النهر", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "نهرية", duration: "0005:35" },
-        { id: 23, type: 'video', title: "فيديو حيوانات المزرعة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مزرعة", duration: "0007:15" }
-    ],
-    ime: [{ id: 1, type: 'video', title: "زواج: مغامرة", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "مغامرة", duration: "0022:10" },
-        { id: 3, type: 'image', title: "صورة ", image: " https://d.top4top.io/p_3754m7gav4.jpeg", contentURL: "https://d.top4top.io/p_3754m7gav4.jpeg", labels: "صور" },
-                { id: 4, type: 'image', title: " 1", image: " https://b.top4top.io/p_3754pp9ki2.jpeg", contentURL: "https://b.top4top.io/p_3754pp9ki2.jpeg", labels: "صور" },
-                        { id: 5, type: 'image', title: "ت  ", image: " https://c.top4top.io/p_37548lmfr3.jpeg", contentURL: "https://c.top4top.io/p_37548lmfr3.jpeg", labels: "صور" },
-                                { id: 6, type: 'image', title: "م 1", image: " ", contentURL: "https://a.top4top.io/p_37544kag61.jpg", labels: "صور" },
-                                          { id: 6, type: 'image', title: "صورة عا 1", image: " https://a.top4top.io/p_37544kag61.jpg", contentURL: "https://a.top4top.io/p_37544kag61.jpg", labels: "صور" },
-          { id: 7, type: 'image', title: "صورة تل 1", image: "https://g.top4top.io/p_37541rhbo2.jpeg", contentURL: "https://g.top4top.io/p_37541rhbo2.jpeg", labels: "صور" }
-
- ],
-   
-    liveGirls: [
-   
-    { id: 1, type: 'live', title: "بث مباشر - قناة 1", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
-    { id: 2, type: 'live', title: "بث مباشر - قناة 2", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" },
-    { id: 3, type: 'live', title: "بث مباشر - قناة 3", image: "https://l.top4top.io/p_3702uwnur1.png", contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", labels: "Live, Girls", duration: "Live" }
-],
-liveChannels: [
-
-{ 
-  id: 1, 
-  type: 'live', 
-  title: "قناة إباحية حية 1", 
-  image: "...", 
-  contentURL: "http://oxax.tv/oh-ah.html", 
-  labels: "Live, Channels", 
-  duration: "Live" 
-}, // 🔥 لازم هاي الفاصلة
-
-{ 
-  id: 2, 
-  type: 'live', 
-  title: "قناة إباحية حية 2", 
-  image: "...", 
-  contentURL: "https://d.top4top.io/m_36805y6jr1.mp4", 
-  labels: "Live, Channels", 
-  duration: "Live" 
-}
-
-],
-
-
-
-  
-    
-    life: [
-        { 
-            id: 1, 
-            type: 'article', 
-            title: "وضعية إندراني", 
-            image: "https://l.top4top.io/p_3702uwnur1.png", 
-            labels: "تعليمي",
-            blocks: [
-                { 
-                    type: 'text', 
-                    content: `
-                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
-                            <h2 style="color: #fb7185; margin-bottom: 15px;">وضعية إندراني</h2>
-                            <p style="margin-bottom: 15px;">
-                                بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني 
-                                لأنها مريحة وتسمح باختراق عميق جداً.
-                            </p>
-                            <div style="margin: 20px 0;">
-                                <img src="https://l.top4top.io/p_3702uwnur1.png" 
-                                     style="width: 100%; max-width: 500px; border-radius: 15px;" 
-                                     alt="صورة توضيحية">
-                            </div>
-                            <video controls style="width: 100%; max-width: 600px; border-radius: 15px;">
-                                <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    ` 
-                }
-            ]
-        },
-        { 
-            id: 2, 
-            type: 'article', 
-            title: "نصائح للحياة الزوجية", 
-            image: "https://l.top4top.io/p_3702uwnur1.png", 
-            labels: "نصائح",
-            blocks: [
-                { 
-                    type: 'text', 
-                    content: `
-                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
-                            <h2 style="color: #fb7185; margin-bottom: 15px;">نصائح ذهبية للحياة الزوجية</h2>
-                            <ul style="margin-right: 20px; margin-bottom: 20px;">
-                                <li>التواصل المستمر هو أساس العلاقة الناجحة</li>
-                                <li>احترام المساحة الشخصية للطرف الآخر</li>
-                                <li>المفاجآت الرومانسية تضفي جواً من السعادة</li>
-                            </ul>
-                            <div style="margin: 20px 0;">
-                                <img src="https://l.top4top.io/p_3702uwnur1.png" 
-                                     style="width: 100%; max-width: 500px; border-radius: 15px;" 
-                                     alt="صورة نصائح">
-                            </div>
-                        </div>
-                    ` 
-                }
-            ]
-        },
-        { 
-            id: 3, 
-            type: 'article', 
-            title: "أفضل 10 وضعيات", 
-            image: "https://l.top4top.io/p_3702uwnur1.png", 
-            labels: "توب 10",
-            blocks: [
-                { 
-                    type: 'text', 
-                    content: `
-                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
-                            <h2 style="color: #fb7185; margin-bottom: 15px;">أفضل 10 وضعيات للأزواج</h2>
-                            <ol style="margin-right: 20px; margin-bottom: 20px;">
-                                <li>وضعية إندراني</li>
-                                <li>وضعية الملعقة</li>
-                                <li>الوضعية التبشيرية</li>
-                                <li>وضعية الفارسة</li>
-                                <li>وضعية الكلبية</li>
-                            </ol>
-                            <video controls style="width: 100%; max-width: 600px; border-radius: 15px;">
-                                <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    ` 
-                }
-            ]
-        },
-        { 
-            id: 4, 
-            type: 'article', 
-            title: "أسرار العلاقة الحميمة", 
-            image: "https://l.top4top.io/p_3702uwnur1.png", 
-            labels: "أسرار",
-            blocks: [
-                { 
-                    type: 'text', 
-                    content: `
-                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
-                            <h2 style="color: #fb7185; margin-bottom: 15px;">أسرار العلاقة الحميمة</h2>
-                            <p>اكتشف أسرار العلاقة الحميمة الناجحة...</p>
-                            <img src="https://l.top4top.io/p_3702uwnur1.png" style="width:100%; max-width:500px;">
-                        </div>
-                    ` 
-                }
-            ]
-        },
-        { 
-            id: 5, 
-            type: 'article', 
-            title: "الرومانسية في الزواج", 
-            image: "https://l.top4top.io/p_3702uwnur1.png", 
-            labels: "رومانسية",
-            blocks: [
-                { 
-                    type: 'text', 
-                    content: `
-                        <div style="direction: rtl; text-align: right; line-height: 1.8;">
-                            <h2 style="color: #fb7185; margin-bottom: 15px;">كيف تحافظ على الرومانسية</h2>
-                            <p>نصائح للحفاظ على الرومانسية في العلاقة الزوجية...</p>
-                            <img src="https://l.top4top.io/p_3702uwnur1.png" style="width:100%; max-width:500px;">
-                        </div>
-                    ` 
-                }
-            ]
-        }
-    ]
+// بيانات أولية سريعة (تظهر فوراً)
+let allDBs = {
+  zaj: [],
+  nesa: [], haywan: [], ime: [], liveGirls: [], liveChannels: [], life: []
 };
 
+// دالة لتحميل البيانات مع التخزين المؤقت
+function loadData() {
+  // 1. عرض البيانات المخزنة فوراً (إن وجدت)
+  const cached = localStorage.getItem('allDBs_cache');
+  const cacheTime = localStorage.getItem('allDBs_cache_time');
+  const now = Date.now();
+  
+  if (cached && cacheTime && (now - parseInt(cacheTime) < 24 * 60 * 60 * 1000)) {
+    try {
+      const data = JSON.parse(cached);
+      for (let key in data) {
+        if (allDBs[key]) allDBs[key] = data[key];
+        else allDBs[key] = data[key];
+      }
+      console.log('✅ عرض البيانات من localStorage (فوري)');
+      
+      // تحديث الواجهة فوراً
+      if (currentSourceKey && allDBs[currentSourceKey]) {
+        dummyData = shuffleArray(allDBs[currentSourceKey]);
+        renderAll();
+        updateFooterStats();
+      }
+      renderMenu();
+      renderCategoryBar();
+    } catch(e) { console.error('خطأ في قراءة localStorage', e); }
+  }
+  
+  // 2. تحميل البيانات من الشبكة في الخلفية (بدون انتظار)
+ fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log('تم تحميل life:', data.life); 
+      let changed = false;
+      for (let key in data) {
+        if (JSON.stringify(allDBs[key]) !== JSON.stringify(data[key])) {
+          allDBs[key] = data[key];
+          changed = true;
+        }
+      }
+      if (changed) {
+        localStorage.setItem('allDBs_cache', JSON.stringify(allDBs));
+        localStorage.setItem('allDBs_cache_time', Date.now());
+        console.log('🔄 تحديث البيانات من الشبكة');
+        
+        if (currentSourceKey && allDBs[currentSourceKey]) {
+          dummyData = shuffleArray(allDBs[currentSourceKey]);
+          renderAll();
+          updateFooterStats();
+        }
+        renderMenu();
+        renderCategoryBar();
+      } else {
+        console.log('✅ البيانات محدثة بالفعل');
+      }
+    })
+    .catch(error => console.error('خطأ في تحميل البيانات:', error));
+}
 // ================ الإعلانات ================
 const siteAds = {
     networkAds: [ 
@@ -1273,8 +1079,10 @@ window.addEventListener('load', function() {
 });
 
 function switchSource(key, name) {
+	
     resetAdsCache();
     currentFilterTag = null;
+    profileMode = null; 
     sessionStorage.setItem('selectedSource', key);
     sessionStorage.setItem('selectedSourceName', name);
     currentSourceKey = key;
@@ -1311,6 +1119,7 @@ function switchSource(key, name) {
         toggleSidebar();
     }
 }
+
 
 function saveState() {
     sessionStorage.setItem('selectedType', currentType);
@@ -1672,7 +1481,10 @@ function playVideo(p) {
     
     window.history.pushState({view: 'player', videoId: p.id}, "");
     currentPlayingId = p.id;
-    localStorage.setItem('currentPlayingId', p.id);
+    sessionStorage.setItem('currentPlayingId', p.id);
+sessionStorage.setItem('lastPlayingSource', currentSourceKey);
+sessionStorage.setItem('lastPlayingSourceName', currentSourceName);
+sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.documentElement.scrollTop);
     const win = document.getElementById('playWindow');
     const vArea = document.getElementById('vArea');
     win.classList.remove('hidden');
@@ -1887,7 +1699,6 @@ function playVideo(p) {
         }
 // داخل playVideo، بعد التحقق من p.type === 'video'
 if (p.contentURL.includes('drive.google.com')) {
-    // استخدم رابط التضمين الصحيح
     const embedUrl = getGoogleDriveEmbedLink(p.contentURL);
     vArea.innerHTML = `
         <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
@@ -1896,6 +1707,13 @@ if (p.contentURL.includes('drive.google.com')) {
                 allowfullscreen>
         </iframe>
     `;
+    // ✅ إضافة تحديث الاقتراحات قبل الخروج
+    setTimeout(() => {
+        updateRecSuggestions();
+        updateSideSuggestions();
+        updatePlayerStats();
+        updateFooterStats();
+    }, 150);
     return;
 }
 
@@ -1947,12 +1765,13 @@ if (p.contentURL.match(/\.mp4$/i)) {
             </div>
         `;
     }
-    setTimeout(() => {
-        updateRecSuggestions();
-        updateSideSuggestions();
-        updatePlayerStats();
-        updateFooterStats();
-    }, 100);
+    // بعد كل الشروط وقبل إغلاق الدالة
+setTimeout(() => {
+    updateRecSuggestions();
+    updateSideSuggestions();
+    updatePlayerStats();
+    updateFooterStats();
+}, 150);
 }
 function restoreFinalState() {
     try {
@@ -2215,6 +2034,7 @@ function updateSideSuggestions() {
 
 // ================ دوال العرض الرئيسية ================
 function renderAll() {
+	
     const grid = document.getElementById('gridBox');
     if (!grid) return;
     const q = document.getElementById('searchBox')?.value.toLowerCase() || '';
@@ -2223,6 +2043,7 @@ function renderAll() {
         if (currentType === 'image' && currentCat !== 'all content') {
             if (currentCat === 'ثابتة' && p.labels?.includes('متحركة')) return false;
             if (currentCat === 'متحركة' && !p.labels?.includes('متحركة')) return false;
+            
         }
         if (q && !p.title.toLowerCase().includes(q)) return false;
         if (currentFilterTag) {
@@ -2239,6 +2060,7 @@ function renderAll() {
         renderPagination(0);
         return;
     }
+    
     const paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
     grid.innerHTML = paginated.map((item, index) => {
         let html = createCard(item);
@@ -2274,6 +2096,7 @@ function changeCategory(event, sourceKey, displayName, contentType, categoryType
     const sidebar = document.getElementById('mainSidebar');
     if (sidebar && sidebar.classList.contains('translate-x-0')) {
         toggleSidebar(); // تستخدم الدالة الموجودة لإغلاق القائمة
+        saveState();
     }
 }
 
@@ -2775,6 +2598,7 @@ window.onpopstate = function(event) {
 
 // ================ أحداث تحميل الصفحة ================
 window.onload = () => {
+	loadData();
     updateUserUI();
     if (currentUser) {
         ageVerificationEnabled = false;
@@ -2786,6 +2610,7 @@ window.onload = () => {
     updateFooterStats();
     updateUserActivity();
     checkAgeVerification();
+    
 
     // محاولة استعادة الفيديو قيد التشغيل أولاً (من sessionStorage فقط)
     const playingId = sessionStorage.getItem('currentPlayingId');
@@ -2828,11 +2653,12 @@ window.onload = () => {
         } else {
             profileMode = null;
         }
-    } else {
-        // لا توجد جلسة سابقة: نستخدم القسم الافتراضي Straight مع الفيديوهات
-        currentSourceKey = 'zaj';
-        currentSourceName = 'الزواج';
-        dummyData = shuffleArray(allDBs['zaj']);
+  } else {
+    // لا توجد جلسة سابقة: نستخدم القسم الافتراضي Straight مع الفيديوهات
+    currentSourceKey = 'zaj';
+    currentSourceName = 'الزواج';
+    dummyData = shuffleArray(allDBs['zaj']);
+    
         currentType = 'video';
         currentCat = 'all content';
         activeParent = null;
@@ -3177,17 +3003,19 @@ function updateMobileMenuContent() {
 }
 // دالة لتغيير القسم والفئة من القائمة الجانبية الثابتة
 function changeCategory(event, sourceKey, displayName, contentType, categoryType) {
-    resetAdsCache();
     if (event) {
         event.preventDefault();
         event.stopPropagation();
     }
-    // التحقق من وجود القسم المطلوب
-    if (!allDBs[sourceKey]) return;
+    resetAdsCache();
     
-    // تعيين القسم الجديد وإعادة تعيين المتغيرات
+    // تعيين المصدر أولاً
     currentSourceKey = sourceKey;
     currentSourceName = displayName;
+    sessionStorage.setItem('selectedSource', sourceKey);
+    sessionStorage.setItem('selectedSourceName', displayName);
+    
+    // تحديث البيانات
     dummyData = shuffleArray(allDBs[sourceKey]);
     currentFilterTag = null;
     profileMode = null;
@@ -3202,9 +3030,7 @@ function changeCategory(event, sourceKey, displayName, contentType, categoryType
         currentCat = 'all content';
     } else if (contentType === 'image') {
         currentType = 'image';
-        if (categoryType === 'static') currentCat = 'ثابتة';
-        else if (categoryType === 'animated') currentCat = 'متحركة';
-        else currentCat = 'all content';
+        currentCat = (categoryType === 'static') ? 'ثابتة' : (categoryType === 'animated' ? 'متحركة' : 'all content');
     } else if (contentType === 'article') {
         currentType = 'article';
         currentCat = 'all content';
@@ -3213,13 +3039,15 @@ function changeCategory(event, sourceKey, displayName, contentType, categoryType
         currentCat = 'all content';
     }
     
-    // تحديث العناوين وحفظ الحالة
+    // تحديث واجهة المستخدم
     const catTitle = document.getElementById('catTitle');
     if (catTitle) catTitle.innerText = t('sectionTitles')[sourceKey] || t('sectionNames')[sourceKey] || sourceKey;
     updateSubTitle();
     saveState();
+    
     window.history.pushState({view: 'section', section: sourceKey}, "");
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     renderMenu(); 
     renderAll();
     updateFooterStats();
