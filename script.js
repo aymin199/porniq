@@ -256,6 +256,7 @@ const siteAds = {
     horizontalRectAds: [
     { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example1.com", title: "عرض حصري 1" },
     { video: "https://g.top4top.io/m_3753hq7ei1.mp4", link: "https://example2.com", title: "عرض حصري 2" },
+        { image: "https://files.catbox.moe/45bcht.png", link: "https://example2.com", title: "عرض حصري 2" },
         { video: "https://d.top4top.io/m_37548wm9l0.mp4", link: "https://example2.com", title: "عرض حصري 2" },
     { video: "https://b.top4top.io/m_3754wr5fy0.mp4", link: "https://example3.com", title: "عرض حصري 3" }
 ]
