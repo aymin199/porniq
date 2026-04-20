@@ -1002,3 +1002,81 @@ video::-webkit-media-controls-fullscreen-button {
         margin-bottom: 6px;
     }
 }
+/* تنسيق الصور على الهواتف - شبكي (عمودين) مع الحفاظ على الأبعاد الأصلية */
+@media (max-width: 768px) {
+    body.image-mode-active #gridBox {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    /* جعل حاوية الصورة تأخذ الارتفاع التلقائي حسب الصورة */
+    body.image-mode-active #gridBox .thumb-wrapper {
+        aspect-ratio: auto !important;
+        height: auto !important;
+        max-height: none !important;
+        background: #000;
+        border-radius: 12px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* الصورة تظهر كاملة بدون قص، وتحافظ على نسبتها */
+    body.image-mode-active #gridBox .thumb-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        background: #000;
+    }
+    
+    /* إخفاء شارة المدة والنوع للصور */
+    body.image-mode-active #gridBox .video-duration-badge {
+        display: none !important;
+    }
+}
+
+/* ===== إعلانات تحت الترقيم - حجم تلقائي ===== */
+.ad-square,
+.ad-horizontal {
+    transition: all 0.3s ease;
+}
+
+.ad-square .relative,
+.ad-horizontal .relative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    width: 100%;
+}
+
+.ad-square img,
+.ad-square video,
+.ad-horizontal img,
+.ad-horizontal video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .ad-square .relative {
+        min-height: 100px;
+    }
+    .ad-horizontal .relative {
+        min-height: 80px;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .ad-square .relative {
+        min-height: 180px;
+    }
+    .ad-horizontal .relative {
+        min-height: 140px;
+    }
+}
