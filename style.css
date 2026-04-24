@@ -1204,3 +1204,75 @@ video::-webkit-media-controls-fullscreen-button {
         right: 10px;
     }
 }
+/* ===== إعلانات تحت الترقيم - الحفاظ على الأبعاد الأصلية ===== */
+.ad-square,
+.ad-horizontal {
+    transition: all 0.3s ease;
+}
+
+.ad-square .relative,
+.ad-horizontal .relative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    width: 100%;
+}
+
+/* 🔥 التعديل الجديد: الحفاظ على الأبعاد الأصلية للصور و GIF */
+.ad-square img,
+.ad-horizontal img {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    max-height: 300px; /* الحد الأقصى للارتفاع */
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* الفيديو يبقى كما هو بدون تغيير */
+.ad-square video,
+.ad-horizontal video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .ad-square .relative {
+        min-height: 100px;
+    }
+    .ad-horizontal .relative {
+        min-height: 80px;
+    }
+    .ad-square img,
+    .ad-horizontal img {
+        max-height: 200px;
+    }
+    .ad-square video,
+    .ad-horizontal video {
+        max-height: 200px;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .ad-square .relative {
+        min-height: 180px;
+    }
+    .ad-horizontal .relative {
+        min-height: 140px;
+    }
+    .ad-square img,
+    .ad-horizontal img {
+        max-height: 350px;
+    }
+    .ad-square video,
+    .ad-horizontal video {
+        max-height: 350px;
+    }
+}
