@@ -1080,3 +1080,127 @@ video::-webkit-media-controls-fullscreen-button {
         min-height: 140px;
     }
 }
+/* ===== تحسينات شريط التنقل العلوي ===== */
+.top-navbar {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.top-navbar ul {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+    padding: 4px 0 !important;
+}
+
+.top-navbar ul::-webkit-scrollbar {
+    display: none;
+}
+
+.top-navbar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: #f0f0f0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.top-navbar .nav-link:hover {
+    background: rgba(190, 24, 93, 0.25);
+    color: white;
+    border-color: rgba(190, 24, 93, 0.5);
+}
+
+.top-navbar .nav-link.fuck-now {
+    background: linear-gradient(135deg, #be185d, #6d28d9);
+    color: white;
+    font-weight: bold;
+    padding: 6px 18px;
+    box-shadow: 0 0 12px rgba(190, 24, 93, 0.4);
+}
+
+.top-navbar .nav-link.fuck-now:hover {
+    background: linear-gradient(135deg, #db2777, #7c3aed);
+}
+
+/* القوائم المنسدلة */
+.top-navbar .dropdown-wrapper {
+    position: relative;
+}
+
+.top-navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #18181b;
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+    padding: 6px 0;
+    min-width: 200px;
+    box-shadow: 0 20px 30px -8px rgba(0,0,0,0.8);
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(12px);
+    background: rgba(24, 24, 27, 0.98);
+}
+
+.top-navbar .dropdown-menu.show {
+    display: block;
+}
+
+.top-navbar .dropdown-menu a {
+    display: block;
+    padding: 8px 18px;
+    color: #d4d4d8;
+    font-size: 0.85rem;
+    transition: background 0.15s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.top-navbar .dropdown-menu a:hover {
+    background: #be185d;
+    color: white;
+}
+
+/* سهم القائمة */
+.top-navbar .dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 6px;
+    opacity: 0.8;
+    transition: transform 0.2s;
+}
+
+/* تحسينات الهاتف */
+@media (max-width: 768px) {
+    .top-navbar .nav-link {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+
+    .top-navbar .dropdown-menu {
+        position: fixed;
+        top: auto;
+        bottom: auto;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: 300px;
+        margin: 0 auto;
+        transform: translateY(8px);
+        border-radius: 16px;
+        box-shadow: 0 25px 40px -10px black;
+    }
+
+    [dir="rtl"] .top-navbar .dropdown-menu {
+        left: auto;
+        right: 10px;
+    }
+}

@@ -39,10 +39,10 @@
     
     {
       "id": 5,
-      "type": "video",
+      "type": "image",
       "title": "zaj video 13",
-      "image": "",
-      "contentURL": "",
+      "image": "https://files.catbox.moe/d3o3w3.jpg",
+      "contentURL": "https://files.catbox.moe/d3o3w3.jpg",
       "labels": "",
       "duration": "00:00"
     },
@@ -183,28 +183,29 @@
     },
     {
       "id": 21,
-      "type": "video",
+      "type": "image",
       "title": "zaj video 21",
-      "image": "",
-      "contentURL": "",
+      "image": "https://files.catbox.moe/9rjfd5.jpg",
+      "contentURL": "https://files.catbox.moe/9rjfd5.jpg",
       "labels": "",
       "duration": "00:00"
     },
+    
     {
       "id": 22,
-      "type": "video",
+      "type": "image",
       "title": "zaj video 22",
-      "image": "",
-      "contentURL": "",
+      "image": "https://files.catbox.moe/8saj01.jpg",
+      "contentURL": "https://files.catbox.moe/8saj01.jpg",
       "labels": "",
       "duration": "00:00"
     },
     {
       "id": 23,
-      "type": "video",
+      "type": "image",
       "title": "zaj video 23",
-      "image": "",
-      "contentURL": "",
+      "image": "https://files.catbox.moe/es69j7.jpg",
+      "contentURL":"https://files.catbox.moe/es69j7.jpg",
       "labels": "",
       "duration": "00:00"
     },
@@ -221,8 +222,8 @@
       "id": 25,
       "type": "image",
       "title": "naked ass butt and pussy",
-      "image": "https://e.top4top.io/p_3753j5f462.jpg",
-      "contentURL": "https://e.top4top.io/p_3753j5f462.jpg",
+      "image": "https://files.catbox.moe/sl352n.jpg",
+      "contentURL": "https://files.catbox.moe/sl352n.jpg",
       "labels": "naked, pussy, ass, butt"
     }
   ],
@@ -314,9 +315,11 @@
   ],
   "liveChannels": [
     { "id": 1, "type": "live", "title": "ОХ-АХ HD", "image": "https://k.top4top.io/p_37567rat30.jpg", "contentURL": "http://oxax.tv/oh-ah.html", "labels": "live, channel", "duration": "Live" },
+        { "id": 1, "type": "live", "title": "fap-tv-3", "image": "https://c.top4top.io/p_376232e0q0.jpg", "contentURL": "http://oxax.tv/fap-tv-3.html", "labels": "live, channel", "duration": "Live" },
     { "id": 2, "type": "live", "title": "brazzers-tv-online", "image":"https://j.top4top.io/p_3756oefsw0.png", "contentUR ": "https://adult-tv-channels.com/brazzers-tv-online/", "labels": "live, channel", "duration": "Live" },
-    { "id": 3, "type": "live", "title": "Live Channel 3", "image": "", "contentURL": "", "labels": "live, channel", "duration": "Live" }
+    { "id": 3, "type": "live", "title": "fap-tv-2", "image": "https://f.top4top.io/p_3762tq3iq0.jpg", "contentURL": "http://oxax.tv/fap-tv-2.html", "labels": "live, channel", "duration": "Live" }
   ],
+  
   "life": [
     {
       "id": 1,

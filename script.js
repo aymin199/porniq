@@ -4270,35 +4270,120 @@ const vAreaObserver = document.getElementById('vArea');
 if (vAreaObserver) {
     observer.observe(vAreaObserver, { childList: true, subtree: true });
 }
-// ================ الشريط العلوي الجديد ================
+// ================ دوال مساعدة عامة للتبديل إلى الأقسام ================
+function switchToStraightVideo() {
+    switchSource('zaj', 'Straight');
+    setTimeout(() => {
+        currentType = 'video';
+        currentCat = 'all content';
+        profileMode = null;
+        currentPage = 1;
+        saveState();
+        renderAll();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+}
+
+function switchToLesbianVideo() {
+    switchSource('nesa', 'Lesbian');
+    setTimeout(() => {
+        currentType = 'video';
+        currentCat = 'all content';
+        profileMode = null;
+        currentPage = 1;
+        saveState();
+        renderAll();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+}
+
+function switchToTransVideo() {
+    switchSource('haywan', 'Trans');
+    setTimeout(() => {
+        currentType = 'video';
+        currentCat = 'all content';
+        profileMode = null;
+        currentPage = 1;
+        saveState();
+        renderAll();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+}
+
+function switchToAnimeVideo() {
+    switchSource('ime', 'Anime');
+    setTimeout(() => {
+        currentType = 'video';
+        currentCat = 'all content';
+        profileMode = null;
+        currentPage = 1;
+        saveState();
+        renderAll();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+}
+
+function switchToImages() {
+    if (currentSourceKey === 'life') switchSource('zaj', 'Straight');
+    setTimeout(() => {
+        currentType = 'image';
+        currentCat = 'all content';
+        profileMode = null;
+        currentPage = 1;
+        saveState();
+        renderAll();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+}
+
+function playRandomVideo() {
+    let sourceData = dummyData.length ? dummyData : allDBs['zaj'];
+    const videos = sourceData.filter(item => item.type === 'video');
+    if (videos.length) {
+        const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+        playVideo(randomVideo);
+    } else {
+        alert('لا توجد فيديوهات متاحة حالياً');
+    }
+}
+
+// اجعلها متاحة عالميًا
+window.switchToStraightVideo = switchToStraightVideo;
+window.switchToLesbianVideo = switchToLesbianVideo;
+window.switchToTransVideo = switchToTransVideo;
+window.switchToAnimeVideo = switchToAnimeVideo;
+window.switchToImages = switchToImages;
+window.playRandomVideo = playRandomVideo;
+
+// ================ الشريط العلوي الجديد (محسّن بالكامل) ================
 function initTopNavbar() {
     const container = document.querySelector('.top-navbar ul');
     if (!container) return;
 
     // روابط قابلة للتخصيص
     const TIKTOK_URL = localStorage.getItem('tiktokRedirectUrl') || 'https://www.tiktok.com/@pornxiq';
-    const PORNSTARS_URL = '#'; // يمكنك تغييره لاحقاً
-    const COMMUNITY_URL = '#';  // رابط المنتدى أو وسائل التواصل
+    const PORNSTARS_URL = '#';
+    const COMMUNITY_URL = '#';
 
-    // الحصول على التصنيفات العشوائية للقائمة المنسدلة CATEGORIES
     const randomCategories = [...allCategories].sort(() => 0.5 - Math.random()).slice(0, 8);
 
-    // بناء عناصر الشريط
+    // تحديد السهم حسب اللغة
+    const arrowIcon = currentLang === 'ar' ? '◀' : '▶';
+
     const navItems = [
         {
             label: 'pornxiq TikTok',
             type: 'link',
             action: () => window.open(TIKTOK_URL, '_blank'),
-            class: ''
         },
         {
             label: 'PORN VIDEOS',
             type: 'dropdown',
             items: [
-                { name: 'Straight video', action: () => switchToStraightVideo() },
-                { name: 'Lesbian video', action: () => switchToLesbianVideo() },
-                { name: 'Trans video', action: () => switchToTransVideo() },
-                { name: 'Anime video', action: () => switchToAnimeVideo() }
+                { name: 'Straight video', action: switchToStraightVideo },
+                { name: 'Lesbian video', action: switchToLesbianVideo },
+                { name: 'Trans video', action: switchToTransVideo },
+                { name: 'Anime video', action: switchToAnimeVideo }
             ]
         },
         {
@@ -4313,18 +4398,16 @@ function initTopNavbar() {
             label: 'LIVE CAMS',
             type: 'link',
             action: () => switchSource('liveGirls', 'Live Girls'),
-            class: ''
         },
         {
             label: 'PORNSTARS',
             type: 'link',
             action: () => window.open(PORNSTARS_URL, '_blank'),
-            class: ''
         },
         {
             label: 'FUCK NOW',
             type: 'button',
-            action: () => playRandomVideo(),
+            action: playRandomVideo,
             class: 'fuck-now'
         },
         {
@@ -4339,96 +4422,22 @@ function initTopNavbar() {
         {
             label: 'PHOTOS & GIFTS',
             type: 'link',
-            action: () => switchToImages(),
-            class: ''
+            action: switchToImages,
         }
     ];
 
-    // دوال مساعدة للتبديل إلى أقسام محددة مع فلتر الفيديو
-    function switchToStraightVideo() {
-        switchSource('zaj', 'Straight');
-        setTimeout(() => {
-            currentType = 'video';
-            currentCat = 'all content';
-            profileMode = null;
-            currentPage = 1;
-            saveState();
-            renderAll();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 50);
-    }
-    function switchToLesbianVideo() {
-        switchSource('nesa', 'Lesbian');
-        setTimeout(() => {
-            currentType = 'video';
-            currentCat = 'all content';
-            profileMode = null;
-            currentPage = 1;
-            saveState();
-            renderAll();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 50);
-    }
-    function switchToTransVideo() {
-        switchSource('haywan', 'Trans');
-        setTimeout(() => {
-            currentType = 'video';
-            currentCat = 'all content';
-            profileMode = null;
-            currentPage = 1;
-            saveState();
-            renderAll();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 50);
-    }
-    function switchToAnimeVideo() {
-        switchSource('ime', 'Anime');
-        setTimeout(() => {
-            currentType = 'video';
-            currentCat = 'all content';
-            profileMode = null;
-            currentPage = 1;
-            saveState();
-            renderAll();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 50);
-    }
-    function switchToImages() {
-        if (currentSourceKey === 'life') switchSource('zaj', 'Straight');
-        setTimeout(() => {
-            currentType = 'image';
-            currentCat = 'all content';
-            profileMode = null;
-            currentPage = 1;
-            saveState();
-            renderAll();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 50);
-    }
-    function playRandomVideo() {
-        // تشغيل فيديو عشوائي من القسم الحالي (أو من Straight إذا لم يكن هناك)
-        let sourceData = dummyData.length ? dummyData : allDBs['zaj'];
-        const videos = sourceData.filter(item => item.type === 'video');
-        if (videos.length) {
-            const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-            playVideo(randomVideo);
-        } else {
-            alert('لا توجد فيديوهات متاحة حالياً');
-        }
-    }
-
     // بناء HTML الشريط
     container.innerHTML = navItems.map(item => {
-        if (item.type === 'link') {
-            return `<li><a class="nav-link ${item.class}" href="javascript:void(0)">${item.label}</a></li>`;
-        } else if (item.type === 'button') {
-            return `<li><a class="nav-link ${item.class}" href="javascript:void(0)">${item.label}</a></li>`;
+        if (item.type === 'link' || item.type === 'button') {
+            return `<li><a class="nav-link ${item.class || ''}" href="javascript:void(0)">${item.label}</a></li>`;
         } else if (item.type === 'dropdown') {
             return `
-                <li>
-                    <a class="nav-link" href="javascript:void(0)">${item.label} <span class="dropdown-arrow">▼</span></a>
+                <li class="dropdown-wrapper">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                        ${item.label} <span class="dropdown-arrow">${arrowIcon}</span>
+                    </a>
                     <div class="dropdown-menu">
-                        ${item.items.map(sub => `<a href="javascript:void(0)">${sub.name}</a>`).join('')}
+                        ${item.items.map(sub => `<a href="javascript:void(0)" class="dropdown-item">${sub.name}</a>`).join('')}
                     </div>
                 </li>
             `;
@@ -4437,28 +4446,102 @@ function initTopNavbar() {
     }).join('');
 
     // ربط الأحداث
-    document.querySelectorAll('.top-navbar .nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
+    const dropdownToggles = container.querySelectorAll('.dropdown-toggle');
+    const dropdownMenus = container.querySelectorAll('.dropdown-menu');
+
+    // إغلاق جميع القوائم المنسدلة
+    function closeAllDropdowns(except = null) {
+        dropdownMenus.forEach(menu => {
+            if (menu !== except) {
+                menu.classList.remove('show');
+            }
+        });
+    }
+
+    // فتح/إغلاق القائمة عند النقر على الزر (يدعم اللمس)
+    dropdownToggles.forEach((toggle) => {
+        const parentLi = toggle.closest('li');
+        const menu = parentLi.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', (e) => {
             e.preventDefault();
-            const label = link.innerText.trim().replace('▼', '').trim();
-            const item = navItems.find(i => i.label === label);
-            if (item) {
-                if (item.type === 'link' || item.type === 'button') {
-                    item.action();
-                }
-            } else {
-                // البحث في القوائم المنسدلة
-                for (let parent of navItems) {
-                    if (parent.type === 'dropdown' && parent.items.some(sub => sub.name === label)) {
-                        const subItem = parent.items.find(sub => sub.name === label);
-                        if (subItem) subItem.action();
-                        break;
-                    }
-                }
+            e.stopPropagation();
+
+            const isShown = menu.classList.contains('show');
+            closeAllDropdowns(menu);
+
+            if (!isShown) {
+                menu.classList.add('show');
             }
         });
     });
+
+    // ربط أحداث العناصر داخل القائمة
+    container.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const label = link.innerText.trim();
+            const item = navItems.find(i => i.label === label);
+            if (item && (item.type === 'link' || item.type === 'button')) {
+                item.action();
+                closeAllDropdowns();
+            }
+        });
+    });
+
+    // ربط أحداث عناصر القوائم المنسدلة
+    container.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parentDropdown = item.closest('.dropdown-wrapper');
+            const toggle = parentDropdown.querySelector('.dropdown-toggle');
+            const label = toggle.innerText.replace(arrowIcon, '').trim();
+            const navItem = navItems.find(i => i.label === label);
+
+            if (navItem && navItem.type === 'dropdown') {
+                const subItemName = item.innerText.trim();
+                const subItem = navItem.items.find(s => s.name === subItemName);
+                if (subItem && typeof subItem.action === 'function') {
+                    subItem.action();
+                }
+            }
+            closeAllDropdowns();
+        });
+    });
+
+    // إغلاق القوائم عند النقر خارجها
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.top-navbar')) {
+            closeAllDropdowns();
+        }
+    });
 }
+// إخفاء الحاويات الفارغة على الهواتف
+function hideEmptyContainersOnMobile() {
+    if (window.innerWidth <= 768) {
+        const emptySelectors = [
+            '#topCategoryBar',
+            '#adsBelowPagination',
+            '#sideAdsContainer',
+            '.vertical-ad-left',
+            'aside.xl\\:block'
+        ];
+        emptySelectors.forEach(selector => {
+            const el = document.querySelector(selector);
+            if (el && el.innerHTML.trim() === '') {
+                el.style.display = 'none';
+            }
+        });
+    }
+}
+
+// تنفيذ عند تحميل الصفحة وعند كل تغيير
+window.addEventListener('load', hideEmptyContainersOnMobile);
+window.addEventListener('resize', hideEmptyContainersOnMobile);
+// استدعاء الدالة عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', () => {
+    initTopNavbar();
+});
 
 // استدعاء الدالة عند تحميل الصفحة
 window.addEventListener('DOMContentLoaded', () => {
