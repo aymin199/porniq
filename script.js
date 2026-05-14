@@ -1,3 +1,394 @@
+window.allDBsData = {
+   
+  "zaj": [
+    {
+      "id": 1,
+      "type": "video",
+      "title": "LoveHerFeet - Creepy Stepdad Stepdaughter",
+      "image": "https://up6.cc/2026/05/177876650039191.jpg",
+      "contentURL": "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk",
+      "labels": "Feet, milf",
+      "duration": "11:30"
+    },
+    {
+      "id": 2,
+      "type": "video",
+      "title": "Busy Mercedes Carrera takes time off work for a good fuck",
+      "image": "https://a.top4top.io/p_37535ta9f0.jpg",
+      "contentURL": "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk",
+      "labels": "hardcore, blowjob, creampie, milf",
+      "duration": "00:00"
+    },
+    {
+      "id": 3,
+      "type": "video",
+      "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE",
+      "image": "https://files.catbox.moe/jxijpj.jpg",
+      "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk",
+      "labels": "Pink Pussy, blowjob, creampie, milf",
+      "duration": "00:00"
+    },
+    {
+      "id": 4,
+      "type": "video",
+      "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro",
+      "image": "https://f.top4top.io/p_3755ozfb71.jpg",
+      "contentURL": "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk",
+      "labels": "Stepbrohardcore, blowjob, creampie, milf",
+      "duration": "00:00"
+    },
+    
+    {
+      "id": 5,
+      "type": "image",
+      "title": "zaj video 13",
+      "image": "https://files.catbox.moe/d3o3w3.jpg",
+      "contentURL": "https://files.catbox.moe/d3o3w3.jpg",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 6,
+      "type": "video",
+      "title": "She_s going on a Date on Valentine_s Day. what could go Wrong",
+      "image": "https://up6.cc/2026/05/177876642332791.png",
+      "contentURL": "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk",
+      "labels": "blowjob, creampie, milf",
+      "duration": "00:00"
+    },
+    {
+      "id": 7,
+      "type": "video",
+      "title": "zaj video 7",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 8,
+      "type": "video",
+      "title": "zaj video 8",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 9,
+      "type": "video",
+      "title": "zaj video 9",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 10,
+      "type": "video",
+      "title": "zaj video 10",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 11,
+      "type": "video",
+      "title": "zaj video 11",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 12,
+      "type": "video",
+      "title": "zaj video 12",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 13,
+      "type": "video",
+      "title": "zaj video 13",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 14,
+      "type": "video",
+      "title": "zaj video 14",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 15,
+      "type": "video",
+      "title": "zaj video 15",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 16,
+      "type": "video",
+      "title": "zaj video 16",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 17,
+      "type": "video",
+      "title": "zaj video 17",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 18,
+      "type": "video",
+      "title": "zaj video 18",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 19,
+      "type": "video",
+      "title": "zaj video 19",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 20,
+      "type": "video",
+      "title": "zaj video 20",
+      "image": "",
+      "contentURL": "",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 21,
+      "type": "image",
+      "title": "zaj video 21",
+      "image": "https://files.catbox.moe/9rjfd5.jpg",
+      "contentURL": "https://files.catbox.moe/9rjfd5.jpg",
+      "labels": "",
+      "duration": "00:00"
+    },
+    
+    {
+      "id": 22,
+      "type": "image",
+      "title": "zaj video 22",
+      "image": "https://files.catbox.moe/8saj01.jpg",
+      "contentURL": "https://files.catbox.moe/8saj01.jpg",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 23,
+      "type": "image",
+      "title": "zaj video 23",
+      "image": "https://files.catbox.moe/es69j7.jpg",
+      "contentURL":"https://files.catbox.moe/es69j7.jpg",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 24,
+      "type": "image",
+      "title": "naked ass butt and pussy ",
+      "image": "https://e.top4top.io/p_3753j5f462.jpg",
+      "contentURL": "https://e.top4top.io/p_3753j5f462.jpg",
+      "labels": "",
+      "duration": "00:00"
+    },
+    {
+      "id": 25,
+      "type": "image",
+      "title": "naked ass butt and pussy",
+      "image": "https://files.catbox.moe/sl352n.jpg",
+      "contentURL": "https://files.catbox.moe/sl352n.jpg",
+      "labels": "naked, pussy, ass, butt"
+    }
+  ],
+  "nesa": [
+    { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", "labels": "Compilation", "duration": "00:00" },
+    { "id": 2, "type": "video", "title": "nesa video 2", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 3, "type": "video", "title": "nesa video 3", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 4, "type": "video", "title": "nesa video 4", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 5, "type": "video", "title": "nesa video 5", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 6, "type": "video", "title": "nesa video 6", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 7, "type": "video", "title": "nesa video 7", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 8, "type": "video", "title": "nesa video 8", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 9, "type": "video", "title": "nesa video 9", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 10, "type": "video", "title": "nesa video 10", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 11, "type": "video", "title": "nesa video 11", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 12, "type": "video", "title": "nesa video 12", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 13, "type": "video", "title": "nesa video 13", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 14, "type": "video", "title": "nesa video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 15, "type": "video", "title": "nesa video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 16, "type": "video", "title": "nesa video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 17, "type": "video", "title": "nesa video 17", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 18, "type": "video", "title": "nesa video 18", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 19, "type": "video", "title": "nesa video 19", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 20, "type": "video", "title": "nesa video 20", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 21, "type": "video", "title": "nesa video 21", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 22, "type": "image", "title": "nesa video 22", "image": "https://f.top4top.io/p_3754qh5mz0.jpg", "contentURL": "https://f.top4top.io/p_3754qh5mz0.jpg",    "labels": "naked, pussy, ass, butt"},
+    { "id": 23, "type": "image", "title": "nesa video 23", "image": "https://e.top4top.io/p_3753j5f462.jpg", "contentURL": "https://e.top4top.io/p_3753j5f462.jpg",    "labels": "naked, pussy, ass, butt" },
+    { "id": 24, "type": "image", "title": "nesa video 24", "image": "https://f.top4top.io/p_3754zu7n06.jpeg", "contentURL": "https://f.top4top.io/p_3754zu7n06.jpeg",    "labels": "naked, pussy, ass, butt" },
+    { "id": 25, "type": "image", "title": "nesa video 25", "image": "https://l.top4top.io/p_3754oc8jl0.png", "contentURL": "https://l.top4top.io/p_3754oc8jl0.png",    "labels": "naked, pussy, ass, butt"}
+  ],
+  "haywan": [
+    { "id": 1, "type": "video", "title": "haywan video 1", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 2, "type": "video", "title": "haywan video 2", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 3, "type": "video", "title": "haywan video 3", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 4, "type": "video", "title": "haywan video 4", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 5, "type": "video", "title": "haywan video 5", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 6, "type": "video", "title": "haywan video 6", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 7, "type": "video", "title": "haywan video 7", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 8, "type": "video", "title": "haywan video 8", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 9, "type": "video", "title": "haywan video 9", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 10, "type": "video", "title": "haywan video 10", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 11, "type": "video", "title": "haywan video 11", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 12, "type": "video", "title": "haywan video 12", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 13, "type": "video", "title": "haywan video 13", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 14, "type": "video", "title": "haywan video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 15, "type": "video", "title": "haywan video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 16, "type": "video", "title": "haywan video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 17, "type": "video", "title": "haywan video 17", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 18, "type": "video", "title": "haywan video 18", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 19, "type": "video", "title": "haywan video 19", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 20, "type": "video", "title": "haywan video 20", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 21, "type": "video", "title": "haywan video 21", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 22, "type": "video", "title": "haywan video 22", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 23, "type": "video", "title": "haywan video 23", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 24, "type": "video", "title": "haywan video 24", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 25, "type": "video", "title": "haywan video 25", "image": "", "contentURL": "", "labels": "", "duration": "00:00" }
+  ],
+  "ime": [
+    { "id": 1, "type": "video", "title": "ime anime 1", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 2, "type": "video", "title": "ime anime 2", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 3, "type": "video", "title": "ime anime 3", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 4, "type": "video", "title": "ime anime 4", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 5, "type": "video", "title": "ime anime 5", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 6, "type": "video", "title": "ime anime 6", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 7, "type": "video", "title": "ime anime 7", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 8, "type": "video", "title": "ime anime 8", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 9, "type": "video", "title": "ime anime 9", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 10, "type": "video", "title": "ime anime 10", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 11, "type": "video", "title": "ime anime 11", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 12, "type": "video", "title": "ime anime 12", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 13, "type": "video", "title": "ime anime 13", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 14, "type": "video", "title": "ime anime 14", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 15, "type": "video", "title": "ime anime 15", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 16, "type": "video", "title": "ime anime 16", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 17, "type": "video", "title": "ime anime 17", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 18, "type": "video", "title": "ime anime 18", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 19, "type": "video", "title": "ime anime 19", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 20, "type": "video", "title": "ime anime 20", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
+    { "id": 21, "type": "image", "title": "ime anime 21", "image": "https://d.top4top.io/p_3754m7gav4.jpeg", "contentURL": "https://d.top4top.io/p_3754m7gav4.jpeg", "labels": "anime" },
+    { "id": 22, "type": "image", "title": "ime anime 22", "image": "https://b.top4top.io/p_3754pp9ki2.jpeg", "contentURL": "https://b.top4top.io/p_3754pp9ki2.jpeg", "labels": "anime"},
+    { "id": 23, "type": "image", "title": "ime anime 23", "image": "https://c.top4top.io/p_37548lmfr3.jpeg", "contentURL": "https://c.top4top.io/p_37548lmfr3.jpeg", "labels": "anime"},
+    { "id": 24, "type": "image", "title": "ime anime 24", "image": "https://g.top4top.io/p_37541rhbo2.jpeg", "contentURL": "https://g.top4top.io/p_37541rhbo2.jpeg", "labels": "anime" },
+    { "id": 25, "type": "image", "title": "ime anime 25", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" }
+  ],
+  "liveGirls": [
+    { "id": 1, "type": "live", "title": "Live Channel 1", "image": "", "contentURL": "", "labels": "live, channel", "duration": "Live" },
+    { "id": 2, "type": "live", "title": "Live Channel 2", "image": "", "contentURL": "", "labels": "live, channel", "duration": "Live" },
+    { "id": 3, "type": "live", "title": "Live Channel 3", "image": "", "contentURL": "", "labels": "live, channel", "duration": "Live" }
+  ],
+  "liveChannels": [
+    { "id": 1, "type": "live", "title": "ОХ-АХ HD", "image": "https://k.top4top.io/p_37567rat30.jpg", "contentURL": "http://oxax.tv/oh-ah.html", "labels": "live, channel", "duration": "Live" },
+        { "id": 1, "type": "live", "title": "fap-tv-3", "image": "https://c.top4top.io/p_376232e0q0.jpg", "contentURL": "http://oxax.tv/fap-tv-3.html", "labels": "live, channel", "duration": "Live" },
+    { "id": 2, "type": "live", "title": "brazzers-tv-online", "image":"https://j.top4top.io/p_3756oefsw0.png", "contentUR ": "https://adult-tv-channels.com/brazzers-tv-online/", "labels": "live, channel", "duration": "Live" },
+    { "id": 3, "type": "live", "title": "fap-tv-2", "image": "https://f.top4top.io/p_3762tq3iq0.jpg", "contentURL": "http://oxax.tv/fap-tv-2.html", "labels": "live, channel", "duration": "Live" }
+  ],
+  
+  "life": [
+    {
+      "id": 1,
+      "type": "article",
+      "title": "وضعية إندراني",
+      "image": "https://l.top4top.io/p_3702uwnur1.png",
+      "labels": "تعليمي",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "<div style=\"direction: rtl; text-align: right; line-height: 1.8;\"><h2 style=\"color: #fb7185; margin-bottom: 15px;\">وضعية إندراني</h2><p style=\"margin-bottom: 15px;\">بواسطة رايتشل فوستر (9 فبراير 2022). يحب الأزواج وضعية إندراني لأنها مريحة وتسمح باختراق عميق جداً.</p><div style=\"margin: 20px 0;\"><img src=\"https://l.top4top.io/p_3702uwnur1.png\" style=\"width: 100%; max-width: 500px; border-radius: 15px;\" alt=\"صورة توضيحية\"></div><video controls style=\"width: 100%; max-width: 600px; border-radius: 15px;\"><source src=\"https://d.top4top.io/m_36805y6jr1.mp4\" type=\"video/mp4\"></video></div>"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "article",
+      "title": "نصائح للحياة الزوجية",
+      "image": "https://l.top4top.io/p_3702uwnur1.png",
+      "labels": "نصائح",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "<div style=\"direction: rtl; text-align: right; line-height: 1.8;\"><h2 style=\"color: #fb7185; margin-bottom: 15px;\">نصائح ذهبية للحياة الزوجية</h2><ul style=\"margin-right: 20px; margin-bottom: 20px;\"><li>التواصل المستمر هو أساس العلاقة الناجحة</li><li>احترام المساحة الشخصية للطرف الآخر</li><li>المفاجآت الرومانسية تضفي جواً من السعادة</li></ul><div style=\"margin: 20px 0;\"><img src=\"https://l.top4top.io/p_3702uwnur1.png\" style=\"width: 100%; max-width: 500px; border-radius: 15px;\" alt=\"صورة نصائح\"></div></div>"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "article",
+      "title": "أفضل 10 وضعيات",
+      "image": "https://l.top4top.io/p_3702uwnur1.png",
+      "labels": "توب 10",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "<div style=\"direction: rtl; text-align: right; line-height: 1.8;\"><h2 style=\"color: #fb7185; margin-bottom: 15px;\">أفضل 10 وضعيات للأزواج</h2><ol style=\"margin-right: 20px; margin-bottom: 20px;\"><li>وضعية إندراني</li><li>وضعية الملعقة</li><li>الوضعية التبشيرية</li><li>وضعية الفارسة</li><li>وضعية الكلبية</li></ol><video controls style=\"width: 100%; max-width: 600px; border-radius: 15px;\"><source src=\"https://d.top4top.io/m_36805y6jr1.mp4\" type=\"video/mp4\"></video></div>"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "article",
+      "title": "أسرار العلاقة الحميمة",
+      "image": "https://l.top4top.io/p_3702uwnur1.png",
+      "labels": "أسرار",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "<div style=\"direction: rtl; text-align: right; line-height: 1.8;\"><h2 style=\"color: #fb7185; margin-bottom: 15px;\">أسرار العلاقة الحميمة</h2><p>اكتشف أسرار العلاقة الحميمة الناجحة...</p><img src=\"https://l.top4top.io/p_3702uwnur1.png\" style=\"width:100%; max-width:500px;\"></div>"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "article",
+      "title": "الرومانسية في الزواج",
+      "image": "https://l.top4top.io/p_3702uwnur1.png",
+      "labels": "رومانسية",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "<div style=\"direction: rtl; text-align: right; line-height: 1.8;\"><h2 style=\"color: #fb7185; margin-bottom: 15px;\">كيف تحافظ على الرومانسية</h2><p>نصائح للحفاظ على الرومانسية في العلاقة الزوجية...</p><img src=\"https://l.top4top.io/p_3702uwnur1.png\" style=\"width:100%; max-width:500px;\"></div>"
+        }
+      ]
+    }
+  ]
+}
 
 
 // دالة لاستخراج الرابط الحقيقي من أي نص (مثل BBCode)
@@ -175,21 +566,14 @@ let allDBs = {
 
 // دالة لتحميل البيانات مع التخزين المؤقت
 function loadData() {
-  // 1. عرض البيانات المخزنة فوراً (إن وجدت)
-  const cached = localStorage.getItem('allDBs_cache');
-  const cacheTime = localStorage.getItem('allDBs_cache_time');
-  const now = Date.now();
-  
-  if (cached && cacheTime && (now - parseInt(cacheTime) < 24 * 60 * 60 * 1000)) {
-    try {
-      const data = JSON.parse(cached);
-      for (let key in data) {
-        if (allDBs[key]) allDBs[key] = data[key];
-        else allDBs[key] = data[key];
+  return new Promise((resolve, reject) => {
+    // استخدام البيانات من data.js مباشرة
+    if (window.allDBsData) {
+      for (let key in window.allDBsData) {
+        if (allDBs[key]) allDBs[key] = window.allDBsData[key];
+        else allDBs[key] = window.allDBsData[key];
       }
-      console.log('✅ عرض البيانات من localStorage (فوري)');
-      
-      // تحديث الواجهة فوراً
+      // تحديث الواجهة
       if (currentSourceKey && allDBs[currentSourceKey]) {
         dummyData = shuffleArray(allDBs[currentSourceKey]);
         renderAll();
@@ -197,38 +581,25 @@ function loadData() {
       }
       renderMenu();
       renderCategoryBar();
-    } catch(e) { console.error('خطأ في قراءة localStorage', e); }
-  }
-  
-  // 2. تحميل البيانات من الشبكة في الخلفية (بدون انتظار)
- fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log('تم تحميل life:', data.life); 
-      let changed = false;
-      for (let key in data) {
-        if (JSON.stringify(allDBs[key]) !== JSON.stringify(data[key])) {
-          allDBs[key] = data[key];
-          changed = true;
-        }
-      }
-      if (changed) {
-        localStorage.setItem('allDBs_cache', JSON.stringify(allDBs));
-        localStorage.setItem('allDBs_cache_time', Date.now());
-        console.log('🔄 تحديث البيانات من الشبكة');
-        
-        if (currentSourceKey && allDBs[currentSourceKey]) {
-          dummyData = shuffleArray(allDBs[currentSourceKey]);
-          renderAll();
-          updateFooterStats();
-        }
-        renderMenu();
-        renderCategoryBar();
-      } else {
-        console.log('✅ البيانات محدثة بالفعل');
-      }
-    })
-    .catch(error => console.error('خطأ في تحميل البيانات:', error));
+      resolve();
+    } else {
+      // fallback: محاولة fetch إذا لم توجد البيانات (للخادم)
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          for (let key in data) allDBs[key] = data[key];
+          if (currentSourceKey && allDBs[currentSourceKey]) {
+            dummyData = shuffleArray(allDBs[currentSourceKey]);
+            renderAll();
+            updateFooterStats();
+          }
+          renderMenu();
+          renderCategoryBar();
+          resolve();
+        })
+        .catch(reject);
+    }
+  });
 }
 // ================ الإعلانات ================
 const siteAds = {
