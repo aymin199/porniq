@@ -4732,7 +4732,8 @@ function initTopNavbar() {
     if (!container) return;
 
     // روابط قابلة للتخصيص
-    const TIKTOK_URL = localStorage.getItem('tiktokRedirectUrl') || 'https://www.tiktok.com/@pornxiq';
+   // ملف script.js - تم التعديل في دالة initTopNavbar
+const TIKTOK_URL = localStorage.getItem('tiktokRedirectUrl') || 'https://www.xfree.com/';
     const PORNSTARS_URL = '#';
     const COMMUNITY_URL = '#';
 
@@ -4769,6 +4770,11 @@ function initTopNavbar() {
             label: 'LIVE CAMS',
             type: 'link',
             action: () => switchSource('liveGirls', 'Live Girls'),
+        },
+        {
+            label: 'LIVE CHANNELS',
+            type: 'link',
+            action: () => switchSource('liveChannels', 'Live Channels Porn'),
         },
         {
             label: 'PORNSTARS',

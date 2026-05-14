@@ -1276,3 +1276,69 @@ video::-webkit-media-controls-fullscreen-button {
         max-height: 350px;
     }
 }
+/* ========== إصلاح القوائم المنسدلة للشريط العلوي (مودال مثل الهاتف) ========== */
+.top-navbar .dropdown-menu {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    max-width: 340px !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    background: rgba(24, 24, 27, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    border: none !important;
+    border-radius: 28px !important;
+    box-shadow: 0 25px 45px -12px rgba(0,0,0,0.9), 0 0 0 1px rgba(190,24,93,0.4) !important;
+    padding: 8px 0 !important;
+    z-index: 200000 !important;
+    margin: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* تخصيص شريط التمرير الداخلي */
+.top-navbar .dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+}
+.top-navbar .dropdown-menu::-webkit-scrollbar-track {
+    background: #1f1f2f;
+    border-radius: 10px;
+}
+.top-navbar .dropdown-menu::-webkit-scrollbar-thumb {
+    background: #be185d;
+    border-radius: 10px;
+}
+
+/* عناصر القائمة */
+.top-navbar .dropdown-menu a {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+}
+
+.top-navbar .dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.top-navbar .dropdown-menu a:hover {
+    background: #be185d;
+    transform: scale(1.02);
+    border-radius: 20px;
+    margin: 0 6px;
+}
+
+/* إزالة أي إطار حول الأزرار */
+.top-navbar .dropdown-toggle:focus,
+.top-navbar .nav-link:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
