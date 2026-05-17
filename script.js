@@ -1,3 +1,4 @@
+
 window.allDBsData = {
    
 "zaj": [
@@ -6,28 +7,24 @@ window.allDBsData = {
 { "id": 3, "type": "video", "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE", "image": "https://files.catbox.moe/jxijpj.jpg", "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", "labels": "Pink Pussy, blowjob, creampie, milf", "duration": "00:00" },
 { "id": 4, "type": "video", "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro", "image": "https://f.top4top.io/p_3755ozfb71.jpg", "contentURL": "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk", "labels": "Stepbrohardcore, blowjob, creampie, milf", "duration": "00:00" },
 { "id": 6, "type": "video", "title": "She_s going on a Date on Valentine_s Day. what could go Wrong", "image": "https://up6.cc/2026/05/177876642332791.png", "contentURL": "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk", "labels": "blowjob, creampie, milf", "duration": "00:00" },
-
-
-{ "id": 5, "type": "video", "title": "Horny Teen Eats Creampie from her Asian Girlfriend_s Pussy after Hard and Rough Sex with Sugar Daddy", "image": " ", "contentURL": "https://drive.google.com/file/d/1KLnk9AQ3nC1JHaA2nTC1-wC6FlH8pfou/view?usp=sharing ", "labels": "", "duration": "00:00" },
-{ "id": 7, "type": "video", "title": "Genuine Home Fucking Video", "image": "", "contentURL": "https://drive.google.com/file/d/1GHB4iPeXQFi6ATsJ8trGRm2VfB9u9iCu/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 8, "type": "video", "title": "Big dick buttsex video starring Sunny Shine. Russian anal whore loses her anal virginity _ cums too", "image": "", "contentURL": "https://drive.google.com/file/d/1IzO67I4rOeulqdMJJrUjJzlXfhZdMxxJ/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 9, "type": "video", "title": "Amateur Latina Squirts Hard while Straining", "image": "", "contentURL": "https://drive.google.com/file/d/1X6yeQPWBrkhDV9a5F2dHZUOVNys2cZMS/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "", "contentURL": "https://drive.google.com/file/d/103kyExFwCG9aZPk2s6uNqAXgbZ4TGSvs/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 11, "type": "video", "title": "Lucky Neighbor-When the Neighbor Knocked on the Door_ they were already Hot and Craving Sex. Fefo23x6 Arrived at the Perfect Time_ in the right Place", "image": "", "contentURL": "https://drive.google.com/file/d/1NEl-elR6W43fQemm3ww3IND3daPYsA7b/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "", "contentURL": "https://drive.google.com/file/d/1K-7ja4Vp0IR38MRgJd66aa4-ZZtmCLan/view?usp=sharing", "labels": "", "duration": "00:00" },
-
-
-
+{ "id": 5, "type": "video", "title": "Horny Teen Eats Creampie from her Asian Girlfriend_s Pussy after Hard and Rough Sex with Sugar Daddy", "image": "https://i.top4top.io/p_37897jkwi1.jpg ", "contentURL": "https://drive.google.com/file/d/1KLnk9AQ3nC1JHaA2nTC1-wC6FlH8pfou/view?usp=sharing ", "labels": "", "duration": "00:00" },
+{ "id": 7, "type": "video", "title": "Genuine Home Fucking Video", "image": "https://b.top4top.io/p_37890950m1.jpg", "contentURL": "https://drive.google.com/file/d/1GHB4iPeXQFi6ATsJ8trGRm2VfB9u9iCu/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 8, "type": "video", "title": "Sunny Shine Enjoys Unforgettable First anal Sex ", "image": "https://b.top4top.io/p_37897fhpa1.png", "contentURL": "https://drive.google.com/file/d/1IzO67I4rOeulqdMJJrUjJzlXfhZdMxxJ/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 9, "type": "video", "title": "Amateur Latina Squirts Hard while Straining", "image": "https://j.top4top.io/p_3789pljv32.jpg", "contentURL": "https://drive.google.com/file/d/1X6yeQPWBrkhDV9a5F2dHZUOVNys2cZMS/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "https://k.top4top.io/p_3789htbp91.png", "contentURL": "https://drive.google.com/file/d/103kyExFwCG9aZPk2s6uNqAXgbZ4TGSvs/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 11, "type": "video", "title": "Lucky Neighbor-When the neighbor knocked on the door, they were already hot and craving sex", "image": "https://l.top4top.io/p_3789mx9tb1.png", "contentURL": "https://drive.google.com/file/d/1NEl-elR6W43fQemm3ww3IND3daPYsA7b/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "https://k.top4top.io/p_3789rlfhw1.png", "contentURL": "https://drive.google.com/file/d/1K-7ja4Vp0IR38MRgJd66aa4-ZZtmCLan/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 13, "type": "video", "title": "zaj video 13", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
 
 
-{ "id": 14, "type": "video", "title": "zaj video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 15, "type": "video", "title": "zaj video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 16, "type": "video", "title": "zaj video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 17, "type": "video", "title": "zaj video 17", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 18, "type": "video", "title": "zaj video 18", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 14, "type": "video", "title": "Petite Babe Freya Von Doom Rides BBC after Blowjob", "image": "https://a.top4top.io/p_3789whdxd2.png", "contentURL": "https://drive.google.com/file/d/1ldz82d_Q7gIG_MwR610R3BPmUpM3PKqE/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 15, "type": "video", "title": "POV Sloppy Blowjob & Titfuck & Hard Doggyfuck with Creampie ", "image": "https://l.top4top.io/p_378929nfm1.jpg", "contentURL": "https://drive.google.com/file/d/1skThZvvLKvQMxtqF4t0RwUlQ-zp4Z9S8/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 16, "type": "video", "title": "PURE TABOO 18yo Step-Sister Longs 2 try ANAL with Bro", "image": "https://j.top4top.io/p_37895o52c1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 17, "type": "video", "title": "PURE TABOO Gia Derza Secretly Loses her Anal Virginity to her Priest", "image": "https://k.top4top.io/p_37891xhso2.jpg", "contentURL": "https://drive.google.com/file/d/1Inp_SQpbnl-yvhJCb-1YxRG7BXhp_Mou/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 18, "type": "video", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
 
 
+{ "id": 24, "type": "gif", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://c.top4top.io/p_3789t6ipb1.gif", "contentURL": "https://c.top4top.io/p_3789t6ipb1.gif", "labels": "gif", "duration": "00:00" },
 
 { "id": 19, "type": "image", "title": "zaj video 19", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
 { "id": 20, "type": "image", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://up6.cc/2026/05/177902698111341.jpg", "contentURL": "", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
@@ -438,6 +435,7 @@ const siteAds = {
  // أضف هذا الكود الجديد للإعلانات المستطيلة الرفيعة
     horizontalRectAds: [
     { video: "https://k.top4top.io/m_3747dk0rw0.mp4", link: "https://example1.com", title: "عرض حصري 1" },
+    { video: "https://g.top4top.io/m_3753hq7ei1.mp4", link: "https://example2.com", title: "عرض حصري 2" },
     { video: "https://g.top4top.io/m_3753hq7ei1.mp4", link: "https://example2.com", title: "عرض حصري 2" },
         { image: "https://f.top4top.io/p_3762zgfvm0.png", link: "https://example2.com", title: "عرض حصري 2" },
         { video: "https://d.top4top.io/m_37548wm9l0.mp4", link: "https://example2.com", title: "عرض حصري 2" },
@@ -1609,8 +1607,7 @@ function createCard(p) {
                          this.closest('.thumb-wrapper')?.classList.add('portrait-content');
                      }"
                      onerror="this.src='https://via.placeholder.com/300x200/333/fff?text=Image'">
-                
-                ${p.type === 'live' ? 
+            ${p.type === 'live' ? 
     `<span class="video-duration-badge bg-red-600 animate-pulse text-[10px] px-2 py-1">
         <i>🔴</i> LIVE
     </span>` : 
@@ -1618,9 +1615,14 @@ function createCard(p) {
         `<span class="video-duration-badge text-[10px] px-2 py-1">
             <i>⏱️</i> ${p.duration || defaultDuration}
         </span>` : 
-        `<span class="video-duration-badge text-[10px] px-2 py-1">
-            <i>🖼️</i> ${p.image && p.image.includes('.gif') ? 'GIF' : 'صورة'}
-        </span>`
+        (p.type === 'gif' ?
+            `<span class="video-duration-badge text-[10px] px-2 py-1" style="background: #8b5cf6;">
+                <i>🎞️</i> GIF
+            </span>` :
+            `<span class="video-duration-badge text-[10px] px-2 py-1">
+                <i>🖼️</i> صورة
+            </span>`
+        )
     )
 }
             </div>
@@ -1957,6 +1959,18 @@ if (p.contentURL.match(/\.mp4$/i)) {
             </div>
         `;
     }
+    else if (p.type === 'gif') {
+    vArea.style.paddingBottom = '0';
+    vArea.style.height = 'auto';
+    vArea.classList.add('image-mode');
+    vArea.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
+            <img src="${p.image}" 
+                 style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
+                 alt="${p.title}">
+        </div>
+    `;
+}
     // بعد كل الشروط وقبل إغلاق الدالة
 setTimeout(() => {
     updateRecSuggestions();
@@ -2232,7 +2246,10 @@ function renderAll() {
     if (!grid) return;
     const q = document.getElementById('searchBox')?.value.toLowerCase() || '';
     let filtered = dummyData.filter(p => {
-        if (currentType !== 'all' && p.type !== currentType) return false;
+       // إذا كان المستخدم يطلب صور (image) فتشمل أيضاً gif
+let itemType = p.type;
+if (currentType === 'image' && itemType === 'gif') itemType = 'image';
+if (currentType !== 'all' && itemType !== currentType) return false;
         if (currentType === 'image' && currentCat !== 'all content') {
             if (currentCat === 'ثابتة' && p.labels?.includes('متحركة')) return false;
             if (currentCat === 'متحركة' && !p.labels?.includes('متحركة')) return false;

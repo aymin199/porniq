@@ -1347,3 +1347,14 @@ button:focus {
     vertical-align: middle;
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
+/* شارة GIF مميزة */
+.video-duration-badge[style*="background: #8b5cf6"] {
+    background: #8b5cf6 !important;
+    border-color: #a78bfa !important;
+}
+
+/* جعل الـ GIF يظهر بشكل أفضل في المشغل */
+#vArea.image-mode img[src$=".gif"] {
+    image-rendering: crisp-edges;
+    background: #000;
+}
