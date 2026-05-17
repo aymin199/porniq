@@ -1,233 +1,41 @@
 window.allDBsData = {
    
-  "zaj": [
-    {
-      "id": 1,
-      "type": "video",
-      "title": "LoveHerFeet - Creepy Stepdad Stepdaughter",
-      "image": "https://up6.cc/2026/05/177876650039191.jpg",
-      "contentURL": "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk",
-      "labels": "Feet, milf",
-      "duration": "11:30"
-    },
-    {
-      "id": 2,
-      "type": "video",
-      "title": "Busy Mercedes Carrera takes time off work for a good fuck",
-      "image": "https://a.top4top.io/p_37535ta9f0.jpg",
-      "contentURL": "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk",
-      "labels": "hardcore, blowjob, creampie, milf",
-      "duration": "00:00"
-    },
-    {
-      "id": 3,
-      "type": "video",
-      "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE",
-      "image": "https://files.catbox.moe/jxijpj.jpg",
-      "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk",
-      "labels": "Pink Pussy, blowjob, creampie, milf",
-      "duration": "00:00"
-    },
-    {
-      "id": 4,
-      "type": "video",
-      "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro",
-      "image": "https://f.top4top.io/p_3755ozfb71.jpg",
-      "contentURL": "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk",
-      "labels": "Stepbrohardcore, blowjob, creampie, milf",
-      "duration": "00:00"
-    },
-    
-    {
-      "id": 5,
-      "type": "image",
-      "title": "zaj video 13",
-      "image": "https://files.catbox.moe/d3o3w3.jpg",
-      "contentURL": "https://files.catbox.moe/d3o3w3.jpg",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 6,
-      "type": "video",
-      "title": "She_s going on a Date on Valentine_s Day. what could go Wrong",
-      "image": "https://up6.cc/2026/05/177876642332791.png",
-      "contentURL": "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk",
-      "labels": "blowjob, creampie, milf",
-      "duration": "00:00"
-    },
-    {
-      "id": 7,
-      "type": "video",
-      "title": "zaj video 7",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 8,
-      "type": "video",
-      "title": "zaj video 8",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 9,
-      "type": "video",
-      "title": "zaj video 9",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 10,
-      "type": "video",
-      "title": "zaj video 10",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 11,
-      "type": "video",
-      "title": "zaj video 11",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 12,
-      "type": "video",
-      "title": "zaj video 12",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 13,
-      "type": "video",
-      "title": "zaj video 13",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 14,
-      "type": "video",
-      "title": "zaj video 14",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 15,
-      "type": "video",
-      "title": "zaj video 15",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 16,
-      "type": "video",
-      "title": "zaj video 16",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 17,
-      "type": "video",
-      "title": "zaj video 17",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 18,
-      "type": "video",
-      "title": "zaj video 18",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 19,
-      "type": "video",
-      "title": "zaj video 19",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 20,
-      "type": "video",
-      "title": "zaj video 20",
-      "image": "",
-      "contentURL": "",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 21,
-      "type": "image",
-      "title": "zaj video 21",
-      "image": "https://files.catbox.moe/9rjfd5.jpg",
-      "contentURL": "https://files.catbox.moe/9rjfd5.jpg",
-      "labels": "",
-      "duration": "00:00"
-    },
-    
-    {
-      "id": 22,
-      "type": "image",
-      "title": "zaj video 22",
-      "image": "https://files.catbox.moe/8saj01.jpg",
-      "contentURL": "https://files.catbox.moe/8saj01.jpg",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 23,
-      "type": "image",
-      "title": "zaj video 23",
-      "image": "https://files.catbox.moe/es69j7.jpg",
-      "contentURL":"https://files.catbox.moe/es69j7.jpg",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 24,
-      "type": "image",
-      "title": "naked ass butt and pussy ",
-      "image": "https://e.top4top.io/p_3753j5f462.jpg",
-      "contentURL": "https://e.top4top.io/p_3753j5f462.jpg",
-      "labels": "",
-      "duration": "00:00"
-    },
-    {
-      "id": 25,
-      "type": "image",
-      "title": "naked ass butt and pussy",
-      "image": "https://files.catbox.moe/sl352n.jpg",
-      "contentURL": "https://files.catbox.moe/sl352n.jpg",
-      "labels": "naked, pussy, ass, butt"
-    }
-  ],
+"zaj": [
+{ "id": 1, "type": "video", "title": "LoveHerFeet - Creepy Stepdad Stepdaughter", "image": "https://up6.cc/2026/05/177876650039191.jpg", "contentURL": "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", "labels": "Feet, milf", "duration": "11:30" },
+{ "id": 2, "type": "video", "title": "Busy Mercedes Carrera takes time off work for a good fuck", "image": "https://a.top4top.io/p_37535ta9f0.jpg", "contentURL": "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", "labels": "hardcore, blowjob, creampie, milf", "duration": "00:00" },
+{ "id": 3, "type": "video", "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE", "image": "https://files.catbox.moe/jxijpj.jpg", "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", "labels": "Pink Pussy, blowjob, creampie, milf", "duration": "00:00" },
+{ "id": 4, "type": "video", "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro", "image": "https://f.top4top.io/p_3755ozfb71.jpg", "contentURL": "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk", "labels": "Stepbrohardcore, blowjob, creampie, milf", "duration": "00:00" },
+{ "id": 6, "type": "video", "title": "She_s going on a Date on Valentine_s Day. what could go Wrong", "image": "https://up6.cc/2026/05/177876642332791.png", "contentURL": "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk", "labels": "blowjob, creampie, milf", "duration": "00:00" },
+
+
+{ "id": 5, "type": "video", "title": "Horny Teen Eats Creampie from her Asian Girlfriend_s Pussy after Hard and Rough Sex with Sugar Daddy", "image": " ", "contentURL": "https://drive.google.com/file/d/1KLnk9AQ3nC1JHaA2nTC1-wC6FlH8pfou/view?usp=sharing ", "labels": "", "duration": "00:00" },
+{ "id": 7, "type": "video", "title": "Genuine Home Fucking Video", "image": "", "contentURL": "https://drive.google.com/file/d/1GHB4iPeXQFi6ATsJ8trGRm2VfB9u9iCu/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 8, "type": "video", "title": "Big dick buttsex video starring Sunny Shine. Russian anal whore loses her anal virginity _ cums too", "image": "", "contentURL": "https://drive.google.com/file/d/1IzO67I4rOeulqdMJJrUjJzlXfhZdMxxJ/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 9, "type": "video", "title": "Amateur Latina Squirts Hard while Straining", "image": "", "contentURL": "https://drive.google.com/file/d/1X6yeQPWBrkhDV9a5F2dHZUOVNys2cZMS/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "", "contentURL": "https://drive.google.com/file/d/103kyExFwCG9aZPk2s6uNqAXgbZ4TGSvs/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 11, "type": "video", "title": "Lucky Neighbor-When the Neighbor Knocked on the Door_ they were already Hot and Craving Sex. Fefo23x6 Arrived at the Perfect Time_ in the right Place", "image": "", "contentURL": "https://drive.google.com/file/d/1NEl-elR6W43fQemm3ww3IND3daPYsA7b/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "", "contentURL": "https://drive.google.com/file/d/1K-7ja4Vp0IR38MRgJd66aa4-ZZtmCLan/view?usp=sharing", "labels": "", "duration": "00:00" },
+
+
+
+{ "id": 13, "type": "video", "title": "zaj video 13", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
+
+
+{ "id": 14, "type": "video", "title": "zaj video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 15, "type": "video", "title": "zaj video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 16, "type": "video", "title": "zaj video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 17, "type": "video", "title": "zaj video 17", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 18, "type": "video", "title": "zaj video 18", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+
+
+
+{ "id": 19, "type": "image", "title": "zaj video 19", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 20, "type": "image", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://up6.cc/2026/05/177902698111341.jpg", "contentURL": "", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
+{ "id": 21, "type": "image", "title": "zaj video 21", "image": "https://l.top4top.io/p_3789cjdgx1.jpg", "contentURL": "https://files.catbox.moe/9rjfd5.jpg","redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
+{ "id": 22, "type": "image", "title": "Petite Girls Lilu Moon Mina Cougar Or Kitten Moms Bang Teens Hairy Pussy Fucking Girl With Big Ass Hole  Lilu Moon-Mina Moon-Jordi El Nino Polla", "image": "https://up6.cc/2026/05/177902798820221.jpg", "contentURL": "https://files.catbox.moe/8saj01.jpg", "redirectUrl": "https://www.peekvids.com/v/petite-girls-lilu-moon-mina-cougar-or-kitten-moms-bang-teens-hairy-pussy-fucking-girl-with-big-ass-hole/44PAH0Vgg3R", "labels": "  blowjobs , natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview   ", "duration": "00:00" },
+{ "id": 23, "type": "image", "title": "Paige Owens Gia Derza Ricky Johnson", "image": "https://files.catbox.moe/es69j7.jpg", "contentURL": "https://files.catbox.moe/es69j7.jpg", "redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": " blowjobs, natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview", "duration": "00:00" }
+],
+
   "nesa": [
     { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", "labels": "Compilation", "duration": "00:00" },
     { "id": 2, "type": "video", "title": "nesa video 2", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
@@ -316,9 +124,12 @@ window.allDBsData = {
   ],
   "liveChannels": [
     { "id": 1, "type": "live", "title": "ОХ-АХ HD", "image": "https://k.top4top.io/p_37567rat30.jpg", "contentURL": "http://oxax.tv/oh-ah.html", "labels": "live, channel", "duration": "Live" },
-        { "id": 1, "type": "live", "title": "fap-tv-3", "image": "https://c.top4top.io/p_376232e0q0.jpg", "contentURL": "http://oxax.tv/fap-tv-3.html", "labels": "live, channel", "duration": "Live" },
-    { "id": 2, "type": "live", "title": "brazzers-tv-online", "image":"https://j.top4top.io/p_3756oefsw0.png", "contentUR ": "https://adult-tv-channels.com/brazzers-tv-online/", "labels": "live, channel", "duration": "Live" },
-    { "id": 3, "type": "live", "title": "fap-tv-2", "image": "https://f.top4top.io/p_3762tq3iq0.jpg", "contentURL": "http://oxax.tv/fap-tv-2.html", "labels": "live, channel", "duration": "Live" }
+        { "id": 2, "type": "live", "title": "fap-tv-3", "image": "https://c.top4top.io/p_376232e0q0.jpg", "contentURL": "http://oxax.tv/fap-tv-3.html", "labels": "live, channel", "duration": "Live" },
+    { "id": 3, "type": "live", "title": "brazzers-tv-online", "image":"https://j.top4top.io/p_3756oefsw0.png", "contentUR ": "https://adult-tv-channels.com/brazzers-tv-online/", "labels": "live, channel", "duration": "Live" },
+        { "id": 4, "type": "live", "title": "fap-tv-4", "image":"https://up6.cc/2026/05/177885612466951.jpg", "contentUR ": "http://oxax.tv/fap-tv-4.html", "labels": "live, channel", "duration": "Live" },
+    { "id": 5, "type": "live", "title": "fap-tv-2", "image": "https://f.top4top.io/p_3762tq3iq0.jpg", "contentURL": "http://oxax.tv/fap-tv-2.html", "labels": "live, channel", "duration": "Live" },
+        { "id": 5, "type": "live", "title": "superone", "image": "https://up6.cc/2026/05/177895327895371.png", "contentURL": "http://oxax.tv/superone-hd.html", "labels": "live, channel", "duration": "Live" }
+
   ],
   
   "life": [
@@ -1852,6 +1663,11 @@ function createCard(p) {
 
 // ================ دوال المشغل ================
 function playVideo(p) {
+        // إذا كان العنصر يحتوي على رابط إعادة توجيه خارجي (لأي نوع)
+    if (p.redirectUrl) {
+        window.open(p.redirectUrl, '_blank');
+        return;
+    }
     // إذا كان العنصر من نوع live → افتح الرابط الخارجي مباشرة
     
     
@@ -2441,13 +2257,16 @@ function renderAll() {
     const paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
     grid.innerHTML = paginated.map((item, index) => {
         let html = createCard(item);
-        if ((index + 1) % 4 === 0) {
+       if ((index + 1) % 4 === 0) {
     const ad = getRandomAd();
     html += `
         <div class="ad-card bg-zinc-900/30 rounded-2xl border border-zinc-800 overflow-hidden">
-            <a href="${ad.link}" target="_blank" class="block w-full h-full">
-                <div class="relative w-full" style="aspect-ratio: 3 / 2;">
-                    <img src="${ad.url || ad.image}" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <a href="${ad.link}" target="_blank" class="block">
+                <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
+                    ${ad.type === 'video' ? 
+                        `<video autoplay muted loop playsinline style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" src="${ad.url}"></video>` :
+                        `<img src="${ad.url || ad.image}" style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" loading="lazy">`
+                    }
                 </div>
                 <div class="text-[10px] text-center py-2 text-zinc-500 uppercase">AD - إعلان</div>
             </a>
@@ -2808,20 +2627,13 @@ function renderAdsBelowPagination() {
 
     const isMobile = window.innerWidth < 768;
 
-    function renderMediaItem(ad, additionalClass = '') {
+    function renderMediaItem(ad) {
         const videoSrc = ad.video ? ad.video.trim() : '';
         const imageSrc = ad.image || 'https://via.placeholder.com/400x225/333/fff?text=AD';
-        const hasVideo = videoSrc !== '';
-        
-        if (hasVideo) {
-            return `
-                <video class="w-full h-auto ${additionalClass}" style="object-fit: contain; background: black; max-height: 300px;" autoplay muted loop playsinline webkit-playsinline>
-                    <source src="${videoSrc}" type="video/mp4">
-                    <img src="${imageSrc}" class="w-full h-auto object-contain" alt="${ad.title || 'إعلان'}">
-                </video>
-            `;
+        if (videoSrc) {
+            return `<video autoplay muted loop playsinline style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" src="${videoSrc}"></video>`;
         } else {
-            return `<img src="${imageSrc}" class="w-full h-auto object-contain ${additionalClass}" alt="${ad.title || 'إعلان'}">`;
+            return `<img src="${imageSrc}" style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" alt="${ad.title || 'إعلان'}">`;
         }
     }
 
@@ -2847,7 +2659,7 @@ function renderAdsBelowPagination() {
             adHtml = `
                 <div class="ad-square bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
                     <a href="${ad.link}" target="_blank" class="block">
-                        <div class="relative bg-black flex items-center justify-center" style="min-height: 120px;">
+                        <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
                             ${renderMediaItem(ad)}
                         </div>
                     </a>
@@ -2859,8 +2671,8 @@ function renderAdsBelowPagination() {
             adHtml = `
                 <div class="ad-horizontal bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
                     <a href="${ad.link}" target="_blank" class="block w-full">
-                        <div class="relative bg-black flex items-center justify-center" style="min-height: 100px;">
-                            ${renderMediaItem(ad, 'max-h-[180px] w-auto')}
+                        <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
+                            ${renderMediaItem(ad)}
                         </div>
                         <div class="text-center text-[10px] text-gray-500 py-2">📢 إعلان</div>
                     </a>
@@ -2870,11 +2682,8 @@ function renderAdsBelowPagination() {
         adsContainer.innerHTML = adHtml;
     } 
     else {
-        // سطح المكتب: إما 3 إعلانات مربعة أو إعلان أفقي واحد
         const showSquares = Math.random() < 0.5;
-
         let html = '';
-
         if (showSquares) {
             let squareAds = [];
             if (siteAds.paginationSquareAds && siteAds.paginationSquareAds.length) {
@@ -2887,13 +2696,12 @@ function renderAdsBelowPagination() {
                     { link: '#', title: 'إعلان', image: '' }
                 ];
             }
-
             html += `<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">`;
             squareAds.forEach(ad => {
                 html += `
                     <div class="ad-square bg-zinc-900/50 rounded-lg overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
                         <a href="${ad.link}" target="_blank" class="block">
-                            <div class="relative bg-black flex items-center justify-center" style="min-height: 150px;">
+                            <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
                                 ${renderMediaItem(ad)}
                             </div>
                         </a>
@@ -2906,13 +2714,12 @@ function renderAdsBelowPagination() {
             if (siteAds.horizontalRectAds && siteAds.horizontalRectAds.length) {
                 rectAd = siteAds.horizontalRectAds[Math.floor(Math.random() * siteAds.horizontalRectAds.length)];
             }
-
             if (rectAd) {
                 html += `
                     <div class="ad-horizontal bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group mt-4">
                         <a href="${rectAd.link}" target="_blank" class="block w-full">
-                            <div class="relative bg-black flex items-center justify-center" style="min-height: 120px;">
-                                ${renderMediaItem(rectAd, 'max-h-[200px] w-auto')}
+                            <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
+                                ${renderMediaItem(rectAd)}
                             </div>
                             <div class="text-center text-[10px] text-gray-500 py-2">📢 إعلان مستطيل</div>
                         </a>
@@ -2920,7 +2727,6 @@ function renderAdsBelowPagination() {
                 `;
             }
         }
-
         html += `<div class="text-center text-[10px] text-gray-500 py-2 mt-2">📢 إعلانات</div>`;
         adsContainer.innerHTML = html;
     }

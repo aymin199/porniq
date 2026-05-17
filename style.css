@@ -1342,3 +1342,8 @@ button:focus {
     outline: none !important;
     box-shadow: none !important;
 }
+.external-icon {
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}

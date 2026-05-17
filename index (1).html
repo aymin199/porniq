@@ -66,7 +66,7 @@
     <!-- نافذة التحقق من العمر -->
     <div id="ageVerifyModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-md" style="direction: ltr;">
         <div class="bg-black/80 p-8 rounded-2xl text-center max-w-md w-full border border-yellow-500/30 shadow-2xl backdrop-blur-lg">
-            <h1 class="text-3xl font-black tracking-tighter mb-2 text-white">PORNIQ</h1>
+            <h1 class="text-3xl font-black tracking-tighter mb-2 text-white">PORNxIQ</h1>
             <div class="w-16 h-0.5 bg-yellow-500 mx-auto mb-6"></div>
             <p class="text-white/90 text-sm leading-relaxed mb-6 text-center">
                 This website contains age-restricted materials including nudity and explicit depictions of sexual activity. By entering, you affirm that you are at least 18 years of age or the age of majority in the jurisdiction you are accessing the website from and you consent to viewing sexually explicit content.
@@ -105,7 +105,7 @@
     <!-- الشريط العلوي -->
     <nav class='fixed top-0 inset-x-0 bg-black/90 backdrop-blur-md px-6 py-3 flex items-center justify-between z-50 border-b border-zinc-800'>
         <div class='flex items-center text-2xl font-black tracking-tighter' style="direction: ltr;">
-            <span style="color: #FFB800;">PORN</span><span class="text-white ml-1">IQ</span>
+            <span style="color: #FFB800;">PORNx</span><span class="text-white ml-1">IQ</span>
         </div>
         <div class='flex items-center gap-4'>
             <input class='bg-zinc-900 border border-zinc-800 text-gray-300 rounded-full py-2 px-6 outline-none w-48 md:w-80 text-sm focus:border-pink-600 transition-all' id='searchBox' oninput='doSearch()' placeholder='Search for video...' type='text'/>
@@ -260,139 +260,164 @@
             </div>
             <div id="gridBox" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
             <div id="paginationBox" class="flex justify-center gap-2 mt-12 mb-10"></div>
+            <!-- إعلانات طولية أسفل الترقيم -->
+<div id="verticalAdsBelow" class="vertical-ads-container mt-8 flex flex-col gap-6"></div>
         </main>
         
 <aside class="xl:block w-64 flex-shrink-0">
     <div class="sticky top-24 flex flex-col gap-4" id="sideAdsContainer"></div>
-    
-    <!-- الإعلان العمودي الطويل -->
-    <div class="vertical-ad-left mt-6 pt-4 border-t border-zinc-800">
+
+    <!-- حاوية الإعلانات الطولية المتعددة -->
+    <div class="vertical-ads-list mt-6 pt-4 border-t border-zinc-800">
         <div class="text-[10px] uppercase tracking-widest opacity-30 font-bold mb-3 text-center text-gray-400">Sponsored</div>
-        <div class="vertical-ad-wrapper bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 hover:border-pink-500 transition-all group">
-            <a href="#" target="_blank" id="adLink" class="block">
-                <div id="randomAdContainer" class="relative bg-black flex items-center justify-center" style="width: 100%; min-height: 200px;">
-                    <div class="text-white text-sm">جاري تحميل الإعلان...</div>
-                </div>
-                <div class="text-center text-[10px] text-gray-500 py-2 border-t border-zinc-800">
-                    📢 إعلان عمودي طويل
-                </div>
-            </a>
-        </div>
+        <div id="verticalAdsMulti" class="flex flex-col gap-4"></div>
     </div>
 </aside>
 
+<style>
+    .vertical-ads-list {
+        width: 100%;
+    }
+    .vertical-ad-card {
+        background: #111;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+    }
+    .vertical-ad-card:hover {
+        border-color: #be185d;
+        background: rgba(190,24,93,0.05);
+    }
+    .vertical-ad-card a {
+        display: block;
+        width: 100%;
+    }
+    .vertical-ad-media {
+        display: block;
+        width: 100%;
+        background: #000;
+        line-height: 0;
+    }
+    .vertical-ad-media video,
+    .vertical-ad-media img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background: #000;
+    }
+    .vertical-ad-label {
+        text-align: center;
+        font-size: 10px;
+        padding: 8px;
+        color: #6b7280;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+</style>
+
 <script>
     (function() {
-        // قائمة الإعلانات
+        // قائمة الإعلانات (يمكنك إضافة إعلاناتك الطولية هنا)
         const mediaList = [
             { type: 'video', src: 'https://e.top4top.io/m_3754o3ux01.mp4', link: 'https://example1.com', title: 'إعلان 1' },
             { type: 'video', src: 'https://c.top4top.io/m_3754wamh31.mp4', link: 'https://example2.com', title: 'إعلان 2' },
-                   { type: 'video', src: 'https://j.top4top.io/m_375494yvh8.mp4', link: 'https://example2.com', title: 'إعلان 2' },
-            { type: 'image', src: 'https://j.top4top.io/p_37543d1i10.jpeg', link: 'https://example3.com', title: 'إعلان 3' },
-            { type: 'image', src: 'https://j.top4top.io/p_37543d1i10.jpeg', link: 'https://example4.com', title: 'إعلان 4' }
+            { type: 'video', src: 'https://j.top4top.io/m_375494yvh8.mp4', link: 'https://example2.com', title: 'إعلان 3' },
+            { type: 'image', src: 'https://j.top4top.io/p_37543d1i10.jpeg', link: 'https://example3.com', title: 'إعلان 4' },
+           
         ];
+
+        // عدد الإعلانات المطلوبة (عدّل هذا الرقم إلى 4 أو أي عدد تريده)
+        const ADS_COUNT = 4;
 
         function getRandomMedia() {
             return mediaList[Math.floor(Math.random() * mediaList.length)];
         }
 
-        function renderRandomAd() {
-            const container = document.getElementById('randomAdContainer');
-            const adLink = document.getElementById('adLink');
-            if (!container) {
-                console.warn('randomAdContainer غير موجود');
-                return;
+        // جلب عدد محدد من الإعلانات (قد تتكرر إذا القائمة صغيرة)
+        function getRandomAds(count) {
+            const ads = [];
+            for (let i = 0; i < count; i++) {
+                ads.push(getRandomMedia());
             }
-            if (!adLink) return;
-
-            const media = getRandomMedia();
-            console.log('تحديث الإعلان العمودي:', media.type, media.src);
-            
-            adLink.href = media.link;
-            container.innerHTML = '';
-
-            if (media.type === 'video') {
-                const video = document.createElement('video');
-                video.autoplay = true;
-                video.muted = true;
-                video.loop = true;
-                video.playsInline = true;
-                video.preload = 'auto';
-                video.style.width = '100%';
-                video.style.height = 'auto';
-                video.style.display = 'block';
-                video.style.maxHeight = '400px';
-                video.style.objectFit = 'contain';
-                video.style.background = '#000';
-                
-                const source = document.createElement('source');
-                source.src = media.src;
-                source.type = 'video/mp4';
-                video.appendChild(source);
-                
-                video.onerror = () => {
-                    const fallback = document.createElement('img');
-                    fallback.src = 'https://j.top4top.io/p_37543d1i10.jpeg';
-                    fallback.style.width = '100%';
-                    container.innerHTML = '';
-                    container.appendChild(fallback);
-                };
-                
-                container.appendChild(video);
-                video.play().catch(e => console.warn('autoplay failed', e));
-            } 
-            else {
-                const img = document.createElement('img');
-                img.src = media.src;
-                img.style.width = '100%';
-                img.style.height = 'auto';
-                img.style.display = 'block';
-                img.onerror = () => { img.src = 'https://j.top4top.io/p_37543d1i10.jpeg'; };
-                container.appendChild(img);
-            }
+            return ads;
         }
 
-        // عرض الإعلان عند تحميل الصفحة
-        function initAd() {
-            if (document.getElementById('randomAdContainer')) {
-                renderRandomAd();
+        // (اختياري) جلب إعلانات مختلفة بدون تكرار إذا أردت
+        function getUniqueRandomAds(count) {
+            const shuffled = [...mediaList].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        function renderVerticalAds() {
+            const container = document.getElementById('verticalAdsMulti');
+            if (!container) return;
+
+            // استخدم getRandomAds(ADS_COUNT) للتكرار المسموح، أو getUniqueRandomAds(ADS_COUNT) لمنع التكرار
+            const ads = getRandomAds(ADS_COUNT);
+            let html = '';
+
+            ads.forEach(ad => {
+                const isVideo = ad.type === 'video';
+                html += `
+                    <div class="vertical-ad-card">
+                        <a href="${ad.link}" target="_blank">
+                            <div class="vertical-ad-media">
+                                ${isVideo ? 
+                                    `<video autoplay muted loop playsinline preload="auto">
+                                        <source src="${ad.src}" type="video/mp4">
+                                     </video>` : 
+                                    `<img src="${ad.src}" alt="${ad.title}" loading="lazy">`
+                                }
+                            </div>
+                            <div class="vertical-ad-label">📢 إعلان عمودي طويل</div>
+                        </a>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            // تشغيل الفيديوهات (تجاهل أخطاء autoplay)
+            container.querySelectorAll('video').forEach(v => v.play().catch(e => console.log('autoplay blocked')));
+        }
+
+        function initAds() {
+            if (document.getElementById('verticalAdsMulti')) {
+                renderVerticalAds();
             } else {
-                setTimeout(initAd, 100);
+                setTimeout(initAds, 100);
             }
         }
+
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initAd);
+            document.addEventListener('DOMContentLoaded', initAds);
         } else {
-            initAd();
+            initAds();
         }
 
-        // طريقة قوية للاستماع إلى تغيير القسم: مراقبة المتغير currentSourceKey
         function watchSourceChange() {
             let lastSource = window.currentSourceKey;
             setInterval(() => {
                 if (window.currentSourceKey !== lastSource) {
                     lastSource = window.currentSourceKey;
-                    renderRandomAd();
+                    renderVerticalAds();
                 }
             }, 500);
         }
 
-        // بدء المراقبة بعد تحميل الصفحة
         window.addEventListener('load', function() {
             watchSourceChange();
-            
-            // أيضاً استبدال switchSource إذا وجدت (كإجراء احتياطي)
             if (typeof window.switchSource === 'function') {
                 const original = window.switchSource;
                 window.switchSource = function(key, name) {
                     original(key, name);
-                    setTimeout(renderRandomAd, 200);
+                    setTimeout(renderVerticalAds, 200);
                 };
             }
         });
     })();
 </script>
-
 
 
 
@@ -441,7 +466,7 @@
                     <div class="text-center">
                         <a href="#" onclick="window.location.reload(); return false;" class="flex items-center justify-center gap-2 mb-4 no-underline">
                             <span class="text-2xl font-black" style="direction: ltr; cursor: pointer;">
-                                <span style="color: #FFB800;">PORN</span><span class="text-white">IQ</span>
+                                <span style="color: #FFB800;">PORNx</span><span class="text-white">IQ</span>
                             </span>
                         </a>
                         
@@ -488,7 +513,7 @@
                                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center text-white font-black text-sm mb-2 shadow-lg group-hover:scale-110 transition-all cursor-pointer">
                                         <span style="color: #FFB800;">P</span><span>IQ</span>
                                     </div>
-                                    <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">PORNIQ</span>
+                                    <span class="text-xs text-gray-500 group-hover:text-pink-400 transition">PORNxIQ</span>
                                 </a>
                             </div>
                             
@@ -519,7 +544,7 @@
                 
                 <div class="border-t border-zinc-800 pt-6 mt-6">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div class="text-sm text-gray-500">All rights reserved © 2024 porniq.com</div>
+                        <div class="text-sm text-gray-500">All rights reserved © 2024 pornxiq.com</div>
                         <div class="flex gap-6">
                             <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Privacy</a>
                             <a href="#" class="text-xs text-gray-500 hover:text-pink-500 transition">Terms</a>
@@ -568,37 +593,39 @@
                 <div id="recBox" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
             </div>
             
-            <!-- الجانب الأيمن من المشغل -->
-            <aside class="w-full lg:w-80 flex-shrink-0">
-                <div class="sticky top-10 flex flex-col gap-6">
-                    <!-- إعلانات المشغل -->
-                    <div class="flex flex-col gap-4">
-                        <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
-                            <div class="w-full h-full bg-black flex items-center justify-center">
-                                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                    <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
-                                </video>
-                                <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">▶️ فيديو</div>
-                            </div>
-                        </a>
-                        
-                        <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
-                            <div class="w-full h-full bg-black flex items-center justify-center">
-                                <img src="https://i.postimg.cc/zfSyrPnH/hq720.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="إعلان">
-                                <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">📷 إعلان</div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <!-- اقتراحات مميزة -->
-                    <div class="flex flex-col gap-3">
-                        <div class="text-sm font-bold text-white border-b border-zinc-800 pb-2">اقتراحات مميزة</div>
-                        <div id="sideVerticalList" class="flex flex-col gap-3"></div>
-                    </div>
+           <!-- الجانب الأيمن من المشغل -->
+<aside class="w-full lg:w-80 flex-shrink-0">
+    <div class="sticky top-10 flex flex-col gap-6">
+        <!-- إعلانات المشغل -->
+        <div class="flex flex-col gap-4">
+            <!-- الإعلان الأول (فيديو) -->
+            <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-32 group hover:border-pink-500 transition-all relative">
+                <div class="w-full h-full bg-black flex items-center justify-center">
+                    <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" autoplay muted loop playsinline>
+                        <source src="https://d.top4top.io/m_36805y6jr1.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">▶️ فيديو</div>
                 </div>
-            </aside>
+            </a>
+            
+            <!-- الإعلان الثاني (تم تصحيح الوسم وإضافة التكرار) -->
+    <a href="#" target="_blank" class="block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden h-60 group hover:border-pink-500 transition-all relative">
+        <div class="w-full h-full bg-black flex items-center justify-center">
+            <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" autoplay muted loop playsinline>
+                <source src="https://h.top4top.io/m_3786eltab1.mp4" type="video/mp4">
+            </video>
+            <div class="absolute top-1 right-1 bg-black/80 text-white text-[8px] px-2 py-1 rounded-full border border-pink-500/50">📷 إعلان</div>
+        </div>
+    </a>
+</div>
+        
+        <!-- اقتراحات مميزة -->
+        <div class="flex flex-col gap-3">
+            <div class="text-sm font-bold text-white border-b border-zinc-800 pb-2">اقتراحات مميزة</div>
+            <div id="sideVerticalList" class="flex flex-col gap-3"></div>
         </div>
     </div>
+</aside>
 
     <!-- تحميل الجافاسكريبت -->
     <script src="script.js"></script>
