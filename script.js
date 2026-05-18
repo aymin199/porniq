@@ -2,6 +2,7 @@
 window.allDBsData = {
    
 "zaj": [
+ //video
 { "id": 1, "type": "video", "title": "LoveHerFeet - Creepy Stepdad Stepdaughter", "image": "https://up6.cc/2026/05/177876650039191.jpg", "contentURL": "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", "labels": "Feet, milf", "duration": "11:30" },
 { "id": 2, "type": "video", "title": "Busy Mercedes Carrera takes time off work for a good fuck", "image": "https://a.top4top.io/p_37535ta9f0.jpg", "contentURL": "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", "labels": "hardcore, blowjob, creampie, milf", "duration": "00:00" },
 { "id": 3, "type": "video", "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE", "image": "https://files.catbox.moe/jxijpj.jpg", "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", "labels": "Pink Pussy, blowjob, creampie, milf", "duration": "00:00" },
@@ -14,28 +15,63 @@ window.allDBsData = {
 { "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "https://k.top4top.io/p_3789htbp91.png", "contentURL": "https://drive.google.com/file/d/103kyExFwCG9aZPk2s6uNqAXgbZ4TGSvs/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 11, "type": "video", "title": "Lucky Neighbor-When the neighbor knocked on the door, they were already hot and craving sex", "image": "https://l.top4top.io/p_3789mx9tb1.png", "contentURL": "https://drive.google.com/file/d/1NEl-elR6W43fQemm3ww3IND3daPYsA7b/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "https://k.top4top.io/p_3789rlfhw1.png", "contentURL": "https://drive.google.com/file/d/1K-7ja4Vp0IR38MRgJd66aa4-ZZtmCLan/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 13, "type": "video", "title": "zaj video 13", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
-
-
 { "id": 14, "type": "video", "title": "Petite Babe Freya Von Doom Rides BBC after Blowjob", "image": "https://a.top4top.io/p_3789whdxd2.png", "contentURL": "https://drive.google.com/file/d/1ldz82d_Q7gIG_MwR610R3BPmUpM3PKqE/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 15, "type": "video", "title": "POV Sloppy Blowjob & Titfuck & Hard Doggyfuck with Creampie ", "image": "https://l.top4top.io/p_378929nfm1.jpg", "contentURL": "https://drive.google.com/file/d/1skThZvvLKvQMxtqF4t0RwUlQ-zp4Z9S8/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 16, "type": "video", "title": "PURE TABOO 18yo Step-Sister Longs 2 try ANAL with Bro", "image": "https://j.top4top.io/p_37895o52c1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 17, "type": "video", "title": "PURE TABOO Gia Derza Secretly Loses her Anal Virginity to her Priest", "image": "https://k.top4top.io/p_37891xhso2.jpg", "contentURL": "https://drive.google.com/file/d/1Inp_SQpbnl-yvhJCb-1YxRG7BXhp_Mou/view?usp=sharing", "labels": "", "duration": "00:00" },
 { "id": 18, "type": "video", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 36, "type": "video", "title": "PURE TABOO Shocked MILF Dana Vespoli Discovers Husband Swapped Stepdaughter For Petite Coco Lovelock ", "image": "https://i.top4top.io/p_37905f2tf1.jpg", "contentURL": "https://drive.google.com/file/d/1J6fl4O0YKSa5pQDf8YxhVbltxdnQtsQx/view?usp=sharing", "labels": " Pornstars,Coco Lovelock,Dana Vespoli " },
+{ "id": 40, "type": "video", "title": "Sugar Daddy Fucks His Young Fresh Asian Wife Hard And Cums In her Pretty  ", "image": "https://j.top4top.io/p_37905n4ei2.jpg", "contentURL": "https://drive.google.com/file/d/1R-gNBXltITRYJELiyhukg8rK8wdk1q5c/view?usp=sharing", "labels": " Pornstars, Denis Marti و Fanky Town و Kvini Kim" },
+{ "id": 41, "type": "video","title": "She Stole From Her Foster Parents So She Pay With Her Body", "image": "https://k.top4top.io/p_37902fvip3.jpg", "contentURL": "https://drive.google.com/file/d/1nX7EdN4VolqAdjPIGNK6t8Jcy4dpyAvV/view?usp=sharing", "labels": " Pornstars,Mr. Pete و Phoebe Kalib و Kelly Caprice" },
+{ "id": 39, "type": "video", "title": "The toughest ANAL fucking in the shower RE UPLOAD ", "image": "https://c.top4top.io/p_3790iilnl1.jpg", "contentURL": "https://drive.google.com/file/d/1NCFBKbFc0riYLtke8cxWWrc4bNbqHW_w/view?usp=sharing", "labels": " Angelica Heaven,pornstars " },
+{ "id": 40, "type": "video", "title": "They Taught Their Virgin Stepdaughter How to Get Her Perfect Ass Fucked ", "image": "https://g.top4top.io/p_3790mxvrw1.jpg", "contentURL": "https://drive.google.com/file/d/1tsFuspW70IKTwY93rvDLz6GTOffg1bjq/view?usp=sharing", "labels": "pornstars, Christie Stevens , Filthy Rich   " },
+{ "id": 42, "type": "video", "title": "Threesome With Two Teen Step Sisters! Pulls Panties To The Side And Fucked 4K ", "image": "https://b.top4top.io/p_3790weybc1.jpg", "contentURL": "https://drive.google.com/file/d/1MbJdmeAfTveigGiFmxjpWCE2g628q4_-/view?usp=sharing", "labels": "pornstars, 18-25, Amateur, Babe, Brunette HD Porn , Hardcore, POV ,Step Fantasy, Threesome ,Verified Amateurs " },
+{ "id": 43, "type": "video", "title": "Tinder Guy Used All My Holes For His Pleasure While Parents Were Away ", "image": "https://b.top4top.io/p_3790n1hu71.jpg", "contentURL": "https://drive.google.com/file/d/1_XyHfKKtaREvfTa-h3sXkA16oJT5_QIH/view?usp=sharing", "labels": "pornstars,18-25, 6 Amateur, Anal, Big Dick, Cumshot, HD Porn, POV, Verified Amateurs ,Verified Couples   " },
+{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " }, 
+{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
+{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
 
 
+
+ 
+
+
+
+//movie
+{ "id": 36, "type": "movie", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
+
+
+
+//gif
 { "id": 24, "type": "gif", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://c.top4top.io/p_3789t6ipb1.gif", "contentURL": "https://c.top4top.io/p_3789t6ipb1.gif", "labels": "gif", "duration": "00:00" },
 
+//image
 { "id": 19, "type": "image", "title": "zaj video 19", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
 { "id": 20, "type": "image", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://up6.cc/2026/05/177902698111341.jpg", "contentURL": "", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
 { "id": 21, "type": "image", "title": "zaj video 21", "image": "https://l.top4top.io/p_3789cjdgx1.jpg", "contentURL": "https://files.catbox.moe/9rjfd5.jpg","redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
 { "id": 22, "type": "image", "title": "Petite Girls Lilu Moon Mina Cougar Or Kitten Moms Bang Teens Hairy Pussy Fucking Girl With Big Ass Hole  Lilu Moon-Mina Moon-Jordi El Nino Polla", "image": "https://up6.cc/2026/05/177902798820221.jpg", "contentURL": "https://files.catbox.moe/8saj01.jpg", "redirectUrl": "https://www.peekvids.com/v/petite-girls-lilu-moon-mina-cougar-or-kitten-moms-bang-teens-hairy-pussy-fucking-girl-with-big-ass-hole/44PAH0Vgg3R", "labels": "  blowjobs , natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview   ", "duration": "00:00" },
-{ "id": 23, "type": "image", "title": "Paige Owens Gia Derza Ricky Johnson", "image": "https://files.catbox.moe/es69j7.jpg", "contentURL": "https://files.catbox.moe/es69j7.jpg", "redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": " blowjobs, natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview", "duration": "00:00" }
+{ "id": 23, "type": "image", "title": "Paige Owens Gia Derza Ricky Johnson", "image": "https://files.catbox.moe/es69j7.jpg", "contentURL": "https://files.catbox.moe/es69j7.jpg", "redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": " blowjobs, natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview", "duration": "00:00" }, 
+{ "id": 24, "type": "image", "title": "nesa video 5", "image": "https://h.top4top.io/p_3790ira7n10.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 25, "type": "image", "title": "nesa video 5", "image": "https://f.top4top.io/p_37903ri1s8.gif", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 26, "type": "image", "title": "nesa video 5", "image": "https://d.top4top.io/p_3790j1beu7.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 27, "type": "image", "title": "nesa video 5", "image": "https://c.top4top.io/p_379066knm6.png", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 28, "type": "image", "title": "nesa video 28", "image": "https://b.top4top.io/p_3790ggis35.png", "contentURL": "", "labels": "" },
+{ "id": 29, "type": "image", "title": "nesa video 29", "image": "https://a.top4top.io/p_3790twn314.png", "contentURL": "", "labels": "" },
+{ "id": 30, "type": "image", "title": "nesa video 30", "image": "https://j.top4top.io/p_3790h567m1.jpg", "contentURL": "", "labels": "" },
+{ "id": 31, "type": "image", "title": "nesa video 31", "image": "https://d.top4top.io/p_3790oa8f91.png", "contentURL": "", "labels": "" },
+{ "id": 32, "type": "image", "title": "nesa video 32", "image": "https://b.top4top.io/p_3790d0ky21.png", "contentURL": "", "labels": "" }
+//{ "id": 33, "type": "image", "title": "nesa video 33", "image": "", "contentURL": "", "labels": "" },
+//{ "id": 34, "type": "image", "title": "nesa video 34", "image": "", "contentURL": "", "labels": "" },
+//{ "id": 35, "type": "image", "title": "nesa video 35", "image": "", "contentURL": "", "labels": "" }
+
+
+
 ],
 
+
+
   "nesa": [
-    { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", "labels": "Compilation", "duration": "00:00" },
-    { "id": 2, "type": "video", "title": "nesa video 2", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+    { "id": 2, "type": "video", "title": "nesa video 2", "image": " ", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 3, "type": "video", "title": "nesa video 3", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 4, "type": "video", "title": "nesa video 4", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 5, "type": "video", "title": "nesa video 5", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
@@ -46,7 +82,7 @@ window.allDBsData = {
     { "id": 10, "type": "video", "title": "nesa video 10", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 11, "type": "video", "title": "nesa video 11", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 12, "type": "video", "title": "nesa video 12", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 13, "type": "video", "title": "nesa video 13", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+{ "id": 13, "type": "video", "title": "Kenzie Taylor  Kit Mercer Lana Sharapova are having a lesbian   ", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": " https://drive.google.com/file/d/1_jN-2NkK14-Ix_RGkiA4hfT3U28gmaln/view?usp=sharing", "labels": "big boobs, big tits stepmom, hairy pussy, lesbian facesitting, lesbian threesome, lesbian tribbing, milf big tits, milf threesome, small boobs, stepdaughter, stepmom, big tits, cunnilingus, eating pussy, facesitting, lesbian, milf, old & young, threesome", "duration": "13:21" },
     { "id": 14, "type": "video", "title": "nesa video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 15, "type": "video", "title": "nesa video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 16, "type": "video", "title": "nesa video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
@@ -55,10 +91,15 @@ window.allDBsData = {
     { "id": 19, "type": "video", "title": "nesa video 19", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 20, "type": "video", "title": "nesa video 20", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 21, "type": "video", "title": "nesa video 21", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
+
+
+
+    { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", "labels": "Compilation", "duration": "00:00" },
     { "id": 22, "type": "image", "title": "nesa video 22", "image": "https://f.top4top.io/p_3754qh5mz0.jpg", "contentURL": "https://f.top4top.io/p_3754qh5mz0.jpg",    "labels": "naked, pussy, ass, butt"},
     { "id": 23, "type": "image", "title": "nesa video 23", "image": "https://e.top4top.io/p_3753j5f462.jpg", "contentURL": "https://e.top4top.io/p_3753j5f462.jpg",    "labels": "naked, pussy, ass, butt" },
     { "id": 24, "type": "image", "title": "nesa video 24", "image": "https://f.top4top.io/p_3754zu7n06.jpeg", "contentURL": "https://f.top4top.io/p_3754zu7n06.jpeg",    "labels": "naked, pussy, ass, butt" },
     { "id": 25, "type": "image", "title": "nesa video 25", "image": "https://l.top4top.io/p_3754oc8jl0.png", "contentURL": "https://l.top4top.io/p_3754oc8jl0.png",    "labels": "naked, pussy, ass, butt"}
+
   ],
   "haywan": [
     { "id": 1, "type": "video", "title": "haywan video 1", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
@@ -412,9 +453,9 @@ function loadData() {
 // ================ الإعلانات ================
 const siteAds = {
     networkAds: [ 
-        { type: 'video', url: "https://d.top4top.io/m_36805y6jr1.mp4", link: "https://example.com", title: "إعلان فيديو 1", description: "شاهد العرض الآن" },
-        { type: 'gif', url: "https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif", link: "https://example2.com", title: "إعلان GIF", description: "عرض محدود" },
-        { type: 'image', url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example3.com", title: "إعلان صورة 1", description: "خصم 50%" }
+        { type: 'video', url: "https://e.top4top.io/m_3790fvvfu1.mp4 ", link: "https://example.com", title: "إعلان فيديو 1", description: "شاهد العرض الآن" },
+        { type: 'video', url: "https://l.top4top.io/m_379011vop1.mp4 ", link: "https://example2.com", title: "إعلان GIF", description: "عرض محدود" },
+        { type: 'video', url: "https://i.top4top.io/m_37903nnp21.mp4", link: "https://example3.com", title: "إعلان صورة 1", description: "خصم 50%" }
     ],
     sidebarAds: [
         { url: "https://i.postimg.cc/zfSyrPnH/hq720.jpg", link: "https://example1.com", type: "image" },
@@ -439,7 +480,7 @@ const siteAds = {
     { video: "https://g.top4top.io/m_3753hq7ei1.mp4", link: "https://example2.com", title: "عرض حصري 2" },
         { image: "https://f.top4top.io/p_3762zgfvm0.png", link: "https://example2.com", title: "عرض حصري 2" },
         { video: "https://d.top4top.io/m_37548wm9l0.mp4", link: "https://example2.com", title: "عرض حصري 2" },
-                { image: "https://b.top4top.io/p_376258mb80.gif", link: "https://example2.com", title: "عرض حصري 2" },
+                { image: "https://g.top4top.io/p_3790ytbej1.png", link: "https://example2.com", title: "عرض حصري 2" },
     { video: "https://b.top4top.io/m_3754wr5fy0.mp4", link: "https://example3.com", title: "عرض حصري 3" }
 ]
 
@@ -497,7 +538,7 @@ var dummyData = (typeof allDBs !== 'undefined' && allDBs[currentSourceKey]) ? [.
 var currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
 var usersDB = JSON.parse(localStorage.getItem('usersDB')) || [];
 var currentLang = localStorage.getItem('siteLang') || 'en';
-var itemsPerPage = 20;
+var itemsPerPage = 27;
 var currentPage = 1;
 var profileMode = null;
 var scrollPosition = 0;
@@ -2274,21 +2315,21 @@ if (currentType !== 'all' && itemType !== currentType) return false;
     const paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
     grid.innerHTML = paginated.map((item, index) => {
         let html = createCard(item);
-       if ((index + 1) % 4 === 0) {
-    const ad = getRandomAd();
-    html += `
-        <div class="ad-card bg-zinc-900/30 rounded-2xl border border-zinc-800 overflow-hidden">
-            <a href="${ad.link}" target="_blank" class="block">
-                <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
-                    ${ad.type === 'video' ? 
-                        `<video autoplay muted loop playsinline style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" src="${ad.url}"></video>` :
-                        `<img src="${ad.url || ad.image}" style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" loading="lazy">`
-                    }
-                </div>
-                <div class="text-[10px] text-center py-2 text-zinc-500 uppercase">AD - إعلان</div>
-            </a>
-        </div>`;
-}
+      // if ((index + 1) % 4 === 0) {
+   // const ad = getRandomAd();
+   // html += `
+      //  <div class="ad-card bg-zinc-900/30 rounded-2xl border border-zinc-800 overflow-hidden">
+           // <a href="${ad.link}" target="_blank" class="block">
+              //  <div class="relative bg-black flex items-center justify-center" style="min-height: unset; height: auto;">
+                //    ${ad.type === 'video' ? 
+                   //     `<video autoplay muted loop playsinline style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" src="${ad.url}"></video>` :
+                     //   `<img src="${ad.url || ad.image}" style="display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto;" loading="lazy">`
+                 //   }
+               // </div>
+           //   //  <div class="text-[10px] text-center py-2 text-zinc-500 uppercase">AD - إعلان</div>
+          //  </a>
+        //</div>`;
+//}
         return html;
     }).join('');
     renderPagination(filtered.length);
