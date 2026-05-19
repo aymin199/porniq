@@ -302,12 +302,18 @@ function sanitizeItemUrls(item) {
     if (item.contentURL) {
         item.contentURL = extractRealUrl(item.contentURL);
         if (item.contentURL && item.contentURL.includes('drive.google.com')) {
-            item.contentURL = getGoogleDriveEmbedLink(item.contentURL);
+            // 🔥 تحويل رابط Google Drive إلى رابط مباشر قابل للتشغيل
+            const match = item.contentURL.match(/\/d\/(.+?)\/view/);
+            if (match) {
+                const fileId = match[1];
+                item.contentURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            } else {
+                item.contentURL = getGoogleDriveEmbedLink(item.contentURL);
+            }
         }
     }
     return item;
 }
-
 const allCategories = [
     "Lesbian", "Asian", "MILF", "Doggystyle", "Ebony", "Gay", "Teen", "Repairman", 
     "Pizza Delivery", "Amateur", "Big Cock", "Softcore", "Nurse", "Handjob", 
@@ -1705,75 +1711,53 @@ function createCard(p) {
         </div>
     `;
 }
-
-// ================ دوال المشغل ================
 function playVideo(p) {
-        // إذا كان العنصر يحتوي على رابط إعادة توجيه خارجي (لأي نوع)
+    // إذا كان العنصر يحتوي على رابط إعادة توجيه خارجي
     if (p.redirectUrl) {
         window.open(p.redirectUrl, '_blank');
         return;
     }
-    // إذا كان العنصر من نوع live → افتح الرابط الخارجي مباشرة
-    
-    
+
     window.history.pushState({view: 'player', videoId: p.id}, "");
     currentPlayingId = p.id;
     sessionStorage.setItem('currentPlayingId', p.id);
-sessionStorage.setItem('lastPlayingSource', currentSourceKey);
-sessionStorage.setItem('lastPlayingSourceName', currentSourceName);
-sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.documentElement.scrollTop);
+    sessionStorage.setItem('lastPlayingSource', currentSourceKey);
+    sessionStorage.setItem('lastPlayingSourceName', currentSourceName);
+    sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.documentElement.scrollTop);
+
     const win = document.getElementById('playWindow');
     const vArea = document.getElementById('vArea');
     win.classList.remove('hidden');
     win.style.display = 'block';
     setTimeout(() => {
-    const playerTop = document.getElementById('playWindow');
-    if (playerTop) {
-        playerTop.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-}, 100);
+        const playerTop = document.getElementById('playWindow');
+        if (playerTop) playerTop.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
     document.body.style.overflow = 'hidden';
     win.setAttribute('dir', 'rtl');
+
     const titleElement = document.getElementById('vTitle');
     if (titleElement) titleElement.innerText = p.title;
-    const oldTags = document.getElementById('playerTagsContainer');
-    if (oldTags) oldTags.remove();
-    const tagsContainer = document.createElement('div');
-    tagsContainer.id = 'playerTagsContainer';
-    tagsContainer.style.cssText = `
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 12px 0 8px 0;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    `;
+
+    // التصنيفات
+    let tagsContainer = document.getElementById('playerTagsContainer');
+    if (!tagsContainer) {
+        tagsContainer = document.createElement('div');
+        tagsContainer.id = 'playerTagsContainer';
+        tagsContainer.style.cssText = `display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 8px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.1);`;
+        if (titleElement) titleElement.parentNode.insertBefore(tagsContainer, titleElement.nextSibling);
+    }
     const itemTags = getItemTags(p);
-    if (itemTags.length > 0) {
-        tagsContainer.innerHTML = `
-            <span style="color: #be185d; font-size: 0.75rem; font-weight: bold;">التصنيفات:</span>
-            ${itemTags.map(tag => `
-                <button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" 
-                        style="background: rgba(190,24,93,0.2); 
-                               border: 1px solid rgba(190,24,93,0.5);
-                               color: #ffb3d9;
-                               padding: 4px 12px;
-                               border-radius: 20px;
-                               font-size: 0.7rem;
-                               cursor: pointer;">
-                    #${tag}
-                </button>
-            `).join('')}
-        `;
+    tagsContainer.innerHTML = itemTags.length ? `<span style="color:#be185d;font-size:0.75rem;font-weight:bold;">التصنيفات:</span> ${itemTags.map(tag => `<button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" style="background:rgba(190,24,93,0.2); border:1px solid rgba(190,24,93,0.5); color:#ffb3d9; padding:4px 12px; border-radius:20px; font-size:0.7rem; cursor:pointer;">#${tag}</button>`).join('')}` : '';
+
+    // أزرار التفاعل
+    let actionsContainer = document.querySelector('.action-buttons-container');
+    if (!actionsContainer) {
+        actionsContainer = document.createElement('div');
+        actionsContainer.className = 'action-buttons-container';
+        actionsContainer.style.cssText = `display:flex; flex-wrap:wrap; gap:12px; margin:10px 0; padding:10px 0; border-top:1px solid rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.1);`;
+        tagsContainer.parentNode.insertBefore(actionsContainer, tagsContainer.nextSibling);
     }
-    const vTitleElement = document.getElementById('vTitle');
-    if (vTitleElement && tagsContainer.innerHTML) {
-        vTitleElement.parentNode.insertBefore(tagsContainer, vTitleElement.nextSibling);
-    }
-    const oldActions = document.querySelector('.action-buttons-container');
-    if (oldActions) oldActions.remove();
-    const actionsContainer = document.createElement('div');
-    actionsContainer.className = 'action-buttons-container';
     actionsContainer.innerHTML = `
         <button class="action-btn" onclick="toggleFavFromPlayer(event, ${p.id})">❤️ مفضلة</button>
         <button class="action-btn" onclick="toggleLike(event, ${p.id})">👍 إعجاب</button>
@@ -1781,246 +1765,191 @@ sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.docu
         <button class="action-btn" onclick="toggleWatchLater(event, ${p.id})">⏱️ لاحقاً</button>
         <button class="action-btn" onclick="shareVideo(event, ${p.id}, '${p.title.replace(/'/g, "\\'")}')">📤 مشاركة</button>
     `;
-    if (tagsContainer.innerHTML) {
-        tagsContainer.parentNode.insertBefore(actionsContainer, tagsContainer.nextSibling);
-    }
+
     vArea.innerHTML = '';
-    vArea.classList.remove('portrait-media', 'landscape-media');
+    vArea.classList.remove('image-mode');
     vArea.style.paddingBottom = '56.25%';
     vArea.style.position = 'relative';
-    function isHardToEmbed(url) {
-        const blockedDomains = ['oxax.tv'];
-        return blockedDomains.some(domain => url.includes(domain));
-    }
+
+    // ========== معالجة أنواع المحتوى ==========
     if (p.type === 'live') {
-    let embedURL = p.contentURL;
-    // معالجة يوتيوب وتويش...
-    if (embedURL.includes('youtube.com/watch')) {
-        const videoId = embedURL.split('v=')[1]?.split('&')[0];
-        embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    } else if (embedURL.includes('youtu.be')) {
-        const videoId = embedURL.split('/').pop();
-        embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    } else if (embedURL.includes('twitch.tv')) {
-        const channel = embedURL.split('twitch.tv/')[1];
-        embedURL = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
-    }
-
-    // إذا كان الرابط mp4، نتعامل معه كفيديو
-    if (embedURL.match(/\.mp4$/i)) {
-        p.type = 'video';
-        playVideo(p);
-        return;
-    }
-
-    // المواقع التي لا يمكن تضمينها (تفتح في نافذة جديدة)
-    const blockedDomains = ['oxax.tv', 'example.com']; // أضف أي نطاق تريده
-    const isBlocked = blockedDomains.some(domain => embedURL.includes(domain));
-
-    if (isBlocked) {
-        // افتح الرابط في نافذة جديدة
-        window.open(p.contentURL, '_blank');
-        // لا نغلق المشغل هنا لأن ذلك قد يتعارض مع فتح النافذة
-        // لكننا سنترك المشغل مفتوحاً (يمكن إغلاقه لاحقاً)
-        // تحديث الاقتراحات
-        setTimeout(() => {
-            updateRecSuggestions();
-            updateSideSuggestions();
-            updatePlayerStats();
-            updateFooterStats();
-        }, 100);
-        return;
-    }
-
-    // عرض iframe عادي
-    vArea.innerHTML = `
-        <iframe 
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-            src="${embedURL}" 
-            allow="autoplay; fullscreen; encrypted-media"
-            allowfullscreen>
-        </iframe>
-    `;
-}else if (p.type === 'video') {
-        if (p.contentURL.includes('oxax.tv')) {
+        let embedURL = p.contentURL;
+        if (embedURL.includes('youtube.com/watch')) {
+            const videoId = embedURL.split('v=')[1]?.split('&')[0];
+            embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        } else if (embedURL.includes('youtu.be')) {
+            const videoId = embedURL.split('/').pop();
+            embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        } else if (embedURL.includes('twitch.tv')) {
+            const channel = embedURL.split('twitch.tv/')[1];
+            embedURL = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
+        }
+        const blockedDomains = ['oxax.tv', 'example.com'];
+        if (blockedDomains.some(domain => embedURL.includes(domain))) {
             window.open(p.contentURL, '_blank');
-            // تحديث الاقتراحات
-            setTimeout(() => {
-                updateRecSuggestions();
-                updateSideSuggestions();
-                updatePlayerStats();
-                updateFooterStats();
-            }, 100);
+            setTimeout(() => { updateRecSuggestions(); updateSideSuggestions(); updateFooterStats(); }, 100);
             return;
         }
-        if (p.contentURL.includes('.mp4')) {
-            vArea.innerHTML = `
-                <div id="playerContainer" 
-                     style="position:absolute;top:0;left:0;width:100%;height:100%;background:black;">
-                    <video id="mainVideo" 
-                           style="width:100%;height:100%;object-fit:contain;" 
-                           autoplay>
-                        <source src="${p.contentURL}" type="video/mp4">
-                    </video>
-                    
-                    <div id="centerPlayBtn" style="
-                        position:absolute;
-                        top:50%;
-                        left:50%;
-                        transform:translate(-50%,-50%);
-                        width:70px;
-                        height:70px;
-                        background:rgba(0,0,0,0.7);
-                        border-radius:50%;
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        cursor:pointer;
-                        z-index:10;
-                        backdrop-filter:blur(4px);
-                        border:2px solid rgba(255,255,255,0.3);
-                        transition:all 0.2s ease;
-                    ">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                    
-                    <div id="customControls" 
-                         style="position:absolute;bottom:0;left:0;width:100%;
-                                background:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-                                padding:12px 15px;
-                                display:flex;
-                                align-items:center;
-                                gap:12px;
-                                opacity:0;
-                                transition:opacity 0.3s ease;">
-                        <button id="playPauseBtn" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">⏸️</button>
-                        <span id="currentTime" style="color:white;font-size:12px;font-family:monospace;">00:00</span>
-                        <input id="progressBar" type="range" value="0" min="0" max="100"
-                               style="flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,0.3);">
-                        <span id="durationTime" style="color:white;font-size:12px;font-family:monospace;">00:00</span>
-                        <button id="fullscreenBtn" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">⛶</button>
-                    </div>
-                </div>
-            `;
-            const playerContainer = document.getElementById('playerContainer');
-            const controls = document.getElementById('customControls');
-            let controlsTimeout;
-            const showControls = () => {
-                controls.style.opacity = '1';
-                clearTimeout(controlsTimeout);
-                controlsTimeout = setTimeout(() => {
-                    if (!playerContainer.matches(':hover') && !controls.matches(':hover')) {
-                        controls.style.opacity = '0';
-                    }
-                }, 2000);
-            };
-            playerContainer.addEventListener('mousemove', showControls);
-            playerContainer.addEventListener('touchstart', showControls);
-            playerContainer.addEventListener('mouseleave', () => {
-                controlsTimeout = setTimeout(() => {
-                    controls.style.opacity = '0';
-                }, 1000);
-            });
-            showControls();
-            initPlayer();
-            // تحديث الاقتراحات
-            setTimeout(() => {
-                updateRecSuggestions();
-                updateSideSuggestions();
-                updatePlayerStats();
-                updateFooterStats();
-            }, 100);
-            return;
-        }
-// داخل playVideo، بعد التحقق من p.type === 'video'
-if (p.contentURL.includes('drive.google.com')) {
-    const embedUrl = getGoogleDriveEmbedLink(p.contentURL);
-    vArea.innerHTML = `
-        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-                src="${embedUrl}" 
-                allow="autoplay; fullscreen; encrypted-media"
-                allowfullscreen>
-        </iframe>
-    `;
-    // ✅ إضافة تحديث الاقتراحات قبل الخروج
-    setTimeout(() => {
-        updateRecSuggestions();
-        updateSideSuggestions();
-        updatePlayerStats();
-        updateFooterStats();
-    }, 150);
-    return;
-}
+        vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${embedURL}" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe>`;
+    }
+    else if (p.type === 'video') {
+        let videoUrl = p.contentURL;
+        let isGoogleDrive = videoUrl.includes('drive.google.com');
 
-if (p.contentURL.match(/\.mp4$/i)) {
-    // تشغيل MP4 مباشرة مع عناصر التحكم المخصصة أو البسيطة
-    vArea.innerHTML = `
-        <video style="width:100%; height:100%; object-fit:contain;" controls autoplay>
-            <source src="${p.contentURL}" type="video/mp4">
-        </video>
-    `;
-    return;
-}
-        if (isHardToEmbed(p.contentURL)) {
-            vArea.style.paddingBottom = '0';
+        // ===== حالة Google Drive: استخدم iframe التضميني (لا عناصر تحكم مكررة) =====
+        if (isGoogleDrive) {
+            // استخرج معرف الملف
+            let fileId = null;
+            let match = videoUrl.match(/\/d\/(.+?)\/view/);
+            if (!match) match = videoUrl.match(/id=(.+?)(&|$)/);
+            if (match) fileId = match[1];
+
+            if (fileId) {
+                const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+                vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${embedUrl}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+            } else {
+                vArea.innerHTML = `<div style="text-align:center;padding:20px;color:red;">❌ رابط Google Drive غير صالح</div>`;
+            }
+        }
+        // ===== حالة روابط MP4 المباشرة: استخدم عنصر video مع controls فقط (بدون initAdvancedPlayer) =====
+        else if (videoUrl.match(/\.mp4$/i) || videoUrl.includes('.mp4?')) {
             vArea.innerHTML = `
-                <div style="text-align:center;padding:40px">
-                    <p>⚠️ لا يمكن عرض الفيديو داخل الموقع</p>
-                    <a href="${p.contentURL}" target="_blank">فتح في نافذة جديدة</a>
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:black;">
+                    <video id="mainVideo" style="width:100%;height:100%;object-fit:contain;" controls autoplay>
+                        <source src="${videoUrl}" type="video/mp4">
+                        المتصفح لا يدعم الفيديو.
+                    </video>
                 </div>
             `;
-            // تحديث الاقتراحات
-            setTimeout(() => {
-                updateRecSuggestions();
-                updateSideSuggestions();
-                updatePlayerStats();
-                updateFooterStats();
-            }, 100);
-            return;
         }
-        vArea.innerHTML = `
-            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-                    src="${p.contentURL}" 
-                    allow="autoplay; fullscreen">
-            </iframe>
-        `;
-    } else if (p.type === 'image') {
-        // إزالة أي تنسيقات سابقة وإضافة كلاس image-mode لعرض الصور بشكل صحيح
+        // ===== أي رابط آخر: حاول iframe عادي =====
+        else {
+            vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${videoUrl}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+        }
+    }
+    else if (p.type === 'image' || p.type === 'gif') {
         vArea.style.paddingBottom = '0';
-        vArea.style.height = 'auto';
-        vArea.style.minHeight = 'auto';
-        vArea.classList.add('image-mode'); // إضافة الكلاس الخاص بالصور
-        
+        vArea.classList.add('image-mode');
+        const mediaUrl = (p.type === 'gif' && p.image) ? p.image : p.contentURL;
         vArea.innerHTML = `
-            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
-                <img src="${p.contentURL}" 
-                     style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
-                     alt="${p.title}"
-                     onload="this.parentElement.parentElement.style.paddingBottom = '0'; this.parentElement.parentElement.style.height = 'auto';">
+            <div style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:black;">
+                <img src="${mediaUrl}" style="max-width:100%; max-height:85vh; width:auto; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius:12px;" alt="${p.title}">
             </div>
         `;
     }
-    else if (p.type === 'gif') {
-    vArea.style.paddingBottom = '0';
-    vArea.style.height = 'auto';
-    vArea.classList.add('image-mode');
-    vArea.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
-            <img src="${p.image}" 
-                 style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
-                 alt="${p.title}">
-        </div>
-    `;
+
+    // تحديث الاقتراحات
+    setTimeout(() => {
+        updateRecSuggestions();
+        updateSideSuggestions();
+        updateFooterStats();
+    }, 150);
 }
-    // بعد كل الشروط وقبل إغلاق الدالة
-setTimeout(() => {
-    updateRecSuggestions();
-    updateSideSuggestions();
-    updatePlayerStats();
-    updateFooterStats();
-}, 150);
+function initAdvancedPlayer(videoElement, containerId) {
+    const video = videoElement;
+    const container = document.getElementById(containerId);
+    if (!video || !container) return;
+
+    let controls = container.querySelector('.custom-controls');
+    if (!controls) {
+        controls = document.createElement('div');
+        controls.className = 'custom-controls';
+        controls.style.cssText = `
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 20;
+            box-sizing: border-box;
+        `;
+        controls.innerHTML = `
+            <button class="ctrl-play-pause" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">⏸️</button>
+            <span class="ctrl-current-time" style="color:white; font-size:12px;">00:00</span>
+            <input type="range" class="ctrl-progress" value="0" min="0" max="100" step="0.1" style="flex:1; height:4px; -webkit-appearance:none; background:rgba(255,255,255,0.3); border-radius:2px;">
+            <span class="ctrl-duration" style="color:white; font-size:12px;">00:00</span>
+            <button class="ctrl-mute" style="background:none; border:none; color:white; font-size:18px; cursor:pointer;">🔊</button>
+            <button class="ctrl-fullscreen" style="background:none; border:none; color:white; font-size:18px; cursor:pointer;">⛶</button>
+        `;
+        container.appendChild(controls);
+    }
+
+    const playPauseBtn = controls.querySelector('.ctrl-play-pause');
+    const currentTimeSpan = controls.querySelector('.ctrl-current-time');
+    const progressBar = controls.querySelector('.ctrl-progress');
+    const durationSpan = controls.querySelector('.ctrl-duration');
+    const muteBtn = controls.querySelector('.ctrl-mute');
+    const fullscreenBtn = controls.querySelector('.ctrl-fullscreen');
+    let controlsTimeout;
+
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return '00:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function updateProgress() {
+        if (video.duration) {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressBar.value = percent;
+            progressBar.style.background = `linear-gradient(to right, #be185d ${percent}%, rgba(255,255,255,0.3) ${percent}%)`;
+            currentTimeSpan.innerText = formatTime(video.currentTime);
+        }
+    }
+
+    function showControls() {
+        controls.style.opacity = '1';
+        clearTimeout(controlsTimeout);
+        controlsTimeout = setTimeout(() => {
+            if (!container.matches(':hover') && !controls.matches(':hover')) controls.style.opacity = '0';
+        }, 2000);
+    }
+
+    video.addEventListener('loadedmetadata', () => {
+        durationSpan.innerText = formatTime(video.duration);
+        progressBar.max = 100;
+        updateProgress();
+    });
+    video.addEventListener('timeupdate', updateProgress);
+    video.addEventListener('play', () => { playPauseBtn.innerText = '⏸️'; showControls(); });
+    video.addEventListener('pause', () => { playPauseBtn.innerText = '▶️'; showControls(); });
+    video.addEventListener('click', () => { video.paused ? video.play() : video.pause(); showControls(); });
+
+    playPauseBtn.addEventListener('click', (e) => { e.stopPropagation(); video.paused ? video.play() : video.pause(); showControls(); });
+    progressBar.addEventListener('input', (e) => { video.currentTime = (e.target.value / 100) * video.duration; updateProgress(); showControls(); });
+    muteBtn.addEventListener('click', (e) => { e.stopPropagation(); video.muted = !video.muted; muteBtn.innerText = video.muted ? '🔇' : '🔊'; showControls(); });
+    fullscreenBtn.addEventListener('click', (e) => { e.stopPropagation(); if (!document.fullscreenElement) container.requestFullscreen(); else document.exitFullscreen(); showControls(); });
+
+    let lastTap = 0;
+    video.addEventListener('click', (e) => {
+        const now = Date.now();
+        if (now - lastTap < 300) {
+            e.preventDefault();
+            const rect = video.getBoundingClientRect();
+            const isLeft = (e.clientX - rect.left) < rect.width / 2;
+            let newTime = video.currentTime + (isLeft ? -10 : 10);
+            newTime = Math.min(Math.max(newTime, 0), video.duration);
+            video.currentTime = newTime;
+            let msg = container.querySelector('.seek-message') || (() => { let d = document.createElement('div'); d.className = 'seek-message'; d.style.cssText = 'position:absolute;bottom:20%;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.8);color:white;padding:8px 16px;border-radius:30px;font-size:16px;z-index:30;pointer-events:none;opacity:0;white-space:nowrap;'; container.appendChild(d); return d; })();
+            msg.innerText = (isLeft ? '-10' : '+10') + ' ثانية';
+            msg.style.opacity = '1';
+            setTimeout(() => msg.style.opacity = '0', 800);
+        }
+        lastTap = now;
+    });
+
+    container.addEventListener('mousemove', showControls);
+    container.addEventListener('touchstart', showControls);
+    container.addEventListener('mouseleave', () => { clearTimeout(controlsTimeout); controls.style.opacity = '0'; });
+    video.play().catch(e => console.log('autoplay blocked'));
+    showControls();
 }
 function restoreFinalState() {
     try {
