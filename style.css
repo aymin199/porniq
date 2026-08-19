@@ -1358,3 +1358,61 @@ button:focus {
     image-rendering: crisp-edges;
     background: #000;
 }
+/* ===== تنسيق خاص لعناصر "movie" (أفلام) - حجم متوسط ===== */
+.video-card[data-video-type="movie"] .thumb-wrapper {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    max-height: 360px !important;   /* زيادة من 280px إلى 360px */
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.video-card[data-video-type="movie"] .thumb-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 360px !important;   /* زيادة من 280px إلى 360px */
+    object-fit: contain !important;
+    background: #000;
+    border-radius: 10px;
+}
+
+/* تنسيق الكارت */
+.video-card[data-video-type="movie"] {
+    max-width: 100%;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+/* حجم العنوان */
+.video-card[data-video-type="movie"] .video-title {
+    font-size: 0.8rem !important;
+    margin-top: 6px !important;
+}
+
+/* تنسيق خاص للهواتف */
+@media (max-width: 768px) {
+    .video-card[data-video-type="movie"] .thumb-wrapper {
+        max-height: 260px !important;   /* زيادة من 200px إلى 260px */
+    }
+    .video-card[data-video-type="movie"] .thumb-wrapper img {
+        max-height: 260px !important;
+    }
+    .video-card[data-video-type="movie"] .video-title {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video-card[data-video-type="movie"] .thumb-wrapper {
+        max-height: 310px !important;   /* زيادة من 240px إلى 310px */
+    }
+    .video-card[data-video-type="movie"] .thumb-wrapper img {
+        max-height: 310px !important;
+    }
+}

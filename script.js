@@ -3,33 +3,36 @@ window.allDBsData = {
    
 "zaj": [
  //video
-{ "id": 1, "type": "video", "title": "LoveHerFeet - Creepy Stepdad Stepdaughter", "image": "https://up6.cc/2026/05/177876650039191.jpg", "contentURL": "https://drive.google.com/file/d/1JIapsW3ubHNY-AimREIX_K_dzKWyfMtZ/view?usp=drivesdk", "labels": "Feet, milf", "duration": "11:30" },
-{ "id": 2, "type": "video", "title": "Busy Mercedes Carrera takes time off work for a good fuck", "image": "https://a.top4top.io/p_37535ta9f0.jpg", "contentURL": "https://drive.google.com/file/d/1Ira7gOoh78MxUlYApl3Rsf_BpUbe_V0H/view?usp=drivesdk", "labels": "hardcore, blowjob, creampie, milf", "duration": "00:00" },
-{ "id": 3, "type": "video", "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE", "image": "https://files.catbox.moe/jxijpj.jpg", "contentURL": "https://drive.google.com/file/d/1FF6hq54P1xsK4FXu1ZucQ3enAWAQ5Wkd/view?usp=drivesdk", "labels": "Pink Pussy, blowjob, creampie, milf", "duration": "00:00" },
-{ "id": 4, "type": "video", "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro", "image": "https://f.top4top.io/p_3755ozfb71.jpg", "contentURL": "https://drive.google.com/file/d/1IbfZ0GQlkjcsu5LAyWFCAreJ46ngowXo/view?usp=drivesdk", "labels": "Stepbrohardcore, blowjob, creampie, milf", "duration": "00:00" },
-{ "id": 6, "type": "video", "title": "She_s going on a Date on Valentine_s Day. what could go Wrong", "image": "https://up6.cc/2026/05/177876642332791.png", "contentURL": "https://drive.google.com/file/d/1iMFSYhVyBh-cO7qn2r9WrFgKwxaKZTi8/view?usp=drivesdk", "labels": "blowjob, creampie, milf", "duration": "00:00" },
-{ "id": 5, "type": "video", "title": "Horny Teen Eats Creampie from her Asian Girlfriend_s Pussy after Hard and Rough Sex with Sugar Daddy", "image": "https://i.top4top.io/p_37897jkwi1.jpg ", "contentURL": "https://drive.google.com/file/d/1KLnk9AQ3nC1JHaA2nTC1-wC6FlH8pfou/view?usp=sharing ", "labels": "", "duration": "00:00" },
-{ "id": 7, "type": "video", "title": "Genuine Home Fucking Video", "image": "https://b.top4top.io/p_37890950m1.jpg", "contentURL": "https://drive.google.com/file/d/1GHB4iPeXQFi6ATsJ8trGRm2VfB9u9iCu/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 8, "type": "video", "title": "Sunny Shine Enjoys Unforgettable First anal Sex ", "image": "https://b.top4top.io/p_37897fhpa1.png", "contentURL": "https://drive.google.com/file/d/1IzO67I4rOeulqdMJJrUjJzlXfhZdMxxJ/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 9, "type": "video", "title": "Amateur Latina Squirts Hard while Straining", "image": "https://j.top4top.io/p_3789pljv32.jpg", "contentURL": "https://drive.google.com/file/d/1X6yeQPWBrkhDV9a5F2dHZUOVNys2cZMS/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "https://k.top4top.io/p_3789htbp91.png", "contentURL": "https://drive.google.com/file/d/103kyExFwCG9aZPk2s6uNqAXgbZ4TGSvs/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 11, "type": "video", "title": "Lucky Neighbor-When the neighbor knocked on the door, they were already hot and craving sex", "image": "https://l.top4top.io/p_3789mx9tb1.png", "contentURL": "https://drive.google.com/file/d/1NEl-elR6W43fQemm3ww3IND3daPYsA7b/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "https://k.top4top.io/p_3789rlfhw1.png", "contentURL": "https://drive.google.com/file/d/1K-7ja4Vp0IR38MRgJd66aa4-ZZtmCLan/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 14, "type": "video", "title": "Petite Babe Freya Von Doom Rides BBC after Blowjob", "image": "https://a.top4top.io/p_3789whdxd2.png", "contentURL": "https://drive.google.com/file/d/1ldz82d_Q7gIG_MwR610R3BPmUpM3PKqE/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 15, "type": "video", "title": "POV Sloppy Blowjob & Titfuck & Hard Doggyfuck with Creampie ", "image": "https://l.top4top.io/p_378929nfm1.jpg", "contentURL": "https://drive.google.com/file/d/1skThZvvLKvQMxtqF4t0RwUlQ-zp4Z9S8/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 16, "type": "video", "title": "PURE TABOO 18yo Step-Sister Longs 2 try ANAL with Bro", "image": "https://j.top4top.io/p_37895o52c1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 17, "type": "video", "title": "PURE TABOO Gia Derza Secretly Loses her Anal Virginity to her Priest", "image": "https://k.top4top.io/p_37891xhso2.jpg", "contentURL": "https://drive.google.com/file/d/1Inp_SQpbnl-yvhJCb-1YxRG7BXhp_Mou/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 18, "type": "video", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
-{ "id": 36, "type": "video", "title": "PURE TABOO Shocked MILF Dana Vespoli Discovers Husband Swapped Stepdaughter For Petite Coco Lovelock ", "image": "https://i.top4top.io/p_37905f2tf1.jpg", "contentURL": "https://drive.google.com/file/d/1J6fl4O0YKSa5pQDf8YxhVbltxdnQtsQx/view?usp=sharing", "labels": " Pornstars,Coco Lovelock,Dana Vespoli " },
-{ "id": 40, "type": "video", "title": "Sugar Daddy Fucks His Young Fresh Asian Wife Hard And Cums In her Pretty  ", "image": "https://j.top4top.io/p_37905n4ei2.jpg", "contentURL": "https://drive.google.com/file/d/1R-gNBXltITRYJELiyhukg8rK8wdk1q5c/view?usp=sharing", "labels": " Pornstars, Denis Marti و Fanky Town و Kvini Kim" },
-{ "id": 41, "type": "video","title": "She Stole From Her Foster Parents So She Pay With Her Body", "image": "https://k.top4top.io/p_37902fvip3.jpg", "contentURL": "https://drive.google.com/file/d/1nX7EdN4VolqAdjPIGNK6t8Jcy4dpyAvV/view?usp=sharing", "labels": " Pornstars,Mr. Pete و Phoebe Kalib و Kelly Caprice" },
-{ "id": 39, "type": "video", "title": "The toughest ANAL fucking in the shower RE UPLOAD ", "image": "https://c.top4top.io/p_3790iilnl1.jpg", "contentURL": "https://drive.google.com/file/d/1NCFBKbFc0riYLtke8cxWWrc4bNbqHW_w/view?usp=sharing", "labels": " Angelica Heaven,pornstars " },
-{ "id": 40, "type": "video", "title": "They Taught Their Virgin Stepdaughter How to Get Her Perfect Ass Fucked ", "image": "https://g.top4top.io/p_3790mxvrw1.jpg", "contentURL": "https://drive.google.com/file/d/1tsFuspW70IKTwY93rvDLz6GTOffg1bjq/view?usp=sharing", "labels": "pornstars, Christie Stevens , Filthy Rich   " },
-{ "id": 42, "type": "video", "title": "Threesome With Two Teen Step Sisters! Pulls Panties To The Side And Fucked 4K ", "image": "https://b.top4top.io/p_3790weybc1.jpg", "contentURL": "https://drive.google.com/file/d/1MbJdmeAfTveigGiFmxjpWCE2g628q4_-/view?usp=sharing", "labels": "pornstars, 18-25, Amateur, Babe, Brunette HD Porn , Hardcore, POV ,Step Fantasy, Threesome ,Verified Amateurs " },
-{ "id": 43, "type": "video", "title": "Tinder Guy Used All My Holes For His Pleasure While Parents Were Away ", "image": "https://b.top4top.io/p_3790n1hu71.jpg", "contentURL": "https://drive.google.com/file/d/1_XyHfKKtaREvfTa-h3sXkA16oJT5_QIH/view?usp=sharing", "labels": "pornstars,18-25, 6 Amateur, Anal, Big Dick, Cumshot, HD Porn, POV, Verified Amateurs ,Verified Couples   " },
-{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " }, 
-{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
-{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
+{ "id": 1, "type": "video", "title": "LoveHerFeet - Creepy Stepdad Stepdaughter", "image": "https://up6.cc/2026/05/177876650039191.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=ph5d5669834b2ff", "redirectUrl":"  https://www.pornhub.com/view_video.php?viewkey=ph5d5669834b2ff  ","labels": "Feet, milf, blowjob, creampie, Stepdaughter,Stepdad ,cum on feet,foot fuck,Logan Pierce, Summer Brooks", "duration": "12:2" },
+{ "id": 2, "type": "video", "title": "HD PureMature Busy takes time off work for a good fuck  ", "image": "https://a.top4top.io/p_37535ta9f0.jpg", "contentURL": "https://sexoamador.blog/garota-de-programa/ ","redirectUrl":" https://sexoamador.blog/garota-de-programa/   ", "labels": "hardcore, blowjob, creampie, milf, Pure Mature,  Mercedes Carrera, Blowjobs  Oral Sex, Brunette Girls Fucking , Creampie Sex, HD Porn, Hardcore Porn Videos, Huge Tits, MILF Mature Sex", "duration": "11:56" },
+{ "id": 3, "type": "video", "title": "Perfect pink pussy babe gets an intense orgasm and unforgettable CREAMPIE", "image": "https://files.catbox.moe/jxijpj.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=68bbbeb41994e ","redirectUrl":"  https://www.pornhub.com/view_video.php?viewkey=68bbbeb41994e  ", "labels": "Pink Pussy, blowjob, creampie, milf,Babe ,Big Tits , licking pussy,sloppy blowjob,girl with braces,amateur creampie, perfect pink pussy, big natural tits, cowgirl creampie", "duration": "16:46" },
+{ "id": 4, "type": "video", "title": "Slut Teenie Step Sis Makes A Move On her Older Stepbro", "image": "https://f.top4top.io/p_3755ozfb71.jpg", "contentURL": "https://josporn.net/sex-video-online/slut-teenie-step-sis-makes-a-move-on-her-older-stepbro-2025","redirectUrl":" https://josporn.net/sex-video-online/slut-teenie-step-sis-makes-a-move-on-her-older-stepbro-2025   ", "labels": "Stepbrohardcore, blowjob, creampie, milf, pussy,pornstar", "duration": "8:00" },
+{ "id": 6, "type": "video", "title": "Comatozze - Fansly - She's Going on a Date on Valentine's Day. What Could Go Wrong","image": "https://up6.cc/2026/05/177876642332791.png", "contentURL": "https://www.porntrex.com/video/3268927/comatozze-fansly-she-s-going-on-a-date-on-valentine-s-day-what-could-go-wrong","redirectUrl":"https://www.porntrex.com/video/3268927/comatozze-fansly-she-s-going-on-a-date-on-valentine-s-day-what-could-go-wrong", "labels": "blowjob, creampie, milf,creampie, busty, perfect pussy ,cowgirl, cheating, talking on the phone,big ass, blonde, dress, pov, step sister,big natural tits, big boobs, homemade ,big dick, doggystyle", "duration": "27:54" },
+{ "id": 5, "type": "video", "title": "Horny Teen Eats Creampie from her Asian Girlfriend_s Pussy after Hard and Rough Sex with Sugar Daddy", "image": "https://files.catbox.moe/e85g09.webp", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=699482399b6e4","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=699482399b6e4 ", "labels": "", "duration": "30:46" },
+{ "id": 7, "type": "video", "title": "Genuine Home Fucking Video", "image": "https://b.top4top.io/p_37890950m1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=674e0bdb40f0c","redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=674e0bdb40f0c   ", "labels": " close up, lubed, big ass oil, jelly ass ,blonde,ass oil, big butt,real sex,pussy juice,ass oil, big butt,big ass oil,close up,jelly ass ", "duration": "12:54" },
+{ "id": 8, "type": "video", "title": "Sunny Shine Enjoys Unforgettable First Painal Sex", "image": "https://files.catbox.moe/pb7lh2.jpg", "contentURL": " https://www.tnaflix.com/amateur-porn/Sunny-Shine-Enjoys-Unforgettable-First-Anal-Sex/video8217777","redirectUrl":"https://www.tnaflix.com/amateur-porn/Sunny-Shine-Enjoys-Unforgettable-First-Anal-Sex/video8217777  ","labels": "P4PI, Amateur, Newbie, petite, blonde, pigtails, PAWG, Babe, natural, small tits, Upskirt, fingering, close up, buttplug, Toys, toying, gaping, gape, pov, undressing, Shaved Pussy, blowjob, Hardcore, Ass to mouth, Cum In Mouth, Facial, cumshot, point of view, fetish, first anal, First Anal Quest, Sunny Shine, Sub for more", "duration": "40:8" },
+{ "id": 9, "type": "video", "title": "Amateur Latina Squirts Hard while Straining", "image": "https://j.top4top.io/p_3789pljv32.jpg",   "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69cbf12fa2b53", "redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=69cbf12fa2b53","labels": "cum, best blowjob, squirt, anal, gape, big ass, big tits, amateur, anal squirting, 18 year old, latina, hot teenage girl", "duration": "05:44"  } ,
+{ "id": 10, "type": "video", "title": "I made him Fuck me in the Shower", "image": "https://k.top4top.io/p_3789htbp91.png", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69d735075bd45","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=69d735075bd45", "labels": "Sex In The Shower,brunette, cute, 18 year old, hot teenage girl, kissing, submissive, loud moaning, eye rolling, hardcore, extreme, hard rough sex, hard fast fuck, doggystyle, choking, orgasm, amateur couple,18-25, College (18+), Cumshot, Female Orgasm, HD Porn, Hardcore, POV, Rough Sex, Russian, Verified Amateurs, Amateurs, Amateur, Amateur Porn, Amateur Sex, Amateur Videos, Amateur Video, Amateur Porn, Amateur Video, Amateur Porn, Amateur Video", "duration": "10:26" },
+{ "id": 11, "type": "video", "title": "Lucky Neighbor-When the neighbor knocked on the door, they were already hot and craving sex. Fefo23x6 arrived at the perfect time, in the right place", "image": "https://l.top4top.io/p_3789mx9tb1.png", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69d821c557e4d","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=69d821c557e4d", "labels": " pussy, blowjob, creampie, milf,creampie, busty, perfect pussy ,cowgirl, cheating, talking on the phone,big ass, blonde, dress, pov, step sister,big natural tits, big boobs, homemade ,big dick, doggystyle ", "duration": "11:28" },
+{ "id": 12, "type": "video", "title": "My Birthday Party went not as Expected", "image": "https://k.top4top.io/p_3789rlfhw1.png", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69cb889c5a7f0","redirectUrl":"  https://www.pornhub.com/view_video.php?viewkey=69cb889c5a7f0  ", "labels": "anal, amateur, petite, teen, hardcore, extreme, hard, rough, sex, submissive, eye rolling, loud moaning, orgasm, real sex, cute brunette, 18 year old, cuckold", "duration": "10:07" },
+{ "id": 14, "type": "video", "title": "Petite Babe Freya Von Doom Rides BBC after Blowjob", "image": "https://a.top4top.io/p_3789whdxd2.png", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69a7079e841a8","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=69a7079e841a8", "labels": "", "duration": "00:00" },
+{ "id": 15, "type": "video", "title": "POV Sloppy Blowjob & Titfuck & Hard Doggyfuck with Creampie ", "image": "https://l.top4top.io/p_378929nfm1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=ph633e2ae73d6d6","redirectUrl":"  https://www.pornhub.com/view_video.php?viewkey=ph633e2ae73d6d6  ", "labels": " Big Dick, Big Tits, Blowjob.Creampie, Female Orgasm, HD Porn ,Hardcore, Muscular Men ,POV,Rough Sex,Verified Amateurs ,Blowjob,big cock, big boobs,outdoor sex, blonde,big natural tits.sloppy blowjob   ", "duration": "13:27" },
+{ "id": 16, "type": "video", "title": "PURE TABOO Virginal 18yo Step-Sister Longs 2 Try ANAL with stepBro", "image": "https://j.top4top.io/p_37895o52c1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=6667479b059f3","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=6667479b059f3    ", "labels": "pornstars, step sister, ass,pussy, anal, anal sex, big ass, big tits, step sister, pussy, anal, anal sex, big ass, big tits,bigdick , big tits, step sister, pussy, anal, anal sex, big ass, big tits ", "duration": "12:56" },
+{ "id": 17, "type": "video", "title": "PURE TABOO Gia Derza Secretly Loses her Anal Virginity to her Priest", "image": "https://k.top4top.io/p_37891xhso2.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=ph61049fafe9fa1","redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=ph61049fafe9fa1   ", "labels": "babes, brunette ,natural tits, toys, uniform ,big dick, rimming rimjob deepthroat face fuck, anal ,toy, anal fingering,puretaboo, reality, gia derza, priest, church girl, big ass", "duration": "12:55" },
+{ "id": 18, "type": "video", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=63d3ac4a154e4","redirectUrl":"   https://www.pornhub.com/view_video.php?viewkey=63d3ac4a154e4 ", "labels": "hard rough sex, teen, deepthroat, ass to mouth ,big ass, natural tits, first time, virgin, anal ,toy, anal fingering,puretaboo, reality, gia derza, priest, church girl", "duration": "13:9" },
+{ "id": 36, "type": "video", "title": "PURE TABOO Shocked MILF Dana Vespoli Discovers Husband Swapped Stepdaughter For Petite Coco Lovelock ", "image": "https://i.top4top.io/p_37905f2tf1.jpg", "contentURL": "https://www.tnaflix.com/blonde-porn/COCO-LOVELOCK-DANA-VESPOLI/video11699364","redirectUrl":" https://www.tnaflix.com/blonde-porn/COCO-LOVELOCK-DANA-VESPOLI/video11699364   ", "labels": " Pornstars,Coco Lovelock,Dana Vespoli, stracke_hallie,  CoCo Lovelock,  Dana Vespoli, Blonde Girls Fucking ,Brunette Girls Fucking ,Cumshots ,Porn Stars,Threesome Sex ", "duration": "15:55" },
+{ "id": 40, "type": "video", "title": "Sugar Daddy Fucks His Young Fresh Asian Wife Hard And Cums In her Pretty  ", "image": "https://j.top4top.io/p_37905n4ei2.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=695d37bc252c9","redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=695d37bc252c9   ", "labels": " Pornstars, Denis Marti ,Fanky Town ,Kvini Kim ", "duration": "16:29" },
+{ "id": 41, "type": "video","title": "She Stole From Her Foster Parents So She Pay With Her Body", "image": "https://k.top4top.io/p_37902fvip3.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=68b305f7c0984", "redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=68b305f7c0984"   ,"labels": " Pornstars,Mr. Pete و Phoebe Kalib و Kelly Caprice" },
+{ "id": 39, "type": "video", "title": "The toughest ANAL fucking in the shower RE UPLOAD ", "image": "https://c.top4top.io/p_3790iilnl1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=66ffdc37e28c4","redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=66ffdc37e28c4   ", "labels": " Angelica Heaven,pornstars,amateur anal, hard anal, hard fast fuck ,hard rough sex, hardcore anal, amateur cock sucking ,sex in the shower ,hardcore sex, russian homemade ,18 year old 18, year cute girl ,18 anal, russian 18 ,cum on face, reverse cowgirl, big natural boobs ","duration": "7:54" },
+{ "id": 40, "type": "video", "title": "They Taught Their Virgin Stepdaughter How to Get Her Perfect Ass Fucked ", "image": "https://g.top4top.io/p_3790mxvrw1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=68bc25855365a ","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=68bc25855365a",  "labels": "blowjob, anal, anal, creampie, stepdad, first time, anal, virgin, first time, big ass, fuck me hard, daddy, milf, step mom, amateur, anal, step mom, teen, anal, step dad, virgin, first time, Christie Stevens, Filthy Rich", "duration": "51:01" },
+{ "id": 42, "type": "video", "title": "Threesome with two Teen Step Sisters_ Pulls Panties to the Side and Fucked 4K ", "image": "https://b.top4top.io/p_3790weybc1.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=ph634053fb3fed4","redirectUrl":"https://www.pornhub.com/view_video.php?viewkey=ph634053fb3fed4    ", "labels": "pornstars, 18-25, Amateur, Babe, Brunette HD Porn , Hardcore, POV ,Step Fantasy, Threesome ,Verified Amateurs ,Verified Couples ,  ", "duration": "15:44"    },
+
+
+
+{ "id": 43, "type": "video", "title": "Tinder Guy Used All My Holes For His Pleasure While Parents Were Away ", "image": "https://b.top4top.io/p_3790n1hu71.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=653d27c49f5c8","redirectUrl":"  https://www.pornhub.com/view_video.php?viewkey=653d27c49f5c8  ", "labels": "pornstars,18-25, 6 Amateur, Anal, Big Dick, Cumshot, HD Porn, POV, Verified Amateurs ,Verified Couples ,18-25, 60FPS, Amateur, Anal, Big Dick, Cumshot, HD Porn ,POV ,Verified Amateurs ,amateur anal, homemade anal, doggystyle, prone bone, wet pussy, tight ass, 18 anal, pink pussy ,blonde, huge cumshot, big cock anal, girl moaning, ass pussy switch, anal creampie, schoolgirl uniform,tinder", "duration": "11:32" },
+{ "id": 44, "type": "video", "title": "Sneaky Stepsis Bangs Stepbro Right Next to Boyfriend  MyPervyFamily", "image": "https://files.catbox.moe/t13xk5.avif", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=68668fafaadbf ", "redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=68668fafaadbf   ","labels": " Pink Pussy, blowjob, creampie, milf amateur, taboo ,  step sis, stepsister , big ass,big cock,big dick, cum in mouth", "duration": "23:13" }, 
+//{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
+//{ "id": 44, "type": "video", "title": "nesa video 42", "image": "", "contentURL": "", "labels": "pornstars, " },  
 
 
 
@@ -38,29 +41,34 @@ window.allDBsData = {
 
 
 //movie
-{ "id": 36, "type": "movie", "title": "PURE TABOO Innocent Church Girl tries Anal for the first Time with Perverted Priest", "image": "https://j.top4top.io/p_3789o48gc1.jpg", "contentURL": "https://drive.google.com/file/d/1NIT3LaJkIKlaF0raYCUMTsXbvIZ1gb7x/view?usp=sharing", "labels": "", "duration": "00:00" },
+{ "id": 37, "type": "movie", "title": "Sex Invitation (2026) | DORCEL (Spanish)", "image": "https://files.catbox.moe/s3753m.jpg", "contentURL": "https://ru.paradisehill.cc/5d00023e22705/","redirectUrl":"  https://ru.paradisehill.cc/5d00023e22705/  ", "labels": "", "duration": "00:00" },
+
 
 
 
 //gif
-{ "id": 24, "type": "gif", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://c.top4top.io/p_3789t6ipb1.gif", "contentURL": "https://c.top4top.io/p_3789t6ipb1.gif", "labels": "gif", "duration": "00:00" },
+{ "id": 24, "type": "gif", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://c.top4top.io/p_3789t6ipb1.gif","redirectUrl":" https://kl.phncdn.com/gif/6460361.gif?hdnea=st=1786529007~exp=1786536207~hdl=-1~hmac=6a7bb64741cb6b7183404d6af0235700505dde1e   " , "labels": "gif", "duration": "00:00" },
+
+
+
+
 
 //image
 { "id": 19, "type": "image", "title": "zaj video 19", "image": " ", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 20, "type": "image", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://up6.cc/2026/05/177902698111341.jpg", "contentURL": "", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
+{ "id": 20, "type": "image", "title": "VR Porn Amazing Big Tit Teen Nekane Fucks POV in 3D on BaDoinkVR.com", "image": "https://up6.cc/2026/05/177902698111341.jpg", "redirectUrl":"  https://kl.phncdn.com/gif/6460361.gif?hdnea=st=1786529007~exp=1786536207~hdl=-1~hmac=6a7bb64741cb6b7183404d6af0235700505dde1e  " , "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
 { "id": 21, "type": "image", "title": "zaj video 21", "image": "https://l.top4top.io/p_3789cjdgx1.jpg", "contentURL": "https://files.catbox.moe/9rjfd5.jpg","redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": "badoinkvr, spanish, natural tits, virtual, reality, point of view, big boobs, young, brunette, vr samsung, playstation, 3d,  nekane ,vr porn step sister, doggy style", "duration": "00:00" },
 { "id": 22, "type": "image", "title": "Petite Girls Lilu Moon Mina Cougar Or Kitten Moms Bang Teens Hairy Pussy Fucking Girl With Big Ass Hole  Lilu Moon-Mina Moon-Jordi El Nino Polla", "image": "https://up6.cc/2026/05/177902798820221.jpg", "contentURL": "https://files.catbox.moe/8saj01.jpg", "redirectUrl": "https://www.peekvids.com/v/petite-girls-lilu-moon-mina-cougar-or-kitten-moms-bang-teens-hairy-pussy-fucking-girl-with-big-ass-hole/44PAH0Vgg3R", "labels": "  blowjobs , natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview   ", "duration": "00:00" },
-{ "id": 23, "type": "image", "title": "Paige Owens Gia Derza Ricky Johnson", "image": "https://files.catbox.moe/es69j7.jpg", "contentURL": "https://files.catbox.moe/es69j7.jpg", "redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": " blowjobs, natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview", "duration": "00:00" }, 
+{ "id": 23, "type": "image", "title": "Paige Owens Gia Derza Ricky Johnson", "image": "https://files.catbox.moe/es69j7.jpg", "redirectUrl": "https://www.playvids.com/0fzcTfKE7ZA/vf/balls-and-wrist-deep-anal-threeway-with-gia-derza-and-paige-owens", "labels": " blowjobs, natural tits, doggystyle, brunette, cowgirl, cumshot, small tits, threesome, anal, big ass, interview", "duration": "00:00" }, 
 { "id": 24, "type": "image", "title": "nesa video 5", "image": "https://h.top4top.io/p_3790ira7n10.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
-{ "id": 25, "type": "image", "title": "nesa video 5", "image": "https://f.top4top.io/p_37903ri1s8.gif", "contentURL": "https://f.top4top.io/p_37903ri1s8.gif", "labels": "", "duration": "00:00" },
+{ "id": 25, "type": "image", "title": "nesa video 5", "image": "https://f.top4top.io/p_37903ri1s8.gif", "contentURL": "", "labels": "", "duration": "00:00" },
 { "id": 26, "type": "image", "title": "nesa video 5", "image": "https://d.top4top.io/p_3790j1beu7.jpg", "contentURL": "", "labels": "", "duration": "00:00" },
 { "id": 27, "type": "image", "title": "nesa video 5", "image": "https://c.top4top.io/p_379066knm6.png", "contentURL": "", "labels": "", "duration": "00:00" },
 { "id": 28, "type": "image", "title": "nesa video 28", "image": "https://b.top4top.io/p_3790ggis35.png", "contentURL": "", "labels": "" },
 { "id": 29, "type": "image", "title": "nesa video 29", "image": "https://a.top4top.io/p_3790twn314.png", "contentURL": "", "labels": "" },
 { "id": 30, "type": "image", "title": "nesa video 30", "image": "https://j.top4top.io/p_3790h567m1.jpg", "contentURL": "", "labels": "" },
 { "id": 31, "type": "image", "title": "nesa video 31", "image": "https://d.top4top.io/p_3790oa8f91.png", "contentURL": "", "labels": "" },
-{ "id": 32, "type": "image", "title": "nesa video 32", "image": "https://b.top4top.io/p_3790d0ky21.png", "contentURL": "", "labels": "" }
-//{ "id": 33, "type": "image", "title": "nesa video 33", "image": "", "contentURL": "", "labels": "" },
+{ "id": 32, "type": "image", "title": "nesa video 32", "image": "https://b.top4top.io/p_3790d0ky21.png", "contentURL": "", "labels": "" },
+{ "id": 33, "type": "image", "title": "nesa video 33", "image": "https://porngif.co/wp-content/uploads/2026/08/porngif-e35e8957d7e47921ad5bac4c3497bb02.gif","contentURL":"","redirectUrl":" https://porngif.co/wp-content/uploads/2026/08/porngif-e35e8957d7e47921ad5bac4c3497bb02.gif   "}, 
 //{ "id": 34, "type": "image", "title": "nesa video 34", "image": "", "contentURL": "", "labels": "" },
 //{ "id": 35, "type": "image", "title": "nesa video 35", "image": "", "contentURL": "", "labels": "" }
 
@@ -82,7 +90,7 @@ window.allDBsData = {
     { "id": 10, "type": "video", "title": "nesa video 10", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 11, "type": "video", "title": "nesa video 11", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 12, "type": "video", "title": "nesa video 12", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 13, "type": "video", "title": "Kenzie Taylor  Kit Mercer Lana Sharapova are having a lesbian   ", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": " https://drive.google.com/file/d/1_jN-2NkK14-Ix_RGkiA4hfT3U28gmaln/view?usp=sharing", "labels": "big boobs, big tits stepmom, hairy pussy, lesbian facesitting, lesbian threesome, lesbian tribbing, milf big tits, milf threesome, small boobs, stepdaughter, stepmom, big tits, cunnilingus, eating pussy, facesitting, lesbian, milf, old & young, threesome", "duration": "13:21" },
+    { "id": 13, "type": "video", "title": "Kenzie Taylor  Kit Mercer Lana Sharapova are having a lesbian   ", "image": "https://up6.cc/2026/05/17790269811612.jpg", "contentURL": "https://www.tnaflix.com/amateur-porn/Kenzie-Taylor%2C-Kit-Mercer%2C-Lana-Sharapova-Good-Mom-Bad-Mother-%2805.12.2020%29/video6570900","redirectUrl":" https://www.tnaflix.com/amateur-porn/Kenzie-Taylor%2C-Kit-Mercer%2C-Lana-Sharapova-Good-Mom-Bad-Mother-%2805.12.2020%29/video6570900   " , "labels": "big boobs, big tits stepmom, hairy pussy, lesbian facesitting, lesbian threesome, lesbian tribbing, milf big tits, milf threesome, small boobs, stepdaughter, stepmom, big tits, cunnilingus, eating pussy, facesitting, lesbian, milf, old & young, threesome", "duration": "13:21" },
     { "id": 14, "type": "video", "title": "nesa video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 15, "type": "video", "title": "nesa video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 16, "type": "video", "title": "nesa video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
@@ -91,7 +99,7 @@ window.allDBsData = {
     { "id": 19, "type": "video", "title": "nesa video 19", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 20, "type": "video", "title": "nesa video 20", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
     { "id": 21, "type": "video", "title": "nesa video 21", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://drive.google.com/file/d/1KECVpAXrNn21o01g88VQlZWokUn5wfuN/view?usp=drivesdk", "labels": "Compilation", "duration": "00:00" },
+    { "id": 1, "type": "video", "title": "Epic Public Flashing Compilation ", "image": "https://c.top4top.io/p_3746q2xr80.jpg", "contentURL": "https://www.pornhub.com/view_video.php?viewkey=69cc33e9834af","redirectUrl":" https://www.pornhub.com/view_video.php?viewkey=69cc33e9834af   " , "labels": "Compilation", "duration": "00:00" },
 
 
     { "id": 22, "type": "image", "title": "nesa video 22", "image": "https://f.top4top.io/p_3754qh5mz0.jpg", "contentURL": "https://f.top4top.io/p_3754qh5mz0.jpg",    "labels": "naked, pussy, ass, butt"},
@@ -104,32 +112,33 @@ window.allDBsData = {
 
   ],
   "haywan": [
-    { "id": 1, "type": "video", "title": "haywan video 1", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 2, "type": "video", "title": "haywan video 2", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 3, "type": "video", "title": "haywan video 3", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 4, "type": "video", "title": "haywan video 4", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 5, "type": "video", "title": "haywan video 5", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 6, "type": "video", "title": "haywan video 6", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 7, "type": "video", "title": "haywan video 7", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 8, "type": "video", "title": "haywan video 8", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 9, "type": "video", "title": "haywan video 9", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 10, "type": "video", "title": "haywan video 10", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 11, "type": "video", "title": "haywan video 11", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 12, "type": "video", "title": "haywan video 12", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 13, "type": "video", "title": "haywan video 13", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 14, "type": "video", "title": "haywan video 14", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 15, "type": "video", "title": "haywan video 15", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 16, "type": "video", "title": "haywan video 16", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 17, "type": "video", "title": "haywan video 17", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 18, "type": "video", "title": "haywan video 18", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 19, "type": "video", "title": "haywan video 19", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 20, "type": "video", "title": "haywan video 20", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 21, "type": "video", "title": "haywan video 21", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 22, "type": "video", "title": "haywan video 22", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 23, "type": "video", "title": "haywan video 23", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 24, "type": "video", "title": "haywan video 24", "image": "", "contentURL": "", "labels": "", "duration": "00:00" },
-    { "id": 25, "type": "video", "title": "haywan video 25", "image": "", "contentURL": "", "labels": "", "duration": "00:00" }
+   {"id":1,"type":"video","title":"haywan video 1","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":2,"type":"video","title":"haywan video 2","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":3,"type":"video","title":"haywan video 3","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":4,"type":"video","title":"haywan video 4","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":5,"type":"video","title":"haywan video 5","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":6,"type":"video","title":"haywan video 6","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":7,"type":"video","title":"haywan video 7","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":8,"type":"video","title":"haywan video 8","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":9,"type":"video","title":"haywan video 9","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":10,"type":"video","title":"haywan video 10","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":11,"type":"video","title":"haywan video 11","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":12,"type":"video","title":"haywan video 12","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":13,"type":"video","title":"haywan video 13","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":14,"type":"video","title":"haywan video 14","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":15,"type":"video","title":"haywan video 15","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":16,"type":"video","title":"haywan video 16","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":17,"type":"video","title":"haywan video 17","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":18,"type":"video","title":"haywan video 18","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":19,"type":"video","title":"haywan video 19","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":20,"type":"video","title":"haywan video 20","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":21,"type":"video","title":"haywan video 21","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":22,"type":"video","title":"haywan video 22","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":23,"type":"video","title":"haywan video 23","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":24,"type":"video","title":"haywan video 24","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"},
+{"id":25,"type":"video","title":"haywan video 25","image":"","contentURL":"","redirectUrl":"    ","labels":"","duration":"00:00"}
   ],
+  
   "ime": [
     { "id": 1, "type": "video", "title": "ime anime 1", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
     { "id": 2, "type": "video", "title": "ime anime 2", "image": "", "contentURL": "", "labels": "anime", "duration": "00:00" },
@@ -242,6 +251,8 @@ window.allDBsData = {
 }
 
 
+
+
 // دالة لاستخراج الرابط الحقيقي من أي نص (مثل BBCode)
 function extractRealUrl(raw) {
     if (!raw || typeof raw !== 'string') return raw;
@@ -302,18 +313,12 @@ function sanitizeItemUrls(item) {
     if (item.contentURL) {
         item.contentURL = extractRealUrl(item.contentURL);
         if (item.contentURL && item.contentURL.includes('drive.google.com')) {
-            // 🔥 تحويل رابط Google Drive إلى رابط مباشر قابل للتشغيل
-            const match = item.contentURL.match(/\/d\/(.+?)\/view/);
-            if (match) {
-                const fileId = match[1];
-                item.contentURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
-            } else {
-                item.contentURL = getGoogleDriveEmbedLink(item.contentURL);
-            }
+            item.contentURL = getGoogleDriveEmbedLink(item.contentURL);
         }
     }
     return item;
 }
+
 const allCategories = [
     "Lesbian", "Asian", "MILF", "Doggystyle", "Ebony", "Gay", "Teen", "Repairman", 
     "Pizza Delivery", "Amateur", "Big Cock", "Softcore", "Nurse", "Handjob", 
@@ -1633,6 +1638,7 @@ function createCard(p) {
             </div>
         `;
     }
+    
     let defaultDuration = '--:--';
     if (p.type === 'video') {
         if (p.contentURL.includes('drive.google.com')) {
@@ -1641,15 +1647,19 @@ function createCard(p) {
             defaultDuration = '03:45';
         }
     }
+    
+    // ✅ استخدام المعرف فقط بدلاً من تمرير الكائن كامل
+    const videoId = p.id;
+    
     return `
-        <div class="video-card group mb-4 relative" data-video-id="${p.id}" data-video-url="${p.contentURL}" data-video-type="${p.type}">
+   <div class="video-card group mb-4 relative" data-video-id="${p.id}" data-video-url="${p.contentURL}" data-video-type="${p.type}">
             <div class="thumb-wrapper relative overflow-hidden rounded-lg bg-zinc-900/40" 
                  style="aspect-ratio: 3/2; border: 1px solid rgba(255,255,255,0.08);"
-                 onclick='playVideo(${JSON.stringify(p).replace(/"/g, "&quot;")})'>
+                 onclick="playVideoById(${videoId})">
                 
                 <img src="${p.image}" 
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                     alt="${p.title}"
+                     alt="${p.title.replace(/"/g, '&quot;')}"
                      loading="lazy"
                      onload="if(this.naturalHeight > this.naturalWidth * 1.2) { 
                          this.classList.add('portrait-thumb');
@@ -1664,13 +1674,18 @@ function createCard(p) {
         `<span class="video-duration-badge text-[10px] px-2 py-1">
             <i>⏱️</i> ${p.duration || defaultDuration}
         </span>` : 
-        (p.type === 'gif' ?
-            `<span class="video-duration-badge text-[10px] px-2 py-1" style="background: #8b5cf6;">
-                <i>🎞️</i> GIF
+        (p.type === 'movie' ?
+            `<span class="video-duration-badge text-[10px] px-2 py-1" style="background: #8B0000; border-color: #FF4500;">
+                <i>🎞️</i> movie
             </span>` :
-            `<span class="video-duration-badge text-[10px] px-2 py-1">
-                <i>🖼️</i> صورة
-            </span>`
+            (p.type === 'gif' ?
+                `<span class="video-duration-badge text-[10px] px-2 py-1" style="background: #8b5cf6;">
+                    <i>🎞️</i> GIF
+                </span>` :
+                `<span class="video-duration-badge text-[10px] px-2 py-1">
+                    <i>🖼️</i> pictures
+                </span>`
+            )
         )
     )
 }
@@ -1679,7 +1694,7 @@ function createCard(p) {
             <div class="flex items-center justify-between mt-2 px-1">
                 <div class="video-title group-hover:text-pink-500 transition-colors line-clamp-2 text-sm font-bold flex-1" 
                      style="cursor: pointer; line-height: 1.3; text-align: right;"
-                     onclick='playVideo(${JSON.stringify(p).replace(/"/g, "&quot;")})'>
+                     onclick="playVideoById(${videoId})">
                     ${p.title}
                 </div>
                 
@@ -1706,58 +1721,79 @@ function createCard(p) {
             </div>
             
             <div class="flex items-center justify-start mt-1 px-1">
-                <span class="text-[8px] text-gray-400 bg-zinc-800/60 px-2 py-0.5 rounded-full">${p.labels || (p.type === 'video' ? 'فيديو' : 'صورة')}</span>
+                <span class="text-[8px] text-gray-400 bg-zinc-800/60 px-2 py-0.5 rounded-full">${p.labels || (p.type === 'video' ? 'فيديو' : (p.type === 'movie' ? 'فيلم' : 'صورة'))}</span>
             </div>
         </div>
     `;
 }
+// ================ دوال المشغل ================
 function playVideo(p) {
-    // إذا كان العنصر يحتوي على رابط إعادة توجيه خارجي
+        // إذا كان العنصر يحتوي على رابط إعادة توجيه خارجي (لأي نوع)
     if (p.redirectUrl) {
         window.open(p.redirectUrl, '_blank');
         return;
     }
-
+    // إذا كان العنصر من نوع live → افتح الرابط الخارجي مباشرة
+    
+    
     window.history.pushState({view: 'player', videoId: p.id}, "");
     currentPlayingId = p.id;
     sessionStorage.setItem('currentPlayingId', p.id);
-    sessionStorage.setItem('lastPlayingSource', currentSourceKey);
-    sessionStorage.setItem('lastPlayingSourceName', currentSourceName);
-    sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.documentElement.scrollTop);
-
+sessionStorage.setItem('lastPlayingSource', currentSourceKey);
+sessionStorage.setItem('lastPlayingSourceName', currentSourceName);
+sessionStorage.setItem('scrollBeforePlayer', window.pageYOffset || document.documentElement.scrollTop);
     const win = document.getElementById('playWindow');
     const vArea = document.getElementById('vArea');
     win.classList.remove('hidden');
     win.style.display = 'block';
     setTimeout(() => {
-        const playerTop = document.getElementById('playWindow');
-        if (playerTop) playerTop.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+    const playerTop = document.getElementById('playWindow');
+    if (playerTop) {
+        playerTop.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}, 100);
     document.body.style.overflow = 'hidden';
     win.setAttribute('dir', 'rtl');
-
     const titleElement = document.getElementById('vTitle');
     if (titleElement) titleElement.innerText = p.title;
-
-    // التصنيفات
-    let tagsContainer = document.getElementById('playerTagsContainer');
-    if (!tagsContainer) {
-        tagsContainer = document.createElement('div');
-        tagsContainer.id = 'playerTagsContainer';
-        tagsContainer.style.cssText = `display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 8px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.1);`;
-        if (titleElement) titleElement.parentNode.insertBefore(tagsContainer, titleElement.nextSibling);
-    }
+    const oldTags = document.getElementById('playerTagsContainer');
+    if (oldTags) oldTags.remove();
+    const tagsContainer = document.createElement('div');
+    tagsContainer.id = 'playerTagsContainer';
+    tagsContainer.style.cssText = `
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0 8px 0;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    `;
     const itemTags = getItemTags(p);
-    tagsContainer.innerHTML = itemTags.length ? `<span style="color:#be185d;font-size:0.75rem;font-weight:bold;">التصنيفات:</span> ${itemTags.map(tag => `<button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" style="background:rgba(190,24,93,0.2); border:1px solid rgba(190,24,93,0.5); color:#ffb3d9; padding:4px 12px; border-radius:20px; font-size:0.7rem; cursor:pointer;">#${tag}</button>`).join('')}` : '';
-
-    // أزرار التفاعل
-    let actionsContainer = document.querySelector('.action-buttons-container');
-    if (!actionsContainer) {
-        actionsContainer = document.createElement('div');
-        actionsContainer.className = 'action-buttons-container';
-        actionsContainer.style.cssText = `display:flex; flex-wrap:wrap; gap:12px; margin:10px 0; padding:10px 0; border-top:1px solid rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.1);`;
-        tagsContainer.parentNode.insertBefore(actionsContainer, tagsContainer.nextSibling);
+    if (itemTags.length > 0) {
+        tagsContainer.innerHTML = `
+            <span style="color: #be185d; font-size: 0.75rem; font-weight: bold;">التصنيفات:</span>
+            ${itemTags.map(tag => `
+                <button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" 
+                        style="background: rgba(190,24,93,0.2); 
+                               border: 1px solid rgba(190,24,93,0.5);
+                               color: #ffb3d9;
+                               padding: 4px 12px;
+                               border-radius: 20px;
+                               font-size: 0.7rem;
+                               cursor: pointer;">
+                    #${tag}
+                </button>
+            `).join('')}
+        `;
     }
+    const vTitleElement = document.getElementById('vTitle');
+    if (vTitleElement && tagsContainer.innerHTML) {
+        vTitleElement.parentNode.insertBefore(tagsContainer, vTitleElement.nextSibling);
+    }
+    const oldActions = document.querySelector('.action-buttons-container');
+    if (oldActions) oldActions.remove();
+    const actionsContainer = document.createElement('div');
+    actionsContainer.className = 'action-buttons-container';
     actionsContainer.innerHTML = `
         <button class="action-btn" onclick="toggleFavFromPlayer(event, ${p.id})">❤️ مفضلة</button>
         <button class="action-btn" onclick="toggleLike(event, ${p.id})">👍 إعجاب</button>
@@ -1765,191 +1801,246 @@ function playVideo(p) {
         <button class="action-btn" onclick="toggleWatchLater(event, ${p.id})">⏱️ لاحقاً</button>
         <button class="action-btn" onclick="shareVideo(event, ${p.id}, '${p.title.replace(/'/g, "\\'")}')">📤 مشاركة</button>
     `;
-
+    if (tagsContainer.innerHTML) {
+        tagsContainer.parentNode.insertBefore(actionsContainer, tagsContainer.nextSibling);
+    }
     vArea.innerHTML = '';
-    vArea.classList.remove('image-mode');
+    vArea.classList.remove('portrait-media', 'landscape-media');
     vArea.style.paddingBottom = '56.25%';
     vArea.style.position = 'relative';
-
-    // ========== معالجة أنواع المحتوى ==========
+    function isHardToEmbed(url) {
+        const blockedDomains = ['oxax.tv'];
+        return blockedDomains.some(domain => url.includes(domain));
+    }
     if (p.type === 'live') {
-        let embedURL = p.contentURL;
-        if (embedURL.includes('youtube.com/watch')) {
-            const videoId = embedURL.split('v=')[1]?.split('&')[0];
-            embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        } else if (embedURL.includes('youtu.be')) {
-            const videoId = embedURL.split('/').pop();
-            embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        } else if (embedURL.includes('twitch.tv')) {
-            const channel = embedURL.split('twitch.tv/')[1];
-            embedURL = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
-        }
-        const blockedDomains = ['oxax.tv', 'example.com'];
-        if (blockedDomains.some(domain => embedURL.includes(domain))) {
+    let embedURL = p.contentURL;
+    // معالجة يوتيوب وتويش...
+    if (embedURL.includes('youtube.com/watch')) {
+        const videoId = embedURL.split('v=')[1]?.split('&')[0];
+        embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    } else if (embedURL.includes('youtu.be')) {
+        const videoId = embedURL.split('/').pop();
+        embedURL = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    } else if (embedURL.includes('twitch.tv')) {
+        const channel = embedURL.split('twitch.tv/')[1];
+        embedURL = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
+    }
+
+    // إذا كان الرابط mp4، نتعامل معه كفيديو
+    if (embedURL.match(/\.mp4$/i)) {
+        p.type = 'video';
+        playVideo(p);
+        return;
+    }
+
+    // المواقع التي لا يمكن تضمينها (تفتح في نافذة جديدة)
+    const blockedDomains = ['oxax.tv', 'example.com']; // أضف أي نطاق تريده
+    const isBlocked = blockedDomains.some(domain => embedURL.includes(domain));
+
+    if (isBlocked) {
+        // افتح الرابط في نافذة جديدة
+        window.open(p.contentURL, '_blank');
+        // لا نغلق المشغل هنا لأن ذلك قد يتعارض مع فتح النافذة
+        // لكننا سنترك المشغل مفتوحاً (يمكن إغلاقه لاحقاً)
+        // تحديث الاقتراحات
+        setTimeout(() => {
+            updateRecSuggestions();
+            updateSideSuggestions();
+            updatePlayerStats();
+            updateFooterStats();
+        }, 100);
+        return;
+    }
+
+    // عرض iframe عادي
+    vArea.innerHTML = `
+        <iframe 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+            src="${embedURL}" 
+            allow="autoplay; fullscreen; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    `;
+}else if (p.type === 'video') {
+        if (p.contentURL.includes('oxax.tv')) {
             window.open(p.contentURL, '_blank');
-            setTimeout(() => { updateRecSuggestions(); updateSideSuggestions(); updateFooterStats(); }, 100);
+            // تحديث الاقتراحات
+            setTimeout(() => {
+                updateRecSuggestions();
+                updateSideSuggestions();
+                updatePlayerStats();
+                updateFooterStats();
+            }, 100);
             return;
         }
-        vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${embedURL}" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe>`;
-    }
-    else if (p.type === 'video') {
-        let videoUrl = p.contentURL;
-        let isGoogleDrive = videoUrl.includes('drive.google.com');
-
-        // ===== حالة Google Drive: استخدم iframe التضميني (لا عناصر تحكم مكررة) =====
-        if (isGoogleDrive) {
-            // استخرج معرف الملف
-            let fileId = null;
-            let match = videoUrl.match(/\/d\/(.+?)\/view/);
-            if (!match) match = videoUrl.match(/id=(.+?)(&|$)/);
-            if (match) fileId = match[1];
-
-            if (fileId) {
-                const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
-                vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${embedUrl}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
-            } else {
-                vArea.innerHTML = `<div style="text-align:center;padding:20px;color:red;">❌ رابط Google Drive غير صالح</div>`;
-            }
-        }
-        // ===== حالة روابط MP4 المباشرة: استخدم عنصر video مع controls فقط (بدون initAdvancedPlayer) =====
-        else if (videoUrl.match(/\.mp4$/i) || videoUrl.includes('.mp4?')) {
+        if (p.contentURL.includes('.mp4')) {
             vArea.innerHTML = `
-                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:black;">
-                    <video id="mainVideo" style="width:100%;height:100%;object-fit:contain;" controls autoplay>
-                        <source src="${videoUrl}" type="video/mp4">
-                        المتصفح لا يدعم الفيديو.
+                <div id="playerContainer" 
+                     style="position:absolute;top:0;left:0;width:100%;height:100%;background:black;">
+                    <video id="mainVideo" 
+                           style="width:100%;height:100%;object-fit:contain;" 
+                           autoplay>
+                        <source src="${p.contentURL}" type="video/mp4">
                     </video>
+                    
+                    <div id="centerPlayBtn" style="
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        width:70px;
+                        height:70px;
+                        background:rgba(0,0,0,0.7);
+                        border-radius:50%;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        cursor:pointer;
+                        z-index:10;
+                        backdrop-filter:blur(4px);
+                        border:2px solid rgba(255,255,255,0.3);
+                        transition:all 0.2s ease;
+                    ">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    
+                    <div id="customControls" 
+                         style="position:absolute;bottom:0;left:0;width:100%;
+                                background:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+                                padding:12px 15px;
+                                display:flex;
+                                align-items:center;
+                                gap:12px;
+                                opacity:0;
+                                transition:opacity 0.3s ease;">
+                        <button id="playPauseBtn" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">⏸️</button>
+                        <span id="currentTime" style="color:white;font-size:12px;font-family:monospace;">00:00</span>
+                        <input id="progressBar" type="range" value="0" min="0" max="100"
+                               style="flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,0.3);">
+                        <span id="durationTime" style="color:white;font-size:12px;font-family:monospace;">00:00</span>
+                        <button id="fullscreenBtn" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">⛶</button>
+                    </div>
                 </div>
             `;
+            const playerContainer = document.getElementById('playerContainer');
+            const controls = document.getElementById('customControls');
+            let controlsTimeout;
+            const showControls = () => {
+                controls.style.opacity = '1';
+                clearTimeout(controlsTimeout);
+                controlsTimeout = setTimeout(() => {
+                    if (!playerContainer.matches(':hover') && !controls.matches(':hover')) {
+                        controls.style.opacity = '0';
+                    }
+                }, 2000);
+            };
+            playerContainer.addEventListener('mousemove', showControls);
+            playerContainer.addEventListener('touchstart', showControls);
+            playerContainer.addEventListener('mouseleave', () => {
+                controlsTimeout = setTimeout(() => {
+                    controls.style.opacity = '0';
+                }, 1000);
+            });
+            showControls();
+            initPlayer();
+            // تحديث الاقتراحات
+            setTimeout(() => {
+                updateRecSuggestions();
+                updateSideSuggestions();
+                updatePlayerStats();
+                updateFooterStats();
+            }, 100);
+            return;
         }
-        // ===== أي رابط آخر: حاول iframe عادي =====
-        else {
-            vArea.innerHTML = `<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="${videoUrl}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
-        }
-    }
-    else if (p.type === 'image' || p.type === 'gif') {
-        vArea.style.paddingBottom = '0';
-        vArea.classList.add('image-mode');
-        const mediaUrl = (p.type === 'gif' && p.image) ? p.image : p.contentURL;
-        vArea.innerHTML = `
-            <div style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:black;">
-                <img src="${mediaUrl}" style="max-width:100%; max-height:85vh; width:auto; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius:12px;" alt="${p.title}">
-            </div>
-        `;
-    }
-
-    // تحديث الاقتراحات
+// داخل playVideo، بعد التحقق من p.type === 'video'
+if (p.contentURL.includes('drive.google.com')) {
+    const embedUrl = getGoogleDriveEmbedLink(p.contentURL);
+    vArea.innerHTML = `
+        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+                src="${embedUrl}" 
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen>
+        </iframe>
+    `;
+    // ✅ إضافة تحديث الاقتراحات قبل الخروج
     setTimeout(() => {
         updateRecSuggestions();
         updateSideSuggestions();
+        updatePlayerStats();
         updateFooterStats();
     }, 150);
+    return;
 }
-function initAdvancedPlayer(videoElement, containerId) {
-    const video = videoElement;
-    const container = document.getElementById(containerId);
-    if (!video || !container) return;
 
-    let controls = container.querySelector('.custom-controls');
-    if (!controls) {
-        controls = document.createElement('div');
-        controls.className = 'custom-controls';
-        controls.style.cssText = `
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 20;
-            box-sizing: border-box;
-        `;
-        controls.innerHTML = `
-            <button class="ctrl-play-pause" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">⏸️</button>
-            <span class="ctrl-current-time" style="color:white; font-size:12px;">00:00</span>
-            <input type="range" class="ctrl-progress" value="0" min="0" max="100" step="0.1" style="flex:1; height:4px; -webkit-appearance:none; background:rgba(255,255,255,0.3); border-radius:2px;">
-            <span class="ctrl-duration" style="color:white; font-size:12px;">00:00</span>
-            <button class="ctrl-mute" style="background:none; border:none; color:white; font-size:18px; cursor:pointer;">🔊</button>
-            <button class="ctrl-fullscreen" style="background:none; border:none; color:white; font-size:18px; cursor:pointer;">⛶</button>
-        `;
-        container.appendChild(controls);
-    }
-
-    const playPauseBtn = controls.querySelector('.ctrl-play-pause');
-    const currentTimeSpan = controls.querySelector('.ctrl-current-time');
-    const progressBar = controls.querySelector('.ctrl-progress');
-    const durationSpan = controls.querySelector('.ctrl-duration');
-    const muteBtn = controls.querySelector('.ctrl-mute');
-    const fullscreenBtn = controls.querySelector('.ctrl-fullscreen');
-    let controlsTimeout;
-
-    function formatTime(seconds) {
-        if (isNaN(seconds)) return '00:00';
-        const mins = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    }
-
-    function updateProgress() {
-        if (video.duration) {
-            const percent = (video.currentTime / video.duration) * 100;
-            progressBar.value = percent;
-            progressBar.style.background = `linear-gradient(to right, #be185d ${percent}%, rgba(255,255,255,0.3) ${percent}%)`;
-            currentTimeSpan.innerText = formatTime(video.currentTime);
+if (p.contentURL.match(/\.mp4$/i)) {
+    // تشغيل MP4 مباشرة مع عناصر التحكم المخصصة أو البسيطة
+    vArea.innerHTML = `
+        <video style="width:100%; height:100%; object-fit:contain;" controls autoplay>
+            <source src="${p.contentURL}" type="video/mp4">
+        </video>
+    `;
+    return;
+}
+        if (isHardToEmbed(p.contentURL)) {
+            vArea.style.paddingBottom = '0';
+            vArea.innerHTML = `
+                <div style="text-align:center;padding:40px">
+                    <p>⚠️ لا يمكن عرض الفيديو داخل الموقع</p>
+                    <a href="${p.contentURL}" target="_blank">فتح في نافذة جديدة</a>
+                </div>
+            `;
+            // تحديث الاقتراحات
+            setTimeout(() => {
+                updateRecSuggestions();
+                updateSideSuggestions();
+                updatePlayerStats();
+                updateFooterStats();
+            }, 100);
+            return;
         }
+        vArea.innerHTML = `
+            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+                    src="${p.contentURL}" 
+                    allow="autoplay; fullscreen">
+            </iframe>
+        `;
+    } else if (p.type === 'image') {
+        // إزالة أي تنسيقات سابقة وإضافة كلاس image-mode لعرض الصور بشكل صحيح
+        vArea.style.paddingBottom = '0';
+        vArea.style.height = 'auto';
+        vArea.style.minHeight = 'auto';
+        vArea.classList.add('image-mode'); // إضافة الكلاس الخاص بالصور
+        
+        vArea.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
+                <img src="${p.contentURL}" 
+                     style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
+                     alt="${p.title}"
+                     onload="this.parentElement.parentElement.style.paddingBottom = '0'; this.parentElement.parentElement.style.height = 'auto';">
+            </div>
+        `;
     }
-
-    function showControls() {
-        controls.style.opacity = '1';
-        clearTimeout(controlsTimeout);
-        controlsTimeout = setTimeout(() => {
-            if (!container.matches(':hover') && !controls.matches(':hover')) controls.style.opacity = '0';
-        }, 2000);
-    }
-
-    video.addEventListener('loadedmetadata', () => {
-        durationSpan.innerText = formatTime(video.duration);
-        progressBar.max = 100;
-        updateProgress();
-    });
-    video.addEventListener('timeupdate', updateProgress);
-    video.addEventListener('play', () => { playPauseBtn.innerText = '⏸️'; showControls(); });
-    video.addEventListener('pause', () => { playPauseBtn.innerText = '▶️'; showControls(); });
-    video.addEventListener('click', () => { video.paused ? video.play() : video.pause(); showControls(); });
-
-    playPauseBtn.addEventListener('click', (e) => { e.stopPropagation(); video.paused ? video.play() : video.pause(); showControls(); });
-    progressBar.addEventListener('input', (e) => { video.currentTime = (e.target.value / 100) * video.duration; updateProgress(); showControls(); });
-    muteBtn.addEventListener('click', (e) => { e.stopPropagation(); video.muted = !video.muted; muteBtn.innerText = video.muted ? '🔇' : '🔊'; showControls(); });
-    fullscreenBtn.addEventListener('click', (e) => { e.stopPropagation(); if (!document.fullscreenElement) container.requestFullscreen(); else document.exitFullscreen(); showControls(); });
-
-    let lastTap = 0;
-    video.addEventListener('click', (e) => {
-        const now = Date.now();
-        if (now - lastTap < 300) {
-            e.preventDefault();
-            const rect = video.getBoundingClientRect();
-            const isLeft = (e.clientX - rect.left) < rect.width / 2;
-            let newTime = video.currentTime + (isLeft ? -10 : 10);
-            newTime = Math.min(Math.max(newTime, 0), video.duration);
-            video.currentTime = newTime;
-            let msg = container.querySelector('.seek-message') || (() => { let d = document.createElement('div'); d.className = 'seek-message'; d.style.cssText = 'position:absolute;bottom:20%;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.8);color:white;padding:8px 16px;border-radius:30px;font-size:16px;z-index:30;pointer-events:none;opacity:0;white-space:nowrap;'; container.appendChild(d); return d; })();
-            msg.innerText = (isLeft ? '-10' : '+10') + ' ثانية';
-            msg.style.opacity = '1';
-            setTimeout(() => msg.style.opacity = '0', 800);
-        }
-        lastTap = now;
-    });
-
-    container.addEventListener('mousemove', showControls);
-    container.addEventListener('touchstart', showControls);
-    container.addEventListener('mouseleave', () => { clearTimeout(controlsTimeout); controls.style.opacity = '0'; });
-    video.play().catch(e => console.log('autoplay blocked'));
-    showControls();
+    else if (p.type === 'gif') {
+    vArea.style.paddingBottom = '0';
+    vArea.style.height = 'auto';
+    vArea.classList.add('image-mode');
+    vArea.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: black;">
+            <img src="${p.image}" 
+                 style="max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; border-radius: 12px;"
+                 alt="${p.title}">
+        </div>
+    `;
+}
+    // بعد كل الشروط وقبل إغلاق الدالة
+setTimeout(() => {
+    updateRecSuggestions();
+    updateSideSuggestions();
+    updatePlayerStats();
+    updateFooterStats();
+}, 150);
 }
 function restoreFinalState() {
     try {
@@ -3175,6 +3266,7 @@ function updateMobileMenuContent() {
     }
 }
 // دالة لتغيير القسم والفئة من القائمة الجانبية الثابتة
+// دالة لتغيير القسم والفئة من القائمة الجانبية الثابتة
 function changeCategory(event, sourceKey, displayName, contentType, categoryType) {
     if (event) {
         event.preventDefault();
@@ -3213,9 +3305,21 @@ function changeCategory(event, sourceKey, displayName, contentType, categoryType
     }
     updateImageModeClass(); 
     
-    // تحديث واجهة المستخدم
+    // تحديث واجهة المستخدم - استخدام عنوان مناسب لكل نوع
     const catTitle = document.getElementById('catTitle');
-    if (catTitle) catTitle.innerText = t('sectionTitles')[sourceKey] || t('sectionNames')[sourceKey] || sourceKey;
+    if (catTitle) {
+        if (contentType === 'movie') {
+            catTitle.innerText = '🎞️ Hot porn Movie';
+        } else if (contentType === 'video') {
+            catTitle.innerText = t('sectionTitles')[sourceKey] || t('sectionNames')[sourceKey] || sourceKey;
+        } else if (contentType === 'image') {
+            catTitle.innerText = '🖼️ photo';
+        } else if (contentType === 'article') {
+            catTitle.innerText = '📄 📖 Sexual positions';
+        } else {
+            catTitle.innerText = t('sectionTitles')[sourceKey] || t('sectionNames')[sourceKey] || sourceKey;
+        }
+    }
     updateSubTitle();
     saveState();
     
